@@ -1,0 +1,2895 @@
+         w __cxa_pure_virtual
+         w __deregister_frame_info
+         w __gnu_Unwind_Find_exidx
+         w __register_frame_info
+         w __syscall_lock_close_recursive
+         w userAppExit
+         w userAppInit
+00000000 00000802 B __ctru_dev_utf16_buf
+00000000 b _TLS_MODULE_BASE_
+00000000 a shift
+00000000 a shift
+00000804 00000401 B __ctru_dev_path_buf
+00100000 A __start__
+00100000 T _start
+00100008 T __service_ptr
+0010000c T __apt_appid
+00100010 T __heap_size
+00100014 T __linear_heap_size
+00100018 T __system_arglist
+0010001c T __system_runflags
+00100020 t startup
+00100058 t ClearMem
+0010006c t ClrLoop
+00100094 T _init
+001000ac t .udivsi3_skip_div0_test
+001000ac T __aeabi_uidiv
+001000ac 000001ec T __udivsi3
+00100298 00000020 T __aeabi_uidivmod
+001002b8 T __aeabi_idiv
+001002b8 00000220 T __divsi3
+001002c0 t .divsi3_skip_div0_test
+001004d8 00000020 T __aeabi_idivmod
+001004f8 00000004 W __aeabi_idiv0
+001004f8 00000004 W __aeabi_ldiv0
+001004fc T __aeabi_drsub
+00100504 000002b0 T __aeabi_dsub
+00100504 000002b0 T __subdf3
+00100508 000002ac T __adddf3
+00100508 000002ac T __aeabi_dadd
+001007b4 00000024 T __aeabi_ui2d
+001007b4 00000024 T __floatunsidf
+001007d8 00000028 T __aeabi_i2d
+001007d8 00000028 T __floatsidf
+00100800 00000048 T __aeabi_f2d
+00100800 00000048 T __extendsfdf2
+00100848 00000074 T __aeabi_ul2d
+00100848 00000074 T __floatundidf
+0010085c 00000060 T __aeabi_l2d
+0010085c 00000060 T __floatdidf
+001008bc T __aeabi_ldivmod
+00100990 T __aeabi_uldivmod
+001009cc 00000014 T __restore_core_regs
+001009cc 00000014 T restore_core_regs
+001009e0 T __gnu_Unwind_Restore_VFP
+001009e8 T __gnu_Unwind_Save_VFP
+001009f0 T __gnu_Unwind_Restore_VFP_D
+001009f8 T __gnu_Unwind_Save_VFP_D
+00100a00 T __gnu_Unwind_Restore_VFP_D_16_to_31
+00100a08 T __gnu_Unwind_Save_VFP_D_16_to_31
+00100a10 T __gnu_Unwind_Restore_WMMXD
+00100a54 T __gnu_Unwind_Save_WMMXD
+00100a98 T __gnu_Unwind_Restore_WMMXC
+00100aac T __gnu_Unwind_Save_WMMXC
+00100ac0 00000024 T ___Unwind_RaiseException
+00100ac0 00000024 T _Unwind_RaiseException
+00100ae4 00000024 T ___Unwind_Resume
+00100ae4 00000024 T _Unwind_Resume
+00100b08 00000024 T ___Unwind_Resume_or_Rethrow
+00100b08 00000024 T _Unwind_Resume_or_Rethrow
+00100b2c 00000024 T ___Unwind_ForcedUnwind
+00100b2c 00000024 T _Unwind_ForcedUnwind
+00100b50 00000024 T ___Unwind_Backtrace
+00100b50 00000024 T _Unwind_Backtrace
+00100b88 00000390 T strcmp
+00100f10 t __do_global_dtors_aux
+00100f50 t frame_dummy
+00100f7c 00000084 T Cosmetics::ValidHexString(std::basic_string_view<char, std::char_traits<char> >)
+00101000 00000104 T Cosmetics::CustomColorOptionText[abi:cxx11](std::basic_string_view<char, std::char_traits<char> >)
+00101104 0000001c T CitraPrint(std::basic_string_view<char, std::char_traits<char> >)
+00101120 00000048 T DebugPrint(char const*, ...)
+00101168 00000064 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [clone .isra.0]
+001011cc 000000b0 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+001011cc 000000b0 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+0010127c 00000028 W std::_Vector_base<unsigned long, std::allocator<unsigned long> >::~_Vector_base()
+0010127c 00000028 W std::_Vector_base<unsigned long, std::allocator<unsigned long> >::~_Vector_base()
+001012a4 00000094 W std::vector<unsigned long, std::allocator<unsigned long> >::vector(std::initializer_list<unsigned long>, std::allocator<unsigned long> const&)
+001012a4 00000094 W std::vector<unsigned long, std::allocator<unsigned long> >::vector(std::initializer_list<unsigned long>, std::allocator<unsigned long> const&)
+00101338 00000780 t __static_initialization_and_destruction_0(int, int) [clone .constprop.0]
+00101ab8 0000013c W void std::vector<unsigned long, std::allocator<unsigned long> >::_M_realloc_insert<unsigned long const&>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long const&)
+00101bf4 00000008 t _GLOBAL__sub_I__ZN7Dungeon11DungeonInfoC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEmmmmhSt6vectorImSaImEE
+00101bfc 00000008 t _GLOBAL__sub_D__ZN7Dungeon11DungeonInfoC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEmmmmhSt6vectorImSaImEE
+00101c04 00000588 W Entrance::ConditionsMet(bool) const
+0010218c 00000020 t _GLOBAL__sub_I_noRandomEntrances
+001021ac 00000064 t _GLOBAL__sub_D_noRandomEntrances
+00102210 00000050 t std::vector<unsigned long, std::allocator<unsigned long> >::_M_erase(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >) [clone .isra.0]
+00102260 0000006c W unsigned long RandomElement<unsigned long>(std::vector<unsigned long, std::allocator<unsigned long> >&, bool)
+001022cc 0000008c t std::vector<unsigned long, std::allocator<unsigned long> > FilterFromPool<unsigned long, GetAllEmptyLocations()::{lambda(unsigned long)#1}>(std::vector<unsigned long, std::allocator<unsigned long> >&, GetAllEmptyLocations()::{lambda(unsigned long)#1}, bool) [clone .constprop.0]
+00102358 00000274 t RandomizeDungeonRewards()
+001025cc 0000004c T VanillaFill()
+00102618 0000013c W void std::vector<ItemLocation*, std::allocator<ItemLocation*> >::_M_realloc_insert<ItemLocation* const&>(__gnu_cxx::__normal_iterator<ItemLocation**, std::vector<ItemLocation*, std::allocator<ItemLocation*> > >, ItemLocation* const&)
+00102754 00000264 W void std::vector<std::vector<unsigned long, std::allocator<unsigned long> >, std::allocator<std::vector<unsigned long, std::allocator<unsigned long> > > >::_M_realloc_insert<std::vector<unsigned long, std::allocator<unsigned long> > const&>(__gnu_cxx::__normal_iterator<std::vector<unsigned long, std::allocator<unsigned long> >*, std::vector<std::vector<unsigned long, std::allocator<unsigned long> >, std::allocator<std::vector<unsigned long, std::allocator<unsigned long> > > > >, std::vector<unsigned long, std::allocator<unsigned long> > const&)
+001029b8 00000258 W void std::vector<std::__cxx11::list<Entrance*, std::allocator<Entrance*> >, std::allocator<std::__cxx11::list<Entrance*, std::allocator<Entrance*> > > >::_M_realloc_insert<std::__cxx11::list<Entrance*, std::allocator<Entrance*> > const&>(__gnu_cxx::__normal_iterator<std::__cxx11::list<Entrance*, std::allocator<Entrance*> >*, std::vector<std::__cxx11::list<Entrance*, std::allocator<Entrance*> >, std::allocator<std::__cxx11::list<Entrance*, std::allocator<Entrance*> > > > >, std::__cxx11::list<Entrance*, std::allocator<Entrance*> > const&)
+00102c10 0000013c W void std::vector<unsigned long, std::allocator<unsigned long> >::_M_realloc_insert<unsigned long>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long&&)
+00102d4c 00000114 t FastFill(std::vector<unsigned long, std::allocator<unsigned long> >, std::vector<unsigned long, std::allocator<unsigned long> >, bool)
+00102e60 00000194 T NoLogicFill()
+00102ff4 00001104 T GetAccessibleLocations(std::vector<unsigned long, std::allocator<unsigned long> > const&, SearchMode)
+001040f8 00000dd8 T Fill()
+00104ed0 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0]
+00104f5c 000000f8 t std::vector<Text, std::allocator<Text> >::vector(std::initializer_list<Text>, std::allocator<Text> const&) [clone .constprop.0] [clone .isra.0]
+00105054 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+001050e0 000000ac t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0] [clone .isra.0]
+0010518c 00000328 t HintText::operator=(HintText&&) [clone .isra.0]
+001054b4 00000130 W Text::Text(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+001054b4 00000130 W Text::Text(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+001055e4 00000064 W Text::~Text()
+001055e4 00000064 W Text::~Text()
+00105648 00000278 W HintText::Item(std::vector<Text, std::allocator<Text> >&&, Text&&)
+001058c0 00000278 W HintText::Exclude(std::vector<Text, std::allocator<Text> >&&, Text&&)
+00105b38 00000060 W Text::Text()
+00105b38 00000060 W Text::Text()
+00105b98 00000098 W std::vector<Text, std::allocator<Text> >::~vector()
+00105b98 00000098 W std::vector<Text, std::allocator<Text> >::~vector()
+00105c30 0000cacc T HintTable_Init()
+001126fc 00000084 t _GLOBAL__sub_I__Z14HintTable_Initv
+00112780 00000100 t _GLOBAL__sub_D__Z14HintTable_Initv
+00112880 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0]
+0011290c 00000180 T Item::Item(bool, int, bool*, Text, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Region, unsigned long, unsigned long, ItemCategory, LocationCategory)
+0011290c 00000180 T Item::Item(bool, int, bool*, Text, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Region, unsigned long, unsigned long, ItemCategory, LocationCategory)
+00112a8c 00000180 T Item::Item(bool, int, unsigned char*, Text, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Region, unsigned long, unsigned long, ItemCategory, LocationCategory)
+00112a8c 00000180 T Item::Item(bool, int, unsigned char*, Text, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, Region, unsigned long, unsigned long, ItemCategory, LocationCategory)
+00112c0c 00000080 T Item::~Item()
+00112c0c 00000080 T Item::~Item()
+00112c8c 00000040 T Item::ApplyEffect()
+00112ccc 00000098 T Item::Value() const
+00112d64 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+00112df0 00000088 t Item::operator=(Item const&) [clone .isra.0]
+00112e78 000000ac t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0] [clone .isra.0]
+00112f24 0000f554 T ItemTable_Init()
+00122478 00000018 T ItemTable(unsigned long)
+00122490 00000094 t _GLOBAL__sub_I__Z14ItemTable_Initv
+00122524 0000002c t _GLOBAL__sub_D__Z14ItemTable_Initv
+00122550 000000e0 t __gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > > std::__find_if<__gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > >, __gnu_cxx::__ops::_Iter_pred<ItemLocation::IsCategory(Category) const::{lambda(auto:1)#1}> >(__gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > >, __gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > >, __gnu_cxx::__ops::_Iter_pred<ItemLocation::IsCategory(Category) const::{lambda(auto:1)#1}>, std::random_access_iterator_tag) [clone .isra.0]
+00122630 0000008c t std::vector<Category, std::allocator<Category> >::vector(std::initializer_list<Category>, std::allocator<Category> const&) [clone .constprop.0] [clone .isra.0]
+001226bc 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+00122748 000001bc t Option::operator=(Option&&) [clone .isra.0]
+00122904 00000194 t std::_Rb_tree<rnd::ItemOverride, rnd::ItemOverride, std::_Identity<rnd::ItemOverride>, ItemOverride_Compare, std::allocator<rnd::ItemOverride> >::_M_erase(std::_Rb_tree_node<rnd::ItemOverride>*) [clone .isra.0]
+00122a98 0000019c t ItemLocation::operator=(ItemLocation&&) [clone .isra.0]
+00122c34 000000ac t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0] [clone .isra.0]
+00122ce0 00000158 W Option::Bool(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >, OptionCategory, unsigned char, bool)
+00122e38 000003a8 W ItemLocation::ItemLocation(ItemLocationType, unsigned char, unsigned char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, unsigned long, std::vector<Category, std::allocator<Category> >, unsigned short)
+00122e38 000003a8 W ItemLocation::ItemLocation(ItemLocationType, unsigned char, unsigned char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, unsigned long, std::vector<Category, std::allocator<Category> >, unsigned short)
+001231e0 000000d0 W ItemLocation::~ItemLocation()
+001231e0 000000d0 W ItemLocation::~ItemLocation()
+001232b0 00000108 W ItemLocation::Base(unsigned char, unsigned char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, unsigned long, unsigned long, std::vector<Category, std::allocator<Category> >&&)
+001233b8 0000010c W ItemLocation::Chest(unsigned char, unsigned char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, unsigned long, unsigned long, std::vector<Category, std::allocator<Category> >&&)
+001234c4 000002f4 W std::array<ItemLocation, 935u>::array()
+001234c4 000002f4 W std::array<ItemLocation, 935u>::array()
+001237b8 00005e78 T LocationTable_Init()
+00129630 00000018 T Location(unsigned long)
+00129648 000001cc T PlaceItemInLocation(unsigned long, unsigned long, bool)
+00129814 000000ac T LocationReset()
+001298c0 000000d4 T ItemReset()
+00129994 000003b4 T CreateItemOverrides()
+00129d48 000002ec t __static_initialization_and_destruction_0(int, int) [clone .constprop.0]
+0012a034 00000194 W void AddLocations<std::vector<unsigned long, std::allocator<unsigned long> > >(std::vector<unsigned long, std::allocator<unsigned long> > const&, std::vector<unsigned long, std::allocator<unsigned long> >*)
+0012a1c8 0000003c T GenerateLocationPool()
+0012a204 000000c8 T GetLocations(std::vector<unsigned long, std::allocator<unsigned long> > const&, Category, Category)
+0012a2cc 0000013c W void std::vector<Option*, std::allocator<Option*> >::_M_realloc_insert<Option*>(__gnu_cxx::__normal_iterator<Option**, std::vector<Option*, std::allocator<Option*> > >, Option*&&)
+0012a408 0000082c W ItemLocation::AddExcludeOption()
+0012ac34 0000004c T AddExcludedOptions()
+0012ac80 00000008 t _GLOBAL__sub_I__Z18LocationTable_Initv
+0012ac88 00000008 t _GLOBAL__sub_D__Z18LocationTable_Initv
+0012ac90 00000074 T GetJunkItem()
+0012ad04 00000c3c T GenerateItemPool()
+0012b940 00000038 t _GLOBAL__sub_I_ItemPool
+0012b978 0000003c t _GLOBAL__sub_D_ItemPool
+0012b9b4 00000008 t AreaTable_Init()::{lambda()#1}::_FUN()
+0012b9bc 00000020 t AreaTable_Init()::{lambda()#3}::_FUN()
+0012b9dc 00000010 t AreaTable_Init()::{lambda()#5}::_FUN()
+0012b9ec 00000010 t AreaTable_Init()::{lambda()#17}::_FUN()
+0012b9fc 00000010 t AreaTable_Init()::{lambda()#23}::_FUN()
+0012ba0c 00000010 t AreaTable_Init()::{lambda()#32}::_FUN()
+0012ba1c 00000010 t AreaTable_Init()::{lambda()#40}::_FUN()
+0012ba2c 00000010 t AreaTable_Init()::{lambda()#41}::_FUN()
+0012ba3c 00000010 t AreaTable_Init()::{lambda()#42}::_FUN()
+0012ba4c 00000010 t AreaTable_Init()::{lambda()#43}::_FUN()
+0012ba5c 00000010 t AreaTable_Init()::{lambda()#75}::_FUN()
+0012ba6c 00000010 t AreaTable_Init()::{lambda()#78}::_FUN()
+0012ba7c 00000010 t AreaTable_Init()::{lambda()#80}::_FUN()
+0012ba8c 00000010 t AreaTable_Init()::{lambda()#81}::_FUN()
+0012ba9c 00000010 t AreaTable_Init()::{lambda()#83}::_FUN()
+0012baac 00000020 t AreaTable_Init()::{lambda()#93}::_FUN()
+0012bacc 00000010 t AreaTable_Init()::{lambda()#99}::_FUN()
+0012badc 00000020 t AreaTable_Init()::{lambda()#125}::_FUN()
+0012bafc 00000008 t AreaTable_Init()::{lambda()#126}::_FUN()
+0012bb04 00000020 t AreaTable_Init()::{lambda()#129}::_FUN()
+0012bb24 00000010 t AreaTable_Init()::{lambda()#149}::_FUN()
+0012bb34 00000010 t AreaTable_Init()::{lambda()#160}::_FUN()
+0012bb44 00000010 t AreaTable_Init()::{lambda()#164}::_FUN()
+0012bb54 00000020 t AreaTable_Init()::{lambda()#167}::_FUN()
+0012bb74 00000020 t AreaTable_Init()::{lambda()#176}::_FUN()
+0012bb94 00000010 t AreaTable_Init()::{lambda()#186}::_FUN()
+0012bba4 00000038 t AreaTable_Init()::{lambda()#191}::_FUN()
+0012bbdc 00000020 t AreaTable_Init()::{lambda()#203}::_FUN()
+0012bbfc 00000020 t AreaTable_Init()::{lambda()#240}::_FUN()
+0012bc1c 00000020 t AreaTable_Init()::{lambda()#242}::_FUN()
+0012bc3c 00000010 t AreaTable_Init()::{lambda()#248}::_FUN()
+0012bc4c 00000020 t AreaTable_Init()::{lambda()#255}::_FUN()
+0012bc6c 00000010 t AreaTable_Init()::{lambda()#285}::_FUN()
+0012bc7c 00000010 t AreaTable_Init()::{lambda()#308}::_FUN()
+0012bc8c 00000010 t AreaTable_Init()::{lambda()#313}::_FUN()
+0012bc9c 00000010 t AreaTable_Init()::{lambda()#318}::_FUN()
+0012bcac 00000020 t AreaTable_Init()::{lambda()#350}::_FUN()
+0012bccc 00000020 t AreaTable_Init()::{lambda()#358}::_FUN()
+0012bcec 00000010 t AreaTable_Init()::{lambda()#418}::_FUN()
+0012bcfc 00000020 t AreaTable_Init()::{lambda()#420}::_FUN()
+0012bd1c 00000020 t AreaTable_Init()::{lambda()#425}::_FUN()
+0012bd3c 00000020 t AreaTable_Init()::{lambda()#442}::_FUN()
+0012bd5c 00000020 t AreaTable_Init()::{lambda()#448}::_FUN()
+0012bd7c 00000014 t AreaTable_Init()::{lambda()#461}::_FUN()
+0012bd90 00000010 t AreaTable_Init()::{lambda()#463}::_FUN()
+0012bda0 00000020 t AreaTable_Init()::{lambda()#471}::_FUN()
+0012bdc0 00000020 t AreaTable_Init()::{lambda()#480}::_FUN()
+0012bde0 00000020 t AreaTable_Init()::{lambda()#482}::_FUN()
+0012be00 00000020 t AreaTable_Init()::{lambda()#496}::_FUN()
+0012be20 00000010 t AreaTable_Init()::{lambda()#505}::_FUN()
+0012be30 00000020 t AreaTable_Init()::{lambda()#513}::_FUN()
+0012be50 00000020 t AreaTable_Init()::{lambda()#528}::_FUN()
+0012be70 00000020 t AreaTable_Init()::{lambda()#536}::_FUN()
+0012be90 00000020 t AreaTable_Init()::{lambda()#546}::_FUN()
+0012beb0 00000020 t AreaTable_Init()::{lambda()#561}::_FUN()
+0012bed0 00000010 t AreaTable_Init()::{lambda()#565}::_FUN()
+0012bee0 00000020 t AreaTable_Init()::{lambda()#566}::_FUN()
+0012bf00 00000020 t AreaTable_Init()::{lambda()#572}::_FUN()
+0012bf20 00000020 t AreaTable_Init()::{lambda()#576}::_FUN()
+0012bf40 00000020 t AreaTable_Init()::{lambda()#580}::_FUN()
+0012bf60 00000020 t AreaTable_Init()::{lambda()#581}::_FUN()
+0012bf80 00000010 t AreaTable_Init()::{lambda()#582}::_FUN()
+0012bf90 00000020 t AreaTable_Init()::{lambda()#602}::_FUN()
+0012bfb0 00000020 t AreaTable_Init()::{lambda()#606}::_FUN()
+0012bfd0 00000020 t AreaTable_Init()::{lambda()#608}::_FUN()
+0012bff0 00000010 t AreaTable_Init()::{lambda()#628}::_FUN()
+0012c000 00000010 t AreaTable_Init()::{lambda()#644}::_FUN()
+0012c010 00000010 t AreaTable_Init()::{lambda()#321}::_FUN()
+0012c020 00000010 t AreaTable_Init()::{lambda()#225}::_FUN()
+0012c030 00000010 t AreaTable_Init()::{lambda()#101}::_FUN()
+0012c040 00000014 t AreaTable_Init()::{lambda()#423}::_FUN()
+0012c054 00000014 t AreaTable_Init()::{lambda()#407}::_FUN()
+0012c068 00000014 t AreaTable_Init()::{lambda()#379}::_FUN()
+0012c07c 00000014 t AreaTable_Init()::{lambda()#341}::_FUN()
+0012c090 00000034 t AreaTable_Init()::{lambda()#59}::_FUN()
+0012c0c4 00000034 t AreaTable_Init()::{lambda()#85}::_FUN()
+0012c0f8 00000034 t AreaTable_Init()::{lambda()#97}::_FUN()
+0012c12c 00000034 t AreaTable_Init()::{lambda()#105}::_FUN()
+0012c160 00000034 t AreaTable_Init()::{lambda()#144}::_FUN()
+0012c194 00000034 t AreaTable_Init()::{lambda()#179}::_FUN()
+0012c1c8 00000034 t AreaTable_Init()::{lambda()#195}::_FUN()
+0012c1fc 00000034 t AreaTable_Init()::{lambda()#201}::_FUN()
+0012c230 00000034 t AreaTable_Init()::{lambda()#216}::_FUN()
+0012c264 00000034 t AreaTable_Init()::{lambda()#244}::_FUN()
+0012c298 00000034 t AreaTable_Init()::{lambda()#300}::_FUN()
+0012c2cc 00000034 t AreaTable_Init()::{lambda()#336}::_FUN()
+0012c300 00000034 t AreaTable_Init()::{lambda()#356}::_FUN()
+0012c334 00000034 t AreaTable_Init()::{lambda()#369}::_FUN()
+0012c368 00000034 t AreaTable_Init()::{lambda()#371}::_FUN()
+0012c39c 00000034 t AreaTable_Init()::{lambda()#403}::_FUN()
+0012c3d0 00000034 t AreaTable_Init()::{lambda()#585}::_FUN()
+0012c404 00000034 t AreaTable_Init()::{lambda()#586}::_FUN()
+0012c438 00000034 t AreaTable_Init()::{lambda()#592}::_FUN()
+0012c46c 00000034 t AreaTable_Init()::{lambda()#605}::_FUN()
+0012c4a0 00000034 t AreaTable_Init()::{lambda()#613}::_FUN()
+0012c4d4 00000034 t AreaTable_Init()::{lambda()#614}::_FUN()
+0012c508 00000048 t AreaTable_Init()::{lambda()#650}::_FUN()
+0012c550 00000070 t AreaTable_Init()::{lambda()#648}::_FUN()
+0012c5c0 0000005c t AreaTable_Init()::{lambda()#639}::_FUN()
+0012c61c 00000050 t AreaTable_Init()::{lambda()#573}::_FUN()
+0012c66c 0000005c t AreaTable_Init()::{lambda()#541}::_FUN()
+0012c6c8 00000048 t AreaTable_Init()::{lambda()#539}::_FUN()
+0012c710 0000005c t AreaTable_Init()::{lambda()#538}::_FUN()
+0012c76c 00000048 t AreaTable_Init()::{lambda()#523}::_FUN()
+0012c7b4 00000028 t AreaTable_Init()::{lambda()#516}::_FUN()
+0012c7dc 0000005c t AreaTable_Init()::{lambda()#502}::_FUN()
+0012c838 00000028 t AreaTable_Init()::{lambda()#500}::_FUN()
+0012c860 0000005c t AreaTable_Init()::{lambda()#494}::_FUN()
+0012c8bc 00000064 t AreaTable_Init()::{lambda()#493}::_FUN()
+0012c920 0000003c t AreaTable_Init()::{lambda()#492}::_FUN()
+0012c95c 00000050 t AreaTable_Init()::{lambda()#490}::_FUN()
+0012c9ac 00000048 t AreaTable_Init()::{lambda()#486}::_FUN()
+0012c9f4 00000084 t AreaTable_Init()::{lambda()#484}::_FUN()
+0012ca78 00000098 t AreaTable_Init()::{lambda()#483}::_FUN()
+0012cb10 00000048 t AreaTable_Init()::{lambda()#476}::_FUN()
+0012cb58 00000048 t AreaTable_Init()::{lambda()#473}::_FUN()
+0012cba0 00000048 t AreaTable_Init()::{lambda()#472}::_FUN()
+0012cbe8 00000048 t AreaTable_Init()::{lambda()#462}::_FUN()
+0012cc30 00000060 t AreaTable_Init()::{lambda()#459}::_FUN()
+0012cc90 00000048 t AreaTable_Init()::{lambda()#453}::_FUN()
+0012ccd8 00000028 t AreaTable_Init()::{lambda()#452}::_FUN()
+0012cd00 0000005c t AreaTable_Init()::{lambda()#437}::_FUN()
+0012cd5c 00000070 t AreaTable_Init()::{lambda()#436}::_FUN()
+0012cdcc 0000002c t AreaTable_Init()::{lambda()#422}::_FUN()
+0012cdf8 00000048 t AreaTable_Init()::{lambda()#414}::_FUN()
+0012ce40 00000048 t AreaTable_Init()::{lambda()#413}::_FUN()
+0012ce88 00000048 t AreaTable_Init()::{lambda()#409}::_FUN()
+0012ced0 00000048 t AreaTable_Init()::{lambda()#396}::_FUN()
+0012cf18 00000078 t AreaTable_Init()::{lambda()#381}::_FUN()
+0012cf90 00000048 t AreaTable_Init()::{lambda()#370}::_FUN()
+0012cfd8 00000040 t AreaTable_Init()::{lambda()#343}::_FUN()
+0012d018 000000a0 t AreaTable_Init()::{lambda()#332}::_FUN()
+0012d0b8 00000064 t AreaTable_Init()::{lambda()#331}::_FUN()
+0012d11c 00000048 t AreaTable_Init()::{lambda()#312}::_FUN()
+0012d164 00000048 t AreaTable_Init()::{lambda()#306}::_FUN()
+0012d1ac 00000048 t AreaTable_Init()::{lambda()#295}::_FUN()
+0012d1f4 0000004c t AreaTable_Init()::{lambda()#283}::_FUN()
+0012d240 00000028 t AreaTable_Init()::{lambda()#280}::_FUN()
+0012d268 00000040 t AreaTable_Init()::{lambda()#279}::_FUN()
+0012d2a8 00000040 t AreaTable_Init()::{lambda()#256}::_FUN()
+0012d2e8 00000048 t AreaTable_Init()::{lambda()#239}::_FUN()
+0012d330 0000005c t AreaTable_Init()::{lambda()#235}::_FUN()
+0012d38c 0000005c t AreaTable_Init()::{lambda()#226}::_FUN()
+0012d3e8 00000024 t AreaTable_Init()::{lambda()#215}::_FUN()
+0012d40c 00000040 t AreaTable_Init()::{lambda()#206}::_FUN()
+0012d44c 00000048 t AreaTable_Init()::{lambda()#189}::_FUN()
+0012d494 0000005c t AreaTable_Init()::{lambda()#187}::_FUN()
+0012d4f0 00000048 t AreaTable_Init()::{lambda()#184}::_FUN()
+0012d538 0000004c t AreaTable_Init()::{lambda()#180}::_FUN()
+0012d584 00000050 t AreaTable_Init()::{lambda()#171}::_FUN()
+0012d5d4 00000024 t AreaTable_Init()::{lambda()#157}::_FUN()
+0012d5f8 0000004c t AreaTable_Init()::{lambda()#151}::_FUN()
+0012d644 00000048 t AreaTable_Init()::{lambda()#72}::_FUN()
+0012d68c 0000005c t AreaTable_Init()::{lambda()#34}::_FUN()
+0012d6e8 00000048 t AreaTable_Init()::{lambda()#9}::_FUN()
+0012d730 0000010c t std::vector<bool (*)(), std::allocator<bool (*)()> >::operator=(std::vector<bool (*)(), std::allocator<bool (*)()> > const&) [clone .isra.0]
+0012d83c 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+0012d8c8 00000008 t AreaTable_Init()::{lambda()#2}::_FUN()
+0012d8d0 00000008 t AreaTable_Init()::{lambda()#4}::_FUN()
+0012d8d8 00000008 t AreaTable_Init()::{lambda()#6}::_FUN()
+0012d8e0 00000008 t AreaTable_Init()::{lambda()#7}::_FUN()
+0012d8e8 00000008 t AreaTable_Init()::{lambda()#8}::_FUN()
+0012d8f0 00000008 t AreaTable_Init()::{lambda()#10}::_FUN()
+0012d8f8 00000008 t AreaTable_Init()::{lambda()#11}::_FUN()
+0012d900 00000008 t AreaTable_Init()::{lambda()#12}::_FUN()
+0012d908 00000008 t AreaTable_Init()::{lambda()#13}::_FUN()
+0012d910 00000008 t AreaTable_Init()::{lambda()#14}::_FUN()
+0012d918 00000008 t AreaTable_Init()::{lambda()#15}::_FUN()
+0012d920 00000008 t AreaTable_Init()::{lambda()#16}::_FUN()
+0012d928 00000008 t AreaTable_Init()::{lambda()#18}::_FUN()
+0012d930 00000008 t AreaTable_Init()::{lambda()#19}::_FUN()
+0012d938 00000008 t AreaTable_Init()::{lambda()#20}::_FUN()
+0012d940 00000008 t AreaTable_Init()::{lambda()#21}::_FUN()
+0012d948 00000008 t AreaTable_Init()::{lambda()#22}::_FUN()
+0012d950 00000008 t AreaTable_Init()::{lambda()#24}::_FUN()
+0012d958 00000008 t AreaTable_Init()::{lambda()#25}::_FUN()
+0012d960 00000008 t AreaTable_Init()::{lambda()#26}::_FUN()
+0012d968 00000008 t AreaTable_Init()::{lambda()#27}::_FUN()
+0012d970 00000008 t AreaTable_Init()::{lambda()#28}::_FUN()
+0012d978 00000008 t AreaTable_Init()::{lambda()#29}::_FUN()
+0012d980 00000008 t AreaTable_Init()::{lambda()#30}::_FUN()
+0012d988 00000008 t AreaTable_Init()::{lambda()#31}::_FUN()
+0012d990 00000008 t AreaTable_Init()::{lambda()#33}::_FUN()
+0012d998 00000008 t AreaTable_Init()::{lambda()#35}::_FUN()
+0012d9a0 00000008 t AreaTable_Init()::{lambda()#36}::_FUN()
+0012d9a8 00000008 t AreaTable_Init()::{lambda()#37}::_FUN()
+0012d9b0 00000008 t AreaTable_Init()::{lambda()#38}::_FUN()
+0012d9b8 00000008 t AreaTable_Init()::{lambda()#39}::_FUN()
+0012d9c0 00000008 t AreaTable_Init()::{lambda()#44}::_FUN()
+0012d9c8 00000008 t AreaTable_Init()::{lambda()#45}::_FUN()
+0012d9d0 00000008 t AreaTable_Init()::{lambda()#46}::_FUN()
+0012d9d8 00000008 t AreaTable_Init()::{lambda()#47}::_FUN()
+0012d9e0 00000008 t AreaTable_Init()::{lambda()#48}::_FUN()
+0012d9e8 00000008 t AreaTable_Init()::{lambda()#49}::_FUN()
+0012d9f0 00000008 t AreaTable_Init()::{lambda()#50}::_FUN()
+0012d9f8 00000008 t AreaTable_Init()::{lambda()#51}::_FUN()
+0012da00 00000008 t AreaTable_Init()::{lambda()#52}::_FUN()
+0012da08 00000008 t AreaTable_Init()::{lambda()#53}::_FUN()
+0012da10 00000008 t AreaTable_Init()::{lambda()#54}::_FUN()
+0012da18 00000008 t AreaTable_Init()::{lambda()#55}::_FUN()
+0012da20 00000008 t AreaTable_Init()::{lambda()#56}::_FUN()
+0012da28 00000008 t AreaTable_Init()::{lambda()#57}::_FUN()
+0012da30 00000008 t AreaTable_Init()::{lambda()#58}::_FUN()
+0012da38 00000008 t AreaTable_Init()::{lambda()#61}::_FUN()
+0012da40 00000008 t AreaTable_Init()::{lambda()#62}::_FUN()
+0012da48 00000008 t AreaTable_Init()::{lambda()#63}::_FUN()
+0012da50 00000008 t AreaTable_Init()::{lambda()#64}::_FUN()
+0012da58 00000008 t AreaTable_Init()::{lambda()#65}::_FUN()
+0012da60 00000008 t AreaTable_Init()::{lambda()#66}::_FUN()
+0012da68 00000008 t AreaTable_Init()::{lambda()#67}::_FUN()
+0012da70 00000008 t AreaTable_Init()::{lambda()#68}::_FUN()
+0012da78 00000008 t AreaTable_Init()::{lambda()#69}::_FUN()
+0012da80 00000008 t AreaTable_Init()::{lambda()#70}::_FUN()
+0012da88 00000008 t AreaTable_Init()::{lambda()#71}::_FUN()
+0012da90 00000008 t AreaTable_Init()::{lambda()#73}::_FUN()
+0012da98 00000008 t AreaTable_Init()::{lambda()#74}::_FUN()
+0012daa0 00000008 t AreaTable_Init()::{lambda()#76}::_FUN()
+0012daa8 00000008 t AreaTable_Init()::{lambda()#77}::_FUN()
+0012dab0 00000008 t AreaTable_Init()::{lambda()#79}::_FUN()
+0012dab8 00000008 t AreaTable_Init()::{lambda()#84}::_FUN()
+0012dac0 00000008 t AreaTable_Init()::{lambda()#86}::_FUN()
+0012dac8 00000008 t AreaTable_Init()::{lambda()#87}::_FUN()
+0012dad0 00000008 t AreaTable_Init()::{lambda()#88}::_FUN()
+0012dad8 00000008 t AreaTable_Init()::{lambda()#89}::_FUN()
+0012dae0 00000008 t AreaTable_Init()::{lambda()#90}::_FUN()
+0012dae8 00000008 t AreaTable_Init()::{lambda()#91}::_FUN()
+0012daf0 00000008 t AreaTable_Init()::{lambda()#92}::_FUN()
+0012daf8 00000008 t AreaTable_Init()::{lambda()#94}::_FUN()
+0012db00 00000008 t AreaTable_Init()::{lambda()#95}::_FUN()
+0012db08 00000008 t AreaTable_Init()::{lambda()#96}::_FUN()
+0012db10 00000008 t AreaTable_Init()::{lambda()#98}::_FUN()
+0012db18 00000008 t AreaTable_Init()::{lambda()#100}::_FUN()
+0012db20 00000008 t AreaTable_Init()::{lambda()#102}::_FUN()
+0012db28 00000008 t AreaTable_Init()::{lambda()#104}::_FUN()
+0012db30 00000008 t AreaTable_Init()::{lambda()#106}::_FUN()
+0012db38 00000008 t AreaTable_Init()::{lambda()#107}::_FUN()
+0012db40 00000008 t AreaTable_Init()::{lambda()#109}::_FUN()
+0012db48 00000008 t AreaTable_Init()::{lambda()#110}::_FUN()
+0012db50 00000008 t AreaTable_Init()::{lambda()#111}::_FUN()
+0012db58 00000008 t AreaTable_Init()::{lambda()#112}::_FUN()
+0012db60 00000008 t AreaTable_Init()::{lambda()#113}::_FUN()
+0012db68 00000008 t AreaTable_Init()::{lambda()#114}::_FUN()
+0012db70 00000008 t AreaTable_Init()::{lambda()#115}::_FUN()
+0012db78 00000008 t AreaTable_Init()::{lambda()#116}::_FUN()
+0012db80 00000008 t AreaTable_Init()::{lambda()#117}::_FUN()
+0012db88 00000008 t AreaTable_Init()::{lambda()#118}::_FUN()
+0012db90 00000008 t AreaTable_Init()::{lambda()#119}::_FUN()
+0012db98 00000008 t AreaTable_Init()::{lambda()#120}::_FUN()
+0012dba0 00000008 t AreaTable_Init()::{lambda()#121}::_FUN()
+0012dba8 00000008 t AreaTable_Init()::{lambda()#122}::_FUN()
+0012dbb0 00000008 t AreaTable_Init()::{lambda()#123}::_FUN()
+0012dbb8 00000008 t AreaTable_Init()::{lambda()#124}::_FUN()
+0012dbc0 00000008 t AreaTable_Init()::{lambda()#130}::_FUN()
+0012dbc8 00000008 t AreaTable_Init()::{lambda()#131}::_FUN()
+0012dbd0 00000008 t AreaTable_Init()::{lambda()#132}::_FUN()
+0012dbd8 00000008 t AreaTable_Init()::{lambda()#133}::_FUN()
+0012dbe0 00000008 t AreaTable_Init()::{lambda()#134}::_FUN()
+0012dbe8 00000008 t AreaTable_Init()::{lambda()#135}::_FUN()
+0012dbf0 00000008 t AreaTable_Init()::{lambda()#136}::_FUN()
+0012dbf8 00000008 t AreaTable_Init()::{lambda()#138}::_FUN()
+0012dc00 00000008 t AreaTable_Init()::{lambda()#139}::_FUN()
+0012dc08 00000008 t AreaTable_Init()::{lambda()#142}::_FUN()
+0012dc10 00000008 t AreaTable_Init()::{lambda()#148}::_FUN()
+0012dc18 00000008 t AreaTable_Init()::{lambda()#152}::_FUN()
+0012dc20 00000008 t AreaTable_Init()::{lambda()#153}::_FUN()
+0012dc28 00000008 t AreaTable_Init()::{lambda()#158}::_FUN()
+0012dc30 00000008 t AreaTable_Init()::{lambda()#161}::_FUN()
+0012dc38 00000008 t AreaTable_Init()::{lambda()#162}::_FUN()
+0012dc40 00000008 t AreaTable_Init()::{lambda()#165}::_FUN()
+0012dc48 00000008 t AreaTable_Init()::{lambda()#166}::_FUN()
+0012dc50 00000008 t AreaTable_Init()::{lambda()#168}::_FUN()
+0012dc58 00000008 t AreaTable_Init()::{lambda()#169}::_FUN()
+0012dc60 00000008 t AreaTable_Init()::{lambda()#172}::_FUN()
+0012dc68 00000008 t AreaTable_Init()::{lambda()#173}::_FUN()
+0012dc70 00000008 t AreaTable_Init()::{lambda()#174}::_FUN()
+0012dc78 00000008 t AreaTable_Init()::{lambda()#175}::_FUN()
+0012dc80 00000008 t AreaTable_Init()::{lambda()#178}::_FUN()
+0012dc88 00000008 t AreaTable_Init()::{lambda()#181}::_FUN()
+0012dc90 00000008 t AreaTable_Init()::{lambda()#182}::_FUN()
+0012dc98 00000008 t AreaTable_Init()::{lambda()#185}::_FUN()
+0012dca0 00000008 t AreaTable_Init()::{lambda()#188}::_FUN()
+0012dca8 00000008 t AreaTable_Init()::{lambda()#190}::_FUN()
+0012dcb0 00000008 t AreaTable_Init()::{lambda()#192}::_FUN()
+0012dcb8 00000008 t AreaTable_Init()::{lambda()#193}::_FUN()
+0012dcc0 00000008 t AreaTable_Init()::{lambda()#196}::_FUN()
+0012dcc8 00000008 t AreaTable_Init()::{lambda()#199}::_FUN()
+0012dcd0 00000008 t AreaTable_Init()::{lambda()#200}::_FUN()
+0012dcd8 00000008 t AreaTable_Init()::{lambda()#202}::_FUN()
+0012dce0 00000008 t AreaTable_Init()::{lambda()#204}::_FUN()
+0012dce8 00000008 t AreaTable_Init()::{lambda()#205}::_FUN()
+0012dcf0 00000008 t AreaTable_Init()::{lambda()#208}::_FUN()
+0012dcf8 00000008 t AreaTable_Init()::{lambda()#209}::_FUN()
+0012dd00 00000008 t AreaTable_Init()::{lambda()#210}::_FUN()
+0012dd08 00000008 t AreaTable_Init()::{lambda()#211}::_FUN()
+0012dd10 00000008 t AreaTable_Init()::{lambda()#212}::_FUN()
+0012dd18 00000008 t AreaTable_Init()::{lambda()#214}::_FUN()
+0012dd20 00000008 t AreaTable_Init()::{lambda()#217}::_FUN()
+0012dd28 00000008 t AreaTable_Init()::{lambda()#218}::_FUN()
+0012dd30 00000008 t AreaTable_Init()::{lambda()#219}::_FUN()
+0012dd38 00000008 t AreaTable_Init()::{lambda()#220}::_FUN()
+0012dd40 00000008 t AreaTable_Init()::{lambda()#222}::_FUN()
+0012dd48 00000008 t AreaTable_Init()::{lambda()#223}::_FUN()
+0012dd50 00000008 t AreaTable_Init()::{lambda()#224}::_FUN()
+0012dd58 00000008 t AreaTable_Init()::{lambda()#228}::_FUN()
+0012dd60 00000008 t AreaTable_Init()::{lambda()#229}::_FUN()
+0012dd68 00000008 t AreaTable_Init()::{lambda()#230}::_FUN()
+0012dd70 00000008 t AreaTable_Init()::{lambda()#231}::_FUN()
+0012dd78 00000008 t AreaTable_Init()::{lambda()#234}::_FUN()
+0012dd80 00000008 t AreaTable_Init()::{lambda()#236}::_FUN()
+0012dd88 00000008 t AreaTable_Init()::{lambda()#238}::_FUN()
+0012dd90 00000008 t AreaTable_Init()::{lambda()#241}::_FUN()
+0012dd98 00000008 t AreaTable_Init()::{lambda()#251}::_FUN()
+0012dda0 00000008 t AreaTable_Init()::{lambda()#258}::_FUN()
+0012dda8 00000008 t AreaTable_Init()::{lambda()#259}::_FUN()
+0012ddb0 00000008 t AreaTable_Init()::{lambda()#260}::_FUN()
+0012ddb8 00000008 t AreaTable_Init()::{lambda()#261}::_FUN()
+0012ddc0 00000008 t AreaTable_Init()::{lambda()#263}::_FUN()
+0012ddc8 00000008 t AreaTable_Init()::{lambda()#268}::_FUN()
+0012ddd0 00000008 t AreaTable_Init()::{lambda()#269}::_FUN()
+0012ddd8 00000008 t AreaTable_Init()::{lambda()#270}::_FUN()
+0012dde0 00000008 t AreaTable_Init()::{lambda()#271}::_FUN()
+0012dde8 00000008 t AreaTable_Init()::{lambda()#272}::_FUN()
+0012ddf0 00000008 t AreaTable_Init()::{lambda()#273}::_FUN()
+0012ddf8 00000008 t AreaTable_Init()::{lambda()#274}::_FUN()
+0012de00 00000008 t AreaTable_Init()::{lambda()#275}::_FUN()
+0012de08 00000008 t AreaTable_Init()::{lambda()#282}::_FUN()
+0012de10 00000008 t AreaTable_Init()::{lambda()#284}::_FUN()
+0012de18 00000008 t AreaTable_Init()::{lambda()#289}::_FUN()
+0012de20 00000008 t AreaTable_Init()::{lambda()#290}::_FUN()
+0012de28 00000008 t AreaTable_Init()::{lambda()#291}::_FUN()
+0012de30 00000008 t AreaTable_Init()::{lambda()#292}::_FUN()
+0012de38 00000008 t AreaTable_Init()::{lambda()#294}::_FUN()
+0012de40 00000008 t AreaTable_Init()::{lambda()#297}::_FUN()
+0012de48 00000008 t AreaTable_Init()::{lambda()#298}::_FUN()
+0012de50 00000008 t AreaTable_Init()::{lambda()#299}::_FUN()
+0012de58 00000008 t AreaTable_Init()::{lambda()#301}::_FUN()
+0012de60 00000008 t AreaTable_Init()::{lambda()#302}::_FUN()
+0012de68 00000008 t AreaTable_Init()::{lambda()#303}::_FUN()
+0012de70 00000008 t AreaTable_Init()::{lambda()#304}::_FUN()
+0012de78 00000008 t AreaTable_Init()::{lambda()#305}::_FUN()
+0012de80 00000008 t AreaTable_Init()::{lambda()#307}::_FUN()
+0012de88 00000008 t AreaTable_Init()::{lambda()#309}::_FUN()
+0012de90 00000008 t AreaTable_Init()::{lambda()#310}::_FUN()
+0012de98 00000008 t AreaTable_Init()::{lambda()#311}::_FUN()
+0012dea0 00000008 t AreaTable_Init()::{lambda()#314}::_FUN()
+0012dea8 00000008 t AreaTable_Init()::{lambda()#315}::_FUN()
+0012deb0 00000008 t AreaTable_Init()::{lambda()#316}::_FUN()
+0012deb8 00000008 t AreaTable_Init()::{lambda()#317}::_FUN()
+0012dec0 00000008 t AreaTable_Init()::{lambda()#319}::_FUN()
+0012dec8 00000008 t AreaTable_Init()::{lambda()#320}::_FUN()
+0012ded0 00000008 t AreaTable_Init()::{lambda()#322}::_FUN()
+0012ded8 00000008 t AreaTable_Init()::{lambda()#323}::_FUN()
+0012dee0 00000008 t AreaTable_Init()::{lambda()#325}::_FUN()
+0012dee8 00000008 t AreaTable_Init()::{lambda()#326}::_FUN()
+0012def0 00000008 t AreaTable_Init()::{lambda()#327}::_FUN()
+0012def8 00000008 t AreaTable_Init()::{lambda()#328}::_FUN()
+0012df00 00000008 t AreaTable_Init()::{lambda()#329}::_FUN()
+0012df08 00000008 t AreaTable_Init()::{lambda()#330}::_FUN()
+0012df10 00000008 t AreaTable_Init()::{lambda()#337}::_FUN()
+0012df18 00000008 t AreaTable_Init()::{lambda()#338}::_FUN()
+0012df20 00000008 t AreaTable_Init()::{lambda()#340}::_FUN()
+0012df28 00000008 t AreaTable_Init()::{lambda()#342}::_FUN()
+0012df30 00000008 t AreaTable_Init()::{lambda()#344}::_FUN()
+0012df38 00000008 t AreaTable_Init()::{lambda()#345}::_FUN()
+0012df40 00000008 t AreaTable_Init()::{lambda()#346}::_FUN()
+0012df48 00000008 t AreaTable_Init()::{lambda()#349}::_FUN()
+0012df50 00000008 t AreaTable_Init()::{lambda()#352}::_FUN()
+0012df58 00000008 t AreaTable_Init()::{lambda()#357}::_FUN()
+0012df60 00000008 t AreaTable_Init()::{lambda()#359}::_FUN()
+0012df68 00000008 t AreaTable_Init()::{lambda()#360}::_FUN()
+0012df70 00000008 t AreaTable_Init()::{lambda()#361}::_FUN()
+0012df78 00000008 t AreaTable_Init()::{lambda()#362}::_FUN()
+0012df80 00000008 t AreaTable_Init()::{lambda()#363}::_FUN()
+0012df88 00000008 t AreaTable_Init()::{lambda()#364}::_FUN()
+0012df90 00000008 t AreaTable_Init()::{lambda()#365}::_FUN()
+0012df98 00000008 t AreaTable_Init()::{lambda()#366}::_FUN()
+0012dfa0 00000008 t AreaTable_Init()::{lambda()#368}::_FUN()
+0012dfa8 00000008 t AreaTable_Init()::{lambda()#373}::_FUN()
+0012dfb0 00000008 t AreaTable_Init()::{lambda()#375}::_FUN()
+0012dfb8 00000008 t AreaTable_Init()::{lambda()#376}::_FUN()
+0012dfc0 00000008 t AreaTable_Init()::{lambda()#377}::_FUN()
+0012dfc8 00000008 t AreaTable_Init()::{lambda()#378}::_FUN()
+0012dfd0 00000008 t AreaTable_Init()::{lambda()#382}::_FUN()
+0012dfd8 00000008 t AreaTable_Init()::{lambda()#385}::_FUN()
+0012dfe0 00000008 t AreaTable_Init()::{lambda()#387}::_FUN()
+0012dfe8 00000008 t AreaTable_Init()::{lambda()#388}::_FUN()
+0012dff0 00000008 t AreaTable_Init()::{lambda()#389}::_FUN()
+0012dff8 00000008 t AreaTable_Init()::{lambda()#390}::_FUN()
+0012e000 00000008 t AreaTable_Init()::{lambda()#393}::_FUN()
+0012e008 00000008 t AreaTable_Init()::{lambda()#394}::_FUN()
+0012e010 00000008 t AreaTable_Init()::{lambda()#395}::_FUN()
+0012e018 00000008 t AreaTable_Init()::{lambda()#397}::_FUN()
+0012e020 00000008 t AreaTable_Init()::{lambda()#398}::_FUN()
+0012e028 00000008 t AreaTable_Init()::{lambda()#399}::_FUN()
+0012e030 00000008 t AreaTable_Init()::{lambda()#400}::_FUN()
+0012e038 00000008 t AreaTable_Init()::{lambda()#401}::_FUN()
+0012e040 00000008 t AreaTable_Init()::{lambda()#402}::_FUN()
+0012e048 00000008 t AreaTable_Init()::{lambda()#406}::_FUN()
+0012e050 00000008 t AreaTable_Init()::{lambda()#408}::_FUN()
+0012e058 00000008 t AreaTable_Init()::{lambda()#415}::_FUN()
+0012e060 00000008 t AreaTable_Init()::{lambda()#419}::_FUN()
+0012e068 00000008 t AreaTable_Init()::{lambda()#424}::_FUN()
+0012e070 00000008 t AreaTable_Init()::{lambda()#426}::_FUN()
+0012e078 00000008 t AreaTable_Init()::{lambda()#427}::_FUN()
+0012e080 00000008 t AreaTable_Init()::{lambda()#428}::_FUN()
+0012e088 00000008 t AreaTable_Init()::{lambda()#429}::_FUN()
+0012e090 00000008 t AreaTable_Init()::{lambda()#430}::_FUN()
+0012e098 00000008 t AreaTable_Init()::{lambda()#431}::_FUN()
+0012e0a0 00000008 t AreaTable_Init()::{lambda()#432}::_FUN()
+0012e0a8 00000008 t AreaTable_Init()::{lambda()#433}::_FUN()
+0012e0b0 00000008 t AreaTable_Init()::{lambda()#434}::_FUN()
+0012e0b8 00000008 t AreaTable_Init()::{lambda()#435}::_FUN()
+0012e0c0 00000008 t AreaTable_Init()::{lambda()#438}::_FUN()
+0012e0c8 00000008 t AreaTable_Init()::{lambda()#440}::_FUN()
+0012e0d0 00000008 t AreaTable_Init()::{lambda()#443}::_FUN()
+0012e0d8 00000008 t AreaTable_Init()::{lambda()#456}::_FUN()
+0012e0e0 00000008 t AreaTable_Init()::{lambda()#460}::_FUN()
+0012e0e8 00000008 t AreaTable_Init()::{lambda()#464}::_FUN()
+0012e0f0 00000008 t AreaTable_Init()::{lambda()#466}::_FUN()
+0012e0f8 00000008 t AreaTable_Init()::{lambda()#467}::_FUN()
+0012e100 00000008 t AreaTable_Init()::{lambda()#468}::_FUN()
+0012e108 00000008 t AreaTable_Init()::{lambda()#469}::_FUN()
+0012e110 00000008 t AreaTable_Init()::{lambda()#470}::_FUN()
+0012e118 00000008 t AreaTable_Init()::{lambda()#474}::_FUN()
+0012e120 00000008 t AreaTable_Init()::{lambda()#475}::_FUN()
+0012e128 00000008 t AreaTable_Init()::{lambda()#478}::_FUN()
+0012e130 00000008 t AreaTable_Init()::{lambda()#485}::_FUN()
+0012e138 00000008 t AreaTable_Init()::{lambda()#487}::_FUN()
+0012e140 00000008 t AreaTable_Init()::{lambda()#489}::_FUN()
+0012e148 00000008 t AreaTable_Init()::{lambda()#491}::_FUN()
+0012e150 00000008 t AreaTable_Init()::{lambda()#495}::_FUN()
+0012e158 00000008 t AreaTable_Init()::{lambda()#497}::_FUN()
+0012e160 00000008 t AreaTable_Init()::{lambda()#501}::_FUN()
+0012e168 00000008 t AreaTable_Init()::{lambda()#503}::_FUN()
+0012e170 00000008 t AreaTable_Init()::{lambda()#507}::_FUN()
+0012e178 00000008 t AreaTable_Init()::{lambda()#509}::_FUN()
+0012e180 00000008 t AreaTable_Init()::{lambda()#510}::_FUN()
+0012e188 00000008 t AreaTable_Init()::{lambda()#511}::_FUN()
+0012e190 00000008 t AreaTable_Init()::{lambda()#512}::_FUN()
+0012e198 00000008 t AreaTable_Init()::{lambda()#517}::_FUN()
+0012e1a0 00000008 t AreaTable_Init()::{lambda()#519}::_FUN()
+0012e1a8 00000008 t AreaTable_Init()::{lambda()#521}::_FUN()
+0012e1b0 00000008 t AreaTable_Init()::{lambda()#524}::_FUN()
+0012e1b8 00000008 t AreaTable_Init()::{lambda()#526}::_FUN()
+0012e1c0 00000008 t AreaTable_Init()::{lambda()#527}::_FUN()
+0012e1c8 00000008 t AreaTable_Init()::{lambda()#529}::_FUN()
+0012e1d0 00000008 t AreaTable_Init()::{lambda()#530}::_FUN()
+0012e1d8 00000008 t AreaTable_Init()::{lambda()#531}::_FUN()
+0012e1e0 00000008 t AreaTable_Init()::{lambda()#532}::_FUN()
+0012e1e8 00000008 t AreaTable_Init()::{lambda()#535}::_FUN()
+0012e1f0 00000008 t AreaTable_Init()::{lambda()#537}::_FUN()
+0012e1f8 00000008 t AreaTable_Init()::{lambda()#554}::_FUN()
+0012e200 00000008 t AreaTable_Init()::{lambda()#555}::_FUN()
+0012e208 00000008 t AreaTable_Init()::{lambda()#556}::_FUN()
+0012e210 00000008 t AreaTable_Init()::{lambda()#559}::_FUN()
+0012e218 00000008 t AreaTable_Init()::{lambda()#560}::_FUN()
+0012e220 00000008 t AreaTable_Init()::{lambda()#567}::_FUN()
+0012e228 00000008 t AreaTable_Init()::{lambda()#569}::_FUN()
+0012e230 00000008 t AreaTable_Init()::{lambda()#579}::_FUN()
+0012e238 00000008 t AreaTable_Init()::{lambda()#584}::_FUN()
+0012e240 00000008 t AreaTable_Init()::{lambda()#589}::_FUN()
+0012e248 00000008 t AreaTable_Init()::{lambda()#591}::_FUN()
+0012e250 00000008 t AreaTable_Init()::{lambda()#594}::_FUN()
+0012e258 00000008 t AreaTable_Init()::{lambda()#595}::_FUN()
+0012e260 00000008 t AreaTable_Init()::{lambda()#596}::_FUN()
+0012e268 00000008 t AreaTable_Init()::{lambda()#600}::_FUN()
+0012e270 00000008 t AreaTable_Init()::{lambda()#604}::_FUN()
+0012e278 00000008 t AreaTable_Init()::{lambda()#607}::_FUN()
+0012e280 00000008 t AreaTable_Init()::{lambda()#609}::_FUN()
+0012e288 00000008 t AreaTable_Init()::{lambda()#612}::_FUN()
+0012e290 00000008 t AreaTable_Init()::{lambda()#616}::_FUN()
+0012e298 00000008 t AreaTable_Init()::{lambda()#618}::_FUN()
+0012e2a0 00000008 t AreaTable_Init()::{lambda()#621}::_FUN()
+0012e2a8 00000008 t AreaTable_Init()::{lambda()#624}::_FUN()
+0012e2b0 00000008 t AreaTable_Init()::{lambda()#625}::_FUN()
+0012e2b8 00000008 t AreaTable_Init()::{lambda()#629}::_FUN()
+0012e2c0 00000008 t AreaTable_Init()::{lambda()#633}::_FUN()
+0012e2c8 00000008 t AreaTable_Init()::{lambda()#634}::_FUN()
+0012e2d0 00000008 t AreaTable_Init()::{lambda()#636}::_FUN()
+0012e2d8 00000008 t AreaTable_Init()::{lambda()#637}::_FUN()
+0012e2e0 00000008 t AreaTable_Init()::{lambda()#638}::_FUN()
+0012e2e8 00000008 t AreaTable_Init()::{lambda()#640}::_FUN()
+0012e2f0 00000008 t AreaTable_Init()::{lambda()#642}::_FUN()
+0012e2f8 00000008 t AreaTable_Init()::{lambda()#643}::_FUN()
+0012e300 00000008 t AreaTable_Init()::{lambda()#645}::_FUN()
+0012e308 00000008 t AreaTable_Init()::{lambda()#647}::_FUN()
+0012e310 00000008 t AreaTable_Init()::{lambda()#649}::_FUN()
+0012e318 00000008 t AreaTable_Init()::{lambda()#655}::_FUN()
+0012e320 00000008 t AreaTable_Init()::{lambda()#656}::_FUN()
+0012e328 00000008 t AreaTable_Init()::{lambda()#657}::_FUN()
+0012e330 00000008 t AreaTable_Init()::{lambda()#659}::_FUN()
+0012e338 00000008 t AreaTable_Init()::{lambda()#660}::_FUN()
+0012e340 00000010 t AreaTable_Init()::{lambda()#658}::_FUN()
+0012e350 00000010 t AreaTable_Init()::{lambda()#597}::_FUN()
+0012e360 00000010 t AreaTable_Init()::{lambda()#603}::_FUN()
+0012e370 00000010 t AreaTable_Init()::{lambda()#598}::_FUN()
+0012e380 00000010 t AreaTable_Init()::{lambda()#599}::_FUN()
+0012e390 00000010 t AreaTable_Init()::{lambda()#646}::_FUN()
+0012e3a0 00000010 t AreaTable_Init()::{lambda()#641}::_FUN()
+0012e3b0 00000010 t AreaTable_Init()::{lambda()#661}::_FUN()
+0012e3c0 00000010 t AreaTable_Init()::{lambda()#264}::_FUN()
+0012e3d0 00000010 t AreaTable_Init()::{lambda()#170}::_FUN()
+0012e3e0 00000010 t AreaTable_Init()::{lambda()#154}::_FUN()
+0012e3f0 00000010 t AreaTable_Init()::{lambda()#159}::_FUN()
+0012e400 00000010 t AreaTable_Init()::{lambda()#163}::_FUN()
+0012e410 00000010 t AreaTable_Init()::{lambda()#197}::_FUN()
+0012e420 00000010 t AreaTable_Init()::{lambda()#198}::_FUN()
+0012e430 00000010 t AreaTable_Init()::{lambda()#183}::_FUN()
+0012e440 00000010 t AreaTable_Init()::{lambda()#143}::_FUN()
+0012e450 00000010 t AreaTable_Init()::{lambda()#140}::_FUN()
+0012e460 00000010 t AreaTable_Init()::{lambda()#141}::_FUN()
+0012e470 00000010 t AreaTable_Init()::{lambda()#145}::_FUN()
+0012e480 00000010 t AreaTable_Init()::{lambda()#146}::_FUN()
+0012e490 00000010 t AreaTable_Init()::{lambda()#150}::_FUN()
+0012e4a0 00000010 t AreaTable_Init()::{lambda()#155}::_FUN()
+0012e4b0 00000010 t AreaTable_Init()::{lambda()#156}::_FUN()
+0012e4c0 00000010 t AreaTable_Init()::{lambda()#82}::_FUN()
+0012e4d0 00000010 t AreaTable_Init()::{lambda()#288}::_FUN()
+0012e4e0 00000010 t AreaTable_Init()::{lambda()#286}::_FUN()
+0012e4f0 00000010 t AreaTable_Init()::{lambda()#287}::_FUN()
+0012e500 00000010 t AreaTable_Init()::{lambda()#276}::_FUN()
+0012e510 00000010 t AreaTable_Init()::{lambda()#281}::_FUN()
+0012e520 00000010 t AreaTable_Init()::{lambda()#351}::_FUN()
+0012e530 00000010 t AreaTable_Init()::{lambda()#347}::_FUN()
+0012e540 00000010 t AreaTable_Init()::{lambda()#348}::_FUN()
+0012e550 00000010 t AreaTable_Init()::{lambda()#354}::_FUN()
+0012e560 00000010 t AreaTable_Init()::{lambda()#355}::_FUN()
+0012e570 00000010 t AreaTable_Init()::{lambda()#339}::_FUN()
+0012e580 00000010 t AreaTable_Init()::{lambda()#232}::_FUN()
+0012e590 00000010 t AreaTable_Init()::{lambda()#233}::_FUN()
+0012e5a0 00000010 t AreaTable_Init()::{lambda()#252}::_FUN()
+0012e5b0 00000010 t AreaTable_Init()::{lambda()#253}::_FUN()
+0012e5c0 00000010 t AreaTable_Init()::{lambda()#254}::_FUN()
+0012e5d0 00000010 t AreaTable_Init()::{lambda()#250}::_FUN()
+0012e5e0 00000010 t AreaTable_Init()::{lambda()#247}::_FUN()
+0012e5f0 00000010 t AreaTable_Init()::{lambda()#249}::_FUN()
+0012e600 00000010 t AreaTable_Init()::{lambda()#257}::_FUN()
+0012e610 00000010 t AreaTable_Init()::{lambda()#262}::_FUN()
+0012e620 00000010 t AreaTable_Init()::{lambda()#265}::_FUN()
+0012e630 00000010 t AreaTable_Init()::{lambda()#266}::_FUN()
+0012e640 00000010 t AreaTable_Init()::{lambda()#267}::_FUN()
+0012e650 00000010 t AreaTable_Init()::{lambda()#411}::_FUN()
+0012e660 00000010 t AreaTable_Init()::{lambda()#412}::_FUN()
+0012e670 00000010 t AreaTable_Init()::{lambda()#410}::_FUN()
+0012e680 00000010 t AreaTable_Init()::{lambda()#444}::_FUN()
+0012e690 00000010 t AreaTable_Init()::{lambda()#445}::_FUN()
+0012e6a0 00000010 t AreaTable_Init()::{lambda()#446}::_FUN()
+0012e6b0 00000010 t AreaTable_Init()::{lambda()#451}::_FUN()
+0012e6c0 00000010 t AreaTable_Init()::{lambda()#367}::_FUN()
+0012e6d0 00000010 t AreaTable_Init()::{lambda()#374}::_FUN()
+0012e6e0 00000010 t AreaTable_Init()::{lambda()#372}::_FUN()
+0012e6f0 00000010 t AreaTable_Init()::{lambda()#404}::_FUN()
+0012e700 00000010 t AreaTable_Init()::{lambda()#405}::_FUN()
+0012e710 00000010 t AreaTable_Init()::{lambda()#383}::_FUN()
+0012e720 00000010 t AreaTable_Init()::{lambda()#384}::_FUN()
+0012e730 00000010 t AreaTable_Init()::{lambda()#481}::_FUN()
+0012e740 00000010 t AreaTable_Init()::{lambda()#421}::_FUN()
+0012e750 00000010 t AreaTable_Init()::{lambda()#498}::_FUN()
+0012e760 00000010 t AreaTable_Init()::{lambda()#457}::_FUN()
+0012e770 00000010 t AreaTable_Init()::{lambda()#458}::_FUN()
+0012e780 00000010 t AreaTable_Init()::{lambda()#441}::_FUN()
+0012e790 00000010 t AreaTable_Init()::{lambda()#454}::_FUN()
+0012e7a0 00000010 t AreaTable_Init()::{lambda()#632}::_FUN()
+0012e7b0 00000010 t AreaTable_Init()::{lambda()#635}::_FUN()
+0012e7c0 00000010 t AreaTable_Init()::{lambda()#630}::_FUN()
+0012e7d0 00000010 t AreaTable_Init()::{lambda()#631}::_FUN()
+0012e7e0 00000010 t AreaTable_Init()::{lambda()#610}::_FUN()
+0012e7f0 00000010 t AreaTable_Init()::{lambda()#611}::_FUN()
+0012e800 00000010 t AreaTable_Init()::{lambda()#617}::_FUN()
+0012e810 00000010 t AreaTable_Init()::{lambda()#619}::_FUN()
+0012e820 00000010 t AreaTable_Init()::{lambda()#522}::_FUN()
+0012e830 00000010 t AreaTable_Init()::{lambda()#525}::_FUN()
+0012e840 00000010 t AreaTable_Init()::{lambda()#542}::_FUN()
+0012e850 00000010 t AreaTable_Init()::{lambda()#504}::_FUN()
+0012e860 00000010 t AreaTable_Init()::{lambda()#506}::_FUN()
+0012e870 00000010 t AreaTable_Init()::{lambda()#508}::_FUN()
+0012e880 00000010 t AreaTable_Init()::{lambda()#515}::_FUN()
+0012e890 00000010 t AreaTable_Init()::{lambda()#514}::_FUN()
+0012e8a0 00000010 t AreaTable_Init()::{lambda()#543}::_FUN()
+0012e8b0 00000010 t AreaTable_Init()::{lambda()#544}::_FUN()
+0012e8c0 00000010 t AreaTable_Init()::{lambda()#545}::_FUN()
+0012e8d0 00000010 t AreaTable_Init()::{lambda()#547}::_FUN()
+0012e8e0 00000010 t AreaTable_Init()::{lambda()#548}::_FUN()
+0012e8f0 00000010 t AreaTable_Init()::{lambda()#549}::_FUN()
+0012e900 00000010 t AreaTable_Init()::{lambda()#550}::_FUN()
+0012e910 00000010 t AreaTable_Init()::{lambda()#551}::_FUN()
+0012e920 00000010 t AreaTable_Init()::{lambda()#588}::_FUN()
+0012e930 00000010 t AreaTable_Init()::{lambda()#590}::_FUN()
+0012e940 00000010 t AreaTable_Init()::{lambda()#583}::_FUN()
+0012e950 00000010 t AreaTable_Init()::{lambda()#587}::_FUN()
+0012e960 00000010 t AreaTable_Init()::{lambda()#552}::_FUN()
+0012e970 00000010 t AreaTable_Init()::{lambda()#553}::_FUN()
+0012e980 00000010 t AreaTable_Init()::{lambda()#570}::_FUN()
+0012e990 00000010 t AreaTable_Init()::{lambda()#562}::_FUN()
+0012e9a0 00000010 t AreaTable_Init()::{lambda()#563}::_FUN()
+0012e9b0 00000010 t AreaTable_Init()::{lambda()#564}::_FUN()
+0012e9c0 00000048 t AreaTable_Init()::{lambda()#479}::_FUN()
+0012ea08 00000048 t AreaTable_Init()::{lambda()#622}::_FUN()
+0012ea50 00000050 t AreaTable_Init()::{lambda()#296}::_FUN()
+0012eaa0 00000034 t AreaTable_Init()::{lambda()#380}::_FUN()
+0012ead4 00000034 t AreaTable_Init()::{lambda()#447}::_FUN()
+0012eb08 00000034 t AreaTable_Init()::{lambda()#450}::_FUN()
+0012eb3c 00000034 t AreaTable_Init()::{lambda()#221}::_FUN()
+0012eb70 00000034 t AreaTable_Init()::{lambda()#147}::_FUN()
+0012eba4 00000048 t AreaTable_Init()::{lambda()#477}::_FUN()
+0012ebec 00000048 t AreaTable_Init()::{lambda()#439}::_FUN()
+0012ec34 00000048 t AreaTable_Init()::{lambda()#499}::_FUN()
+0012ec7c 00000048 t AreaTable_Init()::{lambda()#540}::_FUN()
+0012ecc4 00000050 t AreaTable_Init()::{lambda()#293}::_FUN()
+0012ed14 00000040 t AreaTable_Init()::{lambda()#207}::_FUN()
+0012ed54 00000020 t AreaTable_Init()::{lambda()#568}::_FUN()
+0012ed74 00000020 t AreaTable_Init()::{lambda()#103}::_FUN()
+0012ed94 00000020 t AreaTable_Init()::{lambda()#449}::_FUN()
+0012edb4 00000020 t AreaTable_Init()::{lambda()#177}::_FUN()
+0012edd4 00000020 t AreaTable_Init()::{lambda()#243}::_FUN()
+0012edf4 00000020 t AreaTable_Init()::{lambda()#194}::_FUN()
+0012ee14 00000020 t AreaTable_Init()::{lambda()#353}::_FUN()
+0012ee34 00000010 t AreaTable_Init()::{lambda()#324}::_FUN()
+0012ee44 00000020 t AreaTable_Init()::{lambda()#578}::_FUN()
+0012ee64 00000020 t AreaTable_Init()::{lambda()#557}::_FUN()
+0012ee84 00000020 t AreaTable_Init()::{lambda()#575}::_FUN()
+0012eea4 00000020 t AreaTable_Init()::{lambda()#558}::_FUN()
+0012eec4 00000034 t AreaTable_Init()::{lambda()#601}::_FUN()
+0012eef8 00000034 t AreaTable_Init()::{lambda()#465}::_FUN()
+0012ef2c 00000034 t AreaTable_Init()::{lambda()#60}::_FUN()
+0012ef60 00000034 t AreaTable_Init()::{lambda()#593}::_FUN()
+0012ef94 00000034 t AreaTable_Init()::{lambda()#455}::_FUN()
+0012efc8 00000020 t AreaTable_Init()::{lambda()#571}::_FUN()
+0012efe8 00000020 t AreaTable_Init()::{lambda()#574}::_FUN()
+0012f008 00000020 t AreaTable_Init()::{lambda()#577}::_FUN()
+0012f028 00000020 t AreaTable_Init()::{lambda()#137}::_FUN()
+0012f048 00000020 t AreaTable_Init()::{lambda()#127}::_FUN()
+0012f068 00000020 t AreaTable_Init()::{lambda()#128}::_FUN()
+0012f088 00000020 t AreaTable_Init()::{lambda()#108}::_FUN()
+0012f0a8 00000020 t AreaTable_Init()::{lambda()#333}::_FUN()
+0012f0c8 00000020 t AreaTable_Init()::{lambda()#334}::_FUN()
+0012f0e8 00000020 t AreaTable_Init()::{lambda()#335}::_FUN()
+0012f108 00000010 t AreaTable_Init()::{lambda()#277}::_FUN()
+0012f118 00000010 t AreaTable_Init()::{lambda()#237}::_FUN()
+0012f128 00000010 t AreaTable_Init()::{lambda()#227}::_FUN()
+0012f138 00000010 t AreaTable_Init()::{lambda()#213}::_FUN()
+0012f148 00000010 t AreaTable_Init()::{lambda()#278}::_FUN()
+0012f158 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0]
+0012f1e4 00000048 t AreaTable_Init()::{lambda()#653}::_FUN()
+0012f22c 00000048 t AreaTable_Init()::{lambda()#654}::_FUN()
+0012f274 00000048 t AreaTable_Init()::{lambda()#651}::_FUN()
+0012f2bc 00000048 t AreaTable_Init()::{lambda()#652}::_FUN()
+0012f304 00000034 t AreaTable_Init()::{lambda()#245}::_FUN()
+0012f338 00000034 t AreaTable_Init()::{lambda()#246}::_FUN()
+0012f36c 00000034 t AreaTable_Init()::{lambda()#416}::_FUN()
+0012f3a0 00000034 t AreaTable_Init()::{lambda()#615}::_FUN()
+0012f3d4 00000034 t AreaTable_Init()::{lambda()#417}::_FUN()
+0012f408 0000008c t std::vector<bool (*)(), std::allocator<bool (*)()> >::vector(std::initializer_list<bool (*)()>, std::allocator<bool (*)()> const&) [clone .constprop.0] [clone .isra.0]
+0012f494 00000034 t AreaTable_Init()::{lambda()#620}::_FUN()
+0012f4c8 00000034 t AreaTable_Init()::{lambda()#520}::_FUN()
+0012f4fc 00000034 t AreaTable_Init()::{lambda()#623}::_FUN()
+0012f530 00000034 t AreaTable_Init()::{lambda()#386}::_FUN()
+0012f564 00000034 t AreaTable_Init()::{lambda()#488}::_FUN()
+0012f598 00000034 t AreaTable_Init()::{lambda()#534}::_FUN()
+0012f5cc 00000034 t AreaTable_Init()::{lambda()#518}::_FUN()
+0012f600 00000034 t AreaTable_Init()::{lambda()#533}::_FUN()
+0012f634 00000034 t AreaTable_Init()::{lambda()#392}::_FUN()
+0012f668 00000034 t AreaTable_Init()::{lambda()#391}::_FUN()
+0012f69c 00000034 t AreaTable_Init()::{lambda()#626}::_FUN()
+0012f6d0 00000034 t AreaTable_Init()::{lambda()#627}::_FUN()
+0012f704 0000011c t std::vector<EventAccess, std::allocator<EventAccess> >::vector(std::initializer_list<EventAccess>, std::allocator<EventAccess> const&) [clone .constprop.0] [clone .isra.0]
+0012f820 00000128 t std::vector<LocationAccess, std::allocator<LocationAccess> >::vector(std::initializer_list<LocationAccess>, std::allocator<LocationAccess> const&) [clone .constprop.0] [clone .isra.0]
+0012f948 00000168 t std::__cxx11::list<Entrance, std::allocator<Entrance> >::list(std::initializer_list<Entrance>, std::allocator<Entrance> const&) [clone .constprop.0] [clone .isra.0]
+0012fab0 000002ec t std::vector<LocationAccess, std::allocator<LocationAccess> >::operator=(std::vector<LocationAccess, std::allocator<LocationAccess> > const&) [clone .isra.0]
+0012fd9c 000002d0 t std::vector<EventAccess, std::allocator<EventAccess> >::operator=(std::vector<EventAccess, std::allocator<EventAccess> > const&) [clone .isra.0]
+0013006c 000000ac t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0] [clone .isra.0]
+00130118 000000dc T LocationAccess::CheckConditionAtDay(bool&, bool&) const
+001301f4 00000170 T LocationAccess::ConditionsMet() const
+00130364 00000178 T Area::Area(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, std::vector<EventAccess, std::allocator<EventAccess> >, std::vector<LocationAccess, std::allocator<LocationAccess> >, std::__cxx11::list<Entrance, std::allocator<Entrance> >)
+00130364 00000178 T Area::Area(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, std::vector<EventAccess, std::allocator<EventAccess> >, std::vector<LocationAccess, std::allocator<LocationAccess> >, std::__cxx11::list<Entrance, std::allocator<Entrance> >)
+001304dc 000005ac T Area::UpdateEvents()
+00130a88 00000094 T Areas::AccessReset()
+00130b1c 00000128 T Areas::ResetAllLocations()
+00130c44 00000034 T AreaTable(unsigned long)
+00130c78 00000028 W std::_Vector_base<bool (*)(), std::allocator<bool (*)()> >::~_Vector_base()
+00130c78 00000028 W std::_Vector_base<bool (*)(), std::allocator<bool (*)()> >::~_Vector_base()
+00130ca0 0000005c W std::vector<EventAccess, std::allocator<EventAccess> >::~vector()
+00130ca0 0000005c W std::vector<EventAccess, std::allocator<EventAccess> >::~vector()
+00130cfc 0000005c W std::vector<LocationAccess, std::allocator<LocationAccess> >::~vector()
+00130cfc 0000005c W std::vector<LocationAccess, std::allocator<LocationAccess> >::~vector()
+00130d58 0000014c W std::vector<bool (*)(), std::allocator<bool (*)()> >::_M_default_append(unsigned int)
+00130ea4 000000e0 W Entrance::Entrance(unsigned long, std::vector<bool (*)(), std::allocator<bool (*)()> >)
+00130ea4 000000e0 W Entrance::Entrance(unsigned long, std::vector<bool (*)(), std::allocator<bool (*)()> >)
+00130f84 00000070 W LocationAccess::LocationAccess(unsigned long, std::vector<bool (*)(), std::allocator<bool (*)()> >)
+00130f84 00000070 W LocationAccess::LocationAccess(unsigned long, std::vector<bool (*)(), std::allocator<bool (*)()> >)
+00130ff4 0000006c W EventAccess::EventAccess(bool*, std::vector<bool (*)(), std::allocator<bool (*)()> >)
+00130ff4 0000006c W EventAccess::EventAccess(bool*, std::vector<bool (*)(), std::allocator<bool (*)()> >)
+00131060 00000068 W std::__cxx11::_List_base<Entrance, std::allocator<Entrance> >::_M_clear()
+001310c8 000000f0 T Area::~Area()
+001310c8 000000f0 T Area::~Area()
+001311b8 00000284 t std::__cxx11::list<Entrance, std::allocator<Entrance> >::operator=(std::__cxx11::list<Entrance, std::allocator<Entrance> > const&) [clone .part.0]
+0013143c 0000005c t Area::operator=(Area const&) [clone .isra.0]
+00131498 0002c894 T AreaTable_Init()
+0015dd2c 0000007c t _GLOBAL__sub_I__ZNK14LocationAccess19CheckConditionAtDayERbS0_
+0015dda8 00000104 t _GLOBAL__sub_D__ZNK14LocationAccess19CheckConditionAtDayERbS0_
+0015deac 000002b0 t Logic::HasItem(unsigned long) [clone .part.0]
+0015e15c 0000007c t Logic::HasItem(unsigned long)
+0015e1d8 00000018 T Logic::CanPlay(bool)
+0015e1f0 00000108 T Logic::CanUse(unsigned long)
+0015e2f8 00000010 T Logic::SmallKeys(unsigned char, unsigned char)
+0015e308 00000ae8 T Logic::UpdateHelpers()
+0015edf0 00000400 T Logic::LogicReset()
+0015f1f0 00000184 T main
+0015f374 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+0015f400 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) [clone .isra.0]
+0015f48c 000000b0 T PrintTopScreen()
+0015f53c 000001a0 T MoveCursor(unsigned long)
+0015f6dc 000000dc T PrintMainMenu()
+0015f7b8 00000130 T PrintSubMenu()
+0015f8e8 000001a0 T PrintPresetsMenu()
+0015fa88 00000274 T PrintGenerateMenu()
+0015fcfc 00000080 T ClearDescription()
+0015fd7c 00000278 T UpdatePresetsMenu(unsigned long)
+0015fff4 00000048 T PrintOptionDescription()
+0016003c 00000284 T PrintOptionSubMenu()
+001602c0 00000568 T GenerateRandomizer()
+00160828 00000150 T GetInput[abi:cxx11](char const*)
+00160978 00000204 T UpdateCustomCosmeticColors(unsigned long)
+00160b7c 000000b8 T UpdateOptionSubMenu(unsigned long)
+00160c34 000002e0 T ModeChangeInit()
+00160f14 0000013c W void std::vector<Menu*, std::allocator<Menu*> >::_M_realloc_insert<Menu* const&>(__gnu_cxx::__normal_iterator<Menu**, std::vector<Menu*, std::allocator<Menu*> > >, Menu* const&)
+00161050 000006b8 T MenuUpdate(unsigned long)
+00161708 00000138 T MenuInit()
+00161840 00000028 t _GLOBAL__sub_I__Z14PrintTopScreenv
+00161868 0000007c t _GLOBAL__sub_D__Z14PrintTopScreenv
+001618e4 000001cc T CopyFile(unsigned long long, char const*, char const*)
+00161ab0 00000144 T WritePatch(unsigned long, long, char*, unsigned long&, unsigned long&, unsigned long&, char*)
+00161bf4 0000067c T WriteAllPatches()
+00162270 00000328 T Playthrough::Playthrough_Init(unsigned long)
+00162598 000003a4 T Playthrough::Playthrough_Repeat(int)
+0016293c 00000004 W std::_Sp_counted_ptr<decltype(nullptr), (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+00162940 0000000c W std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_M_destroy()
+0016294c 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+001629d8 00000170 t PresetPath(std::basic_string_view<char, std::char_traits<char> >, OptionCategory)
+00162b48 000003c0 W Option::SetSelectedIndexByString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+00162f08 0000016c T CreatePresetDirectories()
+00163078 000000d8 T DeletePreset(std::basic_string_view<char, std::char_traits<char> >, OptionCategory)
+00163150 00000298 W void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_realloc_insert<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+001633e8 00000598 T GetSettingsPresets[abi:cxx11]()
+00163980 00000040 t _GLOBAL__sub_I__Z23CreatePresetDirectoriesv
+001639c0 00000020 t _GLOBAL__sub_D__Z23CreatePresetDirectoriesv
+001639e0 0000027c T SavePreset(std::basic_string_view<char, std::char_traits<char> >, OptionCategory)
+00163c5c 00000028 T SaveSpecifiedPreset(std::basic_string_view<char, std::char_traits<char> >, OptionCategory)
+00163c84 0000002c T SaveCachedSettings()
+00163cb0 00000030 T SaveCachedCosmetics()
+00163ce0 0000062c T LoadPreset(std::basic_string_view<char, std::char_traits<char> >, OptionCategory)
+0016430c 0000037c T LoadCachedSettings()
+00164688 0000037c T LoadCachedCosmetics()
+00164a04 000000a4 T Random_Init(unsigned long)
+00164aa8 000001c8 W std::mersenne_twister_engine<unsigned long long, 64u, 312u, 156u, 31u, 13043109905998158313ull, 29u, 6148914691236517205ull, 17u, 8202884508482404352ull, 37u, 18444473444759240704ull, 43u, 6364136223846793005ull>::operator()()
+00164c70 0000011c T Random(int, int)
+00164d90 00000088 t _GLOBAL__sub_I__Z11Random_Initm
+00164e18 000000e4 t _GLOBAL__sub_I_logicGlitchless
+00164efc 00000020 t _GLOBAL__sub_D_logicGlitchless
+00164f1c 00000084 t std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >::vector(std::initializer_list<std::basic_string_view<char, std::char_traits<char> > >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > const&) [clone .constprop.0] [clone .isra.0]
+00164fa0 00000090 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .isra.0]
+00165030 00000064 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [clone .isra.0]
+00165094 0000022c t void std::vector<Menu*, std::allocator<Menu*> >::_M_range_insert<__gnu_cxx::__normal_iterator<Menu**, std::vector<Menu*, std::allocator<Menu*> > > >(__gnu_cxx::__normal_iterator<Menu**, std::vector<Menu*, std::allocator<Menu*> > >, __gnu_cxx::__normal_iterator<Menu**, std::vector<Menu*, std::allocator<Menu*> > >, __gnu_cxx::__normal_iterator<Menu**, std::vector<Menu*, std::allocator<Menu*> > >, std::forward_iterator_tag) [clone .isra.0]
+001652c0 000000b4 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, unsigned int, std::allocator<char> const&) [clone .isra.0]
+00165374 0000011c t std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::initializer_list<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&) [clone .constprop.0] [clone .isra.0]
+00165490 000000ac t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0] [clone .isra.0]
+0016553c 00000088 t Settings::IncludeAndHide(std::vector<unsigned long, std::allocator<unsigned long> >)
+001655c4 0000009c W Option::~Option()
+001655c4 0000009c W Option::~Option()
+00165660 00000150 W Option::U8(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >, OptionCategory, unsigned char, bool)
+001657b0 000000e8 W Menu::SubMenu(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::vector<Option*, std::allocator<Option*> >*, bool)
+00165898 000000e4 W Menu::Action(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned char)
+0016597c 000008bc T Settings::FillContext()
+00166238 000007a0 T Settings::SetDefaultSettings()
+001669d8 00000158 T Settings::CollapseCategory(Option, int, int)
+00166b30 00001960 T Settings::ForceChange(unsigned long, Option*)
+00168490 00000004 T Settings::RandomizeAllSettings(bool)
+00168494 00000004 T Settings::UpdateSettings()
+00168498 000000c4 T Settings::GetMenusRecursive(Menu*)
+0016855c 00000084 T Settings::GetAllMenus()
+001685e0 00000064 W std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+001685e0 00000064 W std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::~vector()
+00168644 00000028 W std::_Vector_base<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >::~_Vector_base()
+00168644 00000028 W std::_Vector_base<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >::~_Vector_base()
+0016866c 00000094 W std::vector<Option*, std::allocator<Option*> >::vector(std::initializer_list<Option*>, std::allocator<Option*> const&)
+0016866c 00000094 W std::vector<Option*, std::allocator<Option*> >::vector(std::initializer_list<Option*>, std::allocator<Option*> const&)
+00168700 00000110 W std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+00168700 00000110 W std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::vector(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+00168810 00000028 W std::_Vector_base<Option*, std::allocator<Option*> >::~_Vector_base()
+00168810 00000028 W std::_Vector_base<Option*, std::allocator<Option*> >::~_Vector_base()
+00168838 00000098 W std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >::vector(std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > const&)
+00168838 00000098 W std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > >::vector(std::vector<std::basic_string_view<char, std::char_traits<char> >, std::allocator<std::basic_string_view<char, std::char_traits<char> > > > const&)
+001688d0 00000094 W std::vector<Menu*, std::allocator<Menu*> >::vector(std::initializer_list<Menu*>, std::allocator<Menu*> const&)
+001688d0 00000094 W std::vector<Menu*, std::allocator<Menu*> >::vector(std::initializer_list<Menu*>, std::allocator<Menu*> const&)
+00168964 00000110 W std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::reserve(unsigned int)
+00168a74 00000028 W std::_Vector_base<Menu*, std::allocator<Menu*> >::~_Vector_base()
+00168a74 00000028 W std::_Vector_base<Menu*, std::allocator<Menu*> >::~_Vector_base()
+00168aa0 00008858 t __static_initialization_and_destruction_0(int, int) [clone .constprop.0]
+001712f8 000006d8 T Settings::InitSettings()
+001719d0 00000008 t _GLOBAL__sub_I__ZN8Settings4seedB5cxx11E
+001719d8 00000008 t _GLOBAL__sub_D__ZN8Settings4seedB5cxx11E
+001719e0 000000e0 t __gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > > std::__find_if<__gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > >, __gnu_cxx::__ops::_Iter_pred<ItemLocation::IsCategory(Category) const::{lambda(auto:1)#1}> >(__gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > >, __gnu_cxx::__normal_iterator<Category const*, std::vector<Category, std::allocator<Category> > >, __gnu_cxx::__ops::_Iter_pred<ItemLocation::IsCategory(Category) const::{lambda(auto:1)#1}>, std::random_access_iterator_tag) [clone .isra.0]
+00171ac0 000000fc t std::_Hashtable<unsigned long, std::pair<unsigned long const, unsigned short>, std::allocator<std::pair<unsigned long const, unsigned short> >, std::__detail::_Select1st, std::equal_to<unsigned long>, std::hash<unsigned long>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash_aux(unsigned int, std::integral_constant<bool, true>) [clone .isra.0]
+00171bbc 000000fc t std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned int, std::integral_constant<bool, true>) [clone .isra.0]
+00171cb8 00000064 t __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > std::__upper_bound<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long, __gnu_cxx::__ops::_Val_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long const&, __gnu_cxx::__ops::_Val_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00171d1c 00000064 t __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > std::__lower_bound<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long, __gnu_cxx::__ops::_Iter_comp_val<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long const&, __gnu_cxx::__ops::_Iter_comp_val<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00171d80 000000bc t unsigned long* std::__move_merge<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00171e3c 000000a0 t __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > std::__move_merge<unsigned long*, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(unsigned long*, unsigned long*, unsigned long*, unsigned long*, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00171edc 000000b4 t void std::__insertion_sort<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00171f90 0000019c t void std::__merge_sort_with_buffer<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+0017212c 0000012c t WriteStartingInventory(tinyxml2::XMLDocument&)
+00172258 00000190 t WriteExcludedLocations(tinyxml2::XMLDocument&)
+001723e8 00000244 t WriteSettings(tinyxml2::XMLDocument&, bool)
+0017262c 00000198 t __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > std::_V2::__rotate<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, std::random_access_iterator_tag) [clone .isra.0]
+001727c4 00000128 t void std::__merge_without_buffer<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, int, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, int, int, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+001728ec 00000074 t void std::__inplace_stable_sort<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00172960 00000158 t WriteLocation(tinyxml2::XMLElement*, unsigned long, bool) [clone .constprop.0]
+00172ab8 00000088 T GenerateHash()
+00172b40 0000000c T GetRandomizerHash[abi:cxx11]()
+00172b4c 00000160 T GetRandomizerHashAsString[abi:cxx11]()
+00172cac 00000294 t GetGeneralPath()
+00172f40 0000004c T PlacementLog_Msg(std::basic_string_view<char, std::char_traits<char> >)
+00172f8c 00000034 T PlacementLog_Clear()
+00172fc0 000000b0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_find_before_node(unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int) const
+00173070 000000ac W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0017311c 000001b4 W std::__detail::_Map_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned short> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+001732d0 00000100 W __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > > std::__rotate_adaptive<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, int>(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, int, int, unsigned long*, int)
+001733d0 00000290 t void std::__merge_adaptive<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, int, unsigned long*, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, int, int, unsigned long*, int, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+00173660 000000bc t void std::__stable_sort_adaptive<__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, int, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}> >(__gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, __gnu_cxx::__normal_iterator<unsigned long*, std::vector<unsigned long, std::allocator<unsigned long> > >, unsigned long*, int, __gnu_cxx::__ops::_Iter_comp_iter<WriteIngameSpoilerLog()::{lambda(unsigned long const&, unsigned long const&)#1}>)
+0017371c 00000040 t _GLOBAL__sub_I__Z12GenerateHashv
+0017375c 00000044 t _GLOBAL__sub_D__Z12GenerateHashv
+001737a0 00000ea4 T SpoilerLog_Write()
+00174644 00000354 T PlacementLog_Write()
+00174998 0000001c t _GLOBAL__sub_I_StartingInventory
+001749b4 00000020 t _GLOBAL__sub_D_StartingInventory
+001749d4 00000008 W tinyxml2::XMLNode::ToElement()
+001749dc 00000008 W tinyxml2::XMLNode::ToText()
+001749e4 00000008 W tinyxml2::XMLNode::ToComment()
+001749ec 00000008 W tinyxml2::XMLNode::ToDocument()
+001749f4 00000008 W tinyxml2::XMLNode::ToDeclaration()
+001749fc 00000008 W tinyxml2::XMLNode::ToUnknown()
+00174a04 00000008 W tinyxml2::XMLNode::ToElement() const
+00174a0c 00000008 W tinyxml2::XMLNode::ToText() const
+00174a14 00000008 W tinyxml2::XMLNode::ToComment() const
+00174a1c 00000008 W tinyxml2::XMLNode::ToDocument() const
+00174a24 00000008 W tinyxml2::XMLNode::ToDeclaration() const
+00174a2c 00000008 W tinyxml2::XMLNode::ToUnknown() const
+00174a34 00000004 W tinyxml2::XMLText::ToText()
+00174a38 00000004 W tinyxml2::XMLText::ToText() const
+00174a3c 00000004 W tinyxml2::XMLComment::ToComment()
+00174a40 00000004 W tinyxml2::XMLComment::ToComment() const
+00174a44 00000004 W tinyxml2::XMLDeclaration::ToDeclaration()
+00174a48 00000004 W tinyxml2::XMLDeclaration::ToDeclaration() const
+00174a4c 00000004 W tinyxml2::XMLUnknown::ToUnknown()
+00174a50 00000004 W tinyxml2::XMLUnknown::ToUnknown() const
+00174a54 00000004 W tinyxml2::XMLElement::ToElement()
+00174a58 00000004 W tinyxml2::XMLElement::ToElement() const
+00174a5c 00000004 W tinyxml2::XMLDocument::ToDocument()
+00174a60 00000004 W tinyxml2::XMLDocument::ToDocument() const
+00174a64 00000008 W tinyxml2::XMLDocument::ShallowClone(tinyxml2::XMLDocument*) const
+00174a6c 00000008 W tinyxml2::XMLDocument::ShallowEqual(tinyxml2::XMLNode const*) const
+00174a74 00000008 W tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLDocument const&)
+00174a7c 00000008 W tinyxml2::XMLPrinter::CompactMode(tinyxml2::XMLElement const&)
+00174a84 00000078 T tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const
+00174afc 00000018 T tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const
+00174b14 00000018 T tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const
+00174b2c 00000018 T tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const
+00174b44 00000018 T tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const
+00174b5c 0000007c T tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const
+00174bd8 00000008 W tinyxml2::MemPoolT<52>::ItemSize() const
+00174be0 0000001c W tinyxml2::MemPoolT<52>::Free(void*)
+00174bfc 00000010 W tinyxml2::MemPoolT<52>::SetTracked()
+00174c0c 00000008 W tinyxml2::MemPoolT<56>::ItemSize() const
+00174c14 0000001c W tinyxml2::MemPoolT<56>::Free(void*)
+00174c30 00000010 W tinyxml2::MemPoolT<56>::SetTracked()
+00174c40 00000008 W tinyxml2::MemPoolT<40>::ItemSize() const
+00174c48 0000001c W tinyxml2::MemPoolT<40>::Free(void*)
+00174c64 00000010 W tinyxml2::MemPoolT<40>::SetTracked()
+00174c74 00000008 W tinyxml2::MemPoolT<60>::ItemSize() const
+00174c7c 0000001c W tinyxml2::MemPoolT<60>::Free(void*)
+00174c98 00000010 W tinyxml2::MemPoolT<60>::SetTracked()
+00174ca8 0000004c W tinyxml2::XMLPrinter::~XMLPrinter()
+00174ca8 0000004c W tinyxml2::XMLPrinter::~XMLPrinter()
+00174cf4 00000114 W tinyxml2::MemPoolT<40>::Alloc()
+00174e08 0000011c W tinyxml2::MemPoolT<52>::Alloc()
+00174f24 0000011c W tinyxml2::MemPoolT<56>::Alloc()
+00175040 00000114 W tinyxml2::MemPoolT<60>::Alloc()
+00175154 00000044 T tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)
+00175198 00000090 t tinyxml2::XMLPrinter::Putc(char) [clone .part.0]
+00175228 00000080 W tinyxml2::MemPoolT<40>::~MemPoolT()
+00175228 00000080 W tinyxml2::MemPoolT<40>::~MemPoolT()
+001752a8 00000084 W tinyxml2::MemPoolT<56>::~MemPoolT()
+001752a8 00000084 W tinyxml2::MemPoolT<56>::~MemPoolT()
+0017532c 00000080 W tinyxml2::MemPoolT<60>::~MemPoolT()
+0017532c 00000080 W tinyxml2::MemPoolT<60>::~MemPoolT()
+001753ac 00000084 W tinyxml2::MemPoolT<52>::~MemPoolT()
+001753ac 00000084 W tinyxml2::MemPoolT<52>::~MemPoolT()
+00175430 00000090 W tinyxml2::MemPoolT<52>::~MemPoolT()
+001754c0 00000090 W tinyxml2::MemPoolT<56>::~MemPoolT()
+00175550 0000008c W tinyxml2::MemPoolT<60>::~MemPoolT()
+001755dc 0000008c W tinyxml2::MemPoolT<40>::~MemPoolT()
+00175668 00000058 W tinyxml2::XMLPrinter::~XMLPrinter()
+001756c0 00000054 W tinyxml2::XMLAttribute::~XMLAttribute()
+001756c0 00000054 W tinyxml2::XMLAttribute::~XMLAttribute()
+00175714 00000060 W tinyxml2::XMLAttribute::~XMLAttribute()
+00175774 0000007c T tinyxml2::StrPair::SetStr(char const*, int)
+001757f0 000000c8 T tinyxml2::StrPair::ParseText(char*, char const*, int, int*)
+001758b8 000000dc T tinyxml2::StrPair::ParseName(char*)
+00175994 000000c8 T tinyxml2::StrPair::CollapseWhitespace()
+00175a5c 00000100 T tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)
+00175b5c 0000013c T tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)
+00175c98 000001f0 T tinyxml2::StrPair::GetStr()
+00175e88 000000b4 T tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const
+00175f3c 000000b4 T tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const
+00175ff0 000000b4 T tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const
+001760a4 000000b4 T tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const
+00176158 00000204 T tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const
+0017635c 00000204 T tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const
+00176560 00000214 T tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const
+00176774 00000114 T tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const
+00176888 00000c08 T tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)
+00177490 00000030 T tinyxml2::XMLNode::Value() const
+001774c0 00000074 T tinyxml2::XMLNode::ToElementWithName(char const*) const
+00177534 0000003c T tinyxml2::XMLNode::FirstChildElement(char const*) const
+00177570 0000003c T tinyxml2::XMLNode::NextSiblingElement(char const*) const
+001775ac 00000118 T tinyxml2::XMLAttribute::ParseDeep(char*, bool, int*)
+001776c4 0000000c T tinyxml2::XMLAttribute::SetAttribute(char const*)
+001776d0 0000003c T tinyxml2::XMLAttribute::SetAttribute(unsigned int)
+0017770c 0000008c T tinyxml2::XMLElement::Attribute(char const*, char const*) const
+00177798 00000058 T tinyxml2::XMLElement::GetText() const
+001777f0 0000008c T tinyxml2::XMLElement::DeleteAttribute(tinyxml2::XMLAttribute*)
+0017787c 00000180 T tinyxml2::XMLElement::CreateAttribute()
+001779fc 0000009c T tinyxml2::XMLElement::FindOrCreateAttribute(char const*)
+00177a98 00000250 T tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const
+00177ce8 00000148 T tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+00177ce8 00000148 T tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+00177e30 00000058 T tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)
+00177e88 0000005c T tinyxml2::XMLNode::DeleteNode(tinyxml2::XMLNode*)
+00177ee4 000000f8 T tinyxml2::XMLNode::~XMLNode()
+00177ee4 000000f8 T tinyxml2::XMLNode::~XMLNode()
+00177fdc 00000020 W tinyxml2::XMLText::~XMLText()
+00177fdc 00000020 W tinyxml2::XMLText::~XMLText()
+00177ffc 0000002c W tinyxml2::XMLText::~XMLText()
+00178028 00000020 T tinyxml2::XMLComment::~XMLComment()
+00178028 00000020 T tinyxml2::XMLComment::~XMLComment()
+00178048 0000002c T tinyxml2::XMLComment::~XMLComment()
+00178074 00000020 T tinyxml2::XMLDeclaration::~XMLDeclaration()
+00178074 00000020 T tinyxml2::XMLDeclaration::~XMLDeclaration()
+00178094 0000002c T tinyxml2::XMLDeclaration::~XMLDeclaration()
+001780c0 00000020 T tinyxml2::XMLUnknown::~XMLUnknown()
+001780c0 00000020 T tinyxml2::XMLUnknown::~XMLUnknown()
+001780e0 0000002c T tinyxml2::XMLUnknown::~XMLUnknown()
+0017810c 00000048 T tinyxml2::XMLElement::~XMLElement()
+0017810c 00000048 T tinyxml2::XMLElement::~XMLElement()
+00178154 00000054 T tinyxml2::XMLElement::~XMLElement()
+001781a8 000000b4 t tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*) [clone .part.0]
+0017825c 00000210 T tinyxml2::XMLElement::InsertNewChildElement(char const*)
+0017846c 00000218 T tinyxml2::XMLElement::InsertNewText(char const*)
+00178684 000000c8 T tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)
+0017874c 000002c8 T tinyxml2::XMLElement::SetText(char const*)
+00178a14 00000200 T tinyxml2::XMLDocument::NewElement(char const*)
+00178c14 0000020c T tinyxml2::XMLDocument::NewDeclaration(char const*)
+00178e20 00000040 T tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const
+00178e60 000000f4 T tinyxml2::XMLDocument::SetError(tinyxml2::XMLError, int, char const*, ...)
+00178f54 000000c0 T tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)
+00179014 00000148 T tinyxml2::XMLDocument::Clear()
+0017915c 00000224 T tinyxml2::XMLDocument::~XMLDocument()
+0017915c 00000224 T tinyxml2::XMLDocument::~XMLDocument()
+00179380 00000020 T tinyxml2::XMLDocument::~XMLDocument()
+001793a0 00000218 T tinyxml2::XMLElement::ParseAttributes(char*, int*)
+001795b8 0000005c T tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)
+00179614 0000005c T tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)
+00179670 0000005c T tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)
+001796cc 000003c0 T tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)
+00179a8c 000000dc T tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)
+00179b68 000000d4 T tinyxml2::XMLDocument::Parse()
+00179c3c 000000f8 T tinyxml2::XMLDocument::LoadFile(__sFILE*)
+00179d34 00000098 T tinyxml2::XMLDocument::LoadFile(char const*)
+00179dcc 000000a8 T tinyxml2::XMLPrinter::XMLPrinter(__sFILE*, bool, int)
+00179dcc 000000a8 T tinyxml2::XMLPrinter::XMLPrinter(__sFILE*, bool, int)
+00179e74 000000d0 T tinyxml2::XMLPrinter::Write(char const*, unsigned int)
+00179f44 00000150 t tinyxml2::XMLPrinter::PrintString(char const*, bool) [clone .part.0]
+0017a094 0000003c T tinyxml2::XMLPrinter::PrintSpace(int)
+0017a0d0 00000038 T tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)
+0017a108 00000110 T tinyxml2::XMLDocument::SaveFile(__sFILE*, bool)
+0017a218 0000009c T tinyxml2::XMLDocument::SaveFile(char const*, bool)
+0017a2b4 0000017c T tinyxml2::XMLPrinter::CloseElement(bool)
+0017a430 000001b0 T tinyxml2::XMLPrinter::OpenElement(char const*, bool)
+0017a5e0 000000c4 T tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)
+0017a6a4 000000d0 T tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)
+0017a774 000000dc T tinyxml2::XMLPrinter::PushText(char const*, bool)
+0017a850 00000048 T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)
+0017a898 00000140 T tinyxml2::XMLPrinter::PushComment(char const*)
+0017a9d8 00000044 T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)
+0017aa1c 00000140 T tinyxml2::XMLPrinter::PushDeclaration(char const*)
+0017ab5c 00000044 T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)
+0017aba0 00000150 T tinyxml2::XMLPrinter::PushUnknown(char const*)
+0017acf0 00000044 T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)
+0017ad34 00000194 T RemoveLineBreaks(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+0017aec8 00000008 t romfs_close
+0017aed0 000000c0 t romfs_seek
+0017af90 00000024 t romfs_dirreset
+0017afb4 000000c8 t fill_dir
+0017b07c 0000028c t romfs_dirnext
+0017b308 00000084 t romfs_free
+0017b38c 000000d4 t searchForFile.constprop.0
+0017b460 000000d8 t searchForDir.constprop.0
+0017b538 000001c0 t navigateToDir.constprop.0
+0017b6f8 0000010c t romfs_open
+0017b804 0000004c t romfs_chdir
+0017b850 00000070 t romfs_diropen
+0017b8c0 00000174 t romfs_stat
+0017ba34 00000008 t romfs_dirclose
+0017ba40 00000084 t romfs_fstat
+0017bac4 000000d0 t romfs_read
+0017bb94 0000028c T romfsMountFromFile
+0017be20 00000098 T romfsMountFromCurrentProcess
+0017beb8 00000260 T romfsMountSelf
+0017c118 000001e8 t parseColor
+0017c300 00000018 T consoleSelect
+0017c318 000001ac T consoleDrawChar
+0017c4c4 00000124 T consolePrintChar
+0017c5e8 00000b94 T con_write
+0017d17c 000000fc t newRow
+0017d278 00000168 T consoleInit
+0017d3e0 000000bc T consoleClear
+0017d49c 000000d0 t gfxPresentFramebuffer
+0017d56c 0000001c T gfxIsWide
+0017d588 000000ec T gfxSetScreenFormat
+0017d674 00000010 T gfxSetDoubleBuffering
+0017d684 000000e0 T gfxInit
+0017d764 00000010 T gfxInitDefault
+0017d774 000000b4 T gfxExit
+0017d828 000000a0 T gfxGetFramebuffer
+0017d8c8 00000104 T gfxFlushBuffers
+0017d9cc 00000050 T gfxSwapBuffers
+0017da1c 00000050 T gfxSwapBuffersGpu
+0017da6c 00000c58 t gspHardwareInit
+0017e6c4 00000248 T gspInit
+0017e90c 000000f0 T gspExit
+0017e9fc 00000010 T gspHasGpuRight
+0017ea0c 000000a0 T gspPresentBuffer
+0017eaac 00000044 T gspWaitForEvent
+0017eaf0 00000004 W gxCmdQueueInterrupt
+0017eaf4 00000158 t gspEventThreadMain
+0017ec4c 00000050 T GSPGPU_FlushDataCache
+0017ec9c 00000034 T GSPGPU_SetLcdForceBlack
+0017ecd0 00000068 T GSPGPU_AcquireRight
+0017ed38 00000048 T GSPGPU_ReleaseRight
+0017ed80 0000007c T GSPGPU_ImportDisplayCaptureInfo
+0017edfc 0000002c T GSPGPU_SaveVramSysArea
+0017ee28 0000002c T GSPGPU_RestoreVramSysArea
+0017ee54 000001a4 t aptConvertScreenForCapture
+0017eff8 00000008 W aptDspSleep
+0017f000 00000004 W aptDspWakeup
+0017f004 00000004 W aptDspCancel
+0017f008 00000158 T aptSendCommand
+0017f160 00000044 t aptExitProcess
+0017f1a4 00000050 T aptSetChainloader
+0017f1f4 000002f4 T aptExit
+0017f4e8 000000e0 T aptHandleSleep
+0017f5c8 0000001c T aptSetMessageCallback
+0017f5e4 00000084 T APT_SleepIfShellClosed
+0017f668 00000084 T aptSetSleepAllowed
+0017f6ec 00000084 T APT_UnlockTransition
+0017f770 000004a4 t aptEventHandler
+0017fc14 000000b0 T APT_ReceiveParameter
+0017fcc4 000000b0 t aptReceiveParameter.constprop.0
+0017fd78 000002ac t aptScreenTransfer
+00180024 00000344 t aptWaitForWakeUp.isra.0
+00180368 0000011c T aptLaunchLibraryApplet
+00180488 00000100 T aptJumpToHomeMenu
+00180588 00000048 T aptMainLoop
+001805d0 0000022c T aptInit
+001807fc 0000005c T APT_SendParameter
+00180858 0000007c T APT_CheckNew3DS
+001808d4 00000024 W hidShouldUseIrrst
+001808f8 0000018c T hidInit
+00180a84 000000e8 T hidExit
+00180b6c 000002a4 T hidScanInput
+00180e10 00000010 T hidKeysHeld
+00180e20 00000010 T hidKeysDown
+00180e30 000000cc T fsInit
+00180efc 0000003c T fsExit
+00180f38 00000060 T fsExemptFromSession
+00180f98 00000050 T fsUnexemptFromSession
+00180fe8 00000084 T fsMakePath
+0018106c 000000cc T FSUSER_OpenFile
+00181138 000000d4 T FSUSER_OpenFileDirectly
+0018120c 000000bc T FSUSER_DeleteFile
+001812c8 000000f8 T FSUSER_RenameFile
+001813c0 000000bc T FSUSER_DeleteDirectory
+0018147c 000000d4 T FSUSER_CreateFile
+00181550 000000c4 T FSUSER_CreateDirectory
+00181614 000000f8 T FSUSER_RenameDirectory
+0018170c 000000b4 T FSUSER_OpenDirectory
+001817c0 00000098 T FSUSER_OpenArchive
+00181858 0000008c T FSUSER_CloseArchive
+001818e4 00000074 T FSUSER_GetSdmcArchiveResource
+00181958 00000064 T FSUSER_IsSdmcWritable
+001819bc 00000058 T FSFILE_Read
+00181a14 00000060 T FSFILE_Write
+00181a74 0000003c T FSFILE_GetSize
+00181ab0 00000028 T FSFILE_SetSize
+00181ad8 0000003c T FSFILE_Close
+00181b14 00000024 T FSFILE_Flush
+00181b38 00000050 T FSDIR_Read
+00181b88 0000003c T FSDIR_Close
+00181bc4 00000178 t swkbdMessageCallback
+00181d3c 00000078 T swkbdInit
+00181db4 00000038 T swkbdSetFeatures
+00181dec 00000050 T swkbdSetHintText
+00181e3c 0000006c T swkbdSetButton
+00181ea8 000003a4 T swkbdInputText
+0018224c 000000e8 T utf16_to_utf8
+00182334 00000064 T decode_utf16
+00182398 000000c0 T utf8_to_utf16
+00182458 00000038 W __libctru_init
+00182490 00000170 W __system_initArgv
+00182600 T svcControlMemory
+00182620 T svcQueryMemory
+00182650 T svcExitProcess
+00182658 T svcCreateThread
+00182678 T svcExitThread
+00182680 T svcSleepThread
+00182688 T svcReleaseMutex
+00182690 T svcCreateEvent
+001826a4 T svcSignalEvent
+001826ac T svcClearEvent
+001826b4 T svcCreateMemoryBlock
+001826cc T svcMapMemoryBlock
+001826d4 T svcUnmapMemoryBlock
+001826dc T svcCreateAddressArbiter
+001826f0 T svcArbitrateAddressNoTimeout
+001826f8 T svcCloseHandle
+00182700 T svcWaitSynchronization
+00182708 T svcWaitSynchronizationN
+00182730 T svcDuplicateHandle
+00182744 T svcGetSystemTick
+0018274c T svcConnectToPort
+00182760 T svcSendSyncRequest
+00182768 T svcGetResourceLimit
+0018277c T svcGetResourceLimitLimitValues
+00182784 T svcGetResourceLimitCurrentValues
+0018278c T svcBreak
+00182794 T svcOutputDebugString
+0018279c W initSystem
+001827ec W __ctru_exit
+00182804 T __aeabi_read_tp
+00182810 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00182834 00000004 t addrMapNodeDestructor(rbtree_node*)
+00182838 00000250 T vramMemAlignAt
+00182a88 0000000c T vramAlloc
+00182a94 00000090 T vramFree
+00182b24 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00182b48 00000004 t addrMapNodeDestructor(rbtree_node*)
+00182b4c 00000120 T linearMemAlign
+00182c6c 00000008 T linearAlloc
+00182c74 0000005c T linearFree
+00182cd0 00000080 T MemPool::CoalesceRight(MemBlock*)
+00182d50 0000016c T MemPool::Allocate(MemChunk&, unsigned long, int)
+00182ebc 000000fc T MemPool::Deallocate(MemChunk const&)
+00182fb8 00000030 T MemPool::GetFreeSpace()
+00182fe8 0000000c T __sync_init
+00182ff4 00000018 T __sync_fini
+0018300c 0000002c T syncArbitrateAddress
+00183038 000000b0 T LightLock_Lock
+001830e8 00000040 T LightLock_Unlock
+00183128 00000024 T RecursiveLock_Init
+0018314c 00000030 T RecursiveLock_Lock
+0018317c 00000054 T RecursiveLock_Unlock
+001831d0 00000040 T LightEvent_Init
+00183210 000000a4 T LightEvent_Clear
+001832b4 000000c8 T LightEvent_Signal
+0018337c 00000050 T LightEvent_TryWait
+001833cc 000000b0 T LightEvent_Wait
+0018347c 00000084 W envGetHandle
+00183500 00000050 W envDestroyHandles
+00183550 00000054 T osGetTimeRef
+001835a4 000000ec T osGetTime
+00183690 00000034 T __ctru_speedup_config
+001836c4 00000130 T srvInit
+001837f4 00000058 T srvExit
+0018384c 000000a0 T srvGetServiceHandleDirect
+001838ec 00000038 T srvGetServiceHandle
+00183924 00000038 T srvPublishToSubscriber
+0018395c 00000178 T threadCreate
+00183ad4 0000002c T threadFree
+00183b00 00000024 T threadJoin
+00183b24 00000030 T threadGetCurrent
+00183b54 00000040 T threadExit
+00183b94 00000020 t _thread_begin
+00183bb4 000000b4 t mappableFindAddressWithin
+00183c68 00000028 T mappableInit
+00183c90 00000080 T mappableAlloc
+00183d10 00000004 T mappableFree
+00183d14 00000164 T irrstInit
+00183e78 000000cc T irrstExit
+00183f44 000000b4 T irrstScanInput
+00183ff8 00000024 T irrstKeysHeld
+0018401c 0000000c T srvPmGetSessionHandle
+00184028 00000074 T ptmSysmInit
+0018409c 0000003c T ptmSysmExit
+001840d8 00000034 T PTMSYSM_ConfigureNew3DSCPU
+0018410c 00000010 T rbtree_init
+0018411c 000001b4 t do_insert
+001842d0 00000008 T rbtree_insert
+001842d8 00000090 T rbtree_rotate
+00184368 00000318 T rbtree_remove
+00184680 00000074 T rbtree_find
+001846f4 00000054 T encode_utf16
+00184748 000000e0 T encode_utf8
+00184828 0000013c T decode_utf8
+00184964 00000030 W __appInit
+00184994 00000030 T __syscall_getreent
+001849c4 00000074 T __syscall_gettod_r
+00184a38 00000004 T __syscall_lock_acquire
+00184a3c 00000004 T __syscall_lock_release
+00184a40 00000004 T __syscall_lock_init_recursive
+00184a44 00000004 T __syscall_lock_acquire_recursive
+00184a48 00000004 T __syscall_lock_release_recursive
+00184a4c 00000004 T __syscall_exit
+00184a50 00000050 T initThreadVars
+00184aa0 00000068 T __system_initSyscalls
+00184b08 000001e0 W __system_allocateHeaps
+00184ce8 00000030 W __appExit
+00184d18 00000090 W __libctru_exit
+00184da8 00000014 t archive_link
+00184dbc 00000014 t archive_dirreset
+00184dd0 00000014 t archive_chmod
+00184de4 00000024 t error_cmp
+00184e08 00000050 t archive_translate_error
+00184e58 000000c8 t archive_seek
+00184f20 0000007c t _archiveInit.part.0
+00184f9c 000000c4 t archiveFindDevice.part.0
+00185060 0000025c t archive_utf16path
+001852bc 000000a0 t _archiveUnmountDeviceStruct.part.0
+0018535c 00000014 t archive_fchmod
+00185370 00000014 t archive_statvfs
+00185384 00000164 t _archiveMountDevice
+001854e8 000000e8 t archive_diropen
+001855d0 000000a4 t archive_fstat
+00185674 0000006c t archive_close
+001856e0 0000006c t archive_fsync
+0018574c 00000070 t archive_dirclose
+001857bc 000000e8 t sdmc_statvfs
+001858a4 000000ec t archive_chdir
+00185990 0000007c t archive_ftruncate
+00185a0c 000000ac t archive_read
+00185ab8 000000a4 t archive_unlink
+00185b5c 000000bc t archive_rmdir
+00185c18 000000dc t archive_mkdir
+00185cf4 0000019c t archive_stat
+00185e90 0000015c t archive_dirnext
+00185fec 000000ec t archive_write
+001860d8 000001d4 t archive_open
+001862ac 00000278 t archive_rename
+00186524 0000019c T archiveMountSdmc
+001866c0 00000054 T archiveUnmountAll
+00186714 0000005c T rbtree_node_next
+00186770 00000004 T operator delete(void*, unsigned int)
+00186774 00000004 T operator delete[](void*)
+00186778 000000a4 T std::_Hash_bytes(void const*, unsigned int, unsigned int)
+0018681c 00000014 T std::get_new_handler()
+00186830 0000005c T operator new(unsigned int)
+0018688c 0000001c T operator new(unsigned int, std::nothrow_t const&)
+001868a8 00000004 T operator new[](unsigned int)
+001868ac 00000034 T std::__detail::_List_node_base::_M_transfer(std::__detail::_List_node_base*, std::__detail::_List_node_base*)
+001868e0 00000014 T std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+001868f4 00000014 T std::__detail::_List_node_base::_M_unhook()
+00186908 0000005c T std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+00186964 00000070 T std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+001869d4 00000284 T std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+00186c58 0000008c W std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)
+00186ce4 00000004 W std::string::_Rep::_M_destroy(std::allocator<char> const&)
+00186ce8 000000a4 t _GLOBAL__sub_I__ZNSt12ctype_bynameIcEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj
+00186d8c 000000a4 t _GLOBAL__sub_I__ZNSt12ctype_bynameIwEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj
+00186e30 0000002c T std::__throw_bad_alloc()
+00186e5c 0000002c T std::__throw_bad_array_new_length()
+00186e88 00000040 T std::__throw_logic_error(char const*)
+00186ec8 00000040 T std::__throw_invalid_argument(char const*)
+00186f08 00000040 T std::__throw_length_error(char const*)
+00186f48 00000040 T std::__throw_out_of_range(char const*)
+00186f88 00000010 T std::__throw_out_of_range_fmt(char const*, ...)
+00186f98 00000040 T std::__throw_runtime_error(char const*)
+00186fd8 000000e4 T std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned int) const
+001870c0 000000e0 T std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned int, unsigned int, unsigned int) const
+001871a0 000000f4 t _GLOBAL__sub_I__ZNSt12ctype_bynameIcEC2ERKSsj
+00187294 00000034 W std::mersenne_twister_engine<unsigned int, 32u, 624u, 397u, 31u, 2567483615u, 11u, 4294967295u, 7u, 2636928640u, 15u, 4022730752u, 18u, 1812433253u>::seed(unsigned int)
+001872c8 000000b0 T std::random_device::_M_init_pretr1(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00187378 00000004 T std::random_device::_M_init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0018737c 000000c0 W std::mersenne_twister_engine<unsigned int, 32u, 624u, 397u, 31u, 2567483615u, 11u, 4294967295u, 7u, 2636928640u, 15u, 4022730752u, 18u, 1812433253u>::_M_gen_rand()
+0018743c 00000058 W std::mersenne_twister_engine<unsigned int, 32u, 624u, 397u, 31u, 2567483615u, 11u, 4294967295u, 7u, 2636928640u, 15u, 4022730752u, 18u, 1812433253u>::operator()()
+00187494 0000000c T std::random_device::_M_getval()
+001874a0 00000054 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned int&, unsigned int)
+001874f4 00000014 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()
+00187508 00000084 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct(unsigned int, char)
+0018758c 000000b4 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00187640 00000100 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned int, unsigned int, char const*, unsigned int)
+00187740 0000009c W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::reserve(unsigned int)
+001877dc 00000124 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace_aux(unsigned int, unsigned int, unsigned int, char)
+00187900 0000004c W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::resize(unsigned int, char)
+0018794c 000002ac W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned int, unsigned int, char const*, unsigned int)
+00187bf8 00000090 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned int)
+00187c88 00000074 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char const*, unsigned int, unsigned int) const
+00187cfc 00000054 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::rfind(char, unsigned int) const
+00187d50 0000004c W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::compare(char const*) const
+00187d9c 000000f4 t _GLOBAL__sub_I__ZNSt12ctype_bynameIwEC2ERKSsj
+00187e90 00000004 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+00187e90 00000004 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+00187e94 00000018 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+00187eac 00000008 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
+00187eb4 00000038 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
+00187eec 0000007c W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+00187f68 00000050 W std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>::_M_release()
+00187fb8 00000504 W std::filesystem::__cxx11::_Dir::advance(bool, std::error_code&)
+001884bc 00000080 W std::filesystem::__cxx11::_Dir::~_Dir()
+001884bc 00000080 W std::filesystem::__cxx11::_Dir::~_Dir()
+0018853c 0000000c T std::filesystem::__cxx11::directory_iterator::operator*() const
+00188548 00000020 W std::unique_ptr<std::filesystem::__cxx11::path::_List::_Impl, std::filesystem::__cxx11::path::_List::_Impl_deleter>::~unique_ptr()
+00188548 00000020 W std::unique_ptr<std::filesystem::__cxx11::path::_List::_Impl, std::filesystem::__cxx11::path::_List::_Impl_deleter>::~unique_ptr()
+00188568 0000040c T std::filesystem::__cxx11::directory_iterator::directory_iterator(std::filesystem::__cxx11::path const&, std::filesystem::directory_options, std::error_code*)
+00188568 0000040c T std::filesystem::__cxx11::directory_iterator::directory_iterator(std::filesystem::__cxx11::path const&, std::filesystem::directory_options, std::error_code*)
+00188974 00000184 T std::filesystem::__cxx11::directory_iterator::operator++()
+00188af8 0000000c T std::filesystem::__cxx11::filesystem_error::what() const
+00188b04 00000004 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+00188b04 00000004 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+00188b08 00000018 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>::~_Sp_counted_ptr_inplace()
+00188b20 00000038 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>::_M_get_deleter(std::type_info const&)
+00188b58 00000008 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>::_M_destroy()
+00188b60 0000008c t void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .isra.0]
+00188bec 00000078 T std::filesystem::__cxx11::filesystem_error::~filesystem_error()
+00188bec 00000078 T std::filesystem::__cxx11::filesystem_error::~filesystem_error()
+00188c64 00000084 T std::filesystem::__cxx11::filesystem_error::~filesystem_error()
+00188ce8 0000027c W std::system_error::system_error(std::error_code, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00188ce8 0000027c W std::system_error::system_error(std::error_code, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+00188f64 0000007c T std::filesystem::__cxx11::path::_List::_Impl_deleter::operator()(std::filesystem::__cxx11::path::_List::_Impl*) const
+00188fe0 00000080 W std::filesystem::__cxx11::path::_List::_Impl::_M_erase_from(std::filesystem::__cxx11::path::_Cmpt const*)
+00189060 00000088 W std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>::_M_dispose()
+001890e8 0000000c T std::filesystem::__cxx11::path::_List::_List()
+001890e8 0000000c T std::filesystem::__cxx11::path::_List::_List()
+001890f4 0000006c W std::filesystem::__cxx11::path::_List::clear()
+00189160 00000064 T std::filesystem::__cxx11::path::has_filename() const
+001891c4 000000c4 T std::filesystem::__cxx11::path::_M_find_extension() const
+00189288 00000594 T std::filesystem::__cxx11::path::_M_split_cmpts()
+00189820 00000168 T std::filesystem::__cxx11::path::_List::reserve(int, bool)
+00189988 000003dc W std::filesystem::__cxx11::filesystem_error::_Impl::make_what(std::basic_string_view<char, std::char_traits<char> >, std::filesystem::__cxx11::path const*, std::filesystem::__cxx11::path const*)
+00189d64 00000be4 T std::filesystem::__cxx11::path::_M_append(std::basic_string_view<char, std::char_traits<char> >)
+0018a948 00000054 W void std::_Destroy_aux<false>::__destroy<std::filesystem::__cxx11::path::_Cmpt*>(std::filesystem::__cxx11::path::_Cmpt*, std::filesystem::__cxx11::path::_Cmpt*)
+0018a99c 0000016c W std::filesystem::__cxx11::path::_List::_Impl::copy() const
+0018ab08 00000078 T std::filesystem::__cxx11::path::_List::_List(std::filesystem::__cxx11::path::_List const&)
+0018ab08 00000078 T std::filesystem::__cxx11::path::_List::_List(std::filesystem::__cxx11::path::_List const&)
+0018ab80 000003a8 T std::filesystem::__cxx11::path::_List::operator=(std::filesystem::__cxx11::path::_List const&)
+0018af28 0000003c T std::filesystem::__cxx11::path::operator=(std::filesystem::__cxx11::path const&)
+0018af64 00000024 W std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+0018af64 00000024 W std::__allocated_ptr<std::allocator<std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0> > >::~__allocated_ptr()
+0018af88 000001d0 T std::filesystem::__cxx11::filesystem_error::filesystem_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::error_code)
+0018af88 000001d0 T std::filesystem::__cxx11::filesystem_error::filesystem_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::error_code)
+0018b158 0000019c T std::filesystem::__cxx11::filesystem_error::filesystem_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::filesystem::__cxx11::path const&, std::error_code)
+0018b158 0000019c T std::filesystem::__cxx11::filesystem_error::filesystem_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::filesystem::__cxx11::path const&, std::error_code)
+0018b2f4 0000000c T std::bad_alloc::what() const
+0018b300 00000020 T std::bad_alloc::~bad_alloc()
+0018b300 00000020 T std::bad_alloc::~bad_alloc()
+0018b320 0000002c T std::bad_alloc::~bad_alloc()
+0018b34c 0000000c T std::bad_array_new_length::what() const
+0018b358 00000020 T std::bad_array_new_length::~bad_array_new_length()
+0018b358 00000020 T std::bad_array_new_length::~bad_array_new_length()
+0018b378 0000002c T std::bad_array_new_length::~bad_array_new_length()
+0018b3a4 0000005c T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+0018b400 00000014 T __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+0018b414 00000020 T __cxxabiv1::__class_type_info::~__class_type_info()
+0018b414 00000020 T __cxxabiv1::__class_type_info::~__class_type_info()
+0018b434 0000002c T __cxxabiv1::__class_type_info::~__class_type_info()
+0018b460 00000068 T __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+0018b4c8 0000002c T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+0018b4f4 00000044 T __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+0018b538 00000004 T operator delete(void*)
+0018b53c 000000c8 t (anonymous namespace)::pool::free(void*) [clone .constprop.0]
+0018b604 00000098 t (anonymous namespace)::pool::allocate(unsigned int) [clone .constprop.0]
+0018b69c 00000044 T __cxa_allocate_exception
+0018b6e0 00000030 T __cxa_free_exception
+0018b710 0000003c t _GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
+0018b74c T __cxa_end_cleanup
+0018b75c 0000012c T __cxa_type_match
+0018b888 000000b4 T __cxa_begin_cleanup
+0018b93c 000000b4 T __gnu_end_cleanup
+0018b9f0 00000070 t __cxxabiv1::__is_gxx_exception_class(char*)
+0018ba60 0000002c T __cxa_call_terminate
+0018ba8c 00000138 T __cxa_call_unexpected
+0018bbc4 000000cc T __cxa_begin_catch
+0018bc90 000000e0 T __cxa_end_catch
+0018bd70 00000004 T std::exception::~exception()
+0018bd70 00000004 T std::exception::~exception()
+0018bd74 00000004 T std::bad_exception::~bad_exception()
+0018bd74 00000004 T std::bad_exception::~bad_exception()
+0018bd78 0000000c T transaction clone for std::bad_exception::what() const
+0018bd78 0000000c T std::bad_exception::what() const
+0018bd84 00000018 T std::bad_exception::~bad_exception()
+0018bd9c 0000000c T __cxa_get_globals_fast
+0018bda8 0000000c T __cxa_get_globals
+0018bdb4 0000016c t read_encoded_value_with_base(unsigned char, unsigned int, unsigned char const*, unsigned int*)
+0018bf20 00000058 t base_of_encoded_value(unsigned char, _Unwind_Context*)
+0018bf78 000000d8 t parse_lsda_header(_Unwind_Context*, unsigned char const*, lsda_header_info*)
+0018c050 000006c8 T __gxx_personality_v0
+0018c718 00000014 T __cxxabiv1::__terminate(void (*)())
+0018c72c 00000018 T std::terminate()
+0018c744 0000000c T __cxxabiv1::__unexpected(void (*)())
+0018c750 00000018 T std::unexpected()
+0018c768 00000014 T std::get_terminate()
+0018c77c 00000014 T std::get_unexpected()
+0018c790 00000060 t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Control_Block*)
+0018c7f0 00000058 T __cxa_init_primary_exception
+0018c848 00000054 T __cxa_throw
+0018c89c 000000b0 T __cxa_rethrow
+0018c94c 00000020 T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+0018c94c 00000020 T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+0018c96c 0000002c T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+0018c998 0000006c T __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+0018ca04 000000dc T __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+0018cae0 00000044 T __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+0018cb24 00000004 T std::type_info::~type_info()
+0018cb24 00000004 T std::type_info::~type_info()
+0018cb28 00000008 T std::type_info::__is_pointer_p() const
+0018cb28 00000008 T std::type_info::__is_function_p() const
+0018cb30 0000004c T std::type_info::__equal(std::type_info const&) const
+0018cb30 0000004c T std::type_info::operator==(std::type_info const&) const
+0018cb7c 00000008 T std::logic_error::what() const
+0018cb7c 00000008 T std::runtime_error::what() const
+0018cb84 00000064 T std::runtime_error::~runtime_error()
+0018cb84 00000064 T std::runtime_error::~runtime_error()
+0018cbe8 00000064 T std::logic_error::~logic_error()
+0018cbe8 00000064 T std::logic_error::~logic_error()
+0018cc4c 0000006c T std::runtime_error::~runtime_error()
+0018ccb8 00000064 T std::length_error::~length_error()
+0018ccb8 00000064 T std::length_error::~length_error()
+0018cd1c 00000064 T std::out_of_range::~out_of_range()
+0018cd1c 00000064 T std::out_of_range::~out_of_range()
+0018cd80 00000064 T std::invalid_argument::~invalid_argument()
+0018cd80 00000064 T std::invalid_argument::~invalid_argument()
+0018cde4 0000006c T std::logic_error::~logic_error()
+0018ce50 0000006c T std::out_of_range::~out_of_range()
+0018cebc 0000006c T std::invalid_argument::~invalid_argument()
+0018cf28 0000006c T std::length_error::~length_error()
+0018cf94 000000d4 T std::logic_error::logic_error(char const*)
+0018cf94 000000d4 T std::logic_error::logic_error(char const*)
+0018d068 00000020 T std::invalid_argument::invalid_argument(char const*)
+0018d068 00000020 T std::invalid_argument::invalid_argument(char const*)
+0018d088 00000020 T std::length_error::length_error(char const*)
+0018d088 00000020 T std::length_error::length_error(char const*)
+0018d0a8 00000020 T std::out_of_range::out_of_range(char const*)
+0018d0a8 00000020 T std::out_of_range::out_of_range(char const*)
+0018d0c8 000000d4 T std::runtime_error::runtime_error(char const*)
+0018d0c8 000000d4 T std::runtime_error::runtime_error(char const*)
+0018d19c 000000bc T std::__cow_string::__cow_string(char const*, unsigned int)
+0018d19c 000000bc T std::__cow_string::__cow_string(char const*, unsigned int)
+0018d258 00000030 T std::runtime_error::runtime_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0018d258 00000030 T std::runtime_error::runtime_error(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0018d288 0000000c t (anonymous namespace)::generic_error_category::name() const
+0018d294 00000020 t (anonymous namespace)::generic_error_category::equivalent(int, std::error_condition const&) const
+0018d2b4 0000000c t (anonymous namespace)::system_error_category::name() const
+0018d2c0 000000bc t (anonymous namespace)::system_error_category::default_error_condition(int) const
+0018d37c 0000000c T std::_V2::error_category::default_error_condition(int) const
+0018d388 00000020 T std::_V2::error_category::equivalent(std::error_code const&, int) const
+0018d3a8 00000004 t (anonymous namespace)::system_error_category::~system_error_category()
+0018d3a8 00000004 t (anonymous namespace)::system_error_category::~system_error_category()
+0018d3ac 00000004 t (anonymous namespace)::generic_error_category::~generic_error_category()
+0018d3ac 00000004 t (anonymous namespace)::generic_error_category::~generic_error_category()
+0018d3b0 00000014 t (anonymous namespace)::generic_error_category::~generic_error_category()
+0018d3c4 00000014 t (anonymous namespace)::system_error_category::~system_error_category()
+0018d3d8 00000020 T std::system_error::~system_error()
+0018d3d8 00000020 T std::system_error::~system_error()
+0018d3f8 00000028 T std::system_error::~system_error()
+0018d420 00000060 T std::_V2::error_category::_M_message[abi:cxx11](int) const
+0018d480 000000b4 t (anonymous namespace)::system_error_category::message[abi:cxx11](int) const
+0018d480 000000b4 t (anonymous namespace)::generic_error_category::message[abi:cxx11](int) const
+0018d534 000000cc t (anonymous namespace)::system_error_category::equivalent(int, std::error_condition const&) const
+0018d600 0000000c T std::_V2::system_category()
+0018d60c 0000000c T std::_V2::generic_category()
+0018d618 00000144 T floor
+0018d75c 00000120 T __udivmoddi4
+0018d87c 00000018 t selfrel_offset31
+0018d894 00000090 t search_EIT_table
+0018d924 00000040 t __gnu_unwind_get_pr_addr
+0018d964 000000f4 t get_eit_entry
+0018da58 00000088 t restore_non_core_regs
+0018dae0 00000014 t _Unwind_decode_typeinfo_ptr.constprop.0
+0018daf4 00000004 t _Unwind_DebugHook
+0018daf8 00000064 t unwind_phase2
+0018db5c 00000140 t unwind_phase2_forced
+0018dc9c 000000a4 T __gnu_Unwind_RaiseException
+0018dd40 00000028 T __gnu_Unwind_ForcedUnwind
+0018dd68 00000074 T __gnu_Unwind_Resume
+0018dddc 00000020 T __gnu_Unwind_Resume_or_Rethrow
+0018ddfc 00000004 T _Unwind_Complete
+0018de00 00000018 T _Unwind_DeleteException
+0018de18 0000005c T _Unwind_VRS_Get
+0018de74 0000002c t _Unwind_GetGR
+0018dea0 0000005c T _Unwind_VRS_Set
+0018defc 0000002c t _Unwind_SetGR
+0018df28 000000c0 T __gnu_Unwind_Backtrace
+0018dfe8 00000414 t __gnu_unwind_pr_common
+0018e3fc 00000008 T __aeabi_unwind_cpp_pr0
+0018e404 00000008 W __aeabi_unwind_cpp_pr1
+0018e40c 00000008 W __aeabi_unwind_cpp_pr2
+0018e414 000003dc T _Unwind_VRS_Pop
+0018e7f0 00000064 t next_unwind_byte
+0018e854 0000002c t _Unwind_GetGR.constprop.0
+0018e880 00000004 t unwind_UCB_from_context
+0018e884 00000418 T __gnu_unwind_execute
+0018ec9c 00000048 T __gnu_unwind_frame
+0018ece4 00000010 T _Unwind_GetRegionStart
+0018ecf4 0000001c T _Unwind_GetLanguageSpecificData
+0018ed10 00000008 T _Unwind_GetDataRelBase
+0018ed18 00000008 T _Unwind_GetTextRelBase
+0018ed20 00000014 T abort
+0018ed34 00000078 T bsearch
+0018edac 0000000c T __errno
+0018edb8 00000034 T exit
+0018edec 0000015c T _fclose_r
+0018ef48 00000018 T fclose
+0018ef60 00000080 T ferror
+0018efe0 00000234 T __sflush_r
+0018f214 00000094 T _fflush_r
+0018f2a8 00000038 T fflush
+0018f2e0 000000b4 T fgetc
+0018f394 0000000c T _cleanup_r
+0018f3a0 00000184 T __sinit
+0018f524 00000134 T __sfp
+0018f658 0000000c T __sfp_lock_acquire
+0018f664 0000000c T __sfp_lock_release
+0018f670 0000003c T __libc_fini_array
+0018f6ac 000000c8 T __sflags
+0018f774 00000134 T _fopen_r
+0018f8a8 00000020 T fopen
+0018f8c8 00000094 T fputc
+0018f95c 000002d0 T _fread_r
+0018fc2c 00000038 T fread
+0018fc64 000000f8 T _malloc_trim_r
+0018fd5c 000002e8 T _free_r
+00190044 0000001c T _fseek_r
+00190060 00000034 T fseek
+00190094 00000590 T _fseeko_r
+00190624 0000002c T ftell
+00190650 000001b4 T _ftello_r
+00190804 00000068 T _fwalk
+0019086c 00000070 T _fwalk_reent
+001908dc 000000f0 T _fwrite_r
+001909cc 00000038 T fwrite
+00190a04 00000084 T __libc_init_array
+00190a88 00000018 T isalpha
+00190aa0 00000018 T isspace
+00190ab8 00000008 T iswspace
+00190ac0 00000010 T __locale_mb_cur_max
+00190ad0 00000138 T __smakebuf_r
+00190c08 0000008c T __swhatbuf_r
+00190c94 00000020 T memalign
+00190cb4 0000014c T _memalign_r
+00190e00 00000018 T malloc
+00190e18 00000018 T free
+00190e30 000007e4 T _malloc_r
+00191614 00000068 T _mbrtowc_r
+0019167c 000002f8 T __utf8_mbtowc
+00191974 000000e4 T memchr
+00191a58 000000b0 T memcmp
+00191b08 00000118 T memcpy
+00191c20 00000150 T memmove
+00191d70 000000f4 T memset
+00191e64 0000000c T __malloc_lock
+00191e70 0000000c T __malloc_unlock
+00191e7c 00000034 T printf
+00191eb0 0000001c T putchar
+00191ecc 000000dc T _putc_r
+00191fa8 000000e0 T _puts_r
+00192088 00000018 T puts
+001920a0 0000001c T srand
+001920bc 00000044 T rand
+00192100 0000001c t lflush
+0019211c 00000198 T __srefill_r
+001922b4 0000002c T rewind
+001922e0 00000050 T __srget_r
+00192330 0000025c T setvbuf
+0019258c 00000090 T _raise_r
+0019261c 00000018 T raise
+00192634 000000cc T snprintf
+00192700 00000064 T sprintf
+00192764 00000074 T sscanf
+001927d8 00000044 T __sread
+0019281c 00000008 T __seofread
+00192824 00000068 T __swrite
+0019288c 00000044 T __sseek
+001928d0 00000008 T __sclose
+001928d8 00000130 T strchr
+00192a08 0000063c T _strerror_r
+00193044 00000020 T strerror
+00193064 0000005c T strlen
+001930c0 000000e4 T strncat
+001931a4 000000e4 T strncmp
+00193288 000000c4 T strncpy
+0019334c 00000048 T strnlen
+00193394 00000064 t sulp
+001933f8 000013a8 T _strtod_l
+001947a0 0000000c T _strtod_r
+001947ac 000001a4 t _strtol_l.part.0
+00194950 0000003c T _strtol_r
+0019498c 00000058 T strtol
+001949e4 000001c4 t _strtoul_l.constprop.0
+00194ba8 00000004 T _strtoul_r
+00194bac 00000028 T strtoul
+00194bd4 0000066c t get_arg
+00195240 00003334 T _svfprintf_r
+00198574 00000050 t get_arg
+001985c4 00002c38 T __ssvfscanf_r
+0019b1fc 0000003c T time
+0019b238 00000008 T _user_strerror
+0019b240 0000066c t get_arg
+0019b8b0 0000339c T _vfprintf_r
+0019ec4c 000000d0 t __sbprintf
+0019ed1c 000000a4 T _vsnprintf_r
+0019edc0 00000038 T vsnprintf
+0019edf8 00000108 T __swbuf_r
+0019ef00 00000054 T _wcrtomb_r
+0019ef54 00000028 T _wcsrtombs_r
+0019ef7c 000000f0 T __utf8_wctomb
+0019f06c 0000013c T __swsetup_r
+0019f1a8 00000114 T __call_exitprocs
+0019f2bc 000001b0 t quorem
+0019f470 000011f8 T _dtoa_r
+001a0668 000004b4 T __sfvwrite_r
+001a0b1c 000000f0 t rshift
+001a0c0c 00000814 T __gethex
+001a1420 0000004c T __match
+001a146c 0000029c T __hexnan
+001a1708 0000003c T iswspace_l
+001a1744 000001d8 t __jp2uc
+001a191c 0000009c T _jp2uc_l
+001a19b8 0000000c T _localeconv_r
+001a19c4 00000088 T _Balloc
+001a1a4c 0000001c T _Bfree
+001a1a68 000000f4 T __multadd
+001a1b5c 00000110 T __s2b
+001a1c6c 00000060 T __hi0bits
+001a1ccc 0000009c T __lo0bits
+001a1d68 000000a8 T __i2b
+001a1e10 00000204 T __multiply
+001a2014 00000124 T __pow5mult
+001a2138 00000140 T __lshift
+001a2278 00000058 T __mcmp
+001a22d0 000001ec T __mdiff
+001a24bc 00000068 T __ulp
+001a2524 000000d0 T __b2d
+001a25f4 00000120 T __d2b
+001a2714 00000078 T __ratio
+001a278c 00000088 T __copybits
+001a2814 0000005c T __any_on
+001a2870 00000020 T realloc
+001a2890 000004a0 T _realloc_r
+001a2d30 000000f4 T __sccl
+001a2e24 0000000c T nanf
+001a2e30 00000088 T frexp
+001a2eb8 00000010 T nan
+001a2ec8 000000cc T stpncpy
+001a2f94 0000022c t _strtoll_l.constprop.0
+001a31c0 00000004 T _strtoll_r
+001a31c4 00000244 t _strtoull_l.constprop.0
+001a3408 00000004 T _strtoull_r
+001a340c 00000188 T __ssprint_r
+001a3594 000000d4 T _sungetc_r
+001a3668 0000006c T __ssrefill_r
+001a36d4 000000c4 T _sfread_r
+001a3798 000000a8 T __submore
+001a3840 0000066c t get_arg
+001a3eac 00000030 T __sprint_r
+001a3edc 000022ec T _vfiprintf_r
+001a61c8 000000d0 t __sbprintf
+001a6298 00000188 T _wcsnrtombs_l
+001a6420 0000004c T _wcsnrtombs_r
+001a646c 0000005c T __assert_func
+001a64c8 000000c0 T _calloc_r
+001a6588 0000008c T category
+001a6614 0000003c T fiprintf
+001a6650 00000008 t null_write
+001a6658 00000018 T setDefaultDevice
+001a6670 000000c8 T FindDevice
+001a6738 00000028 T RemoveDevice
+001a6760 0000009c T AddDevice
+001a67fc 00000020 T GetDeviceOpTab
+001a681c 00000078 T _fstat_r
+001a6894 00000014 T _getpid_r
+001a68a8 00000030 T _gettimeofday_r
+001a68d8 00000008 T _isatty_r
+001a68e0 00000014 T _kill_r
+001a68f4 00000084 T _lseek_r
+001a6978 000000c0 T _open_r
+001a6a38 00000080 T _read_r
+001a6ab8 00000078 T _sbrk_r
+001a6b30 00000080 T _write_r
+001a6bb0 00000020 T _exit
+001a6bd0 000001a4 T _concatenate_path
+001a6d74 00000140 T chdir
+001a6eb4 00000008 T __flockfile
+001a6ebc 00000008 T __funlockfile
+001a6ec4 0000008c T __release_handle
+001a6f50 000000b0 T __alloc_handle
+001a7000 0000003c T __get_handle
+001a703c 000000f4 T _close_r
+001a7130 00000068 t __dirnext
+001a7198 000000f4 T opendir
+001a728c 00000090 T closedir
+001a731c 000000a8 T readdir
+001a73c4 0000002c T __getreent
+001a73f0 0000001c T __libc_lock_acquire
+001a740c 0000001c T __libc_lock_release
+001a7428 0000001c T __libc_lock_init_recursive
+001a7444 0000001c T __libc_lock_acquire_recursive
+001a7460 0000001c T __libc_lock_release_recursive
+001a747c 0000001c T __libc_lock_close_recursive
+001a7498 00000038 T __aeabi_d2lz
+001a7498 00000038 T __fixdfdi
+001a74d0 00000040 T __aeabi_d2ulz
+001a74d0 00000040 T __fixunsdfdi
+001a7510 00000048 T strrchr
+001a7558 T _fini
+001a82d4 0000002c R Dungeon::dungeonList
+001a882c 00000044 r JunkPoolItems
+001a8870 0000003c r chestItems
+001a88ac 00000010 r GetBasePath(OptionCategory)::paths
+001a8a94 00000014 r Settings::GlitchDifficultyOptions[abi:cxx11](unsigned char)::glitchDifficulties
+001a8aa8 000001f0 r (anonymous namespace)::hashIcons
+001a8c98 0000003c R vtable for tinyxml2::XMLPrinter
+001a8cf0 0000003c r tinyxml2::entities
+001a8d2c 00000050 R vtable for tinyxml2::XMLUnknown
+001a8d7c 00000050 R vtable for tinyxml2::XMLComment
+001a8dcc 00000050 R vtable for tinyxml2::XMLText
+001a8e1c 00000010 r tinyxml2::XMLUtil::ToBool(char const*, bool*)::TRUE_VALS
+001a8e2c 00000010 r tinyxml2::XMLUtil::ToBool(char const*, bool*)::FALSE_VALS
+001a8e3c 00000050 R vtable for tinyxml2::XMLDeclaration
+001a8e8c 00000050 R vtable for tinyxml2::XMLElement
+001a8edc 00000050 R vtable for tinyxml2::XMLNode
+001a8f2c 00000050 R vtable for tinyxml2::XMLDocument
+001a8f7c 00000004 r tinyxml2::XMLPrinter::PushHeader(bool, bool)::bom
+001a92d8 000000c9 V std::__detail::__to_chars_10_impl<unsigned int>(char*, unsigned int, unsigned int)::__digits
+001ad51c r .LC65
+001ad524 r .LC66
+001af6e8 r .LC2
+001af894 000000c9 V std::__detail::__to_chars_10_impl<unsigned long>(char*, unsigned int, unsigned long)::__digits
+001af9f4 r .LC13
+001afa54 r .LC19
+001b4cdc 00000010 V vtable for tinyxml2::XMLAttribute
+001b4cec 00000020 V vtable for tinyxml2::MemPoolT<60>
+001b4d0c 00000020 V vtable for tinyxml2::MemPoolT<40>
+001b4d2c 00000020 V vtable for tinyxml2::MemPoolT<56>
+001b4d4c 00000020 V vtable for tinyxml2::MemPoolT<52>
+001b4d80 00000070 r romFS_devoptab
+001b4e68 00000070 r dotab_stdout
+001b4ed8 00000018 r grayScale
+001b4ef0 00000006 r colorCube
+001b4ef8 00000030 r colorTable
+001b4f4c 00000008 r morton_y.2
+001b4f54 00000008 r morton_x.3
+001b4f5c 00000008 r s_sleepWakeEvents.4
+001b4f84 00000014 r swkbdFeatures
+001b4fa4 R default_font_bin
+001b57a4 R default_font_bin_end
+001b57d0 00000030 r error_table
+001b5808 00000070 r archive_devoptab
+001b5878 00000001 R std::nothrow
+001b5894 0000000e r std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned int) const::__fast_bkt
+001b58a4 00000404 R std::__detail::__prime_list
+001b5dc8 0000000d r CSWTCH.166
+001b5dd8 0000002f V typeinfo name for std::_Mutex_base<(__gnu_cxx::_Lock_policy)0>
+001b5e08 00000008 V typeinfo for std::_Mutex_base<(__gnu_cxx::_Lock_policy)0>
+001b5e10 00000018 V typeinfo name for std::_Sp_make_shared_tag
+001b5e28 00000008 V typeinfo for std::_Sp_make_shared_tag
+001b5e30 00000034 V typeinfo name for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>
+001b5e64 0000000c V typeinfo for std::_Sp_counted_base<(__gnu_cxx::_Lock_policy)0>
+001b5e70 0000005f V typeinfo name for std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>
+001b5ed0 0000000c V typeinfo for std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>
+001b5edc 0000001c V vtable for std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::_Dir, std::allocator<std::filesystem::__cxx11::_Dir>, (__gnu_cxx::_Lock_policy)0>
+001b5ef8 00000008 V std::_Sp_make_shared_tag::_S_ti()::__tag
+001b5f68 0000002b R typeinfo name for std::filesystem::__cxx11::filesystem_error
+001b5f94 0000000c R typeinfo for std::filesystem::__cxx11::filesystem_error
+001b5fa0 00000072 V typeinfo name for std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>
+001b6014 0000000c V typeinfo for std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>
+001b6020 00000014 R vtable for std::filesystem::__cxx11::filesystem_error
+001b6034 0000001c V vtable for std::_Sp_counted_ptr_inplace<std::filesystem::__cxx11::filesystem_error::_Impl, std::allocator<std::filesystem::__cxx11::filesystem_error::_Impl>, (__gnu_cxx::_Lock_policy)0>
+001b6050 00000001 V std::filesystem::__cxx11::path::preferred_separator
+001b6064 0000000d R typeinfo name for std::bad_alloc
+001b6074 0000000c R typeinfo for std::bad_alloc
+001b6080 00000014 R vtable for std::bad_alloc
+001b60b0 00000019 R typeinfo name for std::bad_array_new_length
+001b60cc 0000000c R typeinfo for std::bad_array_new_length
+001b60d8 00000014 R vtable for std::bad_array_new_length
+001b60ec 00000022 R typeinfo name for __cxxabiv1::__class_type_info
+001b6110 0000000c R typeinfo for __cxxabiv1::__class_type_info
+001b611c 0000002c R vtable for __cxxabiv1::__class_type_info
+001b615c 0000000d R typeinfo name for std::exception
+001b616c 00000008 R typeinfo for std::exception
+001b6174 00000012 R typeinfo name for std::bad_exception
+001b6188 0000000c R typeinfo for std::bad_exception
+001b6194 00000020 R typeinfo name for __cxxabiv1::__forced_unwind
+001b61b4 00000008 R typeinfo for __cxxabiv1::__forced_unwind
+001b61bc 00000024 R typeinfo name for __cxxabiv1::__foreign_exception
+001b61e0 00000008 R typeinfo for __cxxabiv1::__foreign_exception
+001b61e8 00000014 R vtable for std::bad_exception
+001b61fc 00000025 R typeinfo name for __cxxabiv1::__si_class_type_info
+001b6224 0000000c R typeinfo for __cxxabiv1::__si_class_type_info
+001b6230 0000002c R vtable for __cxxabiv1::__si_class_type_info
+001b625c 0000000d R typeinfo name for std::type_info
+001b626c 00000008 R typeinfo for std::type_info
+001b6274 00000010 R typeinfo name for std::logic_error
+001b6284 0000000c R typeinfo for std::logic_error
+001b6290 00000015 R typeinfo name for std::invalid_argument
+001b62a8 0000000c R typeinfo for std::invalid_argument
+001b62b4 00000011 R typeinfo name for std::length_error
+001b62c8 0000000c R typeinfo for std::length_error
+001b62d4 00000011 R typeinfo name for std::out_of_range
+001b62e8 0000000c R typeinfo for std::out_of_range
+001b62f4 00000012 R typeinfo name for std::runtime_error
+001b6308 0000000c R typeinfo for std::runtime_error
+001b6314 00000014 R vtable for std::logic_error
+001b6328 00000014 R vtable for std::invalid_argument
+001b633c 00000014 R vtable for std::length_error
+001b6350 00000014 R vtable for std::out_of_range
+001b6364 00000014 R vtable for std::runtime_error
+001b63b4 00000019 R typeinfo name for std::_V2::error_category
+001b63d0 00000008 R typeinfo for std::_V2::error_category
+001b63d8 00000011 R typeinfo name for std::system_error
+001b63ec 0000000c R typeinfo for std::system_error
+001b63f8 0000000c r typeinfo for (anonymous namespace)::generic_error_category
+001b6404 0000002a r typeinfo name for (anonymous namespace)::generic_error_category
+001b6430 0000000c r typeinfo for (anonymous namespace)::system_error_category
+001b643c 00000029 r typeinfo name for (anonymous namespace)::system_error_category
+001b6468 00000014 R vtable for std::system_error
+001b647c 00000028 r vtable for (anonymous namespace)::generic_error_category
+001b64a4 00000028 r vtable for (anonymous namespace)::system_error_category
+001b64cc 00000101 R _ctype_
+001b65d0 00000004 R _global_impure_ptr
+001b6d24 00000014 r fpinan.0
+001b6d38 00000014 r fpi.1
+001b6d50 00000028 r tinytens
+001b6db4 00000010 r zeroes.0
+001b6dc4 00000010 r blanks.1
+001b6ddc 00000022 r basefix.0
+001b6e00 00000010 r zeroes.0
+001b6e10 00000010 r blanks.1
+001b6edc 00000100 R __hexdig
+001b6ff0 00001a7c r d02f4
+001b8a6c 0000172a r b02cf
+001ba198 00000040 r a8
+001ba1d8 000000a2 r a7
+001ba27c 00000070 r a6
+001ba2ec 0000005b r a3
+001ba348 000000bc r a2
+001ba404 000000bc r a1
+001ba50c 0000000c r p05.0
+001ba518 00000028 R __mprec_bigtens
+001ba540 000000c8 R __mprec_tens
+001ba608 0000006c R __action_table
+001ba674 0000006c R __state_table
+001ba6e0 00000100 R __chclass
+001ba7e0 00000010 r zeroes.0
+001ba7f0 00000010 r blanks.1
+001ba840 00003528 r categories
+001bdd68 00000070 R dotab_stdnull
+001bddd8 r 
+001be154 R __exidx_start
+001be48c R __exidx_end
+001bf000 0000039c d Areas::allAreas
+001bf39c 00000008 D shuffleOcaMusicDesc
+001bf3a4 00000008 D fanfaresOcarinaDesc
+001bf3ac 00000008 D onlyFanfaresDesc
+001bf3b4 00000008 D fanfaresOffDesc
+001bf3bc 00000008 D shuffleBGMDesc
+001bf3c4 00000008 D musicRandoDesc
+001bf3cc 00000008 D coloredBossKeysDesc
+001bf3d4 00000008 D coloredKeysDesc
+001bf3dc 00000008 D chestSizeDesc
+001bf3e4 00000008 D chestAnimDesc
+001bf3ec 00000008 D damageMultiDesc
+001bf3f4 00000008 D freeScarecrowDesc
+001bf3fc 00000008 D ocarinasDesc
+001bf404 00000008 D shuffleCowsDesc
+001bf40c 00000008 D scrubsRandomPrices
+001bf414 00000008 D scrubsExpensive
+001bf41c 00000008 D scrubsAffordable
+001bf424 00000008 D scrubsOff
+001bf42c 00000008 D tokensAllTokens
+001bf434 00000008 D tokensOverworld
+001bf43c 00000008 D tokensDungeon
+001bf444 00000008 D tokensOff
+001bf44c 00000008 D shopsRandom
+001bf454 00000008 D shopsFour
+001bf45c 00000008 D shopsThree
+001bf464 00000008 D shopsTwo
+001bf46c 00000008 D shopsOne
+001bf474 00000008 D shopsZero
+001bf47c 00000008 D shopsOff
+001bf484 00000008 D linksPocketNothing
+001bf48c 00000008 D linksPocketAnything
+001bf494 00000008 D linksPocketAdvancement
+001bf49c 00000008 D linksPocketDungeonReward
+001bf4a4 00000008 D linksPocketDefault
+001bf4ac 00000008 D skipSongReplaysDesc
+001bf4b4 00000008 D fastElegyStatuesDesc
+001bf4bc 00000008 D fastArrowSwitchDesc
+001bf4c4 00000008 D increasePushSpeedDesc
+001bf4cc 00000008 D goodDampeRNGDesc
+001bf4d4 00000008 D fastDogRaceDesc
+001bf4dc 00000008 D fastBankDesc
+001bf4e4 00000008 D fastLabFishDesc
+001bf4ec 00000008 D underwaterOcarinaDesc
+001bf4f4 00000008 D fierceDietyAnywhereDesc
+001bf4fc 00000008 D skipMinigamePhasesDesc
+001bf504 00000008 D blastVeryLong
+001bf50c 00000008 D blastLong
+001bf514 00000008 D blastShort
+001bf51c 00000008 D blastVeryShort
+001bf524 00000008 D blastInstant
+001bf52c 00000008 D blastDefault
+001bf534 00000008 D removeDDDesc
+001bf53c 00000008 D iceTrapsOnslaught
+001bf544 00000008 D iceTrapsMayhem
+001bf54c 00000008 D iceTrapsExtra
+001bf554 00000008 D iceTrapsNormal
+001bf55c 00000008 D iceTrapsOff
+001bf564 00000008 D itemPoolMinimal
+001bf56c 00000008 D itemPoolScarce
+001bf574 00000008 D itemPoolBalanced
+001bf57c 00000008 D itemPoolPlentiful
+001bf584 00000008 D advancedTrapDmgDesc
+001bf58c 00000008 D basicTrapDmgDesc
+001bf594 00000008 D randomTrapDmgDesc
+001bf59c 00000008 D menuButtonDesc
+001bf5a4 00000008 D ingameSpoilersHideDesc
+001bf5ac 00000008 D ingameSpoilersShowDesc
+001bf5b4 00000008 D changeOverworldItemsDesc
+001bf5bc 00000008 D veryStrongHintsDesc
+001bf5c4 00000008 D strongHintsDesc
+001bf5cc 00000008 D balancedHintsDesc
+001bf5d4 00000008 D uselessHintsDesc
+001bf5dc 00000008 D clearerHintsDesc
+001bf5e4 00000008 D gossipStonesHintsDesc
+001bf5ec 00000008 D songsAllLocations
+001bf5f4 00000008 D songsDungeonRewards
+001bf5fc 00000008 D songsSongLocations
+001bf604 00000008 D startingSpinDesc
+001bf60c 00000008 D progressiveGildedSwordDesc
+001bf614 00000008 D twinmoldTrialSkipDesc
+001bf61c 00000008 D gyorgTrialSkipDesc
+001bf624 00000008 D gohtTrialSkipDesc
+001bf62c 00000008 D odolwaTrialSkipDesc
+001bf634 00000008 D rsDurabilityInf
+001bf63c 00000008 D rsDurabilityVanilla
+001bf644 00000008 D skipEponaRaceDesc
+001bf64c 00000008 D shuffleMerchantsDesc
+001bf654 00000008 D shuffleGFAnywhere
+001bf65c 00000008 D shuffleGFSelf
+001bf664 00000008 D shuffleGFVanilla
+001bf66c 00000008 D kokiriSwordDesc
+001bf674 00000008 D magicBeansDesc
+001bf67c 00000008 D shuffleRewardsAnywhere
+001bf684 00000008 D shuffleRewardsOverworld
+001bf68c 00000008 D shuffleRewardsAnyDungeon
+001bf694 00000008 D shuffleRewardsEndOfDungeon
+001bf69c 00000008 D fairyAnywhere
+001bf6a4 00000008 D fairyOverworld
+001bf6ac 00000008 D fairyAnyDungeon
+001bf6b4 00000008 D fairyOwnDungeon
+001bf6bc 00000008 D fairyStartWith
+001bf6c4 00000008 D fairyVanilla
+001bf6cc 00000008 D bossKeyAnywhere
+001bf6d4 00000008 D bossKeyOverworld
+001bf6dc 00000008 D bossKeyAnyDungeon
+001bf6e4 00000008 D bossKeyOwnDungeon
+001bf6ec 00000008 D bossKeyVanilla
+001bf6f4 00000008 D bossKeyStartWith
+001bf6fc 00000008 D smallKeyAnywhere
+001bf704 00000008 D smallKeyOverworld
+001bf70c 00000008 D smallKeyAnyDungeon
+001bf714 00000008 D smallKeyOwnDungeon
+001bf71c 00000008 D smallKeyVanilla
+001bf724 00000008 D smallKeyStartWith
+001bf72c 00000008 D mapCompassAnywhere
+001bf734 00000008 D mapCompassOverworld
+001bf73c 00000008 D mapCompassAnyDungeon
+001bf744 00000008 D mapCompassOwnDungeon
+001bf74c 00000008 D mapCompassVanilla
+001bf754 00000008 D mapCompassStartWith
+001bf75c 00000008 D shuffleChestItemsRandom
+001bf764 00000008 D shuffleChestItemsVanilla
+001bf76c 00000008 D heartDropDesc
+001bf774 00000008 D ammoDropDesc
+001bf77c 00000008 D bombchuInLogicDesc
+001bf784 00000008 D shuffleDungeonEntrancesDesc
+001bf78c 00000008 D dungeonRandomize
+001bf794 00000008 D startWithMaxRupeesDesc
+001bf79c 00000008 D startWithConsumablesDesc
+001bf7a4 00000008 D ToggleLogicExpertDesc
+001bf7ac 00000008 D ToggleLogicIntermediateDesc
+001bf7b4 00000008 D ToggleLogicNoviceDesc
+001bf7bc 00000008 D ToggleLogicNoneDesc
+001bf7c4 00000008 D locationsReachableDesc
+001bf7cc 00000008 D logicVanilla
+001bf7d4 00000008 D logicNoLogic
+001bf7dc 00000008 D logicGlitched
+001bf7e4 00000008 D logicGlitchless
+001bf7ec 00000004 D tinyxml2::XMLUtil::writeBoolTrue
+001bf7f0 00000004 D tinyxml2::XMLUtil::writeBoolFalse
+001bf7f4 0000004c D tinyxml2::XMLDocument::_errorNames
+001bf840 00000001 d firstConsoleInit.0
+001bf844 00000004 D currentConsole
+001bf848 00000048 D defaultConsole
+001bf890 00000004 d kCount
+001bf894 00000004 d kInterval
+001bf898 00000004 d kDelay
+001bf89c W __stacksize__
+001bf8a0 00000004 D __cxxabiv1::__unexpected_handler
+001bf8a4 00000004 d (anonymous namespace)::system_category_instance
+001bf8a8 00000004 d (anonymous namespace)::generic_category_instance
+001bf8ac 00000004 D __cxxabiv1::__terminate_handler
+001bf8b0 00000004 D _impure_ptr
+001bf8b8 00000460 d impure_data
+001bfd18 0000016c D __global_locale
+001bfe84 00000004 D __malloc_sbrk_base
+001bfe88 00000004 D __malloc_trim_threshold
+001bfe90 00000408 D __malloc_av_
+001c0298 0000008c D devoptab_list
+001c0324 00000004 d defaultDevice
+001c0328 00000400 d _current_working_directory
+001c0728 00001000 d handles
+001c1728 0000000c d __stderr_handle
+001c1734 0000000c d __stdout_handle
+001c1740 0000000c d __stdin_handle
+001c1754 d _GLOBAL_OFFSET_TABLE_
+001c1760 d __frame_dummy_init_array_entry
+001c1760 D __init_array_start
+001c1760 B __preinit_array_end
+001c1760 B __preinit_array_start
+001c1760 D __tdata_lma
+001c1760 D __tdata_lma_end
+001c17b0 d __do_global_dtors_aux_fini_array_entry
+001c17b0 D __fini_array_start
+001c17b0 D __init_array_end
+001c17e8 D __bss_start__
+001c17e8 D __fini_array_end
+001c17e8 00000038 B Dungeon::TheMoon
+001c1820 00000038 B Dungeon::SecretShrine
+001c1858 00000038 B Dungeon::AncientCastleOfIkana
+001c1890 00000038 B Dungeon::BeneathTheWell
+001c18c8 00000038 B Dungeon::PiratesFortress
+001c1900 00000038 B Dungeon::OceansideSpiderHouse
+001c1938 00000038 B Dungeon::SwampSpiderHouse
+001c1970 00000038 B Dungeon::StoneTowerTemple
+001c19a8 00000038 B Dungeon::GreatBayTemple
+001c19e0 00000038 B Dungeon::SnowheadTemple
+001c1a18 00000038 B Dungeon::WoodfallTemple
+001c1a50 0000000c B playthroughEntrances[abi:cxx11]
+001c1a5c 00000001 b placementFailure
+001c1a60 00014168 b hintTable
+001d5bc8 0001ff54 b itemTable
+001f5b20 00000002 B itemsPlaced
+001f5b22 00000001 B showItemProgress
+001f5b24 0000000c B dungeonRewardLocations
+001f5b30 0000000c B allLocations
+001f5b3c 0000000c B gossipStoneLocations
+001f5b48 00000018 B overrides
+001f5b60 0000000c B wothLocations
+001f5b70 0000000c B playthroughLocations
+001f5b7c 0000000c B chestLocations
+001f5b88 0000000c B logicalLocations
+001f5b94 0000000c B overworldLocations
+001f5ba0 0000000c B everyPossibleLocation
+001f5bac 00000001 B allLocationsReachable
+001f5bad 00000001 B playthroughBeatable
+001f5bb0 00022b28 b locationTable
+002186d8 0000000c B ItemPool
+002186e4 0000000c B PendingJunkPool
+002186f0 0000000c B IceTrapModels
+002186fc 00015ea0 b areaTable
+0022e59c 00000001 B Logic::Scarecrow
+0022e59d 00000001 B Logic::FireArrows
+0022e59e 00000001 B Logic::IceArrows
+0022e59f 00000001 B Logic::LightArrows
+0022e5a0 00000001 B Logic::Sticks
+0022e5a1 00000001 B Logic::Pictobox
+0022e5a2 00000001 B Logic::PowderKeg
+0022e5a3 00000001 B Logic::DekuMask
+0022e5a4 00000001 B Logic::GoronMask
+0022e5a5 00000001 B Logic::ZoraMask
+0022e5a6 00000001 B Logic::BlastMask
+0022e5a7 00000001 B Logic::GreatFairyMask
+0022e5a8 00000001 B Logic::PostmansHat
+0022e5a9 00000001 B Logic::AllNightMask
+0022e5aa 00000001 B Logic::BremenMask
+0022e5ab 00000001 B Logic::DonGerosMask
+0022e5ac 00000001 B Logic::MaskOfScents
+0022e5ad 00000001 B Logic::RomanisMask
+0022e5ae 00000001 B Logic::CircusLeadersMask
+0022e5af 00000001 B Logic::KafeisMask
+0022e5b0 00000001 B Logic::KamarosMask
+0022e5b1 00000001 B Logic::CouplesMask
+0022e5b2 00000001 B Logic::GibdosMask
+0022e5b3 00000001 B Logic::GarosMask
+0022e5b4 00000001 B Logic::CaptainsHat
+0022e5b5 00000001 B Logic::GiantsMask
+0022e5b6 00000001 B Logic::FierceDietyMask
+0022e5b7 00000001 B Logic::MaskOfTruth
+0022e5b8 00000001 B Logic::KokiriSword
+0022e5b9 00000001 B Logic::LensOfTruth
+0022e5ba 00000001 B Logic::HerosBow
+0022e5bb 00000001 B Logic::DekuStick
+0022e5bc 00000001 B Logic::Ocarina
+0022e5bd 00000001 B Logic::MagicMeter
+0022e5be 00000001 B Logic::Bow
+0022e5bf 00000001 B Logic::StickPot
+0022e5c0 00000001 B Logic::DekuBabaSticks
+0022e5c1 00000001 B Logic::DekuStickDrop
+0022e5c2 00000001 B Logic::NutPot
+0022e5c3 00000001 B Logic::NutCrate
+0022e5c4 00000001 B Logic::DekuBabaNuts
+0022e5c5 00000001 B Logic::DekuNutDrop
+0022e5c6 00000001 B Logic::BugShrub
+0022e5c7 00000001 B Logic::WanderingBugs
+0022e5c8 00000001 B Logic::BugRock
+0022e5c9 00000001 B Logic::BugsAccess
+0022e5ca 00000001 B Logic::LoneFish
+0022e5cb 00000001 B Logic::FishGroup
+0022e5cc 00000001 B Logic::FishAccess
+0022e5cd 00000001 B Logic::WitchBottle
+0022e5ce 00000001 B Logic::SongOfStorms
+0022e5cf 00000001 B Logic::HotSpringWater
+0022e5d0 00000001 B Logic::SpringWater
+0022e5d1 00000001 B Logic::WaterAccess
+0022e5d2 00000001 B Logic::HotSpringWaterAccess
+0022e5d3 00000001 B Logic::WaterForBeans
+0022e5d4 00000001 B Logic::MagicBean
+0022e5d5 00000001 B Logic::MagicBeanPack
+0022e5d6 00000001 B Logic::LimitlessBeans
+0022e5d7 00000001 B Logic::AnyMagicBean
+0022e5d8 00000001 B Logic::AnyBombBag
+0022e5d9 00000001 B Logic::Bombs
+0022e5da 00000001 B Logic::Nuts
+0022e5db 00000001 B Logic::HasBottle
+0022e5dc 00000001 B Logic::Bugs
+0022e5dd 00000001 B Logic::Fish
+0022e5de 00000001 B Logic::HasExplosives
+0022e5df 00000001 B Logic::CanBlastOrSmash
+0022e5e0 00000001 B Logic::CanDive
+0022e5e1 00000001 B Logic::CanPlantBugs
+0022e5e2 00000001 B Logic::EponasSong
+0022e5e3 00000001 B Logic::Epona
+0022e5e4 00000001 B Logic::CanRideEpona
+0022e5e5 00000001 B Logic::CanPlantBean
+0022e5e6 00000001 B Logic::CanOpenStormGrotto
+0022e5e7 00000001 B Logic::CanOpenBombGrotto
+0022e5e8 00000001 B Logic::DekuStickFighting
+0022e5e9 00000001 B Logic::HasFireSource
+0022e5ea 00000001 B Logic::HasFireSourceWithTorch
+0022e5eb 00000001 B Logic::AnyBSword
+0022e5ec 00000001 B Logic::AnySword
+0022e5ed 00000001 B Logic::RoomKey
+0022e5ee 00000001 B Logic::NightInnAccess
+0022e5ef 00000001 B Logic::Fighting
+0022e5f0 00000001 B Logic::AnyShield
+0022e5f1 00000001 B Logic::CanUseProjectile
+0022e5f2 00000001 B Logic::Townwallet200
+0022e5f3 00000001 B Logic::OceanWallet500
+0022e5f4 00000001 B Logic::AnyWallet
+0022e5f5 00000001 B Logic::AnyBottle
+0022e5f6 00000001 B Logic::ProgressiveMagic
+0022e5f7 00000001 B Logic::MagicPower
+0022e5f8 00000001 B Logic::ExtendedMagicPower
+0022e5f9 00000001 B Logic::Hookshot
+0022e5fa 00000001 B Logic::ScarecrowSong
+0022e5fb 00000001 B Logic::LandTitle
+0022e5fc 00000001 B Logic::SwampTitle
+0022e5fd 00000001 B Logic::OceanTitle
+0022e5fe 00000001 B Logic::MountainTitle
+0022e5ff 00000001 B Logic::LetterKafei
+0022e600 00000001 B Logic::LetterMama
+0022e601 00000001 B Logic::AnyPaper
+0022e602 00000001 B Logic::ProgressiveBombBag
+0022e603 00000001 B Logic::BombBag20
+0022e604 00000001 B Logic::TownBombBag
+0022e605 00000001 B Logic::MountainBombBag
+0022e606 00000001 B Logic::Explosives
+0022e607 00000001 B Logic::BuyBombchus5
+0022e608 00000001 B Logic::BuyBombchus10
+0022e609 00000001 B Logic::BuyBombchus20
+0022e60a 00000001 B Logic::HasBombchus
+0022e60b 00000001 B Logic::FoundBombchus
+0022e60c 00000001 B Logic::Bombchus
+0022e60d 00000001 B Logic::ProgressiveBow
+0022e60e 00000001 B Logic::TownArcheryQuiver
+0022e60f 00000001 B Logic::SwampArcheryQuiver
+0022e610 00000001 B Logic::Arrows
+0022e611 00000001 B Logic::AlienBottle
+0022e612 00000001 B Logic::BeaverRaceBottle
+0022e613 00000001 B Logic::DampeBottle
+0022e614 00000001 B Logic::GoronRaceBottle
+0022e615 00000001 B Logic::ChateauBottle
+0022e616 00000001 B Logic::WoodfallClear
+0022e617 00000001 B Logic::DekuPrincess
+0022e618 00000001 B Logic::AllZoraEggs
+0022e619 00000001 B Logic::Mushroom
+0022e61a 00000001 B Logic::AnyRedPotion
+0022e61b 00000001 B Logic::AnyBluePotion
+0022e61c 00000001 B Logic::AnyHealingPotion
+0022e61d 00000001 B Logic::TwoBottles
+0022e61e 00000001 B Logic::CrossPoisonWater
+0022e61f 00000001 B Logic::PoisonSwampAccess
+0022e620 00000001 B Logic::AccessToAllSwampSpiders
+0022e621 00000001 B Logic::SonataOfAwakening
+0022e622 00000001 B Logic::WoodfallTempleAccess
+0022e623 00000001 B Logic::SwampSpiderhouseTreeRoom
+0022e624 00000001 B Logic::NorthAccess
+0022e625 00000001 B Logic::EnterSnowheadTemple
+0022e626 00000001 B Logic::GoronsLullaby
+0022e627 00000001 B Logic::SnowheadTempleAccess
+0022e628 00000001 B Logic::WestAccess
+0022e629 00000001 B Logic::UseIceArrow
+0022e62a 00000001 B Logic::PiratesFortressAccess
+0022e62b 00000001 B Logic::GreatBayTempleAccess
+0022e62c 00000001 B Logic::GBTReverseWaterDirection
+0022e62d 00000001 B Logic::NewWaveBossaNova
+0022e62e 00000001 B Logic::PinnacleRockAccess
+0022e62f 00000001 B Logic::ExitOceanSpiderHouse
+0022e630 00000001 B Logic::OceanSkulltulas
+0022e631 00000001 B Logic::AccessToAllOceanSpiders
+0022e632 00000001 B Logic::UseFireArrow
+0022e633 00000001 B Logic::EastAccess
+0022e634 00000001 B Logic::IkanaGraveyardAccess
+0022e635 00000001 B Logic::IkanaCanyonAccess
+0022e636 00000001 B Logic::ElegyOfEmptiness
+0022e637 00000001 B Logic::StoneTowerTempleAcccess
+0022e638 00000001 B Logic::InvertedStoneTowerTempleAccess
+0022e639 00000001 B Logic::UseLightArrow
+0022e63a 00000001 B Logic::FightTwinmold
+0022e63b 00000001 B Logic::EponaAccess
+0022e63c 00000001 B Logic::StoneTowerClear
+0022e63d 00000001 B Logic::GreatBayClear
+0022e63e 00000001 B Logic::SnowheadClear
+0022e63f 00000001 B Logic::MoonAccess
+0022e640 00000001 B Logic::AllWoodfallStrays
+0022e641 00000001 B Logic::AllSnowheadStrays
+0022e642 00000001 B Logic::AllGreatBayStrays
+0022e643 00000001 B Logic::AllStoneTowerStrays
+0022e644 00000001 B Logic::TakeDamage
+0022e645 00000001 B Logic::PoisonWaterAsZora
+0022e646 00000001 B Logic::WFT2ndFloorSkip
+0022e647 00000001 B Logic::OneMask
+0022e648 00000001 B Logic::TwoMasks
+0022e649 00000001 B Logic::ThreeMasks
+0022e64a 00000001 B Logic::FourMasks
+0022e64b 00000001 B Logic::StoneMask
+0022e64c 00000001 B Logic::KeatonMask
+0022e64d 00000001 B Logic::BunnyHood
+0022e64e 00000001 B Logic::AllMasks
+0022e64f 00000001 B Logic::Seahorse
+0022e650 00000001 B Logic::noVariable
+0022e651 00000001 B Logic::BigPoe
+0022e652 00000001 B Logic::SpinAttack
+0022e653 00000001 B Logic::BombersNotebook
+0022e654 00000001 B Logic::MirrorShield
+0022e655 00000001 B Logic::HerosShield
+0022e656 00000001 B Logic::RazorSword
+0022e657 00000001 B Logic::GildedSword
+0022e658 00000001 B Logic::GreatFairySword
+0022e659 00000001 B Logic::StoneTowerMagicBean
+0022e65a 00000001 B Logic::SwampScrubMagicBean
+0022e65b 00000001 B Logic::PendantOfMemories
+0022e65c 00000001 B Logic::MoonsTear
+0022e65d 00000001 B Logic::LandTitleAccess
+0022e65e 00000001 B Logic::SwampTitleAccess
+0022e65f 00000001 B Logic::MountainTitleAccess
+0022e660 00000001 B Logic::OceanTitleAccess
+0022e661 00000001 B Logic::RoomKeyAccess
+0022e662 00000001 B Logic::LetterKafeiAccess
+0022e663 00000001 B Logic::PendantAccess
+0022e664 00000001 B Logic::LetterMamaAccess
+0022e665 00000001 B Logic::MoonsTearAccess
+0022e666 00000001 B Logic::SongOfHealing
+0022e667 00000001 B Logic::OathToOrder
+0022e668 00000001 B Logic::SongOfSoaring
+0022e669 00000001 B Logic::OdolwaRemains
+0022e66a 00000001 B Logic::GohtRemains
+0022e66b 00000001 B Logic::GyorgRemains
+0022e66c 00000001 B Logic::TwinmoldRemains
+0022e66d 00000001 B Logic::WoodfallTempleKeys
+0022e66e 00000001 B Logic::SnowheadTempleKeys
+0022e66f 00000001 B Logic::GreatBayTempleKeys
+0022e670 00000001 B Logic::StoneTowerTempleKeys
+0022e671 00000001 B Logic::BossKeyWoodfallTemple
+0022e672 00000001 B Logic::BossKeySnowheadTemple
+0022e673 00000001 B Logic::BossKeyGreatBayTemple
+0022e674 00000001 B Logic::BossKeyStoneTowerTemple
+0022e675 00000001 B Logic::BombchuDrop
+0022e676 00000001 B Logic::Water
+0022e677 00000001 B Logic::BombBag
+0022e678 00000001 B Logic::CanCutShrubs
+0022e679 00000001 B Logic::HasShield
+0022e67a 00000001 B Logic::CanShield
+0022e67b 00000001 B Logic::IsItem
+0022e67c 00000001 B Logic::CanShootBubble
+0022e67d 00000001 B Logic::OneWoodfallKey
+0022e67e 00000001 B Logic::OneSnowheadKey
+0022e67f 00000001 B Logic::TwoSnowheadKeys
+0022e680 00000001 B Logic::OneGreatBayKey
+0022e681 00000001 B Logic::OneStoneTowerKey
+0022e682 00000001 B Logic::TwoStoneTowerKeys
+0022e683 00000001 B Logic::ThreeStoneTowerKeys
+0022e684 00000001 B Logic::ClockTownStrayFairy
+0022e685 00000001 B Logic::SHSwitchPress
+0022e686 00000001 B Logic::ReverseWaterFlow
+0022e687 00000001 B Logic::RedSwitch
+0022e688 00000001 B Logic::RedSwitch2
+0022e689 00000001 B Logic::GreenSwitch
+0022e68a 00000001 B Logic::GreenSwitch2
+0022e68b 00000001 B Logic::GreenValve
+0022e68c 00000001 B Logic::PirateBees
+0022e68d 00000001 B Logic::MusicBoxOn
+0022e68e 00000001 B Logic::IkanaLightSwitch
+0022e68f 00000001 B Logic::IkanaCastleRoofHole
+0022e690 00000001 B Logic::ArmosRoomLightHole
+0022e691 00000001 B Logic::InvertedChestSpawn
+0022e692 00000001 B Logic::EnterSakonHideout
+0022e693 00000001 B Logic::AtDay
+0022e694 00000001 B Logic::AtNight
+0022e695 00000001 B Logic::Day
+0022e696 00000001 B Logic::IsDay1
+0022e697 00000001 B Logic::IsDay2
+0022e698 00000001 B Logic::IsDay3
+0022e699 00000001 B Logic::ZoraEgg
+0022e69a 00000001 B Logic::CanGoToMoon
+0022e69b 00000001 B Logic::PlacedMasks
+0022e69c 00000001 B Logic::STStraysInPool
+0022e69d 00000001 B Logic::SHStraysInPool
+0022e69e 00000001 B Logic::WFStraysInPool
+0022e69f 00000001 B Logic::OceanTokensInPool
+0022e6a0 00000001 B Logic::SwampTokensInPool
+0022e6a1 00000001 B Logic::AddedProgressiveWallets
+0022e6a2 00000001 B Logic::AddedProgressiveBows
+0022e6a3 00000001 B Logic::AddedProgressiveMagics
+0022e6a4 00000001 B Logic::AddedProgressiveBombBags
+0022e6a5 00000001 B Logic::StoneTowerStrayFairies
+0022e6a6 00000001 B Logic::GBTStrayFairies
+0022e6a7 00000001 B Logic::SnowheadStrayFairies
+0022e6a8 00000001 B Logic::WoodfallStrayFairies
+0022e6a9 00000001 B Logic::OceanSkulltulaTokens
+0022e6aa 00000001 B Logic::SwampSkulltulaTokens
+0022e6ab 00000001 B Logic::ProgressiveWallet
+0022e6ac 00000048 b (anonymous namespace)::topScreen
+0022e6f4 00000004 b (anonymous namespace)::currentMenu
+0022e6f8 00000004 b (anonymous namespace)::currentSetting
+0022e6fc 0000000c b (anonymous namespace)::presetEntries
+0022e708 00000048 b (anonymous namespace)::bottomScreen
+0022e750 00000002 b (anonymous namespace)::settingBound
+0022e754 0000000c b (anonymous namespace)::menuList
+0022e760 00000002 b (anonymous namespace)::pastSeedLength
+0022e762 00000001 b (anonymous namespace)::seedChanged
+0022e764 00000018 b CACHED_SETTINGS_FILENAME
+0022e77c 00000018 b CACHED_COSMETICS_FILENAME
+0022e798 00000001 b init
+0022e7a0 000009c8 b generator
+0022f168 0000000c B GlitchDifficulties
+0022f174 00000005 B Settings::hashIconIndexes
+0022f17c 00000040 B Settings::Logic
+0022f1bc 00000040 B Settings::LocationsReachable
+0022f1fc 00000040 B Settings::ShuffleDungeonEntrances
+0022f23c 00000040 B Settings::BombchusInLogic
+0022f27c 00000040 B Settings::AmmoDrops
+0022f2bc 00000040 B Settings::HeartDropRefills
+0022f2fc 00000040 B Settings::ShuffleChests
+0022f33c 00000040 B Settings::ShuffleRewards
+0022f37c 00000040 B Settings::ShuffleGFRewards
+0022f3bc 00000040 B Settings::LinksPocketItem
+0022f3fc 00000040 B Settings::ShuffleSongs
+0022f43c 00000040 B Settings::Tokensanity
+0022f47c 00000040 B Settings::Scrubsanity
+0022f4bc 00000040 B Settings::Shopsanity
+0022f4fc 00000040 B Settings::ShuffleMagicBeans
+0022f53c 00000040 B Settings::ShuffleKokiriSword
+0022f57c 00000040 B Settings::ShuffleMerchants
+0022f5bc 00000040 B Settings::MapsAndCompasses
+0022f5fc 00000040 B Settings::Keysanity
+0022f63c 00000040 B Settings::BossKeysanity
+0022f67c 00000040 B Settings::SkipMinigamePhases
+0022f6bc 00000040 B Settings::SkipEponaRace
+0022f6fc 00000040 B Settings::DamageMultiplier
+0022f73c 00000040 B Settings::GossipStoneHints
+0022f77c 00000040 B Settings::ChestAnimations
+0022f7bc 00000040 B Settings::ChestSize
+0022f7fc 00000040 B Settings::GenerateSpoilerLog
+0022f83c 00000040 B Settings::IngameSpoilers
+0022f87c 00000040 B Settings::MenuOpeningButton
+0022f8bc 00000040 B Settings::RandomTrapDmg
+0022f8fc 00000040 B Settings::RsDurability
+0022f93c 00000040 B Settings::ItemPoolValue
+0022f97c 00000040 B Settings::IceTrapValue
+0022f9bc 00000040 B Settings::CustomTunicColors
+0022f9fc 00000040 B Settings::ColoredKeys
+0022fa3c 00000040 B Settings::ColoredBossKeys
+0022fa7c 00000040 B Settings::OdolwaTrialSkip
+0022fabc 00000040 B Settings::GohtTrialSkip
+0022fafc 00000040 B Settings::GyorgTrialSkip
+0022fb3c 00000040 B Settings::TwinmoldTrialSkip
+0022fb7c 00000040 B Settings::ProgressiveGildedSword
+0022fbbc 00000040 B Settings::StartingSpin
+0022fbfc 00000040 B Settings::StartingConsumables
+0022fc3c 00000040 B Settings::StartingMaxRupees
+0022fc7c 00000040 B Settings::StartingOcarina
+0022fcbc 00000040 B Settings::StartingBow
+0022fcfc 00000040 B Settings::StartingFireArrows
+0022fd3c 00000040 B Settings::StartingIceArrows
+0022fd7c 00000040 B Settings::StartingLightArrows
+0022fdbc 00000040 B Settings::StartingBombBag
+0022fdfc 00000040 B Settings::StartingBombchus
+0022fe3c 00000040 B Settings::StartingStickCapacity
+0022fe7c 00000040 B Settings::StartingNutCapacity
+0022febc 00000040 B Settings::StartingMagicBean
+0022fefc 00000040 B Settings::StartingPowderKeg
+0022ff3c 00000040 B Settings::StartingPictographBox
+0022ff7c 00000040 B Settings::StartingLensOfTruth
+0022ffbc 00000040 B Settings::StartingHookshot
+0022fffc 00000040 B Settings::StartingGreatFairySword
+0023003c 00000040 B Settings::StartingBottle1
+0023007c 00000040 B Settings::StartingBottle2
+002300bc 00000040 B Settings::StartingBottle3
+002300fc 00000040 B Settings::StartingBottle4
+0023013c 00000040 B Settings::StartingBottle5
+0023017c 00000040 B Settings::StartingBottle6
+002301bc 00000040 B Settings::StartingBottle7
+002301fc 00000040 B Settings::StartingKokiriSword
+0023023c 00000040 B Settings::StartingRazorSword
+0023027c 00000040 B Settings::StartingGildedSword
+002302bc 00000040 B Settings::StartingMagicMeter
+002302fc 00000040 B Settings::StartingDoubleDefense
+0023033c 00000040 B Settings::StartingHealth
+0023037c 0000000c B Settings::gimmickOptions
+00230388 0000000c B Settings::timesaverOptions
+00230394 0000000c B Settings::cosmeticOptions
+002303a0 0000000c B Settings::excludeLocationsOptions
+002303ac 0000000c B Settings::startingInventoryOptions
+002303b8 0000000c B Settings::logicOptions
+002303c4 0000000c B Settings::trickOptions
+002303d0 0000000c B Settings::glitchOptions
+002303dc 0000000c B Settings::shuffleItemOptions
+002303e8 0000000c B Settings::otherSettingsOptions
+002303f4 00000040 B Settings::StartingInventoryToggle
+00230434 00000040 B Settings::StartingMaskToggle
+00230474 00000040 B Settings::StartingSongsToggle
+002304b4 00000040 B Settings::StartingUpgradesToggle
+002304f4 00000040 B Settings::StartingQuestToggle
+00230534 00000040 B Settings::RemoveDoubleDefense
+00230574 00000040 B Settings::ChildTunicColor
+002305b4 0000000c B Settings::mainMenu
+002305c0 00000030 B Settings::generateRandomizer
+002305f0 00000030 B Settings::cosmetics
+00230620 00000030 B Settings::settingsPresets
+00230650 00000030 B Settings::timeSaverSettings
+00230680 00000030 B Settings::gimmicks
+002306b0 00000030 B Settings::mainSettings
+002306e0 0000000c B Settings::mainSettingsOptions
+002306ec 00000030 B Settings::otherSettings
+0023071c 00000030 B Settings::itemSettings
+0023074c 00000030 B Settings::glitchSettings
+0023077c 00000030 B Settings::excludeLocations
+002307ac 00000030 B Settings::startingInventory
+002307dc 00000030 B Settings::tricks
+0023080c 00000030 B Settings::logicSettings
+0023083c 0000000c B Settings::settingsPresetItems
+00230848 00000030 B Settings::resetToDefaultSettings
+00230878 00000030 B Settings::deleteSettingsPreset
+002308a8 00000030 B Settings::saveSettingsPreset
+002308d8 00000030 B Settings::loadSettingsPreset
+00230908 00000040 B Settings::FakeGlitch
+00230948 0000000c b Settings::fanfareDescriptions
+00230954 0000000c b Settings::fanfareOptions
+00230960 00000018 B Settings::finalChildTunicColor[abi:cxx11]
+00230978 0000000c b Settings::cosmeticDescriptions
+00230984 0000000c b Settings::tunicOptions
+00230990 0000000c B Settings::trialSkipOptions
+0023099c 00000040 B Settings::SkipSongReplays
+002309dc 00000040 B Settings::FastElegyStatues
+00230a1c 00000040 B Settings::FastArrowSwitch
+00230a5c 00000040 B Settings::IncreasePushSpeed
+00230a9c 00000040 B Settings::GoodDampeRNG
+00230adc 00000040 B Settings::FastDogRace
+00230b1c 00000040 B Settings::FastBank
+00230b5c 00000040 B Settings::FastLabFish
+00230b9c 00000040 B Settings::FierceDietyAnywhere
+00230bdc 00000040 B Settings::UnderwaterOcarina
+00230c1c 00000040 B Settings::BlastMaskCooldown
+00230c5c 00000040 B Settings::ChangeOverworldItems
+00230c9c 00000040 B Settings::HintDistribution
+00230cdc 00000040 B Settings::ClearerHints
+00230d1c 00000040 B Settings::StrayFairysanity
+00230d5c 00000040 B Settings::RandomizeDungeon
+00230d9c 00000040 B Settings::StartingMaskOfTruth
+00230ddc 00000040 B Settings::StartingFierceDietyMask
+00230e1c 00000040 B Settings::StartingGiantsMask
+00230e5c 00000040 B Settings::StartingCaptainsHat
+00230e9c 00000040 B Settings::StartingGibdosMask
+00230edc 00000040 B Settings::StartingKamarosMask
+00230f1c 00000040 B Settings::StartingCouplesMask
+00230f5c 00000040 B Settings::StartingKafeiMask
+00230f9c 00000040 B Settings::StartingCircusLeaderMask
+00230fdc 00000040 B Settings::StartingRomanisMask
+0023101c 00000040 B Settings::StartingMaskOfScents
+0023105c 00000040 B Settings::StartingDonGeroMask
+0023109c 00000040 B Settings::StartingBremenMask
+002310dc 00000040 B Settings::StartingGreatFairyMask
+0023111c 00000040 B Settings::StartingStoneMask
+0023115c 00000040 B Settings::StartingBlastMask
+0023119c 00000040 B Settings::StartingAllNightMask
+002311dc 00000040 B Settings::StartingPostmanHat
+0023121c 00000040 B Settings::StartingKeatonMask
+0023125c 00000040 B Settings::StartingBunnyHood
+0023129c 00000040 B Settings::StartingZoraMask
+002312dc 00000040 B Settings::StartingGoronMask
+0023131c 00000040 B Settings::StartingDekuMask
+0023135c 00000040 B Settings::StartingOceanToken
+0023139c 00000040 B Settings::StartingSwampToken
+002313dc 00000040 B Settings::StartingTwinmoldRemains
+0023141c 00000040 B Settings::StartingGyorgRemains
+0023145c 00000040 B Settings::StartingGohtRemains
+0023149c 00000040 B Settings::StartingOdolwaRemains
+002314dc 00000040 B Settings::StartingWallet
+0023151c 00000040 B Settings::StartingMirrorShield
+0023155c 00000040 B Settings::StartingHerosShield
+0023159c 00000040 B Settings::StartingSongOfSoaring
+002315dc 00000040 B Settings::StartingSongOfHealing
+0023161c 00000040 B Settings::StartingElegyOfEmptiness
+0023165c 00000040 B Settings::StartingNewWaveBossaNova
+0023169c 00000040 B Settings::StartingGoronsLullaby
+002316dc 00000040 B Settings::StartingSonataOfAwakening
+0023171c 00000040 B Settings::StartingSongOfStorms
+0023175c 00000040 B Settings::StartingEponasSong
+0023179c 00000040 B Settings::StartingOathToOrder
+002317dc 00000040 B Settings::StartingBottle8
+0023181c 00000040 B Settings::ToggleAllTricks
+0023185c 0000000c B Settings::healthOptions[abi:cxx11]
+00231868 0000000c B Settings::bottleOptions[abi:cxx11]
+00231874 00000018 B Settings::version[abi:cxx11]
+0023188c 00000018 B Settings::seed[abi:cxx11]
+002318a4 00000001 B Settings::ShuffleSpecialIndoorEntrances
+002318a5 00000001 B Settings::ShuffleInteriorEntrances
+002318a6 00000001 B Settings::PlayOption
+002318a8 00000024 B Settings::rDungeonRewardOverrides
+002318cc 00000004 B Settings::LinksPocketRewardBitMask
+002318d0 00000078 b randomizerHash
+00231948 00000018 b (anonymous namespace)::placementtxt
+00231960 0000556c b spoilerData
+00236ecc 0000000c B StartingInventory
+00236ed8 00000001 B AdditionalHeartContainers
+00236ed9 b completed.1
+00236edc b object.0
+00236ef4 00000004 b romfs_mount_list
+00236ef8 00000004 V __romfs_path
+00236efc 00000048 B currentCopy
+00236f44 00000004 b screenAlloc
+00236f48 00000004 b screenFree
+00236f4c 00000002 b gfxIsDoubleBuf
+00236f50 00000002 b gfxCurBuf
+00236f52 00000001 b gfxIsVram
+00236f53 00000001 b gfxTopMode
+00236f54 00000002 b gfxFramebufferFormats
+00236f58 00000004 b gfxBottomFramebufferMaxSize
+00236f5c 00000004 b gfxTopFramebufferMaxSize
+00236f60 00000008 b gfxBottomFramebuffers
+00236f68 00000008 b gfxTopFramebuffers
+00236f70 00000007 b gspEventCbOneShot
+00236f78 0000001c b gspEventCbData
+00236f94 0000001c b gspEventCb
+00236fb0 00000038 b gspEvents
+00236fe8 00000004 b gspLastEvent
+00236fec 00000001 b gspRunEvents
+00236ff0 00000004 b gspEventThread
+00236ff4 00000004 b gspEvent
+00236ff8 00000001 b gspGpuRight
+00236ff9 00000001 b gspThreadId
+00236ffc 00000004 b gspSharedMem
+00237000 00000004 b gspSharedMemHandle
+00237004 00000004 b gspRefCount
+00237008 00000004 b gspGpuHandle
+0023700c 00000001 b flagValue.0
+0023700d 00000001 b flagInit.1
+00237010 00000004 b serviceName.6
+00237014 00000001 b aptChainloadMediatype
+00237018 00000008 b aptChainloadTid
+00237020 00000001 b aptChainloadFlags
+00237024 00001000 b aptParameters
+00238024 00000004 b aptFlags
+00238028 00000001 b aptHomeButtonState
+0023802c 00000004 b aptMessageFuncData
+00238030 00000004 b aptMessageFunc
+00238034 0000000c b aptFirstHook
+00238040 00000001 b aptEventHandlerThreadQuit
+00238044 00000004 b aptEventHandlerThread
+00238048 00000008 b aptSleepEvent
+00238050 00000008 b aptReceiveEvent
+00238058 00000008 b aptEvents
+00238060 00000004 b aptLockHandle
+00238064 00000004 b aptRefCount
+00238068 00000001 b usingIrrst
+0023806c 00000004 b hidRefCount
+00238070 00000006 b gRate
+00238078 00000006 b aVec
+00238080 00000004 b cPos
+00238084 00000004 b tPos
+00238088 00000004 b kRepeat
+0023808c 00000004 b kUp
+00238090 00000004 b kDown
+00238094 00000004 b kHeld
+00238098 00000004 b kOld
+0023809c 00000004 B hidSharedMem
+002380a0 00000014 B hidEvents
+002380b4 00000004 B hidMemHandle
+002380b8 00000004 B hidHandle
+002380c0 00000080 b fsExemptArchives
+00238140 00000004 b fsuRefCount
+00238144 00000004 b fsuHandle
+00238148 00000004 b swkbdSharedMemHandle
+0023814c 00000004 b swkbdSharedMem
+00238150 00000004 B __system_retAddr
+00238154 00000004 B __system_argv
+00238158 00000004 B __system_argc
+0023815c b saved_stack
+00238168 00000008 b sVramPoolB
+00238170 00000008 b sVramPoolA
+00238178 0000000c b sAddrMap
+00238188 00000008 b sLinearPool
+00238190 0000000c b sAddrMap
+0023819c 00000004 b arbiter
+002381a0 00000001 V __ctru_speedup
+002381a4 00000004 B __3dslink_host
+002381a8 00000004 b srvRefCount
+002381ac 00000004 b srvHandle
+002381b0 00000004 b currentAddr
+002381b4 00000004 b maxAddr
+002381b8 00000004 b minAddr
+002381bc 00000004 b irrstRefCount
+002381c0 00000004 b csPos
+002381c4 00000004 b kHeld
+002381c8 00000004 B irrstSharedMem
+002381cc 00000004 B irrstEvent
+002381d0 00000004 B irrstMemHandle
+002381d4 00000004 B irrstHandle
+002381d8 00000004 b srvPmHandle
+002381dc 00000004 b ptmSysmRefCount
+002381e0 00000004 b ptmSysmHandle
+002381e4 00000004 V __ctru_linear_heap_size
+002381e8 00000004 V __ctru_heap_size
+002381ec 00000004 B __ctru_linear_heap
+002381f0 00000004 B __ctru_heap
+002381f8 00000540 b archive_devices
+00238738 00000004 b archive_device_cwd
+0023873c 00000001 b archive_initialized
+00238740 00000004 b (anonymous namespace)::__new_handler
+00238744 00000010 V std::string::_Rep::_S_empty_rep_storage
+00238754 00000004 V guard variable for std::__cxx11::collate<char>::id
+00238758 00000004 V guard variable for std::__cxx11::messages<char>::id
+0023875c 00000004 V guard variable for std::__cxx11::time_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::id
+00238760 00000004 V guard variable for std::__cxx11::numpunct<char>::id
+00238764 00000004 V guard variable for std::__cxx11::moneypunct<char, true>::id
+00238768 00000004 V guard variable for std::__cxx11::moneypunct<char, false>::id
+0023876c 00000004 V guard variable for std::__cxx11::money_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::id
+00238770 00000004 V guard variable for std::__cxx11::money_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::id
+00238774 00000004 V guard variable for std::__cxx11::collate<wchar_t>::id
+00238778 00000004 V guard variable for std::__cxx11::messages<wchar_t>::id
+0023877c 00000004 V guard variable for std::__cxx11::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+00238780 00000004 V guard variable for std::__cxx11::numpunct<wchar_t>::id
+00238784 00000004 V guard variable for std::__cxx11::moneypunct<wchar_t, true>::id
+00238788 00000004 V guard variable for std::__cxx11::moneypunct<wchar_t, false>::id
+0023878c 00000004 V guard variable for std::__cxx11::money_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+00238790 00000004 V guard variable for std::__cxx11::money_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+00238794 00000004 V guard variable for std::collate<char>::id
+00238798 00000004 V guard variable for std::messages<char>::id
+0023879c 00000004 V guard variable for std::time_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::id
+002387a0 00000004 V guard variable for std::time_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::id
+002387a4 00000004 V guard variable for std::__timepunct<char>::id
+002387a8 00000004 V guard variable for std::numpunct<char>::id
+002387ac 00000004 V guard variable for std::moneypunct<char, true>::id
+002387b0 00000004 V guard variable for std::moneypunct<char, false>::id
+002387b4 00000004 V guard variable for std::money_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::id
+002387b8 00000004 V guard variable for std::money_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::id
+002387bc 00000004 V guard variable for std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::id
+002387c0 00000004 V guard variable for std::num_get<char, std::istreambuf_iterator<char, std::char_traits<char> > >::id
+002387c4 00000004 V guard variable for std::collate<wchar_t>::id
+002387c8 00000004 V guard variable for std::messages<wchar_t>::id
+002387cc 00000004 V guard variable for std::time_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+002387d0 00000004 V guard variable for std::time_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+002387d4 00000004 V guard variable for std::__timepunct<wchar_t>::id
+002387d8 00000004 V guard variable for std::numpunct<wchar_t>::id
+002387dc 00000004 V guard variable for std::moneypunct<wchar_t, true>::id
+002387e0 00000004 V guard variable for std::moneypunct<wchar_t, false>::id
+002387e4 00000004 V guard variable for std::money_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+002387e8 00000004 V guard variable for std::money_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+002387ec 00000004 V guard variable for std::num_put<wchar_t, std::ostreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+002387f0 00000004 V guard variable for std::num_get<wchar_t, std::istreambuf_iterator<wchar_t, std::char_traits<wchar_t> > >::id
+002387f4 00000010 b (anonymous namespace)::emergency_pool
+00238804 0000000c b eh_globals
+00238810 0000000c b __sinit_recursive_mutex
+0023881c 0000000c b __sfp_recursive_mutex
+00238828 00000028 B __malloc_current_mallinfo
+00238850 00000004 B __malloc_max_total_mem
+00238854 00000004 B __malloc_max_sbrked_mem
+00238858 00000004 B __malloc_top_pad
+0023885c 0000000c b __malloc_recursive_mutex
+00238868 0000000c B __atexit_recursive_mutex
+00238874 00000004 b heap_start.0
+00238878 00000004 B fake_heap_start
+0023887c 00000004 B fake_heap_end
+00238880 00000400 b temp_cwd
+00238c80 00000004 b __hndl_lock
+00238c84 B __tls_start
+0023988c B __bss_end__
+0023988c A __end__
+0023988c B __tls_end
