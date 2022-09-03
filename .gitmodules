@@ -1,3 +1,5 @@
 [submodule "mm3dr"]
 	path = mm3dr
 	url = https://github.com/PhlexPlexico/mm3dr
+[submodule "https://github.com/PhlexPlexico/mm3dr/tree/dev"]
+	branch = dev
