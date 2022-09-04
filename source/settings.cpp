@@ -259,7 +259,7 @@ namespace Settings {
 
   std::vector<Option*> shuffleItemOptions = {
       &ShuffleChests,
-      &ShuffleMasks,
+      //&ShuffleMasks,
          //&RandomizeDungeon,
          //&MapsAndCompasses,
          //&Keysanity,

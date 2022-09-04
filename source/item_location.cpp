@@ -859,9 +859,11 @@ std::vector<LocationKey> chestLocations = {
 	SECRET_SHRINE_GARO_CHEST,
 	SECRET_SHRINE_FINAL_CHEST,
 };
+/*
 std::vector<LocationKey> maskLocations = {
 	E_CLOCK_TOWN_AROMA_IN_OFFICE,
 };
+*/
 std::vector<LocationKey> logicalLocations ={
 	N_CLOCK_TOWN_OLD_LADY, //Blast Mask 
 	N_CLOCK_TOWN_GREAT_FAIRY_DEKU, //Magic Meter 
@@ -1180,7 +1182,7 @@ void GenerateLocationPool() {
   //AddLocation(LINKS_POCKET);
   //AddLocations(overworldLocations);
   AddLocations(chestLocations);
-  AddLocations(maskLocations);
+  //AddLocations(maskLocations);
   //AddLocations(logicalLocations);
   /*
   for (auto dungeon : Dungeon::dungeonList) {
