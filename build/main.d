@@ -1,4 +1,4 @@
-main.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/main.cpp \
+main.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/main.cpp \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -82,53 +82,53 @@ main.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/main.cpp \
  C:/devkitPro/libctru/include/3ds/font.h \
  C:/devkitPro/libctru/include/3ds/gdbhio_dev.h \
  C:/devkitPro/libctru/include/3ds/3dslink.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/menu.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/hint_list.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/hints.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/text.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/random.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/settings.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/rnd/settings.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/advanced_context.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/z3d/z3DVec.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/common_data.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/types.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/utils.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/items.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/player.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/flags.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/debug.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/printf.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/actor.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/bitfield.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/sound.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/actorresource.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/objectbankarchive.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/resarchiveheader.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/as.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/context.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/camera.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/pad.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/scene.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/states/state.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/ui/screens/screen.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/category.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/cosmetics.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/debug.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/pool_functions.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/keys.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item_list.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/region.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item_category.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/rnd/item_override.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item_location.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/rnd/spoiler_data.h \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/fill.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/entrance.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/location_access.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/logic.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/spoiler_log.hpp
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/menu.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hint_list.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hints.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/settings.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/settings.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/advanced_context.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/z3d/z3DVec.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/common_data.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/types.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/utils.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/items.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/player.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/flags.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/debug.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/printf.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/actor.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/bitfield.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/sound.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/actorresource.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/objectbankarchive.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/resarchiveheader.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/as.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/context.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/camera.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/pad.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/scene.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/states/state.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/ui/screens/screen.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/category.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/cosmetics.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/debug.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/pool_functions.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/keys.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_list.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/region.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_category.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/item_override.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_location.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/spoiler_data.h \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/fill.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/entrance.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/location_access.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/logic.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/spoiler_log.hpp
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
@@ -212,50 +212,50 @@ C:/devkitPro/libctru/include/3ds/romfs.h:
 C:/devkitPro/libctru/include/3ds/font.h:
 C:/devkitPro/libctru/include/3ds/gdbhio_dev.h:
 C:/devkitPro/libctru/include/3ds/3dslink.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/menu.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/hint_list.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/hints.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/text.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/random.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/settings.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/rnd/settings.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/advanced_context.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/z3d/z3DVec.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/common_data.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/types.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/utils.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/items.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/player.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/flags.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/debug.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/printf.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/actor.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/common/bitfield.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/sound.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/actorresource.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/objectbankarchive.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/resarchiveheader.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/as.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/context.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/camera.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/pad.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/scene.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/states/state.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/game/ui/screens/screen.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/category.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/cosmetics.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/debug.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/pool_functions.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/keys.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item_list.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/region.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item_category.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/rnd/item_override.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/item_location.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/mm3dr/code/include/rnd/spoiler_data.h:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/fill.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/entrance.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/location_access.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/logic.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/spoiler_log.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/menu.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hint_list.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hints.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/settings.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/settings.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/advanced_context.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/z3d/z3DVec.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/common_data.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/types.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/utils.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/items.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/player.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/flags.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/debug.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/printf.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/actor.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/common/bitfield.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/sound.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/actorresource.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/objectbankarchive.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/resarchiveheader.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/as.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/context.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/camera.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/pad.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/scene.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/states/state.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/game/ui/screens/screen.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/category.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/cosmetics.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/debug.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/pool_functions.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/keys.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_list.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/region.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_category.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/item_override.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_location.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/spoiler_data.h:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/fill.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/entrance.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/location_access.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/logic.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/spoiler_log.hpp:

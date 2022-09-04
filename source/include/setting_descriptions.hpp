@@ -178,6 +178,8 @@ extern const std::vector<string_view> GlitchDifficulties;
 
 extern string_view shuffleChestItemsVanilla;
 extern string_view shuffleChestItemsRandom;
+extern string_view shuffleMasksVanilla;
+extern string_view shuffleMasksRandom;
 extern string_view shuffleGFVanilla;
 extern string_view shuffleGFSelf;
 extern string_view shuffleGFAnywhere;

@@ -255,9 +255,11 @@ namespace Settings {
   Option ShuffleChests = Option::Bool("Shuffle Chest Items", {"Vanilla", "Random"}, { shuffleChestItemsVanilla, shuffleChestItemsRandom }, OptionCategory::Toggle, (u8)ShuffleChestsSetting::SHUFFLECHESTS_RANDOM);
   Option ShuffleGFRewards = Option::U8("Shuffle Great Fairy Rewards", { "Vanilla", "Great Fairies", "Anywhere" }, { shuffleGFVanilla, shuffleGFSelf, shuffleGFAnywhere }, OptionCategory::Setting, (u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_VANILLA);
   Option ShuffleMerchants = Option::Bool("Shuffle Merchants", { "Off", "On" }, { shuffleMerchantsDesc });
+  Option ShuffleMasks = Option::Bool("Shuffle Masks", {"Vanilla", "Random"}, { shuffleMasksVanilla, shuffleMasksRandom}, OptionCategory::Toggle);
 
   std::vector<Option*> shuffleItemOptions = {
       &ShuffleChests,
+      &ShuffleMasks,
          //&RandomizeDungeon,
          //&MapsAndCompasses,
          //&Keysanity,
@@ -525,6 +527,7 @@ namespace Settings {
     ctx.heartDropRefill = (HeartDropRefills) ? 1 : 0;
 
     ctx.shuffleChests = (ShuffleChests) ? 1 : 0;
+    //ctx.shuffleMasks = (ShuffleMasks) ? 1 : 0;
     ctx.shuffleRewards = ShuffleRewards.Value<u8>();
     ctx.shuffleGreatFairyRewards = ShuffleGFRewards.Value<u8>();
     ctx.linksPocketItem = LinksPocketItem.Value<u8>();

@@ -376,6 +376,9 @@ const std::array<ItemKey, 15> chestItems = {
 	//SILVER_RUPEE,
 	PIECE_OF_HEART
 };
+const std::array<ItemKey, 1> maskList = {
+	KAFEIS_MASK,
+};
 //additional chest items
 //GIANTS_MASK, //Might need to separate later due to being a mask
 //PROGRESSIVE_BOW,
@@ -622,6 +625,10 @@ static void PlaceVanillaLogicHelpers() {
 	PlaceItemInLocation(GIANTS_OATH_TO_ORDER, OATH_TO_ORDER, true); //Oath to Order
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_GIANTS_MASK_CHEST, GIANTS_MASK); //Giant's Mask
 };
+
+static void PlaceVanillaMasks() {
+	PlaceItemInLocation(E_CLOCK_TOWN_AROMA_IN_OFFICE, KAFEIS_MASK);
+};
 /*static void PlaceVanillaBossRemains() {
 	PlaceItemInLocation(ODOLWA, ODOLWAS_REMAINS);
 	PlaceItemInLocation(GOHT, GOHTS_REMAINS);
@@ -646,6 +653,12 @@ void GenerateItemPool() {
 	}
 	else {
 		AddItemsToPool(ItemPool, chestItems);
+	}
+	if (!ShuffleMasks) {
+		PlaceVanillaMasks();
+	}
+	else {
+		AddItemsToPool(ItemPool, maskList);
 	}
 	//AddItemsToPool(ItemPool, dungeonRewards);
 	PlaceVanillaLogicHelpers();

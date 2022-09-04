@@ -1,5 +1,5 @@
-debug.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/debug.cpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/debug.hpp \
+debug.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/debug.cpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/debug.hpp \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -83,7 +83,7 @@ debug.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/debug.cpp \
  C:/devkitPro/libctru/include/3ds/font.h \
  C:/devkitPro/libctru/include/3ds/gdbhio_dev.h \
  C:/devkitPro/libctru/include/3ds/3dslink.h
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/debug.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/debug.hpp:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:

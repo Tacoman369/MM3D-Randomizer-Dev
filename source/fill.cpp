@@ -805,6 +805,7 @@ int Fill() {
             //printf("\x1b[9;10HCalculating Way of the Hero...");
             //PareDownPlaythrough();
             //CalculateWotH();
+            CitraPrint("Creating Item Overrides");
             CreateItemOverrides();
            // CreateEntranceOverrides();
            // CreateAlwaysIncludedMessages();

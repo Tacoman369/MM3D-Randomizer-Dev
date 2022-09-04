@@ -83,6 +83,13 @@ string_view shuffleChestItemsRandom   = "Adds Chest Items to the pool to be rand
                                         "the two chests on the Moon";                      //
                                                                                            //
 /*------------------------------                                                           //
+|    SHUFFLE MASKS             |                                                           //
+------------------------------*/                                                           //
+string_view shuffleMasksVanilla       = "Sets Masks to Vanilla Locations";                 //
+                                                                                           //
+string_view shuffleMasksRandom        = "Adds Masks to the pool to be randomized";         //
+                                                                                           //
+/*------------------------------                                                           //
 |      MAPS AND COMPASSES      |                                                           //
 ------------------------------*/                                                           //
 string_view mapCompassStartWith       = "**OPTION CURRENTLY WIP**\n"                       //

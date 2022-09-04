@@ -1,7 +1,7 @@
 cosmetics.o: \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/cosmetics.cpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/cosmetics.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/random.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/cosmetics.cpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/cosmetics.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp \
  C:/devkitPro/libctru/include/3ds.h \
  C:/devkitPro/libctru/include/3ds/types.h \
  C:/devkitPro/libctru/include/3ds/result.h \
@@ -85,8 +85,8 @@ cosmetics.o: \
  C:/devkitPro/libctru/include/3ds/font.h \
  C:/devkitPro/libctru/include/3ds/gdbhio_dev.h \
  C:/devkitPro/libctru/include/3ds/3dslink.h
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/cosmetics.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Main/source/include/random.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/cosmetics.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp:
 C:/devkitPro/libctru/include/3ds.h:
 C:/devkitPro/libctru/include/3ds/types.h:
 C:/devkitPro/libctru/include/3ds/result.h:
