@@ -474,7 +474,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		//LocationAccess(E_CLOCK_TOWN_AROMA_IN_OFFICE, {[] {return true;}}),
+		LocationAccess(E_CLOCK_TOWN_AROMA_IN_OFFICE, {[] {return true;}}),
 	},
 	{
 		//Exits

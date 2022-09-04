@@ -360,6 +360,7 @@ namespace Settings {
 
   //Shuffle Dungeon Items
   extern Option ShuffleChests;
+  extern Option ShuffleMasks;
   extern Option RandomizeDungeon;
   extern Option MapsAndCompasses;
   extern Option Keysanity;

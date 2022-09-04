@@ -53,7 +53,7 @@ CFLAGS	:=	-g -Wall -O2 -mword-relocations \
 			-fomit-frame-pointer -ffunction-sections \
 			$(ARCH)
 
-CFLAGS	+=	$(INCLUDE) -DARM11 -D_3DS
+CFLAGS	+=	$(INCLUDE) -D__3DS__
 
 CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -fno-var-tracking-assignments -std=gnu++17 -Wreorder -Wno-invalid-offsetof
 
@@ -194,9 +194,8 @@ endif
 clean:
 	@echo Cleaning app and basecode ...
 	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(GFXBUILD) $(ROMFS)/basecode.ips source/include/patch_symbols.hpp
-	$(MAKE) clean -f mm3dr/code/Makefile
+	$(MAKE) clean -f mm3dr/code/Makefile 
 	@rm -rf mm3dr/code/build
-	
 #---------------------------------------------------------------------------------
 $(GFXBUILD)/%.t3x	$(BUILD)/%.h	:	%.t3s
 #---------------------------------------------------------------------------------
