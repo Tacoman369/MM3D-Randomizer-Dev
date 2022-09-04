@@ -625,10 +625,10 @@ static void PlaceVanillaLogicHelpers() {
 	PlaceItemInLocation(GIANTS_OATH_TO_ORDER, OATH_TO_ORDER, true); //Oath to Order
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_GIANTS_MASK_CHEST, GIANTS_MASK); //Giant's Mask
 };
-
+/*
 static void PlaceVanillaMasks() {
 	PlaceItemInLocation(E_CLOCK_TOWN_AROMA_IN_OFFICE, KAFEIS_MASK);
-};
+};*/
 /*static void PlaceVanillaBossRemains() {
 	PlaceItemInLocation(ODOLWA, ODOLWAS_REMAINS);
 	PlaceItemInLocation(GOHT, GOHTS_REMAINS);
@@ -654,12 +654,12 @@ void GenerateItemPool() {
 	else {
 		AddItemsToPool(ItemPool, chestItems);
 	}
-	if (!ShuffleMasks) {
+	/*if (!ShuffleMasks) {
 		PlaceVanillaMasks();
 	}
 	else {
 		AddItemsToPool(ItemPool, maskList);
-	}
+	}*/
 	//AddItemsToPool(ItemPool, dungeonRewards);
 	PlaceVanillaLogicHelpers();
 	//PlaceVanillaBossRemains(); //done in fill.cpp - RandomizeDungeonRewards()
