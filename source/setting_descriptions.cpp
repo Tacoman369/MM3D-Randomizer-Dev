@@ -83,12 +83,48 @@ string_view shuffleChestItemsRandom   = "Adds Chest Items to the pool to be rand
                                         "the two chests on the Moon";                      //
                                                                                            //
 /*------------------------------                                                           //
+|    SHUFFLE CHESTS            |                                                           //
+------------------------------*/                                                           //
+string_view shuffleBombersNotebookDesc = "Shuffle Bomber's Notebook.";                    //
+/*------------------------------                                                           //
 |    SHUFFLE MASKS             |                                                           //
 ------------------------------*/                                                           //
 string_view shuffleMasksVanilla       = "Sets Masks to Vanilla Locations";                 //
                                                                                            //
 string_view shuffleMasksRandom        = "Adds Masks to the pool to be randomized";         //
                                                                                            //
+/*------------------------------                                                           //
+|    SHUFFLE TRADE ITEMS       |                                                           //
+------------------------------*/                                                           //
+string_view shuffleTradeItemsDesc     = "Shuffle Anju & Kafei Quest Items\n"               //
+                                        "Includes Both Letters, Room Key, Pendant and Both\n"//
+                                        "Both Kafei Mask & Couples Mask";                  //
+                                                                                           //   
+/*------------------------------                                                           //
+|    SHUFFLE TINGLE MAPS       |                                                           //
+------------------------------*/                                                           //
+string_view shuffleTingleMapsDesc     = "Shuffle Tingle Maps";                             //
+                                                                                           //
+                                                                                           //
+/*------------------------------                                                           //
+|    SHUFFLE HEART CONTAINERS  |                                                           //
+------------------------------*/                                                           //
+string_view shufflePiecesOfHeartDesc  = "Shuffle Piece of Hearts";                         //
+                                                                                           //
+string_view shuffleHeartContainersDesc= "Shuffle Heart Containers";                        //                                                                    
+/*------------------------------                                                           //
+|    ITEM POOL OPTIONS         |                                                           //
+------------------------------*/                                                           //
+string_view shuffleMainInventoryDesc  = "Shuffle Main Inventory Items\n"                   //
+                                        "This includes 2 Swords, 3 Bow/Quivers, 3 BombBags,\n"
+                                        "Powder Kegs, PictoBox, Lens of Truth, Hookshot, \n"
+                                        "7 Bottles, Mirror Shield, 2 Wallets Upgrades, \n" //
+                                        "Magic Beans and Fire, Ice, and Light Arrows";     //
+                                                                                           //   
+string_view shuffleTransformationDesc = "Shuffles Deku, Goron, and Zora Masks";            //
+string_view shuffleFierceDietyDesc    = "Shuffles Fierce Diety Mask";                      //
+string_view shuffleMoonItemsDesc      = "Shuffles Items from the Moon into the pool\n"     //
+                                        "Includes 4 Pieces of Heart, 10 Bombchu & 30 Arrows";
 /*------------------------------                                                           //
 |      MAPS AND COMPASSES      |                                                           //
 ------------------------------*/                                                           //
@@ -214,6 +250,8 @@ string_view kokiriSwordDesc           = "**OPTION CURRENTLY WIP**\n"            
                                         "This will leave you quite vulnerable without any\n"
                                         "way to attack until an item is found";            //
                                                                                            //
+string_view shuffleStartShield       = "**OPTION CURRENTLY WIP**\n"                        //
+                                       "Shuffles your starting shield into the pool";      //
 /*------------------------------                                                           //
 | SHUFFLE GREAT FAIRY REWARDS  |                                                           //
 ------------------------------*/                                                           //
@@ -276,6 +314,10 @@ string_view songsDungeonRewards       = "**OPTION CURRENTLY WIP**\n"            
 string_view songsAllLocations         = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Songs can appear in any location.";               //
                                                                                            //
+string_view shuffleSoaringVanilla     = "**OPTION CURRENTLY WIP**\n"                       //
+                                        "Sets Song of Soaring to its Vanilla Location";    //
+string_view shuffleSoaringRandom      = "**OPTION CURRENTLY WIP**\n"                       //
+                                        "Randomizes Song of Soaring";                      //                                                                                                             
 /*------------------------------                                                           //
 |     GOSSIP STONE HINTS       |                                                           //
 ------------------------------*/                                                           //

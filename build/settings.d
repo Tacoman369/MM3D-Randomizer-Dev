@@ -116,9 +116,9 @@ settings.o: \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/dungeon.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/keys.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hint_list.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hints.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/region.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_category.hpp \
@@ -249,9 +249,9 @@ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/pool_functions.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/dungeon.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/keys.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hint_list.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hints.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/region.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_category.hpp:

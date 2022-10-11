@@ -9,14 +9,16 @@ namespace Dungeon {
 
 	DungeonInfo::DungeonInfo(std::string name_, ItemKey map_, ItemKey compass_,
                          ItemKey smallKey_, ItemKey bossKey_, u8 vanillaKeyCount_,
-                         std::vector<LocationKey> vanillaLocations_)
+                         std::vector<LocationKey> vanillaLocations_,
+						 std::vector<LocationKey> strayLocations_)
   : name(std::move(name_)),
     map(map_),
     compass(compass_),
     smallKey(smallKey_),
     bossKey(bossKey_),
     vanillaKeyCount(vanillaKeyCount_),
-    vanillaLocations(std::move(vanillaLocations_))  {}
+    vanillaLocations(std::move(vanillaLocations_)),
+	strayLocations(std::move(strayLocations_))  {}
 
 DungeonInfo::~DungeonInfo() = default;
 
@@ -65,7 +67,55 @@ void DungeonInfo::PlaceVanillaBossKey() {
 	auto bossKeyLocation = FilterFromPool(dungeonLocations, [](const LocationKey loc) { return Location(loc)->IsCategory(Category::cVanillaBossKey); })[0];
 	PlaceItemInLocation(bossKeyLocation, bossKey);
 }
+/*
+void DungeonInfo::PlaceVanillaSwampToken() {
+	auto dungeonLocations = GetDungeonLocations();
+	auto tokenLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc){return Location(loc)->IsCategory(Category::cSwampSkulltula);});
+	for (auto location : tokenLocations) {
+		PlaceItemInLocation(location, SWAMP_SKULLTULA_TOKEN);
+	}
+}
 
+void DungeonInfo::PlaceVanillaOceanToken() {
+	auto dungeonLocations = GetDungeonLocations();
+	auto tokenLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc){return Location(loc)->IsCategory(Category::cOceanSkulltula);});
+	for (auto location : tokenLocations) {
+		PlaceItemInLocation(location, OCEANSIDE_SKULLTULA_TOKEN);
+	}
+}
+
+void DungeonInfo::PlaceVanillaWFStray() {
+	auto dungeonLocations = GetDungeonLocations();
+	auto wfstrayLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc){return Location(loc)->IsCategory(Category::cWFStray);});
+	for (auto location : wfstrayLocations) {
+		PlaceItemInLocation(location, WF_STRAY_FAIRY);
+	}
+}
+
+void DungeonInfo::PlaceVanillaSHStray() {
+	auto dungeonLocations = GetDungeonLocations();
+	auto shstrayLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc){return Location(loc)->IsCategory(Category::cSHStray);});
+	for (auto location : shstrayLocations) {
+		PlaceItemInLocation(location, SH_STRAY_FAIRY);
+	}
+}
+
+void DungeonInfo::PlaceVanillaGBTStray() {
+	auto dungeonLocations = GetDungeonLocations();
+	auto gbtstrayLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc){return Location(loc)->IsCategory(Category::cGBTStray);});
+	for (auto location : gbtstrayLocations) {
+		PlaceItemInLocation(location, GBT_STRAY_FAIRY);
+	}
+}
+
+void DungeonInfo::PlaceVanillaSTStray() {
+	auto dungeonLocations = GetDungeonLocations();
+	auto ststrayLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc){return Location(loc)->IsCategory(Category::cSTStray);});
+	for (auto location : ststrayLocations) {
+		PlaceItemInLocation(location, ST_STRAY_FAIRY);
+	}
+}
+*/
 void DungeonInfo::PlaceVanillaSmallKeys() {
   if (smallKey == NONE) {
     return;
@@ -81,14 +131,14 @@ void DungeonInfo::PlaceVanillaSmallKeys() {
 //Gets the chosen dungeon locations for a playthrough 
 std::vector<LocationKey> DungeonInfo::GetDungeonLocations() const {
   auto locations = vanillaLocations;
-  AddElementsToPool(locations, vanillaLocations);
+  AddElementsToPool(locations, strayLocations);
   return locations;
 }
 
 //Gets all dungeon locations 
 std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
   auto locations = vanillaLocations;
-  AddElementsToPool(locations, vanillaLocations);
+  AddElementsToPool(locations, strayLocations);
   return locations;
 }
 
@@ -99,7 +149,10 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
                             WOODFALL_TEMPLE_SMALL_KEY_CHEST,
                             ODOLWA_HEART_CONTAINER,
                             WOODFALL_TEMPLE_HEROS_BOW_CHEST,
+							WOODFALL_TEMPLE_BOSS_KEY_CHEST,
                             ODOLWA,
+							WOODFALL_TEMPLE_DEKU_PRINCESS,
+							},{
 							//STRAY FAIRY LOCATIONS
 							WF_SF_ENTRANCE_FAIRY,
 							WF_SF_ENTRANCE_PLATFORM,
@@ -126,8 +179,10 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							SNOWHEAD_TEMPLE_BLOCK_ROOM_CHEST,
 							SNOWHEAD_TEMPLE_BRIDGE_ROOM_CHEST,
 							SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST,
+							SNOWHEAD_TEMPLE_BOSS_KEY_CHEST,
 							GOHT_HEART_CONTAINER,
 							GOHT,
+  							},{
 							//STRAY FAIRY LOCATIONS
 							SH_SF_SNOW_ROOM_BUBBLE,
 							SH_SF_CEILING_BUBBLE,
@@ -143,7 +198,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							SH_SF_MAIN_ROOM_WALL,
 							SH_SF_PILLAR_FREEZARDS,
 							SH_SF_ICE_PUZZLE,
-							SH_SF_CRATE
+							SH_SF_CRATE,
 							
                           });
 
@@ -153,8 +208,10 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
                             GBT_COMPASS_CHEST,
                             GBT_SMALL_KEY_CHEST,
                             GBT_ICE_ARROW_CHEST,
+							GBT_BOSS_KEY_CHEST,
                             GYORG,
 							GYORG_HEART_CONTAINER,
+  							},{
 							//STRAY FAIRY LOCATIONS
 							GBT_SF_SKULLTULA,
 							GBT_SF_WATER_CONTROL_UNDERWATER_BUBBLE,
@@ -186,6 +243,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							STONE_TOWER_TEMPLE_LIGHT_ARROW_CHEST,
 							TWINMOLD,
 							TWINMOLD_HEART_CONTAINER,
+  							},{
 							//STRAY FAIRY LOCATIONS
 							ST_SF_MIRROR_SUN_BLOCK,
 							ST_SF_LAVA_ROOM_LEDGE,
@@ -239,7 +297,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							SSH_TREE_ROOM_GRASS_1,
 							SSH_TREE_ROOM_GRASS_2,
 							SSH_TREE_ROOM_BEEHIVE,
-							} );
+							},{} );
 
   DungeonInfo OceansideSpiderHouse = DungeonInfo("Oceanside Spider house", NONE, NONE, NONE, NONE, 0, {
                             //Vanilla Locations
@@ -277,7 +335,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							OSH_COLORED_SKULLS_BEHIND_PICTURE,
 							OSH_COLORED_SKULLS_POT,
 							
-                          } );
+                          },{} );
 
   DungeonInfo PiratesFortress = DungeonInfo("Pirates Fortress", NONE, NONE, NONE, NONE, 0, {
                             //Vanilla Locations
@@ -294,7 +352,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							PF_INT_UPPER_CHEST,
 							PF_INT_TANK_CHEST,
 							PF_INT_INVISIBLE_SOLDIER,
-                          } );
+                          },{} );
 
   DungeonInfo BeneathTheWell = DungeonInfo("Beneath The Well", NONE, NONE, NONE, NONE, 0, {
                             //Vanilla Locations
@@ -302,13 +360,13 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							WELL_LEFT_PATH_CHEST,
 							WELL_RIGHT_PATH_CHEST,
 							BENEATH_THE_WELL_COW,
-                          } );
+                          },{} );
 
   DungeonInfo AncientCastleOfIkana = DungeonInfo("Ancient Castle of Ikana", NONE, NONE, NONE, NONE, 0, {
                             //Vanilla Locations
                             IKANA_CASTLE_PILLAR,
 							IKANA_CASTLE_IKANA_KING,
-                          } );
+                          },{} );
 
   DungeonInfo SecretShrine = DungeonInfo("Secret Shrine", NONE, NONE, NONE, NONE, 0, {
                             //Vanilla Locations
@@ -318,7 +376,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							SECRET_SHRINE_WART_CHEST,
 							SECRET_SHRINE_WIZZROBE_CHEST,
 							//SECRET_SHRINE_SOIL,
-                          } );
+                          },{} );
 
   DungeonInfo TheMoon = DungeonInfo("The Moon", NONE, NONE, NONE, NONE, 0, {
                             //Vanilla Locations
@@ -327,7 +385,7 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							THE_MOON_ZORA_TRIAL_BONUS,
 							THE_MOON_LINK_TRIAL_BONUS,
 							THE_MOON_MAJORA_CHILD,
-                          } );
+                          },{} );
 
   
   const DungeonArray dungeonList = {

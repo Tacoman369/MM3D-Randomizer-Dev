@@ -13,31 +13,25 @@
 
 using namespace rnd;
 
-Item::Item(bool advancement_,int startAdd_, bool* logicVar_, Text name_, string locationName_, Region region_, HintKey hintKey_, u32 getItemId_, ItemCategory itemCat_, LocationCategory locCat_)
+Item::Item(bool advancement_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
     : 
     advancement(advancement_),
-    startAdd(startAdd_),
     logicVar(logicVar_),
     name(std::move(name_)),
-    locationName(locationName_),
-    region(region_),
     hintKey(hintKey_),
     getItemId(getItemId_),
-    itemCat(itemCat_),
-    locCat(locCat_) {}
+    type(type_), 
+    price(price_) {}
 
-Item::Item(bool advancement_, int startAdd_, u8* logicVar_, Text name_, string locationName_, Region region_, HintKey hintKey_, u32 getItemId_, ItemCategory itemCat_, LocationCategory locCat_)
+Item::Item(bool advancement_, u8* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
     :
     advancement(advancement_),
-    startAdd(startAdd_),
     logicVar(logicVar_),
     name(std::move(name_)),
-    locationName(locationName_),
-    region(region_),
     hintKey(hintKey_),
     getItemId(getItemId_),
-    itemCat(itemCat_),
-    locCat(locCat_) {}
+    type(type_),
+    price(price_) {}
 
 Item::~Item() = default;
 
@@ -65,21 +59,21 @@ ItemOverride_Value Item::Value() const {
     val.all = 0;
     val.getItemId = getItemId;
     
-   // if (getItemId == rnd::GetItemID::GI_ICE_TRAP) {
-   //     val.looksLikeItemId = RandomElement(IceTrapModels);
-   // }
+    if (getItemId == 0x12) {
+        val.looksLikeItemId = RandomElement(IceTrapModels);
+    }
     if (!Settings::ColoredBossKeys && (getItemId >= 0x95 && getItemId <= 0x9A)) { //Boss keys
         val.looksLikeItemId = (u32)GetItemID::GI_KEY_BOSS;
     }
     if (!Settings::ColoredKeys && (getItemId >= 0xAF && getItemId <= 0xB7)) { //Small keys
         val.looksLikeItemId = (u32)GetItemID::GI_KEY_SMALL;
     }
-    //if (type == ITEMTYPE_SHOP) {
-    //    // With the current shopsanity implementation, we need a way to detect
-    //    // regular shop items. This method should have no unintended side effects
-    //    // unless there was a multiworld with 256 players... so, it should be fine.
-    //    val.player = 0xFF;
-    //}
+    if (type == ITEMTYPE_SHOP) {
+        // With the current shopsanity implementation, we need a way to detect
+        // regular shop items. This method should have no unintended side effects
+        // unless there was a multiworld with 256 players... so, it should be fine.
+        val.player = 0xFF;
+    }
     return val; 
     
 }

@@ -268,6 +268,7 @@ namespace Settings {
   //Logic Sttings
   extern Option Logic;
   extern Option LocationsReachable;
+  extern Option GenerateSpoilerLog;
   extern std::vector<Option*> logicOptions;
   extern Option LogicTrick;
  
@@ -280,15 +281,17 @@ namespace Settings {
   extern Option StartingConsumables;
   extern Option StartingMaxRupees;
   extern Option StartingNutCapacity;
+  extern Option StartingInventoryToggle;
+  extern Option StartingOcarina;
   extern Option StartingBombBag;
   extern Option StartingBombchus;
+  extern Option StartingHookshot;
   extern Option StartingBow;
   extern Option StartingFireArrows;
   extern Option StartingIceArrows;
   extern Option StartingLightArrows;
   extern Option StartingLensOfTruth;
   extern Option StartingMagicBean;
-  extern Option StartingHookshot;
   extern Option StartingBottle1;
   extern Option StartingBottle2;
   extern Option StartingBottle3;
@@ -296,7 +299,7 @@ namespace Settings {
   extern Option StartingBottle5;
   extern Option StartingBottle6;
   extern Option StartingBottle7;
-  extern Option StartingOcarina;
+  extern Option StartingSongsToggle;
   extern Option StartingOathToOrder;
   extern Option StartingEponasSong;
   //extern Option StartingInvertedSong;
@@ -309,6 +312,7 @@ namespace Settings {
   extern Option StartingElegyOfEmptiness;
   extern Option StartingSongOfHealing;
   extern Option StartingSongOfSoaring;
+  extern Option StartingUpgradesToggle;
   extern Option StartingKokiriSword;
   extern Option StartingGreatFairySword;
   extern Option StartingHerosShield;
@@ -317,6 +321,7 @@ namespace Settings {
   extern Option StartingWallet;
   extern Option StartingDoubleDefense;
   extern Option StartingHealth;
+  extern Option StartingQuestToggle;
   extern Option StartingOdolwaRemains;
   extern Option StartingGohtRemains;
   extern Option StartingGyorgRemains;
@@ -358,26 +363,48 @@ namespace Settings {
   //Excluded Locations
   extern std::vector<Option*> excludeLocationsOptions;
 
+  //Shuffle Settings
+  extern Option ShuffleMagicBeans;
+  extern Option ShuffleKokiriSword;
+  extern Option Shopsanity;
+  extern Option Tokensanity;
+  extern Option Scrubsanity;
+  extern Option ShuffleCows;
+  //extern Option ShuffleOcarinas;
+  extern Option ShuffleMerchants;
+  extern Option ShuffleSongs;
+  extern Option ShuffleSoaring;
+  extern Option ShuffleStartingShield;
+  extern Option ShuffleBombersNotebook;
+  extern Option ShuffleTradeItems;
+  extern Option ShuffleTingleMaps;
+  extern Option RemoveDoubleDefense;
+  extern std::vector<Option*> shuffleItemOptions;
+
   //Shuffle Dungeon Items
-  extern Option ShuffleChests;
-  extern Option ShuffleMasks;
   extern Option RandomizeDungeon;
   extern Option MapsAndCompasses;
   extern Option Keysanity;
   extern Option BossKeysanity;
   extern Option StrayFairysanity;
   extern Option ShuffleRewards;
-  extern Option ShuffleMagicBeans;
-  extern Option ShuffleKokiriSword;
-//  extern Option Shopsanity;
-//  extern Option Tokensanity;
-//  extern Option Scrubsanity;
-//  extern Option ShuffleCows;
-//  extern Option ShuffleOcarinas;
+  extern Option ShuffleHeartContainers;
   extern std::vector<Option*> shuffleItemOptions;
 
+  //ItemPool Settings
+  extern Option ItemPoolValue;
+  extern Option ShuffleMainInventory;
+  extern Option ShuffleTransformation;
+  extern Option ShuffleFierceDiety;
+  extern Option ShuffleChests;
+  extern Option ShuffleMasks;
+  extern Option ShuffleGFRewards;
+  extern Option ShufflePiecesOfHeart;
+  extern Option ShuffleMoonItems;
+
   //Other Settings
-  extern Option ShuffleSongs;
+  extern Option IceTrapValue;
+  extern Option RandomTrapDmg;
   extern Option GossipStoneHints; 
   extern Option ClearerHints;
   extern Option HintDistribution;
@@ -385,17 +412,12 @@ namespace Settings {
   extern Option ChestAnimations;
   extern Option ChestSize;
   extern Option ChangeOverworldItems;
-  extern Option GenerateSpoilerLog;
   extern Option IngameSpoilers;
   extern Option MenuOpeningButton;
-  extern Option RandomTrapDmg;
   extern Option RsDurability;
   extern std::vector<Option*>otherSettingsOptions;
 
-  //Gimmicks
-  extern Option ItemPoolValue;
-  extern Option IceTrapValue;
-  extern Option RemoveDoubleDefense;
+  //Comfort
   extern Option BlastMaskCooldown;
   extern Option UnderwaterOcarina;
   extern Option FierceDietyAnywhere;
@@ -404,7 +426,7 @@ namespace Settings {
   extern Option AmmoDrops;
   extern Option HeartDropRefills;
   extern Option BombchusInLogic;
-  extern std::vector<Option*>gimmickOptions;
+  extern std::vector<Option*>comfortOptions;
 
   //Comfort||Timesaver Options
   
@@ -431,7 +453,7 @@ namespace Settings {
   
   extern Option CustomTunicColors;
   extern Option ChildTunicColor;
-  extern std::string finalChildTunicColor;
+  //extern std::string finalChildTunicColor;
 
   extern Option ColoredKeys;
   extern Option ColoredBossKeys;
@@ -458,17 +480,21 @@ namespace Settings {
   extern Menu startingInventory;
   extern Menu excludeLocations;
   extern Menu glitchSettings;
-  extern Menu itemSettings;
+  //extern Menu itemSettings;
   extern Menu otherSettings;
   
   //Main Menu
   extern std::vector<Menu *> mainSettingsOptions;
   extern Menu mainSettings;
-  extern Menu gimmicks;
+  extern Menu comfort;
   extern Menu timeSaverSettings;
   extern Menu settingsPresets;
   extern Menu cosmetics;
   extern Menu generateRandomizer;
+  extern Menu shuffleItems;
+  extern Menu shuffleDungeon;
+  extern Menu itemPool;
+  extern Menu detailLogic;
   extern std::vector<Menu *> mainMenu;
 
 

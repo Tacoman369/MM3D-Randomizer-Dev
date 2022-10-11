@@ -39,6 +39,7 @@ namespace Logic {
 	extern bool BeaverRaceBottle;
 	extern bool DampeBottle;
 	extern bool ChateauBottle;
+	extern bool MysteryMilkBottle;
 	extern bool BombersNotebook;
 	extern bool MirrorShield;
 	extern bool HerosShield;
@@ -134,6 +135,7 @@ namespace Logic {
 	extern u8 ProgressiveMagic;
 	extern u8 ProgressiveWallet;
 	extern u8 ProgressiveBombBag;
+	extern u8 ProgressiveSword;
 	//Keys
 	extern u8 WoodfallTempleKeys;
 	extern u8 SnowheadTempleKeys;
@@ -150,7 +152,7 @@ namespace Logic {
 	//Stray Fairies
 	extern u8 WoodfallStrayFairies;
 	extern u8 SnowheadStrayFairies;
-	extern u8 GBTStrayFairies;
+	extern u8 GreatBayStrayFairies;
 	extern u8 StoneTowerStrayFairies;
 	//Drops & Bottle Contents Access
 	extern bool DekuNutDrop;
@@ -279,6 +281,8 @@ namespace Logic {
 	extern u8 SHStraysInPool;
 	extern u8 STStraysInPool;
 	extern u8 PlacedMasks;
+	extern u8 PiecesOfHeart;
+	extern u8 HeartContainers;
 
 	//new helpers
 	extern bool SHSwitchPress;
@@ -295,6 +299,15 @@ namespace Logic {
 	extern bool ArmosRoomLightHole;
 	extern bool InvertedChestSpawn;
 	extern bool EnterSakonHideout;
+	extern bool SunMask;
+	extern bool WatchMoonTearFall;
+	extern bool OldLadySaved;
+	extern bool DekuPrincessReturned;
+	extern bool LaundryFrog;
+	extern bool SwampFrog;
+	extern bool WoodfallFrog;
+	extern bool GreatBayFrog;
+	extern bool ThinBridgeCrystalChest;
 	
 	extern bool AtDay;
 	extern bool AtNight;
@@ -314,6 +327,10 @@ namespace Logic {
 	bool HasProjectile(ItemKey itemName);
 	bool SmallKeys(u8 dungeonKeyCount, u8 requiredAmount);
 	bool ZoraEggCount(u8 currentEggCount, u8 requiredAmount);
+	bool StrayFairyCount(u8 strayFairyCount, u8 requiredAmount);
+	bool SkulltulaCount(u8 currentSkulltulaCount, u8 requiredAmount);
+	bool TotalHeartContainers(u8 requiredAmount);
+	u8 TotalMaskCount();
 	bool EventsUpdated();
 	void LogicReset();
 }

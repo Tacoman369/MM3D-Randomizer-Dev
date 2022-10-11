@@ -113,10 +113,10 @@ patch.o: C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/patch.cpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/category.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_list.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item.hpp \
- C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/keys.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hint_list.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hints.hpp \
+ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/settings.hpp \
  C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/settings.h \
@@ -246,10 +246,10 @@ C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/spoiler_data.
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/category.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item_list.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/item.hpp:
-C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/keys.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hint_list.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/hints.hpp:
+C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/text.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/random.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/source/include/settings.hpp:
 C:/Users/SKREEE/Desktop/MM3D-Randomizer-Dev/mm3dr/code/include/rnd/settings.h:

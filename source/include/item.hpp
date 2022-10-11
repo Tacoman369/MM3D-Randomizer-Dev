@@ -3,7 +3,7 @@
 #include <3ds.h>
 #include <string>
 #include <variant>
-#include "text.hpp"
+
 #include "keys.hpp"
 #include "hint_list.hpp"
 #include "settings.hpp"
@@ -16,11 +16,30 @@ using namespace rnd;
 
 //union ItemOverride_Value;
 
+enum ItemType {
+    ITEMTYPE_ITEM,
+    ITEMTYPE_MAP,
+    ITEMTYPE_COMPASS,
+    ITEMTYPE_BOSSKEY,
+    ITEMTYPE_SMALLKEY,
+    ITEMTYPE_TOKEN,
+    ITEMTYPE_MASK,
+    ITEMTYPE_EVENT,
+    ITEMTYPE_DROP,
+    ITEMTYPE_REFILL,
+    ITEMTYPE_SONG,
+    ITEMTYPE_SHOP,
+    ITEMTYPE_DUNGEONREWARD,
+    ITEMTYPE_STRAYFAIRY,
+    ITEMTYPE_QUEST,
+    ITEMTYPE_TRADE,
+};
+
 class Item {
 public:
     Item() = default;
-    Item(bool advancement_, int startAdd_, bool* logicVar_, Text name_, string locationName_, Region region_, HintKey hintKey_, u32 getItemId_, ItemCategory itemCat_, LocationCategory locCat_);
-    Item(bool advancement_, int startAdd_, u8* logicVar_, Text name_, string locationName_, Region region_, HintKey hintKey_, u32 getItemId_, ItemCategory itemCat_, LocationCategory locCat_);
+    Item(bool advancement_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_ = 0);
+    Item(bool advancement_, u8* logicVar_,   Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_ = 0);
     ~Item();
 
     void ApplyEffect();
@@ -28,21 +47,17 @@ public:
 
     union ItemOverride_Value Value() const;
 
-    int GetStartAdd() const {
-        return startAdd;
-    }
     bool IsAdvancement() const {
         return advancement;
     }
     const Text& GetName() const {
         return name;
     }
-    const string GetLocationName() const {
-        return locationName;
+
+    ItemType GetItemType() const {
+        return type;
     }
-    const Region GetRegion() const {
-        return region;
-    }
+   
     const HintKey GetHintKey() const {
         return hintKey;
     }
@@ -51,12 +66,6 @@ public:
     }
     u32 GetItemId() const {
         return (u32)getItemId;
-    }
-    const ItemCategory GetItemCategory() const {
-        return itemCat;
-    }
-    const LocationCategory GetLocationCategory() const {
-        return locCat;
     }
     
     u16 GetPrice() const {
@@ -77,21 +86,20 @@ public:
         return IsAdvancement();
     }
     bool IsBottleItem() const {
-        return getItemId == (u32)GetItemID::GI_BOTTLE_EMPTY || //Empty Bottle1
-            getItemId == (u32)GetItemID::GI_BOTTLE_EMPTY || //Empty Bottle 2
-            getItemId == (u32)GetItemID::GI_BOTTLE_MILK || //Bottle with Milk
-            getItemId == (u32)GetItemID::GI_BOTTLE_POTION_RED || //Red Potion
-            getItemId == (u32)GetItemID::GI_BOTTLE_GOLD_DUST || //Gold Dust
-            getItemId == (u32)GetItemID::GI_BOTTLE_CHATEAU_ROMANI || //Chateau Romani
-            getItemId == (u32)GetItemID::GI_DEKU_PRINCESS_FAIRY || //Deku Princess
-            getItemId == (u32)GetItemID::GI_FAIRY || //Fairy
-            getItemId == (u32)GetItemID::GI_BOTTLE_BUG || //Bugs
-            getItemId == (u32)GetItemID::GI_BOTTLE_POE_TEXT || //Poe
-            getItemId == (u32)GetItemID::GI_BOTTLE_BIG_POE || //Big Poe
-            getItemId == (u32)GetItemID::GI_BOTTLE_SPRING_WATER || //Spring Water
-            getItemId == (u32)GetItemID::GI_BOTTLE_HOT_SPRING_WATER || //Hot Spring Water
-            getItemId == (u32)GetItemID::GI_BOTTLE_ZORA_EGG || //Zora Egg
-            getItemId == (u32)GetItemID::GI_BOTTLE_MAGIC_MUSHROOM;   //Mushroom
+        return getItemId == 0x5A || //Empty Bottle
+            getItemId == 0x60 || //Bottle with Milk
+            getItemId == 0x5B || //Red Potion
+            getItemId == 0x69 || //Gold Dust
+            getItemId == 0x6F|| //Chateau Romani
+            getItemId == 0x5F || //Deku Princess
+            getItemId == 0x5E || //Fairy
+            getItemId == 0x63 || //Bugs
+            getItemId == 0x65 || //Poe
+            getItemId == 0x66 || //Big Poe
+            getItemId == 0x67 || //Spring Water
+            getItemId == 0x68 || //Hot Spring Water
+            getItemId == 0x69 || //Zora Egg
+            getItemId == 0x6B;   //Mushroom
 
     } 
 
@@ -100,15 +108,11 @@ public:
 
 private:
     bool advancement;  
-    int startAdd;
     std::variant<bool*, u8*> logicVar;
     Text name;
-    string locationName;
-    Region region;
     HintKey hintKey;
     u32 getItemId;
-    ItemCategory itemCat;
-    LocationCategory locCat;
+    ItemType type;
     bool playthrough = false;
     int price;
 };

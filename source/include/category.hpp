@@ -70,6 +70,13 @@ enum class Category {
     cDekuScrub,
     cFairyFountain,
     cChest,
+    cFreestandingItems,
+    cTingleMap,
+    cVanillaHeartPiece,
+    cTransformMask,
+    cDayOne,
+    cDayTwo,
+    cDayThree,
 };
 
 enum class OptionCategory {

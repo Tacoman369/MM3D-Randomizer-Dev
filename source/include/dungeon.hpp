@@ -13,7 +13,8 @@ class DungeonInfo {
 public:
     DungeonInfo(std::string name_, ItemKey map_, ItemKey compass_,
                 ItemKey smallKey_, ItemKey bossKey_, u8 vanillaKeyCount_, 
-                std::vector<LocationKey> vanillaLocations_);
+                std::vector<LocationKey> vanillaLocations_,
+                std::vector<LocationKey> strayLocations_);
     ~DungeonInfo();
 
     const std::string& GetName() const {
@@ -33,6 +34,12 @@ public:
     void PlaceVanillaCompass();
     void PlaceVanillaBossKey();
     void PlaceVanillaSmallKeys();
+    void PlaceVanillaSwampToken();
+    void PlaceVanillaOceanToken();
+    void PlaceVanillaWFStray();
+    void PlaceVanillaSHStray();
+    void PlaceVanillaGBTStray();
+    void PlaceVanillaSTStray();
 
     // Gets the chosen dungeon locations for a playthrough
     std::vector<LocationKey> GetDungeonLocations() const;
@@ -48,6 +55,7 @@ private:
     ItemKey bossKey;
     u8 vanillaKeyCount;
     std::vector<LocationKey> vanillaLocations;
+    std::vector<LocationKey> strayLocations;
 };
 
 extern DungeonInfo WoodfallTemple;
