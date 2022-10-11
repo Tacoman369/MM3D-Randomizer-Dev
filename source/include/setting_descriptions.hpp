@@ -60,6 +60,8 @@ extern string_view kokiriSwordDesc;
 extern string_view songsSongLocations;
 extern string_view songsDungeonRewards;
 extern string_view songsAllLocations;
+extern string_view shuffleSoaringVanilla;
+extern string_view shuffleSoaringRandom;
 
 extern string_view gossipStonesHintsDesc;
 
@@ -197,3 +199,13 @@ extern string_view shuffleDungeonEntrancesDesc;
 extern string_view bombchuInLogicDesc;
 extern string_view ammoDropDesc;
 extern string_view heartDropDesc;
+extern string_view shuffleStartShield;
+extern string_view shuffleTradeItemsDesc;
+extern string_view shuffleTingleMapsDesc;
+extern string_view shuffleHeartContainersDesc;
+extern string_view shufflePiecesOfHeartDesc;
+extern string_view shuffleMainInventoryDesc;
+extern string_view shuffleTransformationDesc;
+extern string_view shuffleFierceDietyDesc;
+extern string_view shuffleMoonItemsDesc;
+extern string_view shuffleBombersNotebookDesc;

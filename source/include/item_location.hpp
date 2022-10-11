@@ -152,6 +152,10 @@ public:
         addedToPool = false;
     }
 
+    ItemKey GetVanillaItem() const {
+        return vanillaItem;
+    }
+
     const std::string& GetName() const {
         return name;
     }
@@ -194,7 +198,7 @@ public:
     }
     
     u16 GetPrice() const {
-        if (ItemTable(placedItem).GetLocationCategory() == LocationCategory::Purchases) {
+        if (ItemTable(placedItem).GetItemType() == ITEMTYPE_SHOP) {
         return ItemTable(placedItem).GetPrice();
         }
         return price;

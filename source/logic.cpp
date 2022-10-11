@@ -47,6 +47,7 @@ namespace Logic {
 	bool BeaverRaceBottle = false;
 	bool DampeBottle = false;
 	bool ChateauBottle = false;
+	bool MysteryMilkBottle = false;
 	bool BombersNotebook = false;
 	bool MirrorShield = false;
 	bool HerosShield = false;
@@ -137,6 +138,7 @@ namespace Logic {
 	u8 ProgressiveMagic = 0;
 	u8 ProgressiveWallet = 0;
 	u8 ProgressiveBombBag = 0;
+	u8 ProgressiveSword = 0;
 	//Keys
 	u8 WoodfallTempleKeys = 0;
 	u8 SnowheadTempleKeys = 0;
@@ -153,7 +155,7 @@ namespace Logic {
 	//Stray Fairies
 	u8 WoodfallStrayFairies = 0;
 	u8 SnowheadStrayFairies = 0;
-	u8 GBTStrayFairies = 0;
+	u8 GreatBayStrayFairies = 0;
 	u8 StoneTowerStrayFairies = 0;
 	//Drops & Bottle Contents Access
 	bool DekuNutDrop = false;
@@ -294,6 +296,15 @@ namespace Logic {
 	bool IsDay1 = false;
 	bool IsDay2 = false;
 	bool IsDay3 = false;
+	bool SunMask = false;
+	bool WatchMoonTearFall =false;
+	bool OldLadySaved = false;
+	bool DekuPrincessReturned = false;
+	bool LaundryFrog = false;
+	bool SwampFrog = false;
+	bool WoodfallFrog = false;
+	bool GreatBayFrog = false;
+	bool ThinBridgeCrystalChest = false;
 
 	bool CanGoToMoon = false;
 	
@@ -310,6 +321,8 @@ namespace Logic {
 	u8 SHStraysInPool = 0;
 	u8 STStraysInPool = 0;
 	u8 PlacedMasks = 0;
+	u8 PiecesOfHeart = 0;
+	u8 HeartContainers = 0;
 
 	bool CanPlay(bool song) {
 		return Ocarina && song;
@@ -412,6 +425,43 @@ namespace Logic {
 		return (currentEggCount >= requiredAmount);
 	}
 
+	bool StrayFairyCount(u8 strayFairyCount, u8 requiredAmount) {
+		return (strayFairyCount >= requiredAmount);
+	}
+
+	bool SkulltulaCount(u8 currentSkulltulaCount, u8 requiredAmount) {
+		return (currentSkulltulaCount >= requiredAmount);
+	}
+
+	bool TotalHeartContainers(u8 requiredAmount) {
+		return (HeartContainers + (PiecesOfHeart/4) >= requiredAmount);
+	}
+
+	u8 TotalMaskCount() { 
+		u8 TotalMasks = 0;
+		if(KeatonMask){TotalMasks++;}
+		if(BunnyHood){TotalMasks++;}
+		if(PostmansHat){TotalMasks++;}
+		if(AllNightMask){TotalMasks++;}
+		if(BlastMask){TotalMasks++;}
+		if(StoneMask){TotalMasks++;}
+		if(GreatFairyMask){TotalMasks++;}
+		if(BremenMask){TotalMasks++;}
+		if(DonGerosMask){TotalMasks++;}
+		if(MaskOfScents){TotalMasks++;}
+		if(RomanisMask){TotalMasks++;}
+		if(CircusLeadersMask){TotalMasks++;}
+		if(KafeisMask){TotalMasks++;}
+		if(CouplesMask){TotalMasks++;}
+		if(KamarosMask){TotalMasks++;}
+		if(GibdosMask){TotalMasks++;}
+		if(GarosMask){TotalMasks++;}
+		if(CaptainsHat){TotalMasks++;}
+		if(GiantsMask){TotalMasks++;}
+		if(MaskOfTruth){TotalMasks++;}
+		return TotalMasks;
+	}
+
 	void UpdateHelpers() {
 		//Drop Access
 		DekuStickDrop = StickPot || DekuBabaSticks;
@@ -424,120 +474,60 @@ namespace Logic {
 		AnyMagicBean = (MagicBean || MagicBeanPack || LimitlessBeans);
 		//refills
 		Bombs = AnyBombBag;
-		Nuts = DekuNutDrop || Nuts;
-		Sticks = DekuStickDrop || Sticks;
+		Nuts = DekuNutDrop;
+		Sticks = DekuStickDrop || DekuStick;
 		Bugs = HasBottle && BugsAccess;
 		Fish = HasBottle && FishAccess;
-		//Seahorse = CanUse(PICTOGRAPH_BOX) && CanPlay(EponasSong) && CanUse(ZORA_MASK);
 		
 		//Other Helpers
-		CanBlastOrSmash = HasExplosives || CanUse(GORON_MASK);
+		CanBlastOrSmash = HasExplosives || GoronMask;
 		CanDive = CanUse(ZORA_MASK);
 		CanPlantBugs = HasBottle && BugsAccess;
 		CanRideEpona = Epona && CanPlay(EponasSong);
 		CanPlantBean = AnyMagicBean || MagicBeanPack;
 		CanOpenStormGrotto = CanPlay(SongOfStorms);
 		CanOpenBombGrotto = CanBlastOrSmash;
-		DekuStickFighting = CanUse(DEKU_STICK);
+		DekuStickFighting = Sticks;
 		HasFireSource = CanUse(FIRE_ARROWS);
-		HasFireSourceWithTorch = CanUse(DEKU_STICK);
-		AnySword = CanUse(GREAT_FAIRYS_SWORD) || AnyBSword;
-		AnyBSword = CanUse(KOKIRI_SWORD) || CanUse(RAZOR_SWORD) || CanUse(GILDED_SWORD);
-		NightInnAccess = CanUse(DEKU_MASK) || RoomKey;
-		Fighting = CanUse(GORON_MASK) || CanUse(ZORA_MASK) || AnySword || DekuStickFighting;
-		AnyShield = CanUse(HEROS_SHIELD) || CanUse(MIRROR_SHIELD);
-		CanUseProjectile = HasExplosives || CanUse(HEROS_BOW);
-		//WoodfallClear = CanPlay(SonataOfAwakening) && CanUse(DEKU_MASK) && CanUse(HEROS_BOW) && WoodfallTempleKeys>=1 && BossKeyWoodfallTemple && AnySword;
-		//SnowheadClear = CanPlay(GoronsLullaby) && CanUse(FIRE_ARROWS) && CanUse(GORON_MASK) && MagicMeter && HasExplosives && SnowheadTempleKeys>=3 && BossKeySnowheadTemple && AnySword;
-		//GreatBayClear = CanPlay(NewWaveBossaNova) && CanUse(ICE_ARROWS) && CanUse(ZORA_MASK) && MagicMeter && CanUse(HOOKSHOT) && GreatBayTempleKeys>=1 && BossKeyGreatBayTemple;
-		//StoneTowerClear = CanPlay(ElegyOfEmptiness) && CanUse(LIGHT_ARROWS) && CanUse(ZORA_MASK) && CanUse(GORON_MASK) && CanUse(DEKU_MASK) && CanUse(GIANTS_MASK) && StoneTowerTempleKeys>=4 && BossKeyStoneTowerTemple && AnySword;
+		HasFireSourceWithTorch = Sticks;
+		AnySword = GreatFairySword || AnyBSword;
+		AnyBSword = KokiriSword || RazorSword || GildedSword || (ProgressiveSword >= 1);
+		NightInnAccess = DekuMask || RoomKey;
+		
+		Fighting = GoronMask || ZoraMask || AnySword || DekuStickFighting;
+		AnyShield = HerosShield|| MirrorShield;
+		CanUseProjectile = HasExplosives || HerosBow || (ProgressiveBow >= 1);
+		
 		//Item Helpers
-		//AnyMagicBean = MagicBean || StoneTowerMagicBean || SwampScrubMagicBean || (DekuMask && PoisonSwampAccess);
-		AnyWallet = Townwallet200 || OceanWallet500;
-		//LimitlessBeans = PoisonSwampAccess && DekuMask;
-		HasBottle = AnyBottle;
+		AnyMagicBean = MagicBean || LimitlessBeans;
+		AnyWallet = Townwallet200 || OceanWallet500 || (ProgressiveWallet >= 1);
+		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || DampeBottle || GoronRaceBottle || ChateauBottle || MysteryMilkBottle || HasBottle;
 		MagicMeter = (ProgressiveMagic >= 1) || MagicPower || ExtendedMagicPower;
-		//WaterForBeans = (AnyBottle && (SpringWater || HotSpringWater)) || SongOfStorms;
+		WaterForBeans = (AnyBottle && (SpringWater || HotSpringWater)) || SongOfStorms;
 		Scarecrow = Hookshot && CanPlay(ScarecrowSong);
 		AnyPaper = (LandTitle || SwampTitle || OceanTitle || MountainTitle || LetterKafei || LetterMama);
 		
 		//Bombs & Bombchus
 		AnyBombBag = (ProgressiveBombBag >= 1) || BombBag20 || TownBombBag || MountainBombBag;
-		//AnyBombBag = BombBag20 || TownBombBag || MountainBombBag || BombBag;
 		Explosives = BlastMask || AnyBombBag;
 		HasBombchus = (BuyBombchus5 || BuyBombchus10 || BuyBombchus20) && AnyBombBag;
 		FoundBombchus = Bombchus;
-		HasExplosives = Bombs || BlastMask;
+		
 		//Bow & Arrows
 		Bow = (ProgressiveBow >= 1) || HerosBow;
-		Arrows = Bow || TownArcheryQuiver || SwampArcheryQuiver;
-		//UseFireArrow = Arrows && FireArrows && MagicMeter;
-		//UseIceArrow = Arrows && IceArrows && MagicMeter;
-		//UseLightArrow = Arrows && LightArrows && MagicMeter;
+		
 		//Bottle Items
-		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || DampeBottle || GoronRaceBottle || ChateauBottle;
-		DekuPrincess = WoodfallClear && AnyBottle;
-		//BigPoe = IkanaCanyonAccess && GibdosMask && AnyBottle && AnyBombBag;
-		//HotSpringWater = NorthAccess && AnyBottle && (SnowheadClear || UseFireArrow);
-		//SpringWater = AnyBottle;
-		//ZoraEgg = PiratesFortressAccess && Hookshot && AnyBottle && PinnacleRockAccess && ((DekuMask && MagicMeter) || Arrows);
-		AllZoraEggs = CanUse(ZORA_MASK) && CanUse(HOOKSHOT) && AnyBottle && Seahorse && CanUse(DEKU_MASK) && MagicMeter;
-		Mushroom = MaskOfScents && AnyBottle;
 		AnyHealingPotion = AnyRedPotion || AnyBluePotion;
 		AnyRedPotion = AnyBottle;
 		AnyBluePotion = AnyBottle;
 		TwoBottles = { (WitchBottle && AlienBottle) || (WitchBottle && BeaverRaceBottle) || (WitchBottle && DampeBottle) ||
-			(WitchBottle && GoronRaceBottle) || (WitchBottle && ChateauBottle) || (AlienBottle && GoronRaceBottle) ||
-			(AlienBottle && BeaverRaceBottle) || (AlienBottle && DampeBottle) || (AlienBottle && ChateauBottle) ||
-			(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && DampeBottle) || (GoronRaceBottle && ChateauBottle) ||
-			(BeaverRaceBottle && DampeBottle) || (BeaverRaceBottle && ChateauBottle) || (DampeBottle && ChateauBottle) };
-		//Location Logic Shortened
-		//Swamp Logic Helpers
-		PoisonSwampAccess = CrossPoisonWater;
-		CrossPoisonWater = HasItem(DEKU_MASK);//DekuMask;
-		AccessToAllSwampSpiders = PoisonSwampAccess && Bugs && MagicMeter && Fighting && HasItem(HOOKSHOT);
-		WoodfallTempleAccess = CanPlay(SonataOfAwakening) && PoisonSwampAccess && Fighting;
-		//WoodfallClear = WoodfallTempleAccess && Arrows && BossKeyWoodfallTemple;
-		SwampSpiderhouseTreeRoom = PoisonSwampAccess;
-		//Snowhead Logic Helpers
-		EnterSnowheadTemple = NorthAccess && HasItem(GORON_MASK) && MagicMeter;
-		NorthAccess = HasExplosives && Bow;
-		SnowheadTempleAccess = NorthAccess && HasItem(GORON_MASK) && MagicMeter && CanPlay(GoronsLullaby);
-		//SnowheadClear = SnowheadTempleAccess && BossKeySnowheadTemple && GoronMask && UseFireArrow;
-		//Great Bay Logic Helpers
-		WestAccess = EponasSong;
-		PiratesFortressAccess = WestAccess && ZoraMask;
-		GreatBayTempleAccess = PiratesFortressAccess && NewWaveBossaNova && Hookshot;
-		GBTReverseWaterDirection = UseIceArrow;
-		//GreatBayClear = GreatBayTempleAccess && BossKeyGreatBayTemple && ZoraMask && Hookshot && UseIceArrow;
-		PinnacleRockAccess = ZoraMask && (Seahorse && AnyBottle);
-		OceanSkulltulas = Explosives && WestAccess && ExitOceanSpiderHouse && Hookshot;
-		AccessToAllOceanSpiders = OceanSkulltulas && UseFireArrow;
-		ExitOceanSpiderHouse = GoronMask;
-		//Ikana Logic Helpers
-		EastAccess = Hookshot && IkanaGraveyardAccess && GarosMask;
-		IkanaGraveyardAccess = EponasSong;
-		IkanaCanyonAccess = EastAccess && UseIceArrow;
-		StoneTowerTempleAcccess = IkanaCanyonAccess && Hookshot && ElegyOfEmptiness && ZoraMask && GoronMask && DekuMask;
-		InvertedStoneTowerTempleAccess = StoneTowerTempleAcccess && UseLightArrow;
-		//StoneTowerClear = InvertedStoneTowerTempleAccess && Hookshot && BossKeyStoneTowerTemple && GiantsMask && UseLightArrow;
-		FightTwinmold = GiantsMask && AnySword && UseLightArrow;
-		//Other Logic Helpers
-		EponaAccess = GoronMask && PowderKeg;
-		MoonAccess = StoneTowerClear && GreatBayClear && SnowheadClear && WoodfallClear;
-		//Temple Keys
-		//OneSnowheadKey = SnowheadTempleKeys == 1;
-		//TwoSnowheadKeys = SnowheadTempleKeys == 2;
-		//OneStoneTowerKey = StoneTowerTempleKeys == 1;
-		//TwoStoneTowerKeys = StoneTowerTempleKeys == 2;
-		//ThreeStoneTowerKeys = StoneTowerTempleKeys == 3;
-		//OneWoodfallKey = WoodfallTempleKeys == 1;
-		//OneGreatBayKey = GreatBayTempleKeys == 1;
-		//Stray Fairy Rewards
-		AllWoodfallStrays = WoodfallClear;
-		AllSnowheadStrays = SnowheadClear;
-		AllGreatBayStrays = GreatBayClear;
-		AllStoneTowerStrays = StoneTowerClear;
+					(WitchBottle && GoronRaceBottle) || (WitchBottle && ChateauBottle) || (AlienBottle && GoronRaceBottle) ||
+					(AlienBottle && BeaverRaceBottle) || (AlienBottle && DampeBottle) || (AlienBottle && ChateauBottle) ||
+					(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && DampeBottle) || (GoronRaceBottle && ChateauBottle) ||
+					(BeaverRaceBottle && DampeBottle) || (BeaverRaceBottle && ChateauBottle) || (DampeBottle && ChateauBottle) || 
+					(WitchBottle && MysteryMilkBottle) || (AlienBottle && MysteryMilkBottle) || (BeaverRaceBottle && MysteryMilkBottle) || 
+					(DampeBottle && MysteryMilkBottle) || (GoronRaceBottle && MysteryMilkBottle) || (ChateauBottle && MysteryMilkBottle)};
+		
 		//Tricks
 		PoisonWaterAsZora = ZoraMask && TakeDamage;
 		WFT2ndFloorSkip = Hookshot;
@@ -590,6 +580,7 @@ namespace Logic {
 	  BeaverRaceBottle = false;
 	  DampeBottle = false;
 	  ChateauBottle = false;
+	  MysteryMilkBottle = false;
 	  BombersNotebook = false;
 	  MirrorShield = false;
 	  HerosShield = false;
@@ -677,10 +668,11 @@ namespace Logic {
 	  TwinmoldRemains = false;
 	  
 	//Progressive Items
-	//u8 ProgressiveBow = 0;
-	//u8 ProgressiveMagic = 0;
-	//u8 ProgressiveWallet = 0;
-	//u8 ProgressiveBombBag = 0;
+	u8 ProgressiveBow = 0;
+	u8 ProgressiveMagic = 0;
+	u8 ProgressiveWallet = 0;
+	u8 ProgressiveBombBag = 0;
+	u8 ProgressiveSword = 0;
 	//Keys
 	 WoodfallTempleKeys = 0;
 	 SnowheadTempleKeys = 0;
@@ -692,13 +684,13 @@ namespace Logic {
 	  BossKeyGreatBayTemple = false;
 	  BossKeyStoneTowerTemple = false;
 	//Skulltula Counts
-	//u8 SwampSkulltulaTokens = 0;
-	//u8 OceanSkulltulaTokens = 0;
+	u8 SwampSkulltulaTokens = 0;
+	u8 OceanSkulltulaTokens = 0;
 	//Stray Fairies
-	//u8 WoodfallStrayFairies = 0;
-	//u8 SnowheadStrayFairies = 0;
-	//u8 GBTStrayFairies = 0;
-	//u8 StoneTowerStrayFairies = 0;
+	u8 WoodfallStrayFairies = 0;
+	u8 SnowheadStrayFairies = 0;
+	u8 GreatBayStrayFairies = 0;
+	u8 StoneTowerStrayFairies = 0;
 	//Drops & Bottle Contents Access
 	  DekuNutDrop = false;
 	  NutPot = false;
@@ -833,6 +825,15 @@ namespace Logic {
 	ArmosRoomLightHole = false;
 	InvertedChestSpawn = false;
 	EnterSakonHideout = false;
+	SunMask = false;
+	WatchMoonTearFall = false;
+	OldLadySaved = false;
+	DekuPrincessReturned = false;
+	LaundryFrog = false;
+	SwampFrog = false;
+	WoodfallFrog = false;
+	GreatBayFrog = false;
+	ThinBridgeCrystalChest = false;
 
 	AtDay = false;
 	AtNight = false;
@@ -844,16 +845,18 @@ namespace Logic {
 	  ZoraEgg = 0;
 	CanGoToMoon = false;
 	//placement tracking
-	//u8 AddedProgressiveBombBags = 0;
-	//u8 AddedProgressiveMagics = 0;
-	//u8 AddedProgressiveBows = 0;
-	//u8 AddedProgressiveWallets = 0;
-	//u8 SwampTokensInPool = 0;
-	//u8 OceanTokensInPool = 0;
-	//u8 WFStraysInPool = 0;
-	//u8 SHStraysInPool = 0;
-	//u8 STStraysInPool = 0;
-	//u8 PlacedMasks = 0;
+	u8 AddedProgressiveBombBags = 0;
+	u8 AddedProgressiveMagics = 0;
+	u8 AddedProgressiveBows = 0;
+	u8 AddedProgressiveWallets = 0;
+	u8 SwampTokensInPool = 0;
+	u8 OceanTokensInPool = 0;
+	u8 WFStraysInPool = 0;
+	u8 SHStraysInPool = 0;
+	u8 STStraysInPool = 0;
+	u8 PlacedMasks = 0;
+	u8 PiecesOfHeart = 0;
+	u8 HeartContainers = 0;
 	}
 }
 

@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <vector>
 
+
 template <typename T, typename Predicate>
 static void erase_if(std::vector<T>& vector, Predicate pred) {
   vector.erase(std::remove_if(begin(vector), end(vector), pred), end(vector));

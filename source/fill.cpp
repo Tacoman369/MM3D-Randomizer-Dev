@@ -25,7 +25,7 @@ using namespace Settings;
 
 static bool placementFailure = false;
 
-/*static void RemoveStartingItemsFromPool() {
+static void RemoveStartingItemsFromPool() {
     for (ItemKey startingItem : StartingInventory) {
         for (size_t i = 0; i < ItemPool.size(); i++) {
             if (startingItem == GREAT_FAIRYS_SWORD) {
@@ -47,7 +47,7 @@ static bool placementFailure = false;
         }
     }
 }
-*/
+
 
 //This function propigates time of day access through entrances
 static bool UpdateToDAccess(Entrance* entrance) {
@@ -101,8 +101,8 @@ std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& 
     std::vector<LocationKey> accessibleLocations;
     
     //Reset all access to begin a new search
-        //ApplyStartingInventory();
-   // UpdateHelpers();
+    ApplyStartingInventory();
+   
     Areas::AccessReset();
     LocationReset();
 
@@ -138,8 +138,6 @@ std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& 
 
             if (area->UpdateEvents()) {
                 updatedEvents = true;
-                // PlacementLog_Msg("Updated Events for :" + area->regionName + "\n");
-                //CitraPrint("Updated Events for: " + area->regionName);
             }
             
             //for each exit in this area
@@ -177,8 +175,6 @@ std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& 
                 LocationKey loc = locPair.GetLocation();
                 ItemLocation* location = Location(loc);
 
-                //CitraPrint(location->GetName() + " Has Item Placed at it: " + location->GetPlacedItemName().GetEnglish());
-            
                 if ((!location->IsAddedToPool())  && (locPair.ConditionsMet())) {   
 
                     location->AddToPool();
@@ -465,7 +461,7 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
                 PlacementLog_Msg("\nCANNOT PLACE ");
                 PlacementLog_Msg(ItemTable(item).GetName().GetEnglish());
                 PlacementLog_Msg(". TRYING AGAIN...\n");
-                DebugPrint("%s: accessable locations according to code %u\n", __func__, accessibleLocations);
+                //DebugPrint("%s: accessable locations according to code %u\n", __func__, accessibleLocations);
                 
                 #ifdef ENABLE_DEBUG
                 PlacementLog_Write();
@@ -514,21 +510,19 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
 //setting, or randomize one dungeon reward to Link's Pocket if that setting is on
 
 static void RandomizeDungeonRewards() {
-std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemCategory() == ItemCategory::Remains;});
+
+std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_DUNGEONREWARD;});
         if (Settings::Logic.Is(LogicSetting::LOGIC_VANILLA)) { //Place dungeon rewards in vanilla locations
             for (LocationKey loc : dungeonRewardLocations) {
                 Location(loc)->PlaceVanillaItem();
             }
         }
         else { //Randomize dungeon rewards with assumed fill -- for now both place vanilla as random dungeon rewards is not implemented yet
-        for (LocationKey loc : dungeonRewardLocations) {
-                Location(loc)->PlaceVanillaItem();
-            }
-            //AssumedFill(rewards, dungeonRewardLocations);
+              AssumedFill(rewards, dungeonRewardLocations);
         }
-
+/*
     //quest item bit mask of each stone/medallion for the savefile
-   /* static constexpr std::array<u32, 9> bitMaskTable = {
+    static constexpr std::array<u32, 9> bitMaskTable = {
       0x00040000, //Kokiri Emerald
       0x00080000, //Goron Ruby
       0x00100000, //Zora Sapphire
@@ -580,7 +574,7 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
 
 //Fills any locations excluded by the player with junk items so that advancement items
 //can't be placed there.
-/*static void FillExcludedLocations() {
+static void FillExcludedLocations() {
     //Only fill in excluded locations that don't already have something and are forbidden
     std::vector<LocationKey> excludedLocations = FilterFromPool(allLocations, [](const LocationKey loc) {
         return Location(loc)->IsExcluded();
@@ -589,10 +583,10 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
     for (LocationKey loc : excludedLocations) {
         PlaceJunkInExcludedLocation(loc);
     }
-}*/
+}
 
 //Function to handle the Own Dungeon setting
-/*static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
+static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
     std::vector<LocationKey> dungeonLocations = dungeon->GetDungeonLocations();
     std::vector<ItemKey> dungeonItems;
 
@@ -626,7 +620,7 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
         auto dungeonMapAndCompass = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetMap() || i == dungeon->GetCompass();});
         AssumedFill(dungeonMapAndCompass, dungeonLocations);
     }
-}*/
+}
 
 /*Randomize items restricted to a certain set of locations.
   The fill order of location groups is as follows:
@@ -636,7 +630,7 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
   Small Keys, Gerudo Keys, Boss Keys, Ganon's Boss Key, and/or dungeon rewards
   will be randomized together if they have the same setting. Maps and Compasses
   are randomized separately once the dungeon advancement items have all been placed.*/
-/*static void RandomizeDungeonItems() {
+static void RandomizeDungeonItems() {
     using namespace Dungeon;
 
     //Get Any Dungeon and Overworld group locations
@@ -667,16 +661,16 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
         }
 
     }
-
+/*
     if (ShuffleRewards.Is(rnd::RewardShuffleSetting::REWARDSHUFFLE_ANY_DUNGEON)) {
-        auto rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemCategory() == ItemCategory::Remains;});
+        auto rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_DUNGEONREWARD;});
         AddElementsToPool(anyDungeonItems, rewards);
     }
     else if (ShuffleRewards.Is(rnd::RewardShuffleSetting::REWARDSHUFFLE_OVERWORLD)) {
-        auto rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemCategory() == ItemCategory::Remains;});
+        auto rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_DUNGEONREWARD;});
         AddElementsToPool(overworldItems, rewards);
     }
-
+*/
     //Randomize Any Dungeon and Overworld pools
     AssumedFill(anyDungeonItems, anyDungeonLocations, true);
     AssumedFill(overworldItems, overworldLocations, true);
@@ -692,7 +686,7 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
             AssumedFill(mapAndCompassItems, overworldLocations, true);
         }
     }
-}*/
+}
 /*
 static void RandomizeLinksPocket() {
     if (LinksPocketItem.Is(rnd::LinksPocketSetting::LINKSPOCKETITEM_ADVANCEMENT)) {
@@ -715,7 +709,7 @@ int VanillaFill() {
     AreaTable_Init();
     GenerateLocationPool();
     GenerateItemPool();
-    //GenerateStartingInventory();
+    GenerateStartingInventory();
     //Place vanilla item in each location
     RandomizeDungeonRewards();
     for (LocationKey loc : allLocations) {
@@ -739,6 +733,7 @@ int NoLogicFill() {
     ItemReset(); //Reset shops incase of shopsanity random
     GenerateLocationPool();
     GenerateItemPool();
+    GenerateStartingInventory();
     RandomizeDungeonRewards();
     std::vector<ItemKey> remainingPool = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return true;});
     FastFill(remainingPool, GetAllEmptyLocations(), false);
@@ -778,14 +773,75 @@ int Fill() {
         ItemReset(); //Reset shops incase of shopsanity random
         GenerateLocationPool();
         GenerateItemPool();
-        //GenerateStartingInventory();
-        //RemoveStartingItemsFromPool();
-        //FillExcludedLocations();
-        
-        //Place dungeon rewards
-        RandomizeDungeonRewards();
+        GenerateStartingInventory();
+        RemoveStartingItemsFromPool();
+        FillExcludedLocations();
         
         showItemProgress = true;
+
+        //Place dungeon items restricted to their Own Dungeon
+        
+        for (auto dungeon : Dungeon::dungeonList) {
+            RandomizeOwnDungeon(dungeon);
+        }
+
+        //Place Main Inventory First
+        //So first get all items in the pool + DekuMask,
+        std::vector<ItemKey> mainadvancementItems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).IsAdvancement() && ItemTable(i).GetItemType() == ITEMTYPE_ITEM;});
+        //Then Place those to expand the amount of checks available
+        AssumedFill(mainadvancementItems, allLocations,true);
+
+        //Then Place Masks to further expand 
+        std::vector<ItemKey> masks = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_MASK;});
+        AssumedFill(masks, allLocations, true);
+
+        //Then Place Anju & Kafei Items in spots accessable on Day 1, this should prevent situations where you cant get an item in time for its use
+        if(ShuffleTradeItems) {
+        std::vector<LocationKey> day1Locations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cDayOne);});
+        std::vector<ItemKey> anjukafeiitems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_QUEST;});
+        AssumedFill(anjukafeiitems, day1Locations,true);
+        }
+
+        //Then Place Deku Merchant Items
+        if(ShuffleMerchants) {
+            std::vector<ItemKey> dekuTrades = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_TRADE;});
+            AssumedFill(dekuTrades, allLocations);
+        }   
+
+        //Place dungeon rewards - always vanilla for now
+        RandomizeDungeonRewards();
+        
+        
+        //Then Place songs if song shuffle is set to specific locations
+        if (ShuffleSongs.IsNot(SongShuffleSetting::SONGSHUFFLE_ANYWHERE)) {
+
+            //Get each song
+            std::vector<ItemKey> songs = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) { return ItemTable(i).GetItemType() == ITEMTYPE_SONG;});
+
+            //Get each song location
+            std::vector<LocationKey> songLocations;
+            if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_SONG_LOCATIONS)) {
+                songLocations = FilterFromPool(allLocations, [](const LocationKey loc) { return Location(loc)->IsCategory(Category::cSong);});
+            }
+            else if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE)) {
+                songLocations = allLocations;
+            }
+            AssumedFill(songs, songLocations, true);
+        }
+
+        //Then place dungeon items that are assigned to restrictive location pools
+        RandomizeDungeonItems();
+
+        //Then place Link's Pocket Item if it has to be an advancement item
+        //Links Pocket is useless as there is no unobtainable check due to a certain time travel sword pedistal 
+        //Any check that occurs before MM3D world initialization like Ocarina/KokiriSword/Shield/SongofTime
+        //Can just be handled by starting inventory 
+        //RandomizeLinksPocket();  
+
+        //Place Tokens before junk
+        std::vector<ItemKey> tokens = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_TOKEN; });
+        AssumedFill(tokens, allLocations, true);
+
         CitraPrint("Starting AssumedFill...");
          //Then place the rest of the advancement items
         std::vector<ItemKey> remainingAdvancementItems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) { return ItemTable(i).IsAdvancement();});
@@ -797,12 +853,13 @@ int Fill() {
         FastFill(remainingPool, GetAllEmptyLocations(), false);
         CitraPrint("Fast Fill of Remaining locations was sucessful");
         //CitraPrint("Generating Playthrough...");
-        //GeneratePlaythrough();
+        //GeneratePlaythrough(); TODO::FIX PLAYTHROUGH
+
         //Successful placement, produced beatable result
         if (!placementFailure) { //&& playthroughBeatable 
             printf("Done");
-            //printf("\x1b[9;10HCalculating Playthrough...");
-            //printf("\x1b[9;10HCalculating Way of the Hero...");
+            //printf("\x1b[9;10HCalculating Playthrough..."); TO-DO::FIX PLAYTHROUGH
+            //printf("\x1b[9;10HCalculating Way of the Hero..."); TO-DO::FIX WOTH
             //PareDownPlaythrough();
             //CalculateWotH();
             CitraPrint("Creating Item Overrides");
@@ -832,94 +889,10 @@ int Fill() {
     //All retries failed
     return -1;
 }
-        //Temporarily add shop items to the ItemPool so that entrance randomization
-        //can validate the world using deku/hylian shields
-        /*AddElementsToPool(ItemPool, GetMinVanillaShopItems(32)); //assume worst case shopsanity 4
-        if (ShuffleEntrances) {
-            printf("\x1b[7;10HShuffling Entrances...");
-            ShuffleAllEntrances();
-            printf("\x1b[7;32HDone");
-        }
-        //erase temporary shop items
-        FilterAndEraseFromPool(ItemPool, [](const ItemKey item) {return ItemTable(item).GetItemType() == ITEMTYPE_SHOP;});
-        */
-        //Place shop items first, since a buy shield is needed to place a dungeon reward on Gohma due to access
-        /*NonShopItems = {};
-        if (Shopsanity.Is(SHOPSANITY_OFF)) {
-            PlaceVanillaShopItems(); //Place vanilla shop items in vanilla location
-        }
-        else {
-            int total_replaced = 0;
-            if (Shopsanity.IsNot(SHOPSANITY_ZERO)) { //Shopsanity 1-4, random
-              //Initialize NonShopItems
-                ItemAndPrice init;
-                init.Name = Text{ "No Item", "Sin objeto", "Pas d'objet" };
-                init.Price = -1;
-                init.Repurchaseable = false;
-                NonShopItems.assign(32, init);
-                //Indices from OoTR. So shopsanity one will overwrite 7, three will overwrite 7, 5, 8, etc.
-                const std::array<int, 4> indices = { 7, 5, 8, 6 };
-                //Overwrite appropriate number of shop items
-                for (size_t i = 0; i < ShopLocationLists.size(); i++) {
-                    int num_to_replace = GetShopsanityReplaceAmount(); //1-4 shop items will be overwritten, depending on settings
-                    total_replaced += num_to_replace;
-                    for (int j = 0; j < num_to_replace; j++) {
-                        int itemindex = indices[j];
-                        int shopsanityPrice = GetRandomShopPrice();
-                        NonShopItems[TransformShopIndex(i * 8 + itemindex - 1)].Price = shopsanityPrice; //Set price to be retrieved by the patch and textboxes
-                        Location(ShopLocationLists[i][itemindex - 1])->SetShopsanityPrice(shopsanityPrice);
-                    }
-                }
-            }
-            //Get all locations and items that don't have a shopsanity price attached
-            std::vector<LocationKey> shopLocations = {};
-            //Get as many vanilla shop items as the total number of shop items minus the number of replaced items
-            //So shopsanity 0 will get all 64 vanilla items, shopsanity 4 will get 32, etc.
-            std::vector<ItemKey> shopItems = GetMinVanillaShopItems(total_replaced);
-
-            for (size_t i = 0; i < ShopLocationLists.size(); i++) {
-                for (size_t j = 0; j < ShopLocationLists[i].size(); j++) {
-                    LocationKey loc = ShopLocationLists[i][j];
-                    if (!(Location(loc)->HasShopsanityPrice())) {
-                        shopLocations.push_back(loc);
-                    }
-                }
-            }
-            //Place the shop items which will still be at shop locations
-            AssumedFill(shopItems, shopLocations);
-        }*/
+        
 
         /*
-        //Place dungeon items restricted to their Own Dungeon
-        for (auto dungeon : Dungeon::dungeonList) {
-            RandomizeOwnDungeon(dungeon);
-        }
-
-        //Then Place songs if song shuffle is set to specific locations
-        if (ShuffleSongs.IsNot(SONGSHUFFLE_ANYWHERE)) {
-
-            //Get each song
-            std::vector<ItemKey> songs = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) { return ItemTable(i).GetItemCategory() == ItemCategory::Songs;});
-
-            //Get each song location
-            std::vector<LocationKey> songLocations;
-            if (ShuffleSongs.Is(SONGSHUFFLE_SONG_LOCATIONS)) {
-                songLocations = FilterFromPool(allLocations, [](const LocationKey loc) { return Location(loc)->IsCategory(Category::cSong);});
-
-            }
-            else if (ShuffleSongs.Is(SONGSHUFFLE_DUNGEON_REWARDS)) {
-                songLocations = FilterFromPool(allLocations, [](const LocationKey loc) { return Location(loc)->IsCategory(Category::cDungeonReward);});
-            }
-
-            AssumedFill(songs, songLocations, true);
-        }
-
-        //Then place dungeon items that are assigned to restrictive location pools
-        RandomizeDungeonItems();
-
-        //Then place Link's Pocket Item if it has to be an advancement item
-        RandomizeLinksPocket();
-
+        
         
        
 }*/

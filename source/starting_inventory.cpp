@@ -25,6 +25,12 @@ void GenerateStartingInventory() {
     for (auto* dungeon : dungeonList) {
       if (dungeon->GetMap() != NONE) {
         AddItemToInventory(dungeon->GetMap());
+        AddItemToInventory(CLOCK_TOWN_MAP);
+        AddItemToInventory(WOODFALL_MAP);
+        AddItemToInventory(SNOWHEAD_MAP);
+        AddItemToInventory(ROMANI_RANCH_MAP);
+        AddItemToInventory(GREAT_BAY_MAP);
+        AddItemToInventory(STONE_TOWER_MAP);
       }
 
       if (dungeon->GetCompass() != NONE) {
@@ -40,21 +46,18 @@ void GenerateStartingInventory() {
       }
     }
   } else if (Keysanity.Is((u8)KeysanitySetting::KEYSANITY_VANILLA)) {
-    // Logic cannot handle vanilla key layout in some dungeons
-    // this is because vanilla expects the dungeon major item to be
-    // locked behind the keys, which is not always true in rando.
-    // We can resolve this by starting with some extra keys
-    // - OoT Randomizer
+    //TO-DO::Add extra keys if necessary depending on how it handles this
+    //OOT3DR only needs to add extra to MQ Spirit Temple though
     }
   
   
-/*
-  if (BossKeysanity.Is(BOSSKEYSANITY_START_WITH)) {
+
+  if (BossKeysanity.Is((u8)BossKeysanitySetting::BOSSKEYSANITY_START_WITH)) {
     AddItemToInventory(WOODFALL_TEMPLE_BOSS_KEY);
     AddItemToInventory(SNOWHEAD_TEMPLE_BOSS_KEY);
     AddItemToInventory(GBT_BOSS_KEY);
     AddItemToInventory(STONE_TOWER_TEMPLE_BOSS_KEY);
-  }*/
+  }
   
   //Starting Inventory Menu
   //Values are associated so that the count of items matches the index of
@@ -67,17 +70,19 @@ void GenerateStartingInventory() {
   AddItemToInventory(ICE_ARROWS,                StartingIceArrows.Value<u8>());
   AddItemToInventory(LIGHT_ARROWS,              StartingLightArrows.Value<u8>());
   AddItemToInventory(LENS_OF_TRUTH,             StartingLensOfTruth.Value<u8>());
-  AddItemToInventory(MAGIC_BEAN_PACK,           StartingMagicBean.Value<u8>());
-  AddItemToInventory(HOOKSHOT,     				StartingHookshot.Value<u8>());
-  AddItemToInventory(EMPTY_BOTTLE1,				StartingBottle1.Value<u8>());
-  AddItemToInventory(EMPTY_BOTTLE2,				StartingBottle2.Value<u8>());
-  //AddItemToInventory(BOTTLE_WITH_MILK,			StartingBottle3.Value<u8<());
-  //AddItemToInventory(BOTTLE_WITH_RED_POTION,	StartingBottle4.Value<u8<());
-  //AddItemToInventory(GOLD_DUST,				    StartingBottle5.Value<u8<());
-  //AddItemToInventory(CHATEAU_ROMANI,			StartingBottle6.Value<u8<());
-  //AddItemToInventory(EMPTY_BOTTLE1,				StartingBottle7.Value<u8<());
+  AddItemToInventory(MAGIC_BEAN,                StartingMagicBean.Value<u8>());//Maybe change to bean pack??
+  AddItemToInventory(HOOKSHOT,     				      StartingHookshot.Value<u8>());
+  AddItemToInventory(POWDER_KEG,                StartingPowderKeg.Value<u8>());
+  AddItemToInventory(PICTOGRAPH_BOX,            StartingPictographBox.Value<u8>());
+  AddItemToInventory(EMPTY_BOTTLE1,				      StartingBottle1.Value<u8>());
+  AddItemToInventory(EMPTY_BOTTLE2,				      StartingBottle2.Value<u8>());
+  AddItemToInventory(BOTTLE_WITH_MILK,			    StartingBottle3.Value<u8>());
+  AddItemToInventory(BOTTLE_WITH_RED_POTION,	  StartingBottle4.Value<u8>());
+  AddItemToInventory(GOLD_DUST,				          StartingBottle5.Value<u8>());
+  AddItemToInventory(CHATEAU_ROMANI,			      StartingBottle6.Value<u8>());
+  AddItemToInventory(BOTTLE_WITH_MYSTERY_MILK,	StartingBottle7.Value<u8>());
   
-  AddItemToInventory(OCARINA_OF_TIME,     		StartingOcarina.Value<u8>());
+  AddItemToInventory(OCARINA_OF_TIME,     		  StartingOcarina.Value<u8>());
   AddItemToInventory(OATH_TO_ORDER,             StartingOathToOrder.Value<u8>());
   AddItemToInventory(EPONAS_SONG,               StartingEponasSong.Value<u8>());
   //AddItemToInventory(INVERTED_SONG_OF_TIME,     StartingInvertedSong.Value<u8>());
@@ -90,7 +95,7 @@ void GenerateStartingInventory() {
   AddItemToInventory(ELEGY_OF_EMPTINESS,        StartingElegyOfEmptiness.Value<u8>());
   AddItemToInventory(SONG_OF_HEALING,           StartingSongOfHealing.Value<u8>());
   AddItemToInventory(SONG_OF_SOARING,           StartingSongOfSoaring.Value<u8>());
-  AddItemToInventory(KOKIRI_SWORD,              StartingKokiriSword.Value<u8>());
+  AddItemToInventory(PROGRESSIVE_SWORD,         StartingKokiriSword.Value<u8>());
   AddItemToInventory(HEROS_SHIELD,              StartingHerosShield.Value<u8>());
   AddItemToInventory(MIRROR_SHIELD,             StartingMirrorShield.Value<u8>());
   AddItemToInventory(PROGRESSIVE_MAGIC_METER,   StartingMagicMeter.Value<u8>());
@@ -100,8 +105,32 @@ void GenerateStartingInventory() {
   AddItemToInventory(GOHTS_REMAINS,             StartingGohtRemains.Value<u8>());
   AddItemToInventory(GYORGS_REMAINS,            StartingGyorgRemains.Value<u8>());
   AddItemToInventory(TWINMOLDS_REMAINS,         StartingTwinmoldRemains.Value<u8>());
-  //AddItemToInventory(SWAMP_SKULLTULA_TOKEN,     StartingSwampToken.Value<u8>());
-  //AddItemToInventory(OCEANSIDE_SKULLTULA_TOKEN, StartingOceanToken.Value<u8>());
+  AddItemToInventory(SWAMP_SKULLTULA_TOKEN,     StartingSwampToken.Value<u8>());
+  AddItemToInventory(OCEANSIDE_SKULLTULA_TOKEN, StartingOceanToken.Value<u8>());
+
+  AddItemToInventory(DEKU_MASK,                 StartingDekuMask.Value<u8>());  
+  AddItemToInventory(GORON_MASK,                StartingGoronMask.Value<u8>());
+  AddItemToInventory(ZORA_MASK,                 StartingZoraMask.Value<u8>());
+  AddItemToInventory(BUNNY_HOOD,                StartingBunnyHood.Value<u8>());
+  AddItemToInventory(KEATON_MASK,               StartingKeatonMask.Value<u8>());
+  AddItemToInventory(POSTMANS_HAT,              StartingPostmanHat.Value<u8>());
+  AddItemToInventory(ALL_NIGHT_MASK,            StartingAllNightMask.Value<u8>());
+  AddItemToInventory(BLAST_MASK,                StartingBlastMask.Value<u8>());
+  AddItemToInventory(STONE_MASK,                StartingStoneMask.Value<u8>());
+  AddItemToInventory(GREAT_FAIRYS_MASK,         StartingGreatFairyMask.Value<u8>());
+  AddItemToInventory(BREMEN_MASK,               StartingBremenMask.Value<u8>());
+  AddItemToInventory(DON_GEROS_MASK,            StartingDonGeroMask.Value<u8>());
+  AddItemToInventory(MASK_OF_SCENTS,            StartingMaskOfScents.Value<u8>());
+  AddItemToInventory(ROMANIS_MASK,              StartingRomanisMask.Value<u8>());
+  AddItemToInventory(CIRCUS_LEADERS_MASK,       StartingCircusLeaderMask.Value<u8>());
+  AddItemToInventory(KAFEIS_MASK,               StartingKafeiMask.Value<u8>());
+  AddItemToInventory(COUPLES_MASK,              StartingCouplesMask.Value<u8>());
+  AddItemToInventory(KAMAROS_MASK,              StartingKamarosMask.Value<u8>());
+  AddItemToInventory(GIBDOS_MASK,               StartingGibdosMask.Value<u8>());
+  AddItemToInventory(CAPTAINS_HAT,              StartingCaptainsHat.Value<u8>());
+  AddItemToInventory(GIANTS_MASK,               StartingGiantsMask.Value<u8>());
+  AddItemToInventory(FIERCE_DIETY_MASK,         StartingFierceDietyMask.Value<u8>());
+  AddItemToInventory(MASK_OF_TRUTH,             StartingMaskOfTruth.Value<u8>());
 
   
   s8 hearts = (StartingHealth.Value<u8>() + 2) % 20 - 2;

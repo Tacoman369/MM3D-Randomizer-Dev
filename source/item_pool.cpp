@@ -11,6 +11,7 @@
 
 using namespace Settings;
 using namespace Dungeon;
+using namespace rnd;
 
 std::vector<ItemKey> ItemPool = {};
 std::vector<ItemKey> PendingJunkPool = {};
@@ -20,7 +21,7 @@ const std::array<ItemKey, 5> dungeonRewards = {
 	GOHTS_REMAINS,
 	GYORGS_REMAINS,
 	TWINMOLDS_REMAINS,
-	MAJORAS_MASK,
+	//MAJORAS_MASK,
 };
 const std::array<ItemKey, 17> JunkPoolItems = {
 	BOMBS_5,
@@ -41,86 +42,7 @@ const std::array<ItemKey, 17> JunkPoolItems = {
 	DEKU_NUTS_10,
 	ICE_TRAP,
 };
-const std::array<ItemKey, 197> alwaysItems = {
-	KOKIRI_SWORD,
-	GREAT_FAIRYS_SWORD,
-	HEROS_SHIELD,
-	MIRROR_SHIELD,
-	DEKU_STICK,
-	LAND_TITLE,
-	SWAMP_TITLE,
-	MOUNTAIN_TITLE,
-	OCEAN_TITLE,
-	BOMBERS_NOTEBOOK,
-	ROOM_KEY,
-	LETTER_KAFEI,
-	PENDANT_MEMORIES,
-	LETTER_MAMA,
-	MOONS_TEAR,
-	SPIN_ATTACK,
-	LENS_OF_TRUTH,
-	FIRE_ARROWS,
-	ICE_ARROWS,
-	LIGHT_ARROWS,
-	HOOKSHOT,
-	MAGIC_BEAN,
-	DOUBLE_DEFENSE,
-	//OCARINA_OF_TIME,
-	PICTOGRAPH_BOX,
-	POWDER_KEG,
-	KEATON_MASK,
-	BUNNY_HOOD,
-	DEKU_MASK,
-	GORON_MASK,
-	ZORA_MASK,
-	POSTMANS_HAT,
-	ALL_NIGHT_MASK,
-	BLAST_MASK,
-	STONE_MASK,
-	GREAT_FAIRYS_MASK,
-	BREMEN_MASK,
-	DON_GEROS_MASK,
-	MASK_OF_SCENTS,
-	ROMANIS_MASK,
-	CIRCUS_LEADERS_MASK,
-	KAFEIS_MASK,
-	COUPLES_MASK,
-	KAMAROS_MASK,
-	GIBDOS_MASK,
-	GAROS_MASK,
-	CAPTAINS_HAT,
-	GIANTS_MASK,
-	FIERCE_DIETY_MASK,
-	MASK_OF_TRUTH,
-	//PROGRESSIVE_SWORD, //3 Progressive Swords
-	//PROGRESSIVE_SWORD,
-	//PROGRESSIVE_SWORD,
-	//PROGRESSIVE_BOMB_BAG, //3 Progressive Bomb Bags
-	//PROGRESSIVE_BOMB_BAG,
-	//PROGRESSIVE_BOMB_BAG,
-	//PROGRESSIVE_BOW, //3 Progressive Bows
-	//PROGRESSIVE_BOW,
-	//PROGRESSIVE_BOW,
-	//PROGRESSIVE_WALLET, //2 Progressive wallets
-	//PROGRESSIVE_WALLET,
-	//PROGRESSIVE_MAGIC_METER,// 2 Progressive Magic Meters
-	//PROGRESSIVE_MAGIC_METER,
-	EMPTY_BOTTLE1,
-	EMPTY_BOTTLE2,
-	BOTTLE_WITH_MILK,
-	BOTTLE_WITH_RED_POTION,
-	GOLD_DUST,
-	CHATEAU_ROMANI,
-	RAZOR_SWORD,
-	GILDED_SWORD,
-	LARGE_QUIVER,
-	LARGEST_QUIVER,
-	BIG_BOMB_BAG,
-	BIGGEST_BOMB_BAG,
-	ADULT_WALLET,
-	GIANT_WALLET,
-	MAGIC_POWER,
-	EXTENDED_MAGIC_POWER,
+const std::array<ItemKey, 12> alwaysItems = {
 	BOMBS_10,
 	BOMBS_5,
 	BOMBS_5,
@@ -199,11 +121,11 @@ const std::array<ItemKey, 83> easyItems = {
 	GIANT_WALLET,
 	MAGIC_POWER,
 	EXTENDED_MAGIC_POWER,
-	ODOLWA_HEART_CONTAINER, //all 4 heart containers
-	GOHT_HEART_CONTAINER,
-	GYORG_HEART_CONTAINER,
-	TWINMOLD_HEART_CONTAINER,
-	//PIECE_OF_HEART1, 16 heart pieces = 4 heart containers
+	HEART_CONTAINER, //all 4 heart containers
+	HEART_CONTAINER,
+	HEART_CONTAINER,
+	HEART_CONTAINER,
+	PIECE_OF_HEART,//16 Pieces of Heart
 };
 const std::array<ItemKey, 141> normalItems = {
 	MAGIC_BEAN,
@@ -221,7 +143,7 @@ const std::array<ItemKey, 4> MOON_Vanilla = {
 	BLUE_RUPEE,
 	BLUE_RUPEE,
 };
-const std::array<ItemKey, 17> normalBottles = {
+const std::array<ItemKey, 18> normalBottles = {
   EMPTY_BOTTLE1,
   BOTTLE_WITH_MILK,
   BOTTLE_WITH_RED_POTION,
@@ -232,6 +154,7 @@ const std::array<ItemKey, 17> normalBottles = {
   BOTTLE_WITH_BUGS,
   BOTTLE_WITH_POE,
   BOTTLE_WITH_BIG_POE,
+  BOTTLE_WITH_MYSTERY_MILK,
   DEKU_PRINCESS,
   CHATEAU_ROMANI,
   BOTTLE_WITH_HOT_SPRING_WATER,
@@ -240,7 +163,7 @@ const std::array<ItemKey, 17> normalBottles = {
   BOTTLE_WITH_ZORA_EGG,
   SEAHORSE,
 };
-const std::array<ItemKey, 39> normalRupees = {
+const std::array<ItemKey, 36> normalRupees = {
 	RED_RUPEE,
 	SILVER_RUPEE,
 	SILVER_RUPEE,
@@ -261,26 +184,60 @@ const std::array<ItemKey, 39> normalRupees = {
 	PURPLE_RUPEE,
 	RED_RUPEE,
 	PURPLE_RUPEE,
-	BLUE_RUPEE,
 	PURPLE_RUPEE,
 	RED_RUPEE,
+	SILVER_RUPEE, //added some extra silver instead of red because its more convenient
 	SILVER_RUPEE,
 	SILVER_RUPEE,
 	SILVER_RUPEE,
-	RED_RUPEE,
-	RED_RUPEE,
-	RED_RUPEE,
-	RED_RUPEE,
-	RED_RUPEE,
-	RED_RUPEE,
-	PURPLE_RUPEE,
-	BLUE_RUPEE,
+	SILVER_RUPEE,
+	SILVER_RUPEE,
 	RED_RUPEE,
 	RED_RUPEE,
 	RED_RUPEE,
 	PURPLE_RUPEE,
-	BLUE_RUPEE,
-
+	RED_RUPEE,
+	RED_RUPEE,
+	RED_RUPEE,
+	PURPLE_RUPEE,
+};
+const std::array<ItemKey, 36> shopsanityRupees = {
+	RED_RUPEE,
+	SILVER_RUPEE,
+	SILVER_RUPEE,
+	RED_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	RED_RUPEE,
+	HUGE_RUPEE,
+	HUGE_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	HUGE_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	RED_RUPEE,
+	PURPLE_RUPEE,
+	PURPLE_RUPEE,
+	RED_RUPEE,
+	SILVER_RUPEE, //added some extra silver instead of red because its more convenient
+	SILVER_RUPEE,
+	SILVER_RUPEE,
+	SILVER_RUPEE,
+	SILVER_RUPEE,
+	SILVER_RUPEE,
+	RED_RUPEE,
+	RED_RUPEE,
+	RED_RUPEE,
+	PURPLE_RUPEE,
+	RED_RUPEE,
+	RED_RUPEE,
+	RED_RUPEE,
+	PURPLE_RUPEE,
 };
 const std::array<ItemKey, 4> dekuScrubItems = {
 	HUGE_RUPEE,
@@ -288,14 +245,26 @@ const std::array<ItemKey, 4> dekuScrubItems = {
 	MAGIC_BEAN,
 	GREEN_POTION_REFILL,
 };
-const std::array<ItemKey, 12> songList = {
-	SONG_OF_TIME,
-	SONG_OF_DOUBLE_TIME,
-	INVERTED_SONG_OF_TIME,
+
+const std::array<ItemKey, 8> chestItems = {
+	LENS_OF_TRUTH,
+	MAGIC_BEAN,
+	HEROS_BOW,
+	FIRE_ARROWS,
+	ICE_ARROWS,
+	LIGHT_ARROWS,
+	HOOKSHOT,
+	MIRROR_SHIELD,
+};
+
+const std::array<ItemKey, 11> songList = {
+	//SONG_OF_TIME,
+	//SONG_OF_DOUBLE_TIME,
+	//INVERTED_SONG_OF_TIME, //SoT not included yet
 	SONG_OF_STORMS,
 	EPONAS_SONG,
 	SONG_OF_HEALING,
-	SONG_OF_SOARING,
+	//SONG_OF_SOARING,
 	SONATA_OF_AWAKENING,
 	GORONS_LULLABY,
 	NEW_WAVE_BOSSA_NOVA,
@@ -303,89 +272,235 @@ const std::array<ItemKey, 12> songList = {
 	OATH_TO_ORDER
 };
 
-const std::array<ItemKey, 15> chestItems = {
-	//RED_RUPEE,
-	//SILVER_RUPEE,
-	//SILVER_RUPEE,
-	LENS_OF_TRUTH,
-	//RED_RUPEE,
-	//PURPLE_RUPEE,
-	PIECE_OF_HEART,
-	//RED_RUPEE,
-	//BOMBCHU_5,
-	PIECE_OF_HEART,
-	//PURPLE_RUPEE,
-	//BOMBCHU_5,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//BOMBCHU_5,
-	//RED_RUPEE,
-	//PURPLE_RUPEE,
-	//RED_RUPEE,
-	//PURPLE_RUPEE,
-	//RED_RUPEE,
-	//PURPLE_RUPEE,
-	//SILVER_RUPEE,
-	//SILVER_RUPEE,
-	//SILVER_RUPEE,
-	//BOMBCHU_10,
-	MAGIC_BEAN,
-	PIECE_OF_HEART,
-	PIECE_OF_HEART,
-	//BOMBCHU_5,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//BOMBCHU_5,
-	PIECE_OF_HEART,
-	//RED_RUPEE,
-	PIECE_OF_HEART,
-	//BLUE_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//BOMBCHU_5,
-	//PURPLE_RUPEE,
-	HEROS_BOW,
+static void PlaceVanillaSongs() {
+	PlaceItemInLocation(HMS_SONG_OF_HEALING, SONG_OF_HEALING);
+	PlaceItemInLocation(DEKU_PALACE_IMPRISONED_MONKEY, SONATA_OF_AWAKENING);
+	PlaceItemInLocation(GORON_VILLAGE_GORON_LULLABY, GORONS_LULLABY);
+	PlaceItemInLocation(ROMANI_RANCH_ROMANIS_GAME, EPONAS_SONG);
+	PlaceItemInLocation(GBC_BABY_ZORAS, NEW_WAVE_BOSSA_NOVA);
+	PlaceItemInLocation(IKANA_CASTLE_IKANA_KING, ELEGY_OF_EMPTINESS);
+	PlaceItemInLocation(IKANA_GRAVEYARD_DAY_ONE_GRAVE_TABLET, SONG_OF_STORMS);
+	PlaceItemInLocation(GIANTS_OATH_TO_ORDER, OATH_TO_ORDER);
+};
+
+const std::array<ItemKey, 18> maskList = {
+	KEATON_MASK,
+	BUNNY_HOOD,
+	POSTMANS_HAT,
+	ALL_NIGHT_MASK,
+	BLAST_MASK,
+	STONE_MASK,
+	GREAT_FAIRYS_MASK,
+	BREMEN_MASK,
+	DON_GEROS_MASK,
+	MASK_OF_SCENTS,
+	ROMANIS_MASK,
+	CIRCUS_LEADERS_MASK,
+	KAMAROS_MASK,
+	GIBDOS_MASK,
+	GAROS_MASK,
+	CAPTAINS_HAT,
+	GIANTS_MASK,
+	MASK_OF_TRUTH,
+};
+
+static void PlaceVanillaMasks() {
+	PlaceItemInLocation(E_CLOCK_TOWN_GORMAN, CIRCUS_LEADERS_MASK);
+	PlaceItemInLocation(DEKU_PALACE_BUTLER_RACE, MASK_OF_SCENTS);
+	PlaceItemInLocation(E_CLOCK_TOWN_POSTMAN_FREEDOM, POSTMANS_HAT);
+	PlaceItemInLocation(IKANA_CANYON_PAMELAS_FATHER, GIBDOS_MASK);
+	PlaceItemInLocation(IKANA_GRAVEYARD_CAPTAIN_KEETA_CHEST, CAPTAINS_HAT);
+	PlaceItemInLocation(LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE, KEATON_MASK);
+	PlaceItemInLocation(LAUNDRY_POOL_GURU_GURU, BREMEN_MASK);
+	PlaceItemInLocation(MILK_ROAD_GORMAN_RACE, GAROS_MASK);
+	PlaceItemInLocation(MOUNTAIN_VILLAGE_HUNGRY_GORON, DON_GEROS_MASK);
+	PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_HUMAN, GREAT_FAIRYS_MASK);
+	PlaceItemInLocation(N_CLOCK_TOWN_OLD_LADY, BLAST_MASK);
+	PlaceItemInLocation(ROMANI_RANCH_GROG, BUNNY_HOOD);
+	PlaceItemInLocation(ROMANI_RANCH_CREMIA_ESCORT, ROMANIS_MASK);
+	PlaceItemInLocation(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD, MASK_OF_TRUTH);
+	PlaceItemInLocation(TERMINA_FIELD_KAMARO, KAMAROS_MASK);
+	PlaceItemInLocation(W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY, ALL_NIGHT_MASK);
+	PlaceItemInLocation(STONE_TOWER_TEMPLE_GIANTS_MASK_CHEST, GIANTS_MASK);
+	PlaceItemInLocation(PF_INT_INVISIBLE_SOLDIER, STONE_MASK);
+};
+
+const std::array<ItemKey, 16> mainInventoryList= {
 	FIRE_ARROWS,
 	ICE_ARROWS,
 	LIGHT_ARROWS,
+	//MAGIC_BEAN,
+	//MAGIC_BEAN_PACK,
+	POWDER_KEG,
+	PICTOGRAPH_BOX,
 	HOOKSHOT,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//SILVER_RUPEE,
-	//RED_RUPEE,
-	//BLUE_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
-	//RED_RUPEE,
+	//GREAT_FAIRYS_SWORD,
+	LENS_OF_TRUTH,
 	MIRROR_SHIELD,
-	//PURPLE_RUPEE,
-	//PURPLE_RUPEE,
-	//SILVER_RUPEE,
-	//SILVER_RUPEE,
-	//SILVER_RUPEE,
-	//SILVER_RUPEE,
-	PIECE_OF_HEART
+	EMPTY_BOTTLE1,
+	EMPTY_BOTTLE2,
+	BOTTLE_WITH_RED_POTION,
+	BOTTLE_WITH_MILK,
+	CHATEAU_ROMANI,
+	GOLD_DUST,
+	BOTTLE_WITH_MYSTERY_MILK,//7 Bottles(currently 7th is empty instead of mystery milk)
+	SEAHORSE,
 };
-const std::array<ItemKey, 1> maskList = {
+
+static void PlaceVanillaMainInventory() {
+	PlaceItemInLocation(SNOWHEAD_TEMPLE_FIRE_ARROW_CHEST, FIRE_ARROWS);
+	PlaceItemInLocation(GBT_ICE_ARROW_CHEST, ICE_ARROWS);
+	PlaceItemInLocation(STONE_TOWER_TEMPLE_LIGHT_ARROW_CHEST, LIGHT_ARROWS);
+	//PlaceItemInLocation(DEKU_PALACE_BEAN_DADDY, MAGIC_BEAN);//Shopsanity
+	PlaceItemInLocation(GORON_VILLAGE_POWDER_KEG_CHALLENGE, POWDER_KEG);
+	PlaceItemInLocation(SOUTHERN_SWAMP_KOTAKE, PICTOGRAPH_BOX);
+	PlaceItemInLocation(PF_INTERIOR_HOOKSHOT_CHEST, HOOKSHOT);
+	PlaceItemInLocation(GORON_VILLAGE_LENS_OF_TRUTH_CHEST, LENS_OF_TRUTH);
+	PlaceItemInLocation(BENEATH_THE_WELL_MIRROR_SHIELD_CHEST, MIRROR_SHIELD);
+	PlaceItemInLocation(SOUTHERN_SWAMP_KOUME, BOTTLE_WITH_RED_POTION);
+	PlaceItemInLocation(TWIN_ISLANDS_GORON_RACE, GOLD_DUST);
+	PlaceItemInLocation(E_CLOCK_TOWN_AROMA_IN_BAR, CHATEAU_ROMANI);
+	PlaceItemInLocation(E_CLOCK_TOWN_GORMAN_QUEST, BOTTLE_WITH_MYSTERY_MILK);
+	PlaceItemInLocation(ZORA_CAPE_BEAVER_RACE_1,EMPTY_BOTTLE2);
+	PlaceItemInLocation(IKANA_GRAVEYARD_DAMPE_DIGGING,EMPTY_BOTTLE1);
+	PlaceItemInLocation(ROMANI_RANCH_ALIEN_DEFENSE,BOTTLE_WITH_MILK);
+	PlaceItemInLocation(GBC_FISHERMAN_PHOTO, SEAHORSE);
+};
+
+const std::array<ItemKey, 12> progressiveItemsList = {
+	PROGRESSIVE_BOW,
+	PROGRESSIVE_BOW,
+	PROGRESSIVE_BOW, //1 Bow + 2 Quiver Upgrades
+	PROGRESSIVE_BOMB_BAG,
+	PROGRESSIVE_BOMB_BAG,
+	PROGRESSIVE_BOMB_BAG, //3 Bomb Bags
+	PROGRESSIVE_MAGIC_METER,
+	PROGRESSIVE_MAGIC_METER,//2 Magic Meters
+	PROGRESSIVE_WALLET,
+	PROGRESSIVE_WALLET,//2 Wallets
+	//PROGRESSIVE_SWORD,
+	PROGRESSIVE_SWORD,
+	PROGRESSIVE_SWORD,//2 Swords -- One added or not depending on ShuffleKokriSword Settings
+};
+
+static void PlaceVanillaProgressive() {
+	PlaceItemInLocation(WOODFALL_TEMPLE_HEROS_BOW_CHEST, PROGRESSIVE_BOW);
+	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1, PROGRESSIVE_BOW);
+	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1, PROGRESSIVE_BOW);
+	PlaceItemInLocation(W_CLOCK_TOWN_BOMB_BAG_BUY, PROGRESSIVE_BOMB_BAG);
+	PlaceItemInLocation(W_CLOCK_TOWN_BIG_BOMB_BAG_BUY, PROGRESSIVE_BOMB_BAG);
+	PlaceItemInLocation(GORON_VILLAGE_SCRUB_PURCHASE, PROGRESSIVE_BOMB_BAG);
+	PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);
+	PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
+	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1, PROGRESSIVE_WALLET);
+	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1, PROGRESSIVE_WALLET);
+	PlaceItemInLocation(HMS_STARTING_SWORD, PROGRESSIVE_SWORD);
+	PlaceItemInLocation(MOUNTAIN_VILLAGE_SMITH_DAY_ONE, PROGRESSIVE_SWORD);
+	PlaceItemInLocation(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, PROGRESSIVE_SWORD);
+};
+
+const std::array<ItemKey, 13> nonProgressiveItemsList = {
+	HEROS_BOW,
+	LARGE_QUIVER,
+	LARGEST_QUIVER,
+	BOMB_BAG,
+	BIG_BOMB_BAG,
+	BIGGEST_BOMB_BAG,
+	MAGIC_POWER,
+	EXTENDED_MAGIC_POWER,
+	ADULT_WALLET,
+	GIANT_WALLET,
+	KOKIRI_SWORD,
+	RAZOR_SWORD,
+	GILDED_SWORD,
+};
+
+static void PlaceVanillaNonProgressive() {
+	PlaceItemInLocation(WOODFALL_TEMPLE_HEROS_BOW_CHEST, HEROS_BOW);
+	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1, LARGE_QUIVER);
+	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1, LARGEST_QUIVER);
+	PlaceItemInLocation(W_CLOCK_TOWN_BOMB_BAG_BUY, BOMB_BAG);
+	PlaceItemInLocation(W_CLOCK_TOWN_BIG_BOMB_BAG_BUY, BIG_BOMB_BAG);
+	PlaceItemInLocation(GORON_VILLAGE_SCRUB_PURCHASE, BIGGEST_BOMB_BAG);
+	PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, MAGIC_POWER);
+	PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, EXTENDED_MAGIC_POWER);
+	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1, ADULT_WALLET);
+	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1, GIANT_WALLET);
+	PlaceItemInLocation(HMS_STARTING_SWORD, KOKIRI_SWORD);
+	PlaceItemInLocation(MOUNTAIN_VILLAGE_SMITH_DAY_ONE, RAZOR_SWORD);
+	PlaceItemInLocation(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, GILDED_SWORD);
+};
+
+static void PlaceVanillaHeartPieces() {
+   for (LocationKey loc: GetLocations(allLocations, Category::cVanillaHeartPiece)) {
+	if (Location(loc)->IsCategory(Category::cTheMoon)){
+		return;
+	}
+	else PlaceItemInLocation(loc, PIECE_OF_HEART);
+   }
+};
+const std::array<ItemKey, 8> vanillaCows = {
+	MILK,
+	MILK,
+	MILK,
+	MILK,
+	MILK,
+	MILK,
+	MILK,
+	MILK,	
+};
+
+const std::array<ItemKey,4> scrubPurchaseItems = {
+	MAGIC_BEAN,
+	PROGRESSIVE_BOMB_BAG,//BIGGEST_BOMB_BAG
+	GREEN_POTION_REFILL,
+	BLUE_POTION_REFILL,
+};
+
+const std::array<ItemKey, 6> moonItemList = {
+	//2Chests and 4 trial rewards, FDM separate
+	ARROWS_30,
+	BOMBCHU_10,
+	PIECE_OF_HEART,
+	PIECE_OF_HEART,
+	PIECE_OF_HEART,
+	PIECE_OF_HEART,
+};
+
+const std::array<ItemKey, 5> scrubTradeItems = {
+	MOONS_TEAR,
+	LAND_TITLE,
+	SWAMP_TITLE,
+	MOUNTAIN_TITLE,
+	OCEAN_TITLE,
+};
+
+const std::array<ItemKey, 6> anjuKafeiTradeItems = {
+	LETTER_KAFEI,
+	LETTER_MAMA,
+	PENDANT_MEMORIES,
+	ROOM_KEY,
 	KAFEIS_MASK,
+	COUPLES_MASK,
 };
-//additional chest items
-//GIANTS_MASK, //Might need to separate later due to being a mask
-//PROGRESSIVE_BOW,
-//CAPTAINS_HAT, //Might need to separate later for masks as its both
-//Moon Chests - not included for now
-//ARROWS_30,
-//BOMBCHU_10,
+
+std::array<ItemKey, 7> zoraEggs = {
+	ZORA_EGG,
+	ZORA_EGG,
+	ZORA_EGG,
+	ZORA_EGG,
+	ZORA_EGG,
+	ZORA_EGG,
+};
+
+std::array<ItemKey, 6> tingleMaps = {
+	CLOCK_TOWN_MAP,
+	WOODFALL_MAP,
+	SNOWHEAD_MAP,
+	GREAT_BAY_MAP,
+	STONE_TOWER_MAP,
+	ROMANI_RANCH_MAP,
+};
 
 void AddItemToPool(std::vector<ItemKey>& pool, ItemKey item, size_t count /*= 1*/) {
 	pool.insert(pool.end(), count, item);
@@ -425,7 +540,7 @@ static ItemKey GetPendingJunkItem() {
 };
 
 //Replace junk items in the pool with pending junk
-/*static void ReplaceMaxItem(const ItemKey itemToReplace, int max) {
+static void ReplaceMaxItem(const ItemKey itemToReplace, int max) {
 	int itemCount = 0;
 	for (size_t i = 0; i < ItemPool.size(); i++) {
 		if (ItemPool[i] == itemToReplace) {
@@ -435,7 +550,7 @@ static ItemKey GetPendingJunkItem() {
 			itemCount++;
 		}
 	}
-};*/
+};
 
 void PlaceJunkInExcludedLocation(const LocationKey il) {
 	//place a non-advancement item in this location
@@ -449,17 +564,20 @@ void PlaceJunkInExcludedLocation(const LocationKey il) {
 	printf("ERROR: No Junk to Place!!!\n");
 };
 
-/*static void PlaceVanillaDekuScrubItems() {
-	PlaceItemInLocation(IKANA_CANYON_SCRUB_PURCHASE, BLUE_POTION_REFILL);
-	PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);
-
-};*/
-
-/*static void PlaceVanillaMapsAndCompasses() {
-	//for (auto dungeon : dungeonList) {
-	//	dungeon->PlaceVanillaMap();
-	//	dungeon->PlaceVanillaCompass();
-	//}
+static void PlaceVanillaMapsAndCompasses() {
+	//Place Dungeon Maps and Compasses
+	for (auto dungeon : dungeonList) {
+		dungeon->PlaceVanillaMap();
+		dungeon->PlaceVanillaCompass();
+	}
+	//Then Place Tingle Maps
+	PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_1, CLOCK_TOWN_MAP);
+	PlaceItemInLocation(TINGLE_ROAD_TO_SS_1, WOODFALL_MAP);
+	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_1, SNOWHEAD_MAP);
+	PlaceItemInLocation(TINGLE_GBC_1, GREAT_BAY_MAP);
+	PlaceItemInLocation(TINGLE_IKANA_CANYON_1, STONE_TOWER_MAP);
+	PlaceItemInLocation(TINGLE_MILK_ROAD_1, ROMANI_RANCH_MAP);
+	/*
 	PlaceItemInLocation(WOODFALL_TEMPLE_COMPASS_CHEST, WOODFALL_TEMPLE_COMPASS);
 	PlaceItemInLocation(WOODFALL_TEMPLE_MAP_CHEST, WOODFALL_TEMPLE_MAP);
 	PlaceItemInLocation(SNOWHEAD_TEMPLE_MAP_CHEST, SNOWHEAD_TEMPLE_MAP);
@@ -468,8 +586,8 @@ void PlaceJunkInExcludedLocation(const LocationKey il) {
 	PlaceItemInLocation(GBT_COMPASS_CHEST, GBT_COMPASS);
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_MAP_CHEST, STONE_TOWER_TEMPLE_MAP);
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_COMPASS_CHEST, STONE_TOWER_TEMPLE_COMPASS);
-
-};*/
+*/
+};
 
 static void PlaceVanillaZoraEggs() {
 	PlaceItemInLocation(PINNACLE_ROCK_ZORA_EGG1, ZORA_EGG);
@@ -482,9 +600,10 @@ static void PlaceVanillaZoraEggs() {
 };
 
 static void PlaceVanillaSmallKeys() {
-	//for (auto dungeon : dungeonList) {
-	//	dungeon->PlaceVanillaSmallKeys();
-	//}
+	for (auto dungeon : dungeonList) {
+		dungeon->PlaceVanillaSmallKeys();
+	}
+	/*
 	PlaceItemInLocation(WOODFALL_TEMPLE_SMALL_KEY_CHEST, WOODFALL_TEMPLE_SMALL_KEY);
 	PlaceItemInLocation(SNOWHEAD_TEMPLE_BLOCK_ROOM_CHEST, SNOWHEAD_TEMPLE_SMALL_KEY);
 	PlaceItemInLocation(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, SNOWHEAD_TEMPLE_SMALL_KEY);
@@ -494,19 +613,168 @@ static void PlaceVanillaSmallKeys() {
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_BRIDGE_SWITCH_CHEST, STONE_TOWER_TEMPLE_SMALL_KEY);
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_UPDRAFT_ROOM_CHEST, STONE_TOWER_TEMPLE_SMALL_KEY);
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_DEATH_ARMOS_ROOM_CHEST, STONE_TOWER_TEMPLE_SMALL_KEY);
+	*/
 };
 
 static void PlaceVanillaBossKeys() {
-	//for (auto dungeon : dungeonList) {
-	//	dungeon->PlaceVanillaBossKey();
-	//}
+	for (auto dungeon : dungeonList) {
+		dungeon->PlaceVanillaBossKey();
+	}
+	/*
 	PlaceItemInLocation(WOODFALL_TEMPLE_BOSS_KEY_CHEST, WOODFALL_TEMPLE_BOSS_KEY);
 	PlaceItemInLocation(SNOWHEAD_TEMPLE_BOSS_KEY_CHEST, SNOWHEAD_TEMPLE_BOSS_KEY);
 	PlaceItemInLocation(GBT_BOSS_KEY_CHEST, GBT_BOSS_KEY);
 	PlaceItemInLocation(STONE_TOWER_TEMPLE_BOSS_KEY_CHEST, STONE_TOWER_TEMPLE_BOSS_KEY);
+	*/
 };
 
-/*static void PlaceVanillaCowMilk() {
+static void PlaceVanillaStrayFairies() {
+	/*TO-DO::make simpler
+	for (auto dungeon : dungeonList) {
+		dungeon->PlaceVanillaWFStray();
+		dungeon->PlaceVanillaSHStray();
+		dungeon->PlaceVanillaGBTStray();
+		dungeon->PlaceVanillaSTStray();
+	}*/
+	//Clock Town
+	PlaceItemInLocation(LAUNDRY_POOL_SF, CT_STRAY_FAIRY);
+	//Woodfall Temple
+	PlaceItemInLocation(WF_SF_ENTRANCE_FAIRY, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_ENTRANCE_PLATFORM, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_MAIN_ROOM_BUBBLE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_MAIN_ROOM_SWITCH, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_PRE_BOSS_LOWER_RIGHT_BUBBLE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_PRE_BOSS_UPPER_RIGHT_BUBBLE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_PRE_BOSS_UPPER_LEFT_BUBBLE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_PRE_BOSS_PILLAR_BUBBLE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_DEKU_BABA, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_DRAGONFLY_ROOM_BUBBLE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_SKULLTULA, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_DARK_ROOM, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_JAR_FAIRY, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_BRIDGE_ROOM_BEEHIVE, WF_STRAY_FAIRY);
+	PlaceItemInLocation(WF_SF_PLATFORM_ROOM_BEEHIVE, WF_STRAY_FAIRY);
+	//SnowheadTemple
+	PlaceItemInLocation(SH_SF_SNOW_ROOM_BUBBLE, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_CEILING_BUBBLE, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_DINOLFOS_1, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_DINOLFOS_2, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_BRIDGE_ROOM_LEDGE_BUBBLE, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_BRIDGE_ROOM_PILLAR_BUBBLE, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_MAP_ROOM_FAIRY, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_MAP_ROOM_LEDGE, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_BASEMENT, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_TWIN_BLOCK, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_ICICLE_ROOM_WALL, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_MAIN_ROOM_WALL, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_PILLAR_FREEZARDS, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_ICE_PUZZLE, SH_STRAY_FAIRY);
+	PlaceItemInLocation(SH_SF_CRATE, SH_STRAY_FAIRY);
+	//Great Bay Temple
+	PlaceItemInLocation(GBT_SF_SKULLTULA, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_WATER_CONTROL_UNDERWATER_BUBBLE, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_WATERWHEEL_ROOM_LOWER, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_WATERWHEEL_ROOM_UPPER, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_GREEN_VALVE, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_SEESAW_ROOM, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_ENTRANCE_TORCHES, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_BIO_BABAS, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_UNDERWATER_BARREL, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_WHIRLPOOL_JAR, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_WHIRLPOOL_BARREL, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_DEXIHANDS_JAR, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_LEDGE_JAR, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_PRE_BOSS_ROOM_BUBBLE, GBT_STRAY_FAIRY);
+	PlaceItemInLocation(GBT_SF_PRE_BOSS_ROOM_UNDERWATER_BUBBLE, GBT_STRAY_FAIRY);
+	//Stone Tower Temple
+	PlaceItemInLocation(ST_SF_MIRROR_SUN_BLOCK, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_LAVA_ROOM_LEDGE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_LAVA_ROOM_FIRE_RING, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_EYEGORE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_UPDRAFT_FIRE_RING, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_MIRROR_SUN_SWITCH, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_BOSS_WARP, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_WIZZROBE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_DEATH_ARMOS, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_UPDRAFT_FROZEN_EYE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_THIN_BRIDGE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_BASEMENT_LEDGE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_STATUE_EYE, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_UNDERWATER, ST_STRAY_FAIRY);
+	PlaceItemInLocation(ST_SF_BRIDGE_CRYSTAL, ST_STRAY_FAIRY);
+};
+
+static void PlaceVanillaSkulltulaTokens() {
+	/* TO-DO::make simpler
+	for (auto dungeon : dungeonList) {
+		dungeon->PlaceVanillaSwampToken();
+		dungeon->PlaceVanillaOceanToken();
+	}*/
+	//Swamp Skull Tokens
+	PlaceItemInLocation(SSH_MAIN_ROOM_NEAR_CEILING, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_WATER, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_LOWER_LEFT_SOIL, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_UPPER_SOIL, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_LOWER_RIGHT_SOIL, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_PILLAR, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_UPPER_PILLAR, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MAIN_ROOM_JAR, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MONUMENT_ROOM_CRATE_1, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MONUMENT_ROOM_CRATE_2, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MONUMENT_ROOM_TORCH, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MONUMENT_ROOM_ON_MONUMENT, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_MONUMENT_ROOM_LOWER_WALL, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_GOLD_ROOM_NEAR_CEILING, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_GOLD_ROOM_PILLAR, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_GOLD_ROOM_BEEHIVE, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_GOLD_ROOM_WALL, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_JAR, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_POT_1, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_POT_2, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_BEHIND_VINES, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_WALL, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_BEEHIVE_1, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_POT_ROOM_BEEHIVE_2, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_TREE_ROOM_TREE_1, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_TREE_ROOM_TREE_2, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_TREE_ROOM_TREE_3, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_TREE_ROOM_GRASS_1, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_TREE_ROOM_GRASS_2, SWAMP_SKULLTULA_TOKEN);
+	PlaceItemInLocation(SSH_TREE_ROOM_BEEHIVE, SWAMP_SKULLTULA_TOKEN);
+	//Ocean Skull Tokens
+	PlaceItemInLocation(OSH_ENTRANCE_LEFT_WALL, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_ENTRANCE_RIGHT_WALL, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_ENTRANCE_WEB, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_HOLE_BEHIND_PICTURE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_HOLE_BEHIND_CABINET, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_ON_CORNER_BOOKSHELF, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_CEILING_EDGE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_BEHIND_BOOKCASE_1, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_BEHIND_BOOKCASE_2, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_LIBRARY_BEHIND_PICTURE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_CEILING_EDGE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_CEILING_PLANK, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_JAR, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_WEBBED_HOLE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_WEBBED_POT, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_UPPER_POT, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_BEHIND_SKULL_1, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_BEHIND_SKULL_2, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_SECOND_ROOM_LOWER_POT, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_STORAGE_ROOM_CEILING_WEB, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_STORAGE_ROOM_BEHIND_CRATE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_STORAGE_ROOM_WALL, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_STORAGE_ROOM_CRATE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_STORAGE_ROOM_BARREL, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_COLORED_SKULLS_CEILING_EDGE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_COLORED_SKULLS_CHANDELIER_1, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_COLORED_SKULLS_CHANDELIER_2, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_COLORED_SKULLS_CHANDELIER_3, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_COLORED_SKULLS_BEHIND_PICTURE, OCEANSIDE_SKULLTULA_TOKEN);
+	PlaceItemInLocation(OSH_COLORED_SKULLS_POT, OCEANSIDE_SKULLTULA_TOKEN);
+};
+
+static void PlaceVanillaCowMilk() {
 	PlaceItemInLocation(GBC_GROTTO_COW1, MILK);
 	PlaceItemInLocation(GBC_GROTTO_COW2, MILK);
 	PlaceItemInLocation(ROMANI_RANCH_COW_1, MILK);
@@ -515,127 +783,34 @@ static void PlaceVanillaBossKeys() {
 	PlaceItemInLocation(TERMINA_FIELD_GROTTO_COW1, MILK);
 	PlaceItemInLocation(TERMINA_FIELD_GROTTO_COW2, MILK);
 	PlaceItemInLocation(BENEATH_THE_WELL_COW, MILK);
-};*/
-
-static void PlaceVanillaChestItems() {
-	PlaceItemInLocation(DEKU_PALACE_BEAN_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(BOMBERS_HIDEOUT_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(E_CLOCK_TOWN_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(GORON_VILLAGE_LENS_OF_TRUTH_CHEST, LENS_OF_TRUTH);
-	PlaceItemInLocation(LENS_CAVE_RED_RUPEE, RED_RUPEE);
-	PlaceItemInLocation(LENS_CAVE_PURPLE_RUPEE, PURPLE_RUPEE);
-	PlaceItemInLocation(GBC_OCEAN_SPIDER_CHEST, PIECE_OF_HEART);
-	PlaceItemInLocation(GBC_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(IKANA_CANYON_SECRET_SHRINE_GROTTO_CHEST, BOMBCHU_5);
-	PlaceItemInLocation(IKANA_GRAVEYARD_IRON_KNUCKLE_CHEST, PIECE_OF_HEART);
-	PlaceItemInLocation(IKANA_GRAVEYARD_CAPTAIN_KEETA_CHEST, CAPTAINS_HAT);
-	PlaceItemInLocation(IKANA_GRAVEYARD_DAY_ONE_GRAVE_BATS, PURPLE_RUPEE);
-	PlaceItemInLocation(IKANA_GRAVEYARD_GROTTO_CHEST, BOMBCHU_5);
-	PlaceItemInLocation(MOUNTAIN_WATERFALL_CHEST, RED_RUPEE);
-	PlaceItemInLocation(MOUNTAIN_VILLAGE_SPRING_WATER_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(ROAD_TO_SNOWHEAD_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PINNACLE_ROCK_UPPER_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PINNACLE_ROCK_LOWER_CHEST, RED_RUPEE);
-	PlaceItemInLocation(ROAD_TO_IKANA_PILLAR_CHEST, RED_RUPEE);
-	PlaceItemInLocation(ROAD_TO_IKANA_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(ROAD_TO_SWAMP_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(DOGGY_RACETRACK_ROOF_CHEST, PURPLE_RUPEE);
-	PlaceItemInLocation(S_CLOCK_TOWN_STRAW_ROOF_CHEST, RED_RUPEE);
-	PlaceItemInLocation(S_CLOCK_TOWN_FINAL_DAY_CHEST, PURPLE_RUPEE);
-	PlaceItemInLocation(SOUTHERN_SWAMP_NEAR_SPIDER_HOUSE_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(SOUTHERN_SWAMP_MYSTERY_WOODS_GROTTO_CHEST, PURPLE_RUPEE);
-	PlaceItemInLocation(STOCKPOTINN_STAFF_ROOM_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(STOCKPOTINN_GUEST_ROOM_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(STONE_TOWER_INVERTED_RIGHT_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(STONE_TOWER_INVERTED_CENTER_CHEST, BOMBCHU_10);
-	PlaceItemInLocation(STONE_TOWER_INVERTED_LEFT_CHEST, MAGIC_BEAN);
-	PlaceItemInLocation(TERMINA_FIELD_PEAHAT_GROTTO_CHEST, PIECE_OF_HEART);
-	PlaceItemInLocation(TERMINA_FIELD_DODONGO_GROTTO_CHEST, PIECE_OF_HEART);
-	PlaceItemInLocation(TERMINA_FIELD_PILLAR_GROTTO_CHEST, BOMBCHU_5);
-	PlaceItemInLocation(TERMINA_FIELD_GRASS_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(TERMINA_FIELD_UNDERWATER_CHEST, RED_RUPEE);
-	PlaceItemInLocation(TERMINA_FIELD_GRASS_CHEST, RED_RUPEE);
-	PlaceItemInLocation(TERMINA_FIELD_STUMP_CHEST, RED_RUPEE);
-	PlaceItemInLocation(HOT_SPRING_WATER_GROTTO_CHEST, RED_RUPEE);
-	PlaceItemInLocation(TWIN_ISLANDS_GORON_RACETRACK_GROTTO_CHEST, BOMBCHU_5);
-	PlaceItemInLocation(TWIN_ISLANDS_UNDERWATER_RAMP_CHEST, PIECE_OF_HEART);
-	PlaceItemInLocation(TWIN_ISLANDS_CAVE_CHEST, RED_RUPEE);
-	PlaceItemInLocation(WOODFALL_BRIDGE_CHEST, PIECE_OF_HEART);
-	PlaceItemInLocation(WOODFALL_BEHIND_OWL_CHEST, BLUE_RUPEE);
-	PlaceItemInLocation(ENTRANCE_TO_WOODFALL_CHEST, RED_RUPEE);
-	PlaceItemInLocation(ZORA_CAPE_LEDGE_NO_TREE, RED_RUPEE);
-	PlaceItemInLocation(ZORA_CAPE_LEDGE_WITH_TREE, RED_RUPEE);
-	PlaceItemInLocation(ZORA_CAPE_GROTTO_CHEST, BOMBCHU_5);
-	PlaceItemInLocation(ZORA_CAPE_UNDERWATER_CHEST, PURPLE_RUPEE);
-	PlaceItemInLocation(WOODFALL_TEMPLE_HEROS_BOW_CHEST, HEROS_BOW);
-	PlaceItemInLocation(SNOWHEAD_TEMPLE_FIRE_ARROW_CHEST, FIRE_ARROWS);
-	PlaceItemInLocation(GBT_ICE_ARROW_CHEST, ICE_ARROWS);
-	PlaceItemInLocation(STONE_TOWER_TEMPLE_LIGHT_ARROW_CHEST, LIGHT_ARROWS);
-	PlaceItemInLocation(STONE_TOWER_TEMPLE_GIANTS_MASK_CHEST, GIANTS_MASK);
-	PlaceItemInLocation(PF_INTERIOR_HOOKSHOT_CHEST, HOOKSHOT);
-	PlaceItemInLocation(PF_INT_LOWER_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_INT_UPPER_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_INT_TANK_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_INT_GUARD_ROOM_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(PF_CAGE_ROOM_SHALLOW_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_CAGE_ROOM_DEEP_CHEST, BLUE_RUPEE);
-	PlaceItemInLocation(PF_MAZE_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_EXTERIOR_LOG_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_EXTERIOR_SAND_CHEST, RED_RUPEE);
-	PlaceItemInLocation(PF_EXTERIOR_CORNER_CHEST, RED_RUPEE);
-	PlaceItemInLocation(BENEATH_THE_WELL_MIRROR_SHIELD_CHEST, MIRROR_SHIELD);
-	PlaceItemInLocation(WELL_LEFT_PATH_CHEST, PURPLE_RUPEE);
-	PlaceItemInLocation(WELL_RIGHT_PATH_CHEST, PURPLE_RUPEE);
-	PlaceItemInLocation(SECRET_SHRINE_DINOLFOS_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(SECRET_SHRINE_WIZZROBE_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(SECRET_SHRINE_WART_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(SECRET_SHRINE_GARO_CHEST, SILVER_RUPEE);
-	PlaceItemInLocation(SECRET_SHRINE_FINAL_CHEST, PIECE_OF_HEART);
-	//PlaceItemInLocation(MAJORA, MAJORAS_MASK);
 };
-//This exists since not all required items to finish the game are included in the randomizer yet
-//Places non randomized but logically required items so that the randomizer can logically place items
-//that are included so far... eventually will go away as more items are included
-static void PlaceVanillaLogicHelpers() {
-	PlaceItemInLocation(HMS_SONG_OF_HEALING, SONG_OF_HEALING,true);
-	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME);
-	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
-	PlaceItemInLocation(HMS_STARTING_SWORD, KOKIRI_SWORD);
-	PlaceItemInLocation(DEKU_PALACE_IMPRISONED_MONKEY, SONATA_OF_AWAKENING);
-	PlaceItemInLocation(GORON_VILLAGE_POWDER_KEG_CHALLENGE, POWDER_KEG);
-	PlaceItemInLocation(GORON_VILLAGE_GORON_LULLABY, GORONS_LULLABY);
-	PlaceItemInLocation(GBC_MIKAU, ZORA_MASK);
-	PlaceItemInLocation(GBC_BABY_ZORAS, NEW_WAVE_BOSSA_NOVA);
-	PlaceItemInLocation(IKANA_GRAVEYARD_DAY_ONE_GRAVE_TABLET, SONG_OF_STORMS);
-	PlaceItemInLocation(MILK_ROAD_GORMAN_RACE, GAROS_MASK);
-	PlaceItemInLocation(MOUNTAIN_VILLAGE_DARMANI, GORON_MASK);
-	PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, MAGIC_POWER);
-	PlaceItemInLocation(N_CLOCK_TOWN_OLD_LADY, BLAST_MASK);
-	PlaceItemInLocation(ROMANI_RANCH_ROMANIS_GAME, EPONAS_SONG);
-	PlaceItemInLocation(SOUTHERN_SWAMP_MUSIC_STATUE, SONG_OF_SOARING);
-	PlaceItemInLocation(W_CLOCK_TOWN_BOMB_BAG_BUY, BOMB_BAG);
-	PlaceItemInLocation(IKANA_CASTLE_IKANA_KING, ELEGY_OF_EMPTINESS);
-	PlaceItemInLocation(SOUTHERN_SWAMP_KOTAKE, BOTTLE_WITH_RED_POTION);
-	PlaceItemInLocation(GBC_FISHERMAN_PHOTO, SEAHORSE);
-	PlaceItemInLocation(SOUTHERN_SWAMP_KOUME, PICTOGRAPH_BOX);
-	PlaceItemInLocation(TERMINA_FIELD_MOONS_TEAR, MOONS_TEAR);
-	PlaceItemInLocation(IKANA_CANYON_PAMELAS_FATHER, GIBDOS_MASK);
-	PlaceItemInLocation(DEKU_PALACE_BEAN_DADDY, MAGIC_BEAN); //Magic Beans
-	PlaceItemInLocation(IKANA_GRAVEYARD_CAPTAIN_KEETA_CHEST, CAPTAINS_HAT); //Captains Hat
-	PlaceItemInLocation(GIANTS_OATH_TO_ORDER, OATH_TO_ORDER, true); //Oath to Order
-	PlaceItemInLocation(STONE_TOWER_TEMPLE_GIANTS_MASK_CHEST, GIANTS_MASK); //Giant's Mask
+
+
+static void PlaceVanillaShopItems() {
+	PlaceItemInLocation(TRADING_POST_ITEM_1, BUY_RED_POTION);
+	PlaceItemInLocation(TRADING_POST_ITEM_2, BUY_GREEN_POTION);
+	PlaceItemInLocation(TRADING_POST_ITEM_3, BUY_HEROS_SHIELD);
+	PlaceItemInLocation(TRADING_POST_ITEM_4, BUY_FAIRYS_SPIRIT);
+	PlaceItemInLocation(TRADING_POST_ITEM_5, BUY_DEKU_STICK_1);
+	PlaceItemInLocation(TRADING_POST_ITEM_6, BUY_ARROWS_30);
+	PlaceItemInLocation(TRADING_POST_ITEM_7, BUY_DEKU_NUT_10);
+	PlaceItemInLocation(TRADING_POST_ITEM_8, BUY_MAGIC_BEAN);
+	PlaceItemInLocation(BOMB_SHOP_ITEM_1, BUY_BOMBS_10);
+	PlaceItemInLocation(BOMB_SHOP_ITEM_2, BUY_BOMBCHU_10);
+	PlaceItemInLocation(POTION_SHOP_ITEM_1, BUY_BLUE_POTION);
+	PlaceItemInLocation(POTION_SHOP_ITEM_2, BUY_GREEN_POTION);
+	PlaceItemInLocation(POTION_SHOP_ITEM_3, BUY_RED_POTION);
+	PlaceItemInLocation(GORON_SHOP_ITEM_1, BUY_BOMBS_10);
+	PlaceItemInLocation(GORON_SHOP_ITEM_2, BUY_BOMBCHU_10);
+	PlaceItemInLocation(GORON_SHOP_ITEM_3, BUY_RED_POTION);
+	PlaceItemInLocation(ZORA_SHOP_ITEM_1, BUY_HEROS_SHIELD);
+	PlaceItemInLocation(ZORA_SHOP_ITEM_2, BUY_ARROWS_10);
+	PlaceItemInLocation(ZORA_SHOP_ITEM_3, BUY_RED_POTION);
+	PlaceItemInLocation(IKANA_CANYON_SCRUB_PURCHASE, BLUE_POTION_REFILL);
+	PlaceItemInLocation(ZORA_HALL_SCRUB_BUY, GREEN_POTION_REFILL);
+	//other 2 scrub sales handled in beans and main inventory
 };
 /*
-static void PlaceVanillaMasks() {
-	PlaceItemInLocation(E_CLOCK_TOWN_AROMA_IN_OFFICE, KAFEIS_MASK);
-};*/
-/*static void PlaceVanillaBossRemains() {
-	PlaceItemInLocation(ODOLWA, ODOLWAS_REMAINS);
-	PlaceItemInLocation(GOHT, GOHTS_REMAINS);
-	PlaceItemInLocation(GYORG, GYORGS_REMAINS);
-	PlaceItemInLocation(TWINMOLD, TWINMOLDS_REMAINS);
-	PlaceItemInLocation(MAJORA, MAJORAS_MASK);
-};
 static void SetScarceItemPool() {
 	//todo
 };
@@ -644,247 +819,281 @@ static void SetMinimalItemPool(){
 };*/
 
 void GenerateItemPool() {
+	
+	ItemPool.clear();//start fresh
 
-	ItemPool.clear();
-	//Fixed Item Locations
-	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
-	if (!ShuffleChests) {
-		PlaceVanillaChestItems();
-	}
-	else {
-		AddItemsToPool(ItemPool, chestItems);
-	}
-	/*if (!ShuffleMasks) {
-		PlaceVanillaMasks();
-	}
-	else {
-		AddItemsToPool(ItemPool, maskList);
-	}*/
-	//AddItemsToPool(ItemPool, dungeonRewards);
-	PlaceVanillaLogicHelpers();
-	//PlaceVanillaBossRemains(); //done in fill.cpp - RandomizeDungeonRewards()
-	PlaceVanillaBossKeys(); //todo Keysanity settings
-	PlaceVanillaSmallKeys(); // for now all vanilla
-	PlaceVanillaZoraEggs(); //for now all vanilla
-	/*
 	//Initialize ice trap models to always major items
 	IceTrapModels = {
-	  GI_SHIELD_MIRROR,
-	  GI_HOOKSHOT,
-	  GI_LENS,
-	  GI_BEAN,
-	  GI_NAYRUS_LOVE,
-	  GI_ARROW_FIRE,
-	  GI_ARROW_ICE,
-	  GI_ARROW_LIGHT,
+	  0x33, //GetItemID::GI_SHIELD_MIRROR,
+	  0x41, //GetItemID::GI_HOOKSHOT,
+	  0x42, //GetItemID::GI_LENS_OF_TRUTH,
+	  0x3B, //GetItemID::GI_GREAT_FAIRY_SWORD,
+	  0x34, //GetItemID::GI_POWDER_KEG,
+	  0x25, //GetItemID::GI_FIRE_ARROW,
+	  0x26, //GetItemID::GI_ICE_ARROW,
+	  0x27, //GetItemID::GI_LIGHT_ARROW,
 	  0xB8, //Double defense
-	  0x82, //Progressive bomb bag
-	  0x83, //Progressive bow
-	  0x85, //Progressive wallet
-	  0x8A, //Progressive magic
+	  0x46, //Progressive bomb bag
+	  0x47, //Progressive bow
+	  0x48, //Progressive wallet
+	  0x49, //Progressive magic
+	  0x4A, //ProgressiveSword
 	};
 	//Check song shuffle and dungeon reward shuffle just for ice traps
-	if (ShuffleSongs.Is(SONGSHUFFLE_ANYWHERE)) {
+	if (ShuffleSongs.Is(rnd::SongShuffleSetting::SONGSHUFFLE_ANYWHERE)) {
 		//Push item ids for songs
-		IceTrapModels.push_back(0xC1);
-		IceTrapModels.push_back(0xC2);
-		IceTrapModels.push_back(0xC3);
-		IceTrapModels.push_back(0xC4);
-		IceTrapModels.push_back(0xC5);
-		IceTrapModels.push_back(0xC6);
-		IceTrapModels.push_back(0xBB);
-		IceTrapModels.push_back(0xBC);
-		IceTrapModels.push_back(0xBD);
+		IceTrapModels.push_back(0x4B);
+		IceTrapModels.push_back(0x4C);
+		IceTrapModels.push_back(0x4D);
+		IceTrapModels.push_back(0x4E);
+		IceTrapModels.push_back(0x4F);
+		IceTrapModels.push_back(0x51);
+		IceTrapModels.push_back(0x54);
+		//IceTrapModels.push_back(0x53); // should be song of time but not included yet
+		//IceTrapModels.push_back(0xC6);
 	}
-	if (ShuffleRewards.Is(REWARDSHUFFLE_ANYWHERE)) {
+	if (ShuffleRewards.Is(rnd::RewardShuffleSetting::REWARDSHUFFLE_ANYWHERE)) {
 		//Push item ids for dungeon rewards
-		IceTrapModels.push_back(0xCB);
-		IceTrapModels.push_back(0xCC);
-		IceTrapModels.push_back(0xCD);
-		IceTrapModels.push_back(0xCE);
+		IceTrapModels.push_back(0x55);
+		IceTrapModels.push_back(0x56);
+		IceTrapModels.push_back(0x57);
+		IceTrapModels.push_back(0x58);
 	}
 
-	//fixed item locations?
+	//Fixed Item Locations
+	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
+	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME, true);
 
-	if (ShuffleKokiriSword) {
-		AddItemToMainPool(KOKIRI_SWORD);
-		//IceTrapModels.push_back(GI_SWORD_KOKIRI);
-	}
-	else {
-		PlaceItemInLocation(LINKS_POCKET, KOKIRI_SWORD);
-	}
+	//Check Non Dungeon Settings
 
-	//if (ShuffleCows) {
-	//	//9 total cow locations
-	//	for (u8 i = 0; i < 8; i++) {
-	//		AddItemToMainPool(GetJunkItem());
-	//	}
-	//}
-	//else {
-		PlaceVanillaCowMilk();
-	//}
-
-	if (ShuffleMagicBeans) {
-		AddItemToMainPool(MAGIC_BEAN_PACK);
-		if (ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
-			AddItemToPool(PendingJunkPool, MAGIC_BEAN_PACK);
-		}
-		IceTrapModels.push_back(0xC9); //Magic bean pack
-	}
-	else {
-		PlaceItemInLocation(DEKU_PALACE_BEAN_DADDY, MAGIC_BEAN);
-	} 
-	*/
-	//TOKEN SANITY
-	/*
-	if (Tokensanity.Is(TOKENSANITY_OFF)) {
-		for (LocationKey loc : GetLocations(allLocations, Category::cSwampSkulltula)) {
-			PlaceItemInLocation(loc, SWAMP_SKULLTULA_TOKEN);
-		}
-		for (LocationKey loc2 : GetLocations(allLocations, Category::cOceanSkulltula)) {
-			PlaceItemInLocation(loc2, OCEAN_SKULLTULA_TOKEN);
-		}
-	}
-	else if (Tokensanity.Is(TOKENSANITY_OVERWORLD)) {
-		for (LocationKey loc : GetLocations(allLocations, Category::cSwampSkulltula)) {
-			if (Location(loc)->IsDungeon()) {
-				PlaceItemInLocation(loc, SWAMP_SKULLTULA_TOKEN);
-			}
-			else {
-				AddItemToMainPool(SWAMP_SKULLTULA_TOKEN);
-			}
-		}
-		for (LocationKey loc2 : GetLocations(allLocations, Category::cOceanSkulltula)) {
-			if (Location(loc2)->IsDungeon()) {
-				PlaceItemInLocation(loc2, OCEAN_SKULLTULA_TOKEN);
-			}
-			else {
-				AddItemToMainPool(OCEAN_SKULLTULA_TOKEN);
-			}
-		}
+	//KOKIRISWORD SHUFFLE
+	if(ShuffleKokiriSword) {
+		AddItemToMainPool(PROGRESSIVE_SWORD);
+		IceTrapModels.push_back(0x37);//GetItemID::GI_KOKIRI_SWORD
+		PlaceItemInLocation(HMS_STARTING_SWORD,GREEN_RUPEE);//Add Junk to this location because theres no way to get it otherwise
+	} else {
+		PlaceItemInLocation(HMS_STARTING_SWORD, KOKIRI_SWORD);
 	}
 
-	else {
-		AddItemToMainPool(SWAMP_SKULLTULA_TOKEN, 30);
-		AddItemToMainPool(OCEAN_SKULLTULA_TOKEN, 30);
+	//SHUFFLE STARTING SHIELD
+	if(ShuffleStartingShield){
+		AddItemToMainPool(HEROS_SHIELD);
+		PlaceItemInLocation(HMS_STARTING_SHIELD, GREEN_RUPEE);//PlaceJunk Here because you cant not get this
 	}
-	*/
-	//STRAY FAIRY SANITY
-	/*
-	if (Straysanity.IS(STRAYSANITY_OFF)) {//if off place in vanilla locations
-		for (LocationKey loc1 : GetLocations(allLocations, Category::cCTStray) &&
-			LocationKey loc2 : GetLocations(allLocations, Category::cWFStray) &&
-			LocationKey loc3 : GetLocations(allLocations, Category::cSHStray) &&
-			LocationKey loc4 : GetLocations(allLocations, Category::cGBTStray) &&
-			LocationKey loc5 : GetLocations(allLocations, Category::cSTStray))
-		{
-			PlaceItemInLocation(loc1, CT_STRAY_FAIRY);
-			PlaceItemInLocation(loc2, WF_STRAY_FAIRY);
-			PlaceItemInLocation(loc3, SH_STRAY_FAIRY);
-			PlaceItemInLocation(loc4, GBT_STRAY_FAIRY);
-			PlaceItemInLocation(loc5, ST_STRAY_FAIRY);
-		}
-	}
-	else if (Straysanity.IS(STRAYSANITY_OVERWORLD) { //if overworld place wherever
-		for (LocationKey loc1 : GetLocations(allLocations, Category::cCTStray) &&
-			LocationKey loc2 : GetLocations(allLocations, Category::cWFStray) &&
-			LocationKey loc3 : GetLocations(allLocations, Category::cSHStray) &&
-			LocationKey loc4 : GetLocations(allLocations, Category::cGBTStray) &&
-			LocationKey loc5 : GetLocations(allLocations, Category::cSTStray))
-		{
-			if (Location(loc1)->IsDungeon()) { PlaceItemInLocation(loc1, CT_STRAY_FAIRY); }
-			else { AddItemToMainPool(CT_STRAY_FAIRY); }
-
-			if (Location(loc2)->IsDungeon()) { PlaceItemInLocation(loc2, WF_STRAY_FAIRY); }
-			else { AddItemToMainPool(WF_STRAY_FAIRY); }
-
-			if (Location(loc3)->IsDungeon()) { PlaceItemInLocation(loc3, SH_STRAY_FAIRY); }
-			else { AddItemToMainPool(SH_STRAY_FAIRY); }
-
-			if (Location(loc4)->IsDungeon()) { PlaceItemInLocation(loc4, GBT_STRAY_FAIRY); }
-			else { AddItemToMainPool(GBT_STRAY_FAIRY); }
-
-			if (Location(loc5)->IsDungeon()) { PlaceItemInLocation(loc5, ST_STRAY_FAIRY); }
-			else { AddItemToMainPool(ST_STRAY_FAIRY); }
-		}
-	}
-	else {
-		AddItemToMainPool(CT_STRAY_FAIRY, 1); //if no selection or error ??
-		AddItemToMainPool(WF_STRAY_FAIRY, 15);
-		AddItemToMainPool(SH_STRAY_FAIRY, 15);
-		AddItemToMainPool(GBT_STRAY_FAIRY, 15);
-		AddItemToMainPool(ST_STRAY_FAIRY, 15);
-	}
-
-	*/
-    /*
-	if (ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
-
-		//Plentiful small keys
-		if (Keysanity.Is(KEYSANITY_ANYWHERE)) {
-			AddItemToPool(PendingJunkPool, WOODFALL_TEMPLE_SMALL_KEY);
-			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_SMALL_KEY1);
-			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_SMALL_KEY2);
-			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_SMALL_KEY3);
-			AddItemToPool(PendingJunkPool, GBT_SMALL_KEY);
-			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY1);
-			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY2);
-			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY3);
-			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY4);
-		}
-
-		if (BossKeysanity.Is(BOSSKEYSANITY_ANYWHERE)) {
-			AddItemToPool(PendingJunkPool, WOODFALL_TEMPLE_BOSS_KEY);
-			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_BOSS_KEY);
-			AddItemToPool(PendingJunkPool, GBT_BOSS_KEY);
-			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_BOSS_KEY);
-		}
-
-	}
-	*/
-	/*
-	if (Settings::Scrubsanity.IsNot(SCRUBSANITY.OFF)) {
-		AddItemsToPool(ItemPool, dekuScrubItems);
-		//I'm not sure what this is for, but it was in ootr3d so I copied it
-		for (u8 i = 0; i < 7; i++) {
-			if (Random(0, 3)) {
-				AddItemToMainPool(ARROWS_30);
-			}
-			else {
-				AddItemToMainPool(DEKU_STICK);
-			}
-		}
-	}
-	else {*/
-		//PlaceVanillaDekuScrubItems();
-	//}
+	else { PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);}
 	
-	//AddItemsToPool(ItemPool, alwaysItems);
-	//AddItemsToPool(ItemPool, dungeonRewards);
-/*
-	//Add 7 total bottles
-	u8 bottleCount = 7;
-	std::vector<ItemKey> bottles;
-	bottles.assign(normalBottles.begin(), normalBottles.end());
-	IceTrapModels.push_back(ItemTable(RandomElement(bottles)).GetItemIndex()); //Get one random bottle type for ice traps
-	for (u8 i = 0; i < bottleCount; i++) {
-		AddRandomBottle(bottles);
+	//SHUFFLE BOMBERS NOTEBOOK
+	if(ShuffleBombersNotebook){
+		AddItemToMainPool(BOMBERS_NOTEBOOK);
 	}
-	*/
-	//add extra songs only if song shuffle is anywhere
-	//AddItemsToPool(ItemPool, songList);
-	//if (ShuffleSongs.Is(SONGSHUFFLE_ANYWHERE) && ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
-	//	AddItemsToPool(PendingJunkPool, songList);
-	//}
+	else {PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);}
 
+	//ShuffleOcarina
+
+	//COWSANITY
+	if (ShuffleCows) {
+		//8 total cows -- rather have junk than 8 extra milk refills
+		for (u8 i = 0; i < 8; i++) {
+      AddItemToMainPool(GetJunkItem());
+    	}
+	} else {
+		PlaceVanillaCowMilk();
+	}
+
+	//MAGIC BEAN SHUFFLE--NEEDS WORK
+	/*
+	if(ShuffleMagicBeans) { //does not shuffle bean salesman yet
+		AddItemToMainPool(MAGIC_BEAN);
+		if (ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)){
+			AddItemToPool(PendingJunkPool, MAGIC_BEAN);
+		}
+		IceTrapModels.push_back(0x75);
+
+		if(Shopsanity){
+			AddItemToMainPool(MAGIC_BEAN);
+			if (ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)){
+			AddItemToPool(PendingJunkPool, MAGIC_BEAN);
+			}
+		}
+	} else {
+		PlaceItemInLocation(STONE_TOWER_INVERTED_LEFT_CHEST, MAGIC_BEAN);
+		if(!Shopsanity){PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);}
+	}*/
+
+	//MAININVENTORY SHUFFLE
+	if(ShuffleMainInventory){
+		AddItemsToPool(ItemPool, mainInventoryList);
+		AddItemsToPool(ItemPool, progressiveItemsList);
+	}
+	else{
+		PlaceVanillaMainInventory();
+		PlaceVanillaProgressive();
+	}
+	
+	//NON TRANSFORM MASK SHUFFLE
+	if (ShuffleMasks) {
+		AddItemsToPool(ItemPool, maskList);
+	}
+	else {PlaceVanillaMasks();}
+
+	//SONG SHUFFLE
+	//add extra songs only if song shuffle is anywhere
+	if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE)){
+		AddItemsToPool(ItemPool, songList);
+	}
+	else if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE) && ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)) {
+		AddItemsToPool(PendingJunkPool, songList);
+	}
+	else {
+		PlaceVanillaSongs();
+	}
+
+	if (ShuffleSoaring)
+	{
+		AddItemToPool(ItemPool, SONG_OF_SOARING);
+	}
+	else {PlaceItemInLocation(SOUTHERN_SWAMP_MUSIC_STATUE, SONG_OF_SOARING); }
+
+	
+	//GREAT FAIRY SHUFFLE
+	if(ShuffleGFRewards){
+		AddItemToMainPool(MAGIC_POWER);
+		AddItemToMainPool(EXTENDED_MAGIC_POWER);
+		if(ShuffleMainInventory){AddItemToMainPool(GREAT_FAIRYS_SWORD);}
+		if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
+	}
+	else{
+		PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, MAGIC_POWER);
+		PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, EXTENDED_MAGIC_POWER);
+		if(!ShuffleMainInventory){PlaceItemInLocation(IKANA_CANYON_GREAT_FAIRY, GREAT_FAIRYS_SWORD);}
+		if(!RemoveDoubleDefense){PlaceItemInLocation(ZORA_CAPE_GREAT_FAIRY, DOUBLE_DEFENSE);}
+	}
+	
+	//REMOVE DD MAYBE?
+	if (RemoveDoubleDefense) { //Prob not needed since its not added unless this is off
+		ReplaceMaxItem(DOUBLE_DEFENSE, 0);
+	}
+	
+	
+	
+	//DEKU/GORON/ZORA MAASK SHUFFLE
+	if(ShuffleTransformation){
+		AddItemToMainPool(DEKU_MASK);
+		AddItemToMainPool(GORON_MASK);
+		AddItemToMainPool(ZORA_MASK);
+	}
+	else { 
+		PlaceItemInLocation(HMS_DEKU_MASK,DEKU_MASK);
+		PlaceItemInLocation(MOUNTAIN_VILLAGE_DARMANI, GORON_MASK);
+		PlaceItemInLocation(GBC_MIKAU, ZORA_MASK);
+	}
+	
+	//FIERECE DIETY SHUFFLE
+	if(ShuffleFierceDiety){
+		AddItemToMainPool(FIERCE_DIETY_MASK);
+	}
+	else{
+		PlaceItemInLocation(THE_MOON_MAJORA_CHILD,FIERCE_DIETY_MASK);
+	}
+	
+	//PIECEOFHEART SHUFFLE
+	if(ShufflePiecesOfHeart){
+		AddItemToMainPool(PIECE_OF_HEART,48);//52Total-4MoonHearts
+	}
+
+	else{
+		PlaceVanillaHeartPieces();
+	}
+	
+	//MOONITEMSHUFFLE
+	if(ShuffleMoonItems){
+		AddItemsToPool(ItemPool, moonItemList);
+	}
+	else {
+		PlaceItemInLocation(THE_MOON_DEKU_TRIAL_BONUS, PIECE_OF_HEART);
+		PlaceItemInLocation(THE_MOON_GORON_TRIAL_BONUS, PIECE_OF_HEART);
+		PlaceItemInLocation(THE_MOON_ZORA_TRIAL_BONUS, PIECE_OF_HEART);
+		PlaceItemInLocation(THE_MOON_LINK_TRIAL_BONUS, PIECE_OF_HEART);
+		PlaceItemInLocation(THE_MOON_GARO_CHEST, ARROWS_30);
+		PlaceItemInLocation(THE_MOON_IRON_KNUCKLE_CHEST, BOMBCHU_10);
+	}
+
+	//TOKENSANITY
+	if(Tokensanity){
+		AddItemToMainPool(SWAMP_SKULLTULA_TOKEN, 30);
+		AddItemToMainPool(OCEANSIDE_SKULLTULA_TOKEN, 30);
+	}
+	else {PlaceVanillaSkulltulaTokens();}
+
+	//DEKU MERCHANT TRADE QUEST
+	if (ShuffleMerchants){//Merchants is Deku Scrub Trade Quest
+		AddItemsToPool(ItemPool, scrubTradeItems);
+	} else {
+		PlaceItemInLocation(TERMINA_FIELD_MOONS_TEAR, MOONS_TEAR);
+		PlaceItemInLocation(S_CLOCK_TOWN_SCRUB_TRADE, LAND_TITLE);
+		PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_TRADE, SWAMP_TITLE);
+		PlaceItemInLocation(GORON_VILLAGE_SCRUB_TRADE, MOUNTAIN_TITLE);
+		PlaceItemInLocation(ZORA_HALL_SCRUB_TRADE, OCEAN_TITLE);
+		PlaceItemInLocation(IKANA_CANYON_SCRUB_TRADE, HUGE_RUPEE);
+	}
+
+	//ANJU AND KAFEI QUEST ITEMS
+	if (ShuffleTradeItems){//TradeItems refers to Anju&Kafei Items
+		AddItemsToPool(ItemPool, anjuKafeiTradeItems);
+	} else {
+		if(ShuffleMasks){
+			AddItemToMainPool(KAFEIS_MASK);
+			AddItemToMainPool(COUPLES_MASK);
+		}
+		else{
+		PlaceItemInLocation(E_CLOCK_TOWN_AROMA_IN_OFFICE, KAFEIS_MASK);
+		PlaceItemInLocation(STOCKPOTINN_ANJU_AND_KAFEI, COUPLES_MASK);
+		}
+		PlaceItemInLocation(STOCKPOTINN_MIDNIGHT_MEETING, LETTER_KAFEI);
+		PlaceItemInLocation(LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO, LETTER_MAMA);
+		PlaceItemInLocation(STOCKPOTINN_RESERVATION, ROOM_KEY);
+		PlaceItemInLocation(LAUNDRY_POOL_KAFEI,PENDANT_MEMORIES);
+	}
+
+	//TO-DO----SHOP SANITY
+	//for now... its all vanilla lol
+	if (Settings::Shopsanity.Is(ShopsanitySetting::SHOPSANITY_OFF) || Settings::Shopsanity.Is(ShopsanitySetting::SHOPSANITY_ZERO)) {
+    AddItemsToPool(ItemPool, normalRupees);
+	PlaceVanillaShopItems();
+ 	 } else { //Shopsanity 1-4, random
+    AddItemsToPool(ItemPool, shopsanityRupees); //Shopsanity gets extra large rupees
+	PlaceVanillaShopItems();
+  	}
+
+	//DUNGEON STUFF 
+
+	//PlaceVanillaBossRemains(); //done in fill.cpp - RandomizeDungeonRewards()
+	//PlaceVanillaBossKeys(); //todo Keysanity settings
+	//PlaceVanillaSmallKeys(); // for now all vanilla
+	PlaceVanillaZoraEggs(); //for now all vanilla
+	//PlaceVanillaMapsAndCompasses();//for now all vanilla
+	//PlaceVanillaStrayFairies();//for now all vanilla
+
+	if(ShuffleHeartContainers) {
+		AddItemToMainPool(HEART_CONTAINER, 4);
+	}
+	else{
+		PlaceItemInLocation(ODOLWA_HEART_CONTAINER,HEART_CONTAINER);
+		PlaceItemInLocation(GOHT_HEART_CONTAINER, HEART_CONTAINER);
+		PlaceItemInLocation(GYORG_HEART_CONTAINER, HEART_CONTAINER);
+		PlaceItemInLocation(TWINMOLD_HEART_CONTAINER, HEART_CONTAINER);
+	}
+
+
+	//AddItemsToPool(ItemPool, normalRupees);
 	//For item pool generation, dungeon items are either placed in their vanilla
 	// location, or added to the pool now and filtered out later depending on when
 	// they need to get placed or removed in fill.cpp. These items are kept in the
 	// pool until removal because the filling algorithm needs to know all of the
 	// advancement items that haven't been placed yet for placing higher priority
-	// items like stones/medallions.
-/*
-	if (MapsAndCompasses.Is(MAPSANDCOMPASSES_VANILLA)) {
+	// items like boss remains.
+
+	if (MapsAndCompasses.Is(MapsAndCompassesSetting::MAPSANDCOMPASSES_VANILLA)) {
 		PlaceVanillaMapsAndCompasses();
 	}
 	else {
@@ -897,9 +1106,10 @@ void GenerateItemPool() {
 				AddItemToMainPool(dungeon->GetCompass());
 			}
 		}
+		AddItemsToPool(ItemPool, tingleMaps);
 	}
 
-	if (Keysanity.Is(KEYSANITY_VANILLA)) {
+	if (Keysanity.Is(KeysanitySetting::KEYSANITY_VANILLA)) {
 		PlaceVanillaSmallKeys();
 	}
 	else {
@@ -910,7 +1120,7 @@ void GenerateItemPool() {
 		}
 	}
 
-	if (BossKeysanity.Is(BOSSKEYSANITY_VANILLA)) {
+	if (BossKeysanity.Is(BossKeysanitySetting::BOSSKEYSANITY_VANILLA)) {
 		PlaceVanillaBossKeys();
 	}
 	else {
@@ -919,39 +1129,74 @@ void GenerateItemPool() {
 		AddItemToMainPool(GBT_BOSS_KEY);
 		AddItemToMainPool(STONE_TOWER_TEMPLE_BOSS_KEY);
 	}
-
-	if (ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
-		AddItemsToPool(ItemPool, easyItems);
+    
+	//STRAY FAIRY SANITY
+	
+	if (StrayFairysanity.Is(StrayFairySanitySetting::STRAYFAIRYSANITY_VANILLA)) {//if off place in vanilla locations
+		PlaceVanillaStrayFairies();
 	}
 	else {
-		AddItemsToPool(ItemPool, normalItems);
+		AddItemToMainPool(CT_STRAY_FAIRY, 1); //if no selection or error ??
+		AddItemToMainPool(WF_STRAY_FAIRY, 15);
+		AddItemToMainPool(SH_STRAY_FAIRY, 15);
+		AddItemToMainPool(GBT_STRAY_FAIRY, 15);
+		AddItemToMainPool(ST_STRAY_FAIRY, 15);
 	}
 
-	if (!ShuffleKokiriSword) {
-		ReplaceMaxItem(KOKIRI_SWORD, 0);
-	}
+	//TO-DO--DungeonRewards
+	//AddItemsToPool(ItemPool, dungeonRewards);
 
-	//Replace ice traps with junk from the pending junk pool if necessary
-	if (IceTrapValue.Is(ICETRAPS_OFF)) {
-		ReplaceMaxItem(ICE_TRAP, 0);
-	}
-	//Replace all junk items with ice traps for onslaught mode
-	else if (IceTrapValue.Is(ICETRAPS_ONSLAUGHT)) {
-		for (u8 i = 0; i < JunkPoolItems.size() - 3; i++) { // -3 Omits Huge Rupees and Deku Nuts 10
-			ReplaceMaxItem(JunkPoolItems[i], 0);
-		}
-	}
 
+	// TO-DO ItemPool for extra items & Scarce and Minimal pools
+	/*if (ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
+		//AddItemsToPool(ItemPool, easyItems);
+	}
+	else {
+		//AddItemsToPool(ItemPool, normalItems);
+	}
 	if (ItemPoolValue.Is(ITEMPOOL_SCARCE)) {//TO DO 
 		SetScarceItemPool();
 	}
 	else if (ItemPoolValue.Is(ITEMPOOL_MINIMAL)) {
 		SetMinimalItemPool();
+	}*/
+
+	if (ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)) {
+
+		//Plentiful small keys
+		if (Keysanity.Is(KeysanitySetting::KEYSANITY_ANYWHERE)) {
+			AddItemToPool(PendingJunkPool, WOODFALL_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, GBT_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY);
+			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_SMALL_KEY);
+		}
+
+		if (BossKeysanity.Is(BossKeysanitySetting::BOSSKEYSANITY_ANYWHERE)) {
+			AddItemToPool(PendingJunkPool, WOODFALL_TEMPLE_BOSS_KEY);
+			AddItemToPool(PendingJunkPool, SNOWHEAD_TEMPLE_BOSS_KEY);
+			AddItemToPool(PendingJunkPool, GBT_BOSS_KEY);
+			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_BOSS_KEY);
+		}
+    
+
 	}
-	else if (RemoveDoubleDefense) {
-		ReplaceMaxItem(DOUBLE_DEFENSE, 0);
+	
+	//Replace ice traps with junk from the pending junk pool if necessary
+	if (IceTrapValue.Is(IceTrapSetting::ICETRAPS_OFF)) {
+		ReplaceMaxItem(ICE_TRAP, 0);
 	}
-	*/
+	//Replace all junk items with ice traps for onslaught mode
+	else if (IceTrapValue.Is(IceTrapSetting::ICETRAPS_ONSLAUGHT)) {
+		for (u8 i = 0; i < JunkPoolItems.size() - 3; i++) { // -3 Omits Huge Rupees and Deku Nuts 10
+			ReplaceMaxItem(JunkPoolItems[i], 0);
+		}
+	}
+
 	//this feels ugly and there's probably a better way, but
    //it replaces random junk with pending junk.
 
