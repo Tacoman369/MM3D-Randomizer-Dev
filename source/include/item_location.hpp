@@ -35,7 +35,8 @@ enum class ItemLocationType {
     Delayed,
     TempleReward,
     HintStone,
-    OtherHint
+    OtherHint,
+    Misc
 };
 
 class SpoilerCollectionCheck {
@@ -114,6 +115,7 @@ public:
         else if (type == ItemLocationType::GrottoScrub) {key.type = ItemOverride_Type::OVR_GROTTO_SCRUB;}
         else if (type == ItemLocationType::Delayed) {key.type = ItemOverride_Type::OVR_DELAYED;}
         else if (type == ItemLocationType::TempleReward) {key.type = ItemOverride_Type::OVR_TEMPLE;}
+        //else if (type == ItemLocationType::Misc) {key.type = game::act::Type::Misc;}
         //TO-DO 
         //else if (type == ItemLocationType::StrayFairy) {key.type = ItemOverride_Type::OVR_STRAY;}
         //else if (type == ItemLocationType::HintStone) {key.type = ItemOverride_Type::OVR_HINT;}

@@ -290,7 +290,7 @@ const std::array<ItemKey, 18> maskList = {
 	ALL_NIGHT_MASK,
 	BLAST_MASK,
 	STONE_MASK,
-	GREAT_FAIRYS_MASK,
+	//GREAT_FAIRYS_MASK,
 	BREMEN_MASK,
 	DON_GEROS_MASK,
 	MASK_OF_SCENTS,
@@ -863,7 +863,12 @@ void GenerateItemPool() {
 	//Fixed Item Locations
 	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
 	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME, true);
-
+	//PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);
+	PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);
+	PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);
+	PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
+	PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_HUMAN, GREAT_FAIRYS_MASK);
+	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
 	//Check Non Dungeon Settings
 
 	//KOKIRISWORD SHUFFLE
@@ -957,8 +962,8 @@ void GenerateItemPool() {
 	
 	//GREAT FAIRY SHUFFLE
 	if(ShuffleGFRewards){
-		AddItemToMainPool(MAGIC_POWER);
-		AddItemToMainPool(EXTENDED_MAGIC_POWER);
+		//AddItemToMainPool(MAGIC_POWER); These crash the game currently
+		//AddItemToMainPool(EXTENDED_MAGIC_POWER);
 		if(ShuffleMainInventory){AddItemToMainPool(GREAT_FAIRYS_SWORD);}
 		if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
 	}
@@ -978,7 +983,7 @@ void GenerateItemPool() {
 	
 	//DEKU/GORON/ZORA MAASK SHUFFLE
 	if(ShuffleTransformation){
-		AddItemToMainPool(DEKU_MASK);
+		//AddItemToMainPool(DEKU_MASK);
 		AddItemToMainPool(GORON_MASK);
 		AddItemToMainPool(ZORA_MASK);
 	}
