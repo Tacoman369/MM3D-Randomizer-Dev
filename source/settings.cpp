@@ -247,18 +247,18 @@ namespace Settings {
   Option RemoveDoubleDefense = Option::Bool("Remove Double Defense", { "No", "Yes" }, { removeDDDesc });
   Option ShuffleBombersNotebook = Option::Bool("Bomber's Notebook", {"Off", "On"}, {shuffleBombersNotebookDesc});
   std::vector<Option*> shuffleItemOptions = {
-      &ShuffleSongs,
-      &ShuffleSoaring,
-      &Shopsanity,
-      &Tokensanity,
+      //&ShuffleSongs,
+      //&ShuffleSoaring,
+      //&Shopsanity,
+      //&Tokensanity,
       &ShuffleCows,
-      &ShuffleKokiriSword,
-      &ShuffleStartingShield,
-      &ShuffleBombersNotebook,
+      //&ShuffleKokiriSword,
+      //&ShuffleStartingShield,
+      //&ShuffleBombersNotebook,
       &ShuffleTradeItems,
       &ShuffleMerchants,
       &RemoveDoubleDefense,
-      &ShuffleMagicBeans,
+      //&ShuffleMagicBeans,
       //&ShuffleOcarinas,
   };
   //Shuffle Dungeon Items
@@ -283,8 +283,8 @@ namespace Settings {
     &MapsAndCompasses,
     &Keysanity,
     &BossKeysanity,
-    &StrayFairysanity,
-    &ShuffleRewards,
+    //&StrayFairysanity,
+    //&ShuffleRewards,
     &ShuffleHeartContainers,
   };
 
@@ -301,7 +301,7 @@ namespace Settings {
   std::vector<Option*>itemPoolSettingsOptions = {
       &ItemPoolValue,
       &ShuffleMainInventory,
-      &ShuffleTransformation,
+      //&ShuffleTransformation,
       &ShuffleFierceDiety,
       &ShuffleMasks,
       //&ShuffleChests,//basically same as main inventory & masks - anything else in a chest is junk
@@ -503,9 +503,9 @@ namespace Settings {
   
   std::vector<Menu *> detailLogicSettings = {
       //&logicSettings,
-      &tricks,
+      //&tricks,
       &excludeLocations,
-      &glitchSettings,
+      //&glitchSettings,
   };
 
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
@@ -524,12 +524,12 @@ namespace Settings {
     &shuffleItems,
     &shuffleDungeon,
     &itemPool,
-    &startingInventory,
+    //&startingInventory,
     &detailLogic,
-    &comfort,
-    &timeSaverSettings,
-    &otherSettings,
-    &cosmetics,
+    //&comfort,
+    //&timeSaverSettings,
+    //&otherSettings,
+    //&cosmetics,
     &settingsPresets,
     &generateRandomizer,
   };
@@ -965,8 +965,10 @@ namespace Settings {
       }
       
       //Force include the Kokiri Sword Chest if Shuffle Kokiri Sword is Off
+      //& Also Set Starting Sword to None 
       if (ShuffleKokiriSword) {
           Unhide({ HMS_STARTING_SWORD });
+          StartingKokiriSword.SetSelectedIndex(0);
       }
       else {
           IncludeAndHide({ HMS_STARTING_SWORD });
