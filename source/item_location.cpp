@@ -112,7 +112,7 @@ void LocationTable_Init() {
 	
 	//N Clock Town
 	locationTable[N_CLOCK_TOWN_GREAT_FAIRY_DEKU]							   = ItemLocation::Base		  (0x26, 0x49, "N Clock Town Great Fairy (Deku)",				N_CLOCK_TOWN_GREAT_FAIRY_DEKU,		            PROGRESSIVE_MAGIC_METER,    {Category::cNorthClockTown, Category::cFairyFountain,Category::cDayOne} );
-	locationTable[N_CLOCK_TOWN_BOMBERS_HIDE_SEEK]							   = ItemLocation::Base		  (0x6E, 0x50, "N Clock Town Bombers Hide n Seek",				N_CLOCK_TOWN_BOMBERS_HIDE_SEEK,		            BOMBERS_NOTEBOOK,			{Category::cNorthClockTown,Category::cDayOne} );
+	//locationTable[N_CLOCK_TOWN_BOMBERS_HIDE_SEEK]							   = ItemLocation::Base		  (0x6E, 0x50, "N Clock Town Bombers Hide n Seek",				N_CLOCK_TOWN_BOMBERS_HIDE_SEEK,		            BOMBERS_NOTEBOOK,			{Category::cNorthClockTown,Category::cDayOne} );
 	locationTable[N_CLOCK_TOWN_KEATON_QUIZ]									   = ItemLocation::Base		  (0x6E, 0x0C, "N Clock Town Keaton Quiz",						N_CLOCK_TOWN_KEATON_QUIZ,			            PIECE_OF_HEART,				{Category::cNorthClockTown, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[N_CLOCK_TOWN_DEKU_PLAYGROUND_3DAYS]						   = ItemLocation::Base		  (0x1E, 0x0C, "N Clock Town Deku Playground 3 Days Reward",	N_CLOCK_TOWN_DEKU_PLAYGROUND_3DAYS,	            PIECE_OF_HEART,				{Category::cNorthClockTown, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayThree} );
 	locationTable[N_CLOCK_TOWN_TREE]										   = ItemLocation::Collectable(0x6E, 0x00, "N Clock Town Tree",								N_CLOCK_TOWN_TREE,					            PIECE_OF_HEART,				{Category::cNorthClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
@@ -804,7 +804,7 @@ std::vector<LocationKey> overworldLocations = {
   MOUNTAIN_VILLAGE_SPRING_WATER_GROTTO_CHEST,
 //N Clock Town
   N_CLOCK_TOWN_GREAT_FAIRY_DEKU,
-  N_CLOCK_TOWN_BOMBERS_HIDE_SEEK,
+  //N_CLOCK_TOWN_BOMBERS_HIDE_SEEK, doesn't give an item in 3d
   N_CLOCK_TOWN_KEATON_QUIZ,
   N_CLOCK_TOWN_DEKU_PLAYGROUND_3DAYS,
   N_CLOCK_TOWN_TREE,
