@@ -1535,7 +1535,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(ZORA_HALL_SCRUB_TRADE, {[] {return GoronMask && MountainTitle;}}),
 		LocationAccess(ZORA_HALL_LULU_ROOM_LEDGE, {[] {return GoronMask && DekuMask && MountainTitle;}}),
-		LocationAccess(ZORA_HALL_SCRUB_BUY, {[] {return ZoraMask;}}),
+		LocationAccess(ZORA_HALL_SCRUB_PURCHASE, {[] {return ZoraMask;}}),
 	},
 	{
 		//Exits

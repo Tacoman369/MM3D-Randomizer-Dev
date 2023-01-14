@@ -807,7 +807,7 @@ static void PlaceVanillaShopItems() {
 	PlaceItemInLocation(ZORA_SHOP_ITEM_2, BUY_ARROWS_10);
 	PlaceItemInLocation(ZORA_SHOP_ITEM_3, BUY_RED_POTION);
 	PlaceItemInLocation(IKANA_CANYON_SCRUB_PURCHASE, BLUE_POTION_REFILL);
-	PlaceItemInLocation(ZORA_HALL_SCRUB_BUY, GREEN_POTION_REFILL);
+	PlaceItemInLocation(ZORA_HALL_SCRUB_PURCHASE, GREEN_POTION_REFILL);
 	//other 2 scrub sales handled in beans and main inventory
 };
 /*
@@ -870,6 +870,15 @@ void GenerateItemPool() {
 	//PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
 	//PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_HUMAN, GREAT_FAIRYS_MASK);
 	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
+
+	//temp placement until bean suffle is fixed - or part of shop sanity
+	PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);
+	
+
+	//Place Temp Items at alt locations so they don't get filled with important stuff - will be replaced later
+	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, BLUE_RUPEE);
+
 	//Check Non Dungeon Settings
 
 	//KOKIRISWORD SHUFFLE

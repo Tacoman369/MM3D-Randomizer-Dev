@@ -32,20 +32,21 @@ void LocationTable_Init() {
 	locationTable[DEKU_PALACE_BEAN_GROTTO_CHEST]							   = ItemLocation::Chest	  (0x07, 0x05, "Deku Palace Bean Grotto Chest",					DEKU_PALACE_BEAN_GROTTO_CHEST,	    	        RED_RUPEE,					{Category::cDekuPalace,Category::cGrotto,Category::cWoodfall,Category::cChest,Category::cDayOne});
 	
 	//East Clock Town
-	locationTable[E_CLOCK_TOWN_AROMA_IN_BAR]								   = ItemLocation::Base		  (0x15, 0x6F, "Madame Aroma in the Bar",						E_CLOCK_TOWN_AROMA_IN_BAR,			            CHATEAU_ROMANI,				{Category::cEastClockTown, Category::cDayThree} );
-	locationTable[E_CLOCK_TOWN_ARCHERY_1]									   = ItemLocation::Base		  (0x20, 0x23, "Clock Town Archery #1",							E_CLOCK_TOWN_ARCHERY_1,				            PROGRESSIVE_BOW,	    	{Category::cEastClockTown, Category::cMinigame,Category::cDayOne } );
-	locationTable[E_CLOCK_TOWN_MAYOR]										   = ItemLocation::Base		  (0x12, 0x06, "Mayor Check",									E_CLOCK_TOWN_MAYOR,					            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cVanillaHeartPiece ,Category::cDayOne} );
-	locationTable[E_CLOCK_TOWN_ARCHERY_2]									   = ItemLocation::Base		  (0x20, 0x0C, "Clock Town Archery #2",							E_CLOCK_TOWN_ARCHERY_2,				            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cMinigame , Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[E_CLOCK_TOWN_HONEY_DARLING_3DAYS]							   = ItemLocation::Base		  (0x11, 0x0C, "Honey and Darling 3 Days",						E_CLOCK_TOWN_HONEY_DARLING_3DAYS,	            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cMinigame , Category::cVanillaHeartPiece,Category::cDayThree} );
-	locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_GORON]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Goron)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_GORON,	        PIECE_OF_HEART,			    {Category::cEastClockTown, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[E_CLOCK_TOWN_POSTMAN_FREEDOM]								   = ItemLocation::Base		  (0x2E, 0x84, "Postman's Freedom",								E_CLOCK_TOWN_POSTMAN_FREEDOM,		            POSTMANS_HAT,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayThree} );
-	locationTable[E_CLOCK_TOWN_GORMAN]										   = ItemLocation::Base		  (0x15, 0x83, "Gorman in the Bar",								E_CLOCK_TOWN_GORMAN,				            CIRCUS_LEADERS_MASK,		{Category::cEastClockTown, Category::cVanillaMask,Category::cDayOne} );
-	locationTable[E_CLOCK_TOWN_AROMA_IN_OFFICE]								   = ItemLocation::Base		  (0x12, 0x8F, "Madame Aroma in the Mayor's Office",			E_CLOCK_TOWN_AROMA_IN_OFFICE,		            KAFEIS_MASK,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_AROMA_IN_BAR]								   = ItemLocation::Base		  (0x15, 0x6F, "Milk Bar Madame Aroma in the Bar",				E_CLOCK_TOWN_AROMA_IN_BAR,			            CHATEAU_ROMANI,				{Category::cEastClockTown, Category::cDayThree} );
+	locationTable[E_CLOCK_TOWN_ARCHERY_1]									   = ItemLocation::Base		  (0x20, 0x47, "E Clock Town Archery #1",						E_CLOCK_TOWN_ARCHERY_1,				            PROGRESSIVE_BOW,	    	{Category::cEastClockTown, Category::cMinigame,Category::cDayOne } );
+	locationTable[E_CLOCK_TOWN_ARCHERY_1_ALT]                                  = ItemLocation::Base       (0x20, 0x05, "E Clock Town Archery #1 Alt",                   E_CLOCK_TOWN_ARCHERY_1_ALT,                     PURPLE_RUPEE,               {Category::cEastClockTown, Category::cMinigame, Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_MAYOR]										   = ItemLocation::Base		  (0x12, 0x06, "E Clock Town Mayor Reward",						E_CLOCK_TOWN_MAYOR,					            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cVanillaHeartPiece ,Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_ARCHERY_2]									   = ItemLocation::Base		  (0x20, 0x0C, "E Clock Town Archery #2",						E_CLOCK_TOWN_ARCHERY_2,				            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cMinigame , Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_HONEY_DARLING_3DAYS]							   = ItemLocation::Base		  (0x11, 0x0C, "E Clock Town Honey and Darling 3 Days",			E_CLOCK_TOWN_HONEY_DARLING_3DAYS,	            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cMinigame , Category::cVanillaHeartPiece,Category::cDayThree} );
+	locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_GORON]					   = ItemLocation::Chest	  (0x17, 0x00, "E Clock Town Treasure Chest Game (Goron)",		E_CLOCK_TOWN_TREASURE_CHEST_GAME_GORON,	        PIECE_OF_HEART,			    {Category::cEastClockTown, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_POSTMAN_FREEDOM]								   = ItemLocation::Base		  (0x2E, 0x84, "Milk Bar Postman's Freedom",					E_CLOCK_TOWN_POSTMAN_FREEDOM,		            POSTMANS_HAT,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayThree} );
+	locationTable[E_CLOCK_TOWN_GORMAN]										   = ItemLocation::Base		  (0x15, 0x83, "Milk Bar Gorman in the Bar",					E_CLOCK_TOWN_GORMAN,				            CIRCUS_LEADERS_MASK,		{Category::cEastClockTown, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_AROMA_IN_OFFICE]								   = ItemLocation::Base		  (0x12, 0x8F, "E Clock Town Madame Aroma in the Mayor's Office",E_CLOCK_TOWN_AROMA_IN_OFFICE,		            KAFEIS_MASK,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[BOMBERS_HIDEOUT_CHEST]						               = ItemLocation::Chest	  (0x29, 0x00, "Bombers' Hideout Chest",						BOMBERS_HIDEOUT_CHEST,	                        SILVER_RUPEE,				{Category::cEastClockTown,Category::cChest,Category::cDayOne } );
 	locationTable[E_CLOCK_TOWN_CHEST]										   = ItemLocation::Chest	  (0x6C, 0x0A, "East Clock Town Chest",							E_CLOCK_TOWN_CHEST,					            SILVER_RUPEE,				{Category::cEastClockTown,Category::cChest ,Category::cDayOne} );
 	//locationTable[E_CLOCK_TOWN_MILK_BAR_CHATEAU]							   = ItemLocation::Base		  (0x12, 0x00, "Milk Bar Chateau Buy",							E_CLOCK_TOWN_MILK_BAR_CHATEAU,		            CHATEAU_ROMANI,				{Category::cEastClockTown} );
 	//locationTable[E_CLOCK_TOWN_MILK_BAR_MILK]								   = ItemLocation::Base		  (0x12, 0x00, "Milk Bar Milk Buy",								E_CLOCK_TOWN_MILK_BAR_MILK,			            MILK,						{Category::cEastClockTown} );
-	locationTable[E_CLOCK_TOWN_GORMAN_QUEST]								   = ItemLocation::Base		  (0x12, 0x70, "Gorman's Mystery Milk Quest",					E_CLOCK_TOWN_GORMAN_QUEST,			            EMPTY_BOTTLE2,				{Category::cEastClockTown,Category::cDayTwo} );
+	locationTable[E_CLOCK_TOWN_GORMAN_QUEST]								   = ItemLocation::Base		  (0x12, 0x70, "Milk Bar Gorman's Mystery Milk Quest",			E_CLOCK_TOWN_GORMAN_QUEST,			            EMPTY_BOTTLE2,				{Category::cEastClockTown,Category::cDayTwo} );
 	//locationTable[E_CLOCK_TOWN_HONEY_DARLING_ANY_DAY]						   = ItemLocation::Base		  (0x11, 0x00, "Honey and Darling Any Day",						E_CLOCK_TOWN_HONEY_DARLING_ANY_DAY,	            PURPLE_RUPEE,				{Category::cEClockTown,Category::cMinigame} );
 	//locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_HUMAN]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Human)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_HUMAN	        PURPLE_RUPEE,				{Category::cEClockTown,Category::cMinigame,Category::cDayOne} );
 	//locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_ZORA]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Zora)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_ZORA,	        RED_RUPEE,				    {Category::cEClockTown,Category::cMinigame ,Category::cDayOne} );
@@ -66,7 +67,7 @@ void LocationTable_Init() {
 	//locationTable[GBC_OCEAN_SPIDER_DAY2]									   = ItemLocation::Base		  (0x28, 0x00, "Oceanside Spider House Day 2 Reward",			GBC_OCEAN_SPIDER_DAY2,				            PURPLE_RUPEE,				{Category::cGreatBayCoast ,Category::cDayTwo} );
 	//locationTable[GBC_OCEAN_SPIDER_DAY3]									   = ItemLocation::Base		  (0x28, 0x00, "Oceanside Spider House Day 3 Reward",			GBC_OCEAN_SPIDER_DAY3,				            RED_RUPEE,					{Category::cGreatBayCoast,Category::cDayThree} );
 	locationTable[GBC_FISHERMAN_GAME]										   = ItemLocation::Base		  (0x37, 0x06, "Great Bay Coast Fisherman's Game",				GBC_FISHERMAN_GAME,					            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cMinigame,Category::cDayOne} );
-	locationTable[GBC_OCEAN_SPIDER_CHEST]									   = ItemLocation::Chest	  (0x28, 0x06, "Oceanside Spider House Chest",					GBC_OCEAN_SPIDER_CHEST,				            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece ,Category::cDayOne} );//Category::cChest,
+	locationTable[GBC_OCEAN_SPIDER_CHEST]									   = ItemLocation::Chest	  (0x28, 0x00, "Oceanside Spider House Chest",					GBC_OCEAN_SPIDER_CHEST,				            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece ,Category::cDayOne} );//Category::cChest,
 	locationTable[GBC_LAB_FISH]												   = ItemLocation::Base		  (0x2F, 0x06, "Greay Bay Lab Fish",							GBC_LAB_FISH,						            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[GBC_LEDGE]												   = ItemLocation::Collectable(0x37, 0x00, "Great Bay Coast Ledge",							GBC_LEDGE,							            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[GBC_MIKAU]												   = ItemLocation::Base		  (0x37, 0x7A, "Great Bay Coast Mikau",							GBC_MIKAU,							            ZORA_MASK,					{Category::cGreatBayCoast, Category::cTransformMask,Category::cDayOne} );
@@ -137,7 +138,8 @@ void LocationTable_Init() {
 	locationTable[ROAD_TO_IKANA_GROTTO_CHEST]								   = ItemLocation::Chest	  (0x07, 0x16, "Road to Ikana Grotto",							ROAD_TO_IKANA_GROTTO_CHEST,					    BOMBCHU_5,				    {Category::cRoadToIkana,Category::cGrotto,Category::cDayOne} );
 	
 	//Road to Southern Swamp
-	locationTable[ROAD_TO_SS_ARCHERY_1]										   = ItemLocation::Base	      (0x24, 0x24, "Road to Southern Swamp Archery 1",				ROAD_TO_SS_ARCHERY_1,					        PROGRESSIVE_BOW,            {Category::cRoadToSouthernSwamp,Category::cMinigame,Category::cDayOne} );
+	locationTable[ROAD_TO_SS_ARCHERY_1]										   = ItemLocation::Base	      (0x24, 0x47, "Road to Southern Swamp Archery 1",				ROAD_TO_SS_ARCHERY_1,					        PROGRESSIVE_BOW,            {Category::cRoadToSouthernSwamp,Category::cMinigame,Category::cDayOne} );
+	locationTable[ROAD_TO_SS_ARCHERY_1_ALT]									   = ItemLocation::Base	      (0x24, 0x05, "Road to Southern Swamp Archery 1 Alt",			ROAD_TO_SS_ARCHERY_1_ALT,					    PURPLE_RUPEE,               {Category::cRoadToSouthernSwamp,Category::cMinigame,Category::cDayOne} );
 	locationTable[ROAD_TO_SS_ARCHERY_2]										   = ItemLocation::Base	      (0x24, 0x0C, "Road to Southern Swamp Archery 2",				ROAD_TO_SS_ARCHERY_2,					        PIECE_OF_HEART,			    {Category::cRoadToSouthernSwamp,Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ROAD_TO_SS_TREE]											   = ItemLocation::Collectable(0x40, 0x00, "Road to Southern Swamp Tree",					ROAD_TO_SS_TREE,						        PIECE_OF_HEART,			    {Category::cRoadToSouthernSwamp, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ROAD_TO_SWAMP_GROTTO_CHEST]								   = ItemLocation::Chest	  (0x07, 0x1E, "Road to Southern Swamp Grotto",					ROAD_TO_SWAMP_GROTTO_CHEST,						RED_RUPEE,			        {Category::cRoadToSouthernSwamp,Category::cGrotto, Category::cChest,Category::cDayOne} );
@@ -164,11 +166,11 @@ void LocationTable_Init() {
 	locationTable[SNOWHEAD_GREAT_FAIRY]									   	   = ItemLocation::Base	      (0x26, 0x2B, "Snowhead Great Fairy",							SNOWHEAD_GREAT_FAIRY,					        PROGRESSIVE_MAGIC_METER,    {Category::cSnowhead, Category::cFairyFountain,Category::cDayOne} );
 	
 	//Southern Swamp
-	locationTable[SOUTHERN_SWAMP_KOUME]										   = ItemLocation::Base       (0x64, 0x43, "Southern Swamp Koume",							SOUTHERN_SWAMP_KOUME,				            PICTOGRAPH_BOX,			    {Category::cSouthernSwamp,Category::cDayOne} );
-	locationTable[SOUTHERN_SWAMP_KOTAKE]								       = ItemLocation::Base 	  (0x0A, 0x5B, "Southern Swamp Kotake",							SOUTHERN_SWAMP_KOTAKE,				            BOTTLE_WITH_RED_POTION,    	{Category::cSouthernSwamp,Category::cDayOne} );
+	locationTable[SOUTHERN_SWAMP_KOUME]										   = ItemLocation::Base       (0x57, 0x43, "Southern Swamp Koume",							SOUTHERN_SWAMP_KOUME,				            PICTOGRAPH_BOX,			    {Category::cSouthernSwamp,Category::cDayOne} );
+	locationTable[SOUTHERN_SWAMP_KOTAKE]								       = ItemLocation::Base 	  (0x0A, 0x59, "Southern Swamp Kotake",							SOUTHERN_SWAMP_KOTAKE,				            BOTTLE_WITH_RED_POTION,    	{Category::cSouthernSwamp,Category::cDayOne} );
 	locationTable[SOUTHERN_SWAMP_SCRUB_TRADE]								   = ItemLocation::Base       (0x45, 0x98, "Southern Swamp Scrub Trade",					SOUTHERN_SWAMP_SCRUB_TRADE,			            SWAMP_TITLE,			    {Category::cSouthernSwamp, Category::cDekuScrub,Category::cDayOne} );
-	locationTable[SOUTHERN_SWAMP_PICTOGRAPH_WINNER]							   = ItemLocation::Base       (0x0A, 0x0C, "Southern Swamp Pictograph Contest Winner",		SOUTHERN_SWAMP_PICTOGRAPH_WINNER,	            PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[SOUTHERN_SWAMP_BOAT_ARCHERY]								   = ItemLocation::Base       (0x0A, 0x0C, "Southern Swamp Boat Archery",					SOUTHERN_SWAMP_BOAT_ARCHERY,		            PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[SOUTHERN_SWAMP_PICTOGRAPH_WINNER]							   = ItemLocation::Base       (0x57, 0xBA, "Southern Swamp Pictograph Contest Winner",		SOUTHERN_SWAMP_PICTOGRAPH_WINNER,	            PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[SOUTHERN_SWAMP_BOAT_ARCHERY]								   = ItemLocation::Base       (0x57, 0x0C, "Southern Swamp Boat Archery",					SOUTHERN_SWAMP_BOAT_ARCHERY,		            PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[SWAMP_TOURIST_CENTER_ROOF]								   = ItemLocation::Collectable(0x45, 0x00, "Southern Swamp Tourist Center Roof",			SWAMP_TOURIST_CENTER_ROOF,		                PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD]						   = ItemLocation::Base       (0x27, 0x8A, "Southern Swamp Spider House Reward",			SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD,	            MASK_OF_TRUTH,			    {Category::cSouthernSwamp, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[SOUTHERN_SWAMP_MUSIC_STATUE]								   = ItemLocation::Base       (0x45, 0x72, "Southern Swamp Music Statue",					SOUTHERN_SWAMP_MUSIC_STATUE,		            SONG_OF_SOARING,		    {Category::cSouthernSwamp, Category::cSong,Category::cDayOne} );
@@ -182,9 +184,9 @@ void LocationTable_Init() {
 	//Stock Pot Inn
 	locationTable[STOCKPOTINN_RESERVATION]									   = ItemLocation::Base		  (0x61, 0xA0, "Stock Pot Inn Reservation",						STOCKPOTINN_RESERVATION,				        ROOM_KEY,				    {Category::cStockPotInn,Category::cDayOne} );
 	locationTable[STOCKPOTINN_MIDNIGHT_MEETING]								   = ItemLocation::Base		  (0x61, 0xAA, "Stock Pot Inn Midnight Meeting",				STOCKPOTINN_MIDNIGHT_MEETING,			        LETTER_KAFEI,			    {Category::cStockPotInn,Category::cDayOne} );
-	locationTable[STOCKPOTINN_TOILET_HAND]									   = ItemLocation::Base		  (0x61, 0x0C, "Stock Pot Inn Toilet Hand",						STOCKPOTINN_TOILET_HAND,					    PIECE_OF_HEART,			    {Category::cStockPotInn, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[STOCKPOTINN_TOILET_HAND]									   = ItemLocation::Base		  (0x61, 0x01, "Stock Pot Inn Toilet Hand",						STOCKPOTINN_TOILET_HAND,					    PIECE_OF_HEART,			    {Category::cStockPotInn, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[STOCKPOTINN_GRANDMA_SHORT_STORY]							   = ItemLocation::Base		  (0x61, 0x0C, "Stock Pot Inn Grandma Short Story",				STOCKPOTINN_GRANDMA_SHORT_STORY,		        PIECE_OF_HEART,			    {Category::cStockPotInn, Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[STOCKPOTINN_GRANDMA_LONG_STORY]							   = ItemLocation::Base		  (0x61, 0x0C, "Stock Pot Inn Grandma Long Story",				STOCKPOTINN_GRANDMA_LONG_STORY,			        PIECE_OF_HEART,			    {Category::cStockPotInn, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[STOCKPOTINN_GRANDMA_LONG_STORY]							   = ItemLocation::Base		  (0x61, 0xBA, "Stock Pot Inn Grandma Long Story",				STOCKPOTINN_GRANDMA_LONG_STORY,			        PIECE_OF_HEART,			    {Category::cStockPotInn, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[STOCKPOTINN_ANJU_AND_KAFEI]								   = ItemLocation::Base		  (0x61, 0x85, "Stock Pot Inn Anju And Kafei",					STOCKPOTINN_ANJU_AND_KAFEI,				        COUPLES_MASK,			    {Category::cStockPotInn, Category::cVanillaMask,Category::cDayThree} );
 	locationTable[STOCKPOTINN_STAFF_ROOM_CHEST]				   			 	   = ItemLocation::Chest	  (0x61, 0x01, "Stock Pot Inn Staff Room Chest",				STOCKPOTINN_STAFF_ROOM_CHEST,			        SILVER_RUPEE,			    {Category::cStockPotInn,Category::cChest ,Category::cDayThree} );
 	locationTable[STOCKPOTINN_GUEST_ROOM_CHEST]								   = ItemLocation::Chest	  (0x61, 0x06, "Stock Pot Inn Guest Room Chest",				STOCKPOTINN_GUEST_ROOM_CHEST,			        SILVER_RUPEE,			    {Category::cStockPotInn,Category::cChest ,Category::cDayOne} );
@@ -195,7 +197,7 @@ void LocationTable_Init() {
 	locationTable[STONE_TOWER_INVERTED_LEFT_CHEST]							   = ItemLocation::Chest	  (0x18, 0x1F, "Inverted Stone Tower Left Chest",				STONE_TOWER_INVERTED_LEFT_CHEST,		        MAGIC_BEAN,			    	{Category::cStoneTower,Category::cChest,Category::cDayOne } );
 	
 	//Termina Field
-	locationTable[TERMINA_FIELD_MOONS_TEAR]									   = ItemLocation::Collectable(0x2D, 0x96, "Termina Field Moon's Tear",						TERMINA_FIELD_MOONS_TEAR,			            MOONS_TEAR,					{Category::cTerminaField,Category::cDayOne} );
+	locationTable[TERMINA_FIELD_MOONS_TEAR]									   = ItemLocation::Base       (0x2D, 0x96, "Termina Field Moon's Tear",						TERMINA_FIELD_MOONS_TEAR,			            MOONS_TEAR,					{Category::cTerminaField,Category::cDayOne} );
 	locationTable[TERMINA_FIELD_GOSSIP_STONES]								   = ItemLocation::Base		  (0x07, 0x0C, "Termina Field Gossip Stones",					TERMINA_FIELD_GOSSIP_STONES,		            PIECE_OF_HEART,				{Category::cTerminaField,Category::cGrotto, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[TERMINA_FIELD_BUSINESS_SCRUB]								   = ItemLocation::Base		  (0x07, 0x0C, "Termina Field Business Scrub",					TERMINA_FIELD_BUSINESS_SCRUB,		            PIECE_OF_HEART,				{Category::cTerminaField,Category::cGrotto,Category::cDekuScrub, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[TERMINA_FIELD_PEAHAT_GROTTO_CHEST]						   = ItemLocation::Chest	  (0x07, 0x04, "Termina Field Peahat Grotto",					TERMINA_FIELD_PEAHAT_GROTTO_CHEST,		        PIECE_OF_HEART,				{Category::cTerminaField,Category::cGrotto, Category::cVanillaHeartPiece,Category::cDayOne } );//Category::cChest,
@@ -245,7 +247,7 @@ void LocationTable_Init() {
 	locationTable[ZORA_HALL_SCRUB_TRADE]									   = ItemLocation::Base		  (0x4C, 0x9A, "Zora Hall Deku Scrub Trade",					ZORA_HALL_SCRUB_TRADE,				            OCEAN_TITLE,				{Category::cZoraHall, Category::cDekuScrub,Category::cDayOne} );
 	locationTable[ZORA_HALL_EVAN]											   = ItemLocation::Base		  (0x4C, 0x0C, "Zora Hall Deku Evan",							ZORA_HALL_EVAN,						            PIECE_OF_HEART,				{Category::cZoraHall, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ZORA_HALL_LULU_ROOM_LEDGE]								   = ItemLocation::Collectable(0x4C, 0x00, "Zora Hall Lulu's Room Ledge",					ZORA_HALL_LULU_ROOM_LEDGE,			            PIECE_OF_HEART,				{Category::cZoraHall, Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[ZORA_HALL_SCRUB_BUY]										   = ItemLocation::Base		  (0x4C, 0x5C, "Zora Hall Deku Scrub Purchase",					ZORA_HALL_SCRUB_BUY,				            GREEN_POTION_REFILL,		{Category::cZoraHall, Category::cDekuScrub,Category::cDayOne} );
+	locationTable[ZORA_HALL_SCRUB_PURCHASE]										   = ItemLocation::Base		  (0x4C, 0x5C, "Zora Hall Deku Scrub Purchase",					ZORA_HALL_SCRUB_PURCHASE,				            GREEN_POTION_REFILL,		{Category::cZoraHall, Category::cDekuScrub,Category::cDayOne} );
 	//locationTable[ZORA_HALL_STAGE_LIGHTS]									   = ItemLocation::Base		  (0x33, 0x00, "Zora Hall Stage Lights",						ZORA_HALL_STAGE_LIGHTS,				            BLUE_RUPEE,					{Category::cZoraHall} );
 	//locationTable[ZORA_HALL_BAD_PHOTO_LULU]								   = ItemLocation::Base		  (0x4C, 0x00, "Zora Hall Bad Photograph of Lulu",				ZORA_HALL_SCRUB_TRADE,				            BLUE_RUPEE,				    {Category::cZoraHall, Category::cDekuScrub} );
 	//locationTable[ZORA_HALL_GOOD_PHOTO_LULU]								   = ItemLocation::Base		  (0x4C, 0x00, "Zora Hall Good Photograph of Lulu",				ZORA_HALL_SCRUB_TRADE,				            BLUE_RUPEE,				    {Category::cZoraHall, Category::cDekuScrub} );
@@ -298,10 +300,10 @@ void LocationTable_Init() {
 	locationTable[PF_INT_UPPER_CHEST]						                   = ItemLocation::Chest	  (0x23, 0x01, "Pirate's Fortress Interior Upper Chest",		    PF_INT_UPPER_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_INT_TANK_CHEST]						                   = ItemLocation::Chest	  (0x23, 0x00, "Pirate's Fortress Interior Tank Chest",			    PF_INT_TANK_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_INT_GUARD_ROOM_CHEST]				                       = ItemLocation::Chest	  (0x23, 0x03, "Pirate's Fortress Interior Guard Room Chest",	    PF_INT_GUARD_ROOM_CHEST,					SILVER_RUPEE,			        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_CAGE_ROOM_SHALLOW_CHEST]			                       = ItemLocation::Chest	  (0x14, 0x04, "Pirate's Fortress Sewer Cage Room Shallow Chest",   PF_CAGE_ROOM_SHALLOW_CHEST,					RED_RUPEE,			            {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_CAGE_ROOM_DEEP_CHEST]				                       = ItemLocation::Chest	  (0x14, 0x06, "Pirate's Fortress Sewer Cage Room Deep Chest",	    PF_CAGE_ROOM_DEEP_CHEST,					BLUE_RUPEE,				        {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_MAZE_CHEST]								               = ItemLocation::Chest	  (0x14, 0x01, "Pirate's Fortress Sewer Maze Chest",			    PF_MAZE_CHEST,								RED_RUPEE,				        {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_SEWER_CAGE]								               = ItemLocation::Collectable(0x14, 0x00, "Pirate's Fortress Sewer Cage",					    PF_SEWER_CAGE,								PIECE_OF_HEART,			        {Category::cPiratesFortressSewer, Category::cVanillaHeartPiece,Category::cDayOne} );//Category::cChest,
+	locationTable[PF_CAGE_ROOM_SHALLOW_CHEST]			                       = ItemLocation::Chest	  (0x23, 0x04, "Pirate's Fortress Sewer Cage Room Shallow Chest",   PF_CAGE_ROOM_SHALLOW_CHEST,					RED_RUPEE,			            {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
+	locationTable[PF_CAGE_ROOM_DEEP_CHEST]				                       = ItemLocation::Chest	  (0x23, 0x06, "Pirate's Fortress Sewer Cage Room Deep Chest",	    PF_CAGE_ROOM_DEEP_CHEST,					BLUE_RUPEE,				        {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
+	locationTable[PF_MAZE_CHEST]								               = ItemLocation::Chest	  (0x23, 0x01, "Pirate's Fortress Sewer Maze Chest",			    PF_MAZE_CHEST,								RED_RUPEE,				        {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
+	locationTable[PF_SEWER_CAGE]								               = ItemLocation::Collectable(0x23, 0x00, "Pirate's Fortress Sewer Cage",					    PF_SEWER_CAGE,								PIECE_OF_HEART,			        {Category::cPiratesFortressSewer, Category::cVanillaHeartPiece,Category::cDayOne} );//Category::cChest,
 	locationTable[PF_EXTERIOR_LOG_CHEST]						               = ItemLocation::Chest	  (0x3B, 0x00, "Pirate's Fortress Exterior Log Chest",			    PF_EXTERIOR_LOG_CHEST,						RED_RUPEE,				        {Category::cPiratesFortressExterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_EXTERIOR_SAND_CHEST]						               = ItemLocation::Chest	  (0x3B, 0x01, "Pirate's Fortress Exterior Sand Chest",			    PF_EXTERIOR_SAND_CHEST,						RED_RUPEE,			        	{Category::cPiratesFortressExterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_EXTERIOR_CORNER_CHEST]					                   = ItemLocation::Chest	  (0x3B, 0x02, "Pirate's Fortress Exterior Corner Chest",		    PF_EXTERIOR_CORNER_CHEST,					RED_RUPEE,			        	{Category::cPiratesFortressExterior,Category::cChest ,Category::cDayOne} );
@@ -725,6 +727,7 @@ std::vector<LocationKey> overworldLocations = {
 //East Clock Town
   E_CLOCK_TOWN_AROMA_IN_BAR,
   E_CLOCK_TOWN_ARCHERY_1,
+  E_CLOCK_TOWN_ARCHERY_1_ALT,
   E_CLOCK_TOWN_ARCHERY_2,
   E_CLOCK_TOWN_MAYOR,
   E_CLOCK_TOWN_HONEY_DARLING_3DAYS,
@@ -827,6 +830,7 @@ std::vector<LocationKey> overworldLocations = {
   ROAD_TO_IKANA_GROTTO_CHEST,
 //Road to Southern Swamp
   ROAD_TO_SS_ARCHERY_1,
+  ROAD_TO_SS_ARCHERY_1_ALT,
   ROAD_TO_SS_ARCHERY_2,
   ROAD_TO_SS_TREE,
   ROAD_TO_SWAMP_GROTTO_CHEST,
@@ -941,7 +945,7 @@ std::vector<LocationKey> overworldLocations = {
   ZORA_HALL_SCRUB_TRADE,
   ZORA_HALL_EVAN,
   ZORA_HALL_LULU_ROOM_LEDGE,
-  ZORA_HALL_SCRUB_BUY,
+  ZORA_HALL_SCRUB_PURCHASE,
   //ZORA_HALL_STAGE_LIGHTS,
   //ZORA_HALL_BAD_PHOTO_LULU,
   //ZORA_HALL_GOOD_PHOTO_LULU,
@@ -1078,6 +1082,14 @@ void AddExcludedOptions() {
 
 void CreateItemOverrides() {
   PlacementLog_Msg("NOW CREATING OVERRIDES\n\n");
+	
+	//Duplicate Archery Rewards onto purple rupee 
+	auto loc1 = Location(E_CLOCK_TOWN_ARCHERY_1);
+	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1_ALT, loc1->GetPlacedItemKey());
+
+	auto loc3 = Location(ROAD_TO_SS_ARCHERY_1);
+	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, loc3->GetPlacedItemKey());
+
   for (LocationKey locKey : allLocations) {
     auto loc = Location(locKey);
     ItemOverride_Value val = ItemTable(loc->GetPlacedItemKey()).Value();
