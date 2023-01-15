@@ -63,7 +63,8 @@ void LocationTable_Init() {
 	locationTable[LENS_CAVE_PURPLE_RUPEE]						               = ItemLocation::Chest	  (0x07, 0x06, "Lens Cave Rock Chest",							LENS_CAVE_PURPLE_RUPEE,		                    PURPLE_RUPEE,		    	{Category::cGoronVillage,Category::cChest ,Category::cDayOne} );
 
 	//Great Bay Coast
-	locationTable[GBC_OCEAN_SPIDER_DAY1]									   = ItemLocation::Base		  (0x28, 0x48, "Oceanside Spider House Day 1 Reward",			GBC_OCEAN_SPIDER_DAY1,				            PROGRESSIVE_WALLET,   		{Category::cGreatBayCoast ,Category::cDayOne} );
+	locationTable[GBC_OCEAN_SPIDER_DAY1]									   = ItemLocation::Base		  (0x28, 0x08, "Oceanside Spider House Day 1 Reward",			GBC_OCEAN_SPIDER_DAY1,				            PROGRESSIVE_WALLET,   		{Category::cGreatBayCoast ,Category::cDayOne} );
+	locationTable[GBC_OCEAN_SPIDER_DAY1_ALT]								   = ItemLocation::Base		  (0x28, 0x09, "Oceanside Spider House Day 1 Reward Alt",		GBC_OCEAN_SPIDER_DAY1_ALT,			            PROGRESSIVE_WALLET,   		{Category::cGreatBayCoast ,Category::cDayOne} );
 	//locationTable[GBC_OCEAN_SPIDER_DAY2]									   = ItemLocation::Base		  (0x28, 0x00, "Oceanside Spider House Day 2 Reward",			GBC_OCEAN_SPIDER_DAY2,				            PURPLE_RUPEE,				{Category::cGreatBayCoast ,Category::cDayTwo} );
 	//locationTable[GBC_OCEAN_SPIDER_DAY3]									   = ItemLocation::Base		  (0x28, 0x00, "Oceanside Spider House Day 3 Reward",			GBC_OCEAN_SPIDER_DAY3,				            RED_RUPEE,					{Category::cGreatBayCoast,Category::cDayThree} );
 	locationTable[GBC_FISHERMAN_GAME]										   = ItemLocation::Base		  (0x37, 0x06, "Great Bay Coast Fisherman's Game",				GBC_FISHERMAN_GAME,					            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cMinigame,Category::cDayOne} );
@@ -158,7 +159,8 @@ void LocationTable_Init() {
 	locationTable[S_CLOCK_TOWN_CLOCK_TOWER_ENTRANCE]						   = ItemLocation::Collectable(0x6F, 0x00, "S Clock Town Clock Tower Entrance",				S_CLOCK_TOWN_CLOCK_TOWER_ENTRANCE,		        PIECE_OF_HEART,			    {Category::cSouthClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[S_CLOCK_TOWN_STRAW_ROOF_CHEST]							   = ItemLocation::Chest	  (0x6F, 0x00, "S Clock Town Straw Roof Chest",					S_CLOCK_TOWN_STRAW_ROOF_CHEST,			        RED_RUPEE,				    {Category::cSouthClockTown,Category::cChest ,Category::cDayOne} );
 	locationTable[S_CLOCK_TOWN_FINAL_DAY_CHEST]								   = ItemLocation::Chest	  (0x6F, 0x01, "S Clock Town Final Day Chest",					S_CLOCK_TOWN_FINAL_DAY_CHEST,			        PURPLE_RUPEE,			    {Category::cSouthClockTown,Category::cChest ,Category::cDayThree} );
-	locationTable[S_CLOCK_TOWN_BANK_REWARD_1]								   = ItemLocation::Base		  (0x6F, 0x48, "S Clock Town Bank Reward 1",					S_CLOCK_TOWN_BANK_REWARD_1,				        PROGRESSIVE_WALLET,		    {Category::cSouthClockTown,Category::cDayOne} );
+	locationTable[S_CLOCK_TOWN_BANK_REWARD_1]								   = ItemLocation::Base		  (0x6F, 0x08, "S Clock Town Bank Reward 1",					S_CLOCK_TOWN_BANK_REWARD_1,				        PROGRESSIVE_WALLET,		    {Category::cSouthClockTown,Category::cDayOne} );
+	locationTable[S_CLOCK_TOWN_BANK_REWARD_1_ALT]							   = ItemLocation::Base		  (0x6F, 0x09, "S Clock Town Bank Reward 1 Alt",				S_CLOCK_TOWN_BANK_REWARD_1_ALT,				    PROGRESSIVE_WALLET,		    {Category::cSouthClockTown,Category::cDayOne} );
 	locationTable[S_CLOCK_TOWN_BANK_REWARD_2]								   = ItemLocation::Base		  (0x6F, 0x02, "S Clock Town Bank Reward 2",					S_CLOCK_TOWN_BANK_REWARD_2,				        BLUE_RUPEE,				    {Category::cSouthClockTown,Category::cDayOne} );
 	locationTable[S_CLOCK_TOWN_BANK_REWARD_3]								   = ItemLocation::Base		  (0x6F, 0x0C, "S Clock Town Bank Reward 3",					S_CLOCK_TOWN_BANK_REWARD_3,				        PIECE_OF_HEART,			    {Category::cSouthClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
 	
@@ -296,8 +298,8 @@ void LocationTable_Init() {
 	
 	//Pirate Fortress 
 	locationTable[PF_INTERIOR_HOOKSHOT_CHEST]					               = ItemLocation::Chest	  (0x23, 0x02, "Pirate's Fortress Interior Hookshot Chest",		    PF_INTERIOR_HOOKSHOT_CHEST,					HOOKSHOT,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_INT_LOWER_CHEST]					  	                   = ItemLocation::Chest	  (0x23, 0x00, "Pirate's Fortress Interior Lower Chest",		    PF_INT_LOWER_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_INT_UPPER_CHEST]						                   = ItemLocation::Chest	  (0x23, 0x01, "Pirate's Fortress Interior Upper Chest",		    PF_INT_UPPER_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
+	locationTable[PF_INT_LOWER_CHEST]					  	                   = ItemLocation::Chest	  (0x14, 0x00, "Pirate's Fortress Interior Lower Chest",		    PF_INT_LOWER_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
+	locationTable[PF_INT_UPPER_CHEST]						                   = ItemLocation::Chest	  (0x14, 0x01, "Pirate's Fortress Interior Upper Chest",		    PF_INT_UPPER_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_INT_TANK_CHEST]						                   = ItemLocation::Chest	  (0x23, 0x00, "Pirate's Fortress Interior Tank Chest",			    PF_INT_TANK_CHEST,							RED_RUPEE,				        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_INT_GUARD_ROOM_CHEST]				                       = ItemLocation::Chest	  (0x23, 0x03, "Pirate's Fortress Interior Guard Room Chest",	    PF_INT_GUARD_ROOM_CHEST,					SILVER_RUPEE,			        {Category::cPiratesFortressInterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_CAGE_ROOM_SHALLOW_CHEST]			                       = ItemLocation::Chest	  (0x23, 0x04, "Pirate's Fortress Sewer Cage Room Shallow Chest",   PF_CAGE_ROOM_SHALLOW_CHEST,					RED_RUPEE,			            {Category::cPiratesFortressSewer,Category::cChest ,Category::cDayOne} );
@@ -307,7 +309,8 @@ void LocationTable_Init() {
 	locationTable[PF_EXTERIOR_LOG_CHEST]						               = ItemLocation::Chest	  (0x3B, 0x00, "Pirate's Fortress Exterior Log Chest",			    PF_EXTERIOR_LOG_CHEST,						RED_RUPEE,				        {Category::cPiratesFortressExterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_EXTERIOR_SAND_CHEST]						               = ItemLocation::Chest	  (0x3B, 0x01, "Pirate's Fortress Exterior Sand Chest",			    PF_EXTERIOR_SAND_CHEST,						RED_RUPEE,			        	{Category::cPiratesFortressExterior,Category::cChest ,Category::cDayOne} );
 	locationTable[PF_EXTERIOR_CORNER_CHEST]					                   = ItemLocation::Chest	  (0x3B, 0x02, "Pirate's Fortress Exterior Corner Chest",		    PF_EXTERIOR_CORNER_CHEST,					RED_RUPEE,			        	{Category::cPiratesFortressExterior,Category::cChest ,Category::cDayOne} );
-	locationTable[PF_INT_INVISIBLE_SOLDIER]							           = ItemLocation::Base	      (0x53, 0x8B, "Pirate's Fortress Interior Invisible Soldier",	    PF_INT_INVISIBLE_SOLDIER,					STONE_MASK,			        	{Category::cPiratesFortressInterior, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[PF_INT_INVISIBLE_SOLDIER]							           = ItemLocation::Base	      (0x14, 0x8B, "Pirate's Fortress Interior Invisible Soldier",	    PF_INT_INVISIBLE_SOLDIER,					STONE_MASK,			        	{Category::cPiratesFortressInterior, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[PF_INT_INVISIBLE_SOLDIER_ALT]							       = ItemLocation::Base	      (0x14, 0xBA, "Pirate's Fortress Interior Invisible Soldier Alt",	PF_INT_INVISIBLE_SOLDIER_ALT,				FISHING_PASS,		        	{Category::cPiratesFortressInterior, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[PF_INT_HOOKSHOT_ROOM_ZORA_EGG]                               = ItemLocation::Collectable(0x23, 0x69, "Pirates Fortress Interior Hookshot Room Zora Egg",  PF_INT_HOOKSHOT_ROOM_ZORA_EGG,				ZORA_EGG,                       {Category::cPiratesFortressInterior, Category::cBottleCatch,Category::cDayOne} );
 	locationTable[PF_INT_GUARD_ROOM_ZORA_EGG]                                  = ItemLocation::Collectable(0x23, 0x69, "Pirates Fortress Interior Guard Room Zora Egg",     PF_INT_GUARD_ROOM_ZORA_EGG,   				ZORA_EGG,                       {Category::cPiratesFortressInterior, Category::cBottleCatch,Category::cDayOne} );
 	locationTable[PF_INT_BARREL_MAZE_ZORA_EGG]                                 = ItemLocation::Collectable(0x23, 0x69, "Pirates Fortress Interior Barrel Maze Zora Egg",    PF_INT_BARREL_MAZE_ZORA_EGG,   				ZORA_EGG,                       {Category::cPiratesFortressInterior, Category::cBottleCatch,Category::cDayOne} );
@@ -762,6 +765,7 @@ std::vector<LocationKey> overworldLocations = {
   //GBC_OCEAN_SPIDER_DAY3,
   GBC_FISHERMAN_GAME,
   //GBC_OCEAN_SPIDER_CHEST,--Handled in Dungeon.cpp
+  GBC_OCEAN_SPIDER_DAY1_ALT,
   GBC_LAB_FISH,
   GBC_LEDGE,
   GBC_MIKAU,
@@ -851,6 +855,7 @@ std::vector<LocationKey> overworldLocations = {
   S_CLOCK_TOWN_STRAW_ROOF_CHEST,
   S_CLOCK_TOWN_FINAL_DAY_CHEST,
   S_CLOCK_TOWN_BANK_REWARD_1,
+  S_CLOCK_TOWN_BANK_REWARD_1_ALT,
   S_CLOCK_TOWN_BANK_REWARD_2,
   S_CLOCK_TOWN_BANK_REWARD_3,
 //Snowhead
@@ -1087,8 +1092,17 @@ void CreateItemOverrides() {
 	auto loc1 = Location(E_CLOCK_TOWN_ARCHERY_1);
 	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1_ALT, loc1->GetPlacedItemKey());
 
-	auto loc3 = Location(ROAD_TO_SS_ARCHERY_1);
-	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, loc3->GetPlacedItemKey());
+	auto loc2 = Location(ROAD_TO_SS_ARCHERY_1);
+	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, loc2->GetPlacedItemKey());
+
+	auto loc3 = Location(PF_INT_INVISIBLE_SOLDIER);
+	PlaceItemInLocation(PF_INT_INVISIBLE_SOLDIER_ALT, loc3->GetPlacedItemKey());
+
+	auto loc4 = Location(S_CLOCK_TOWN_BANK_REWARD_1);
+	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, loc4->GetPlacedItemKey());
+
+	auto loc5 = Location(GBC_OCEAN_SPIDER_DAY1);
+	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1_ALT, loc5->GetPlacedItemKey());
 
   for (LocationKey locKey : allLocations) {
     auto loc = Location(locKey);

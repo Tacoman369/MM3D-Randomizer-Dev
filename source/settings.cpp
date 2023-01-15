@@ -325,17 +325,17 @@ namespace Settings {
   
   std::vector<Option*>otherSettingsOptions = {
       &IceTrapValue,
-      &RandomTrapDmg,
-      &GossipStoneHints,
-      &ClearerHints,
-      &HintDistribution,
-      &DamageMultiplier,
-      &ChestAnimations,
-      &ChestSize,
-      &ChangeOverworldItems,
-      &IngameSpoilers,
-      &MenuOpeningButton,
-      &RsDurability,
+      //&RandomTrapDmg,
+      //&GossipStoneHints,
+      //&ClearerHints,
+      //&HintDistribution,
+      //&DamageMultiplier,
+      //&ChestAnimations,
+      //&ChestSize,
+      //&ChangeOverworldItems,
+      //&IngameSpoilers,
+      //&MenuOpeningButton,
+      //&RsDurability,
   };
   
   /*COMFORT*/
@@ -528,7 +528,7 @@ namespace Settings {
     &detailLogic,
     //&comfort,
     //&timeSaverSettings,
-    //&otherSettings,
+    &otherSettings,
     //&cosmetics,
     &settingsPresets,
     &generateRandomizer,

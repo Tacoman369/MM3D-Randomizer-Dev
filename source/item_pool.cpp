@@ -367,15 +367,15 @@ static void PlaceVanillaMainInventory() {
 	PlaceItemInLocation(GBC_FISHERMAN_PHOTO, SEAHORSE);
 };
 
-const std::array<ItemKey, 12> progressiveItemsList = {
+const std::array<ItemKey, 10> progressiveItemsList = {
 	PROGRESSIVE_BOW,
 	PROGRESSIVE_BOW,
 	PROGRESSIVE_BOW, //1 Bow + 2 Quiver Upgrades
 	PROGRESSIVE_BOMB_BAG,
 	PROGRESSIVE_BOMB_BAG,
 	PROGRESSIVE_BOMB_BAG, //3 Bomb Bags
-	PROGRESSIVE_MAGIC_METER,
-	PROGRESSIVE_MAGIC_METER,//2 Magic Meters
+	//PROGRESSIVE_MAGIC_METER,
+	//PROGRESSIVE_MAGIC_METER,//2 Magic Meters part of Great Fairy Reward Shuffle
 	PROGRESSIVE_WALLET,
 	PROGRESSIVE_WALLET,//2 Wallets
 	//PROGRESSIVE_SWORD,
@@ -870,6 +870,7 @@ void GenerateItemPool() {
 	//PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
 	//PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_HUMAN, GREAT_FAIRYS_MASK);
 	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
+	PlaceItemInLocation(WOODFALL_TEMPLE_DEKU_PRINCESS, DEKU_PRINCESS);
 
 	//temp placement until bean suffle is fixed - or part of shop sanity
 	PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);
@@ -878,6 +879,9 @@ void GenerateItemPool() {
 	//Place Temp Items at alt locations so they don't get filled with important stuff - will be replaced later
 	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1_ALT, BLUE_RUPEE);
 	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(PF_INT_INVISIBLE_SOLDIER_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1_ALT, BLUE_RUPEE);
 
 	//Check Non Dungeon Settings
 
