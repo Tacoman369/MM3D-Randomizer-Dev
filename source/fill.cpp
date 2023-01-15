@@ -787,14 +787,14 @@ int Fill() {
 
         //Place Main Inventory First
         //So first get all items in the pool + DekuMask,
-        std::vector<ItemKey> mainadvancementItems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).IsAdvancement() && ItemTable(i).GetItemType() == ITEMTYPE_ITEM;});
+        std::vector<ItemKey> mainadvancementItems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).IsAdvancement();});//&& ItemTable(i).GetItemType() == ITEMTYPE_ITEM
         //Then Place those to expand the amount of checks available
         AssumedFill(mainadvancementItems, allLocations,true);
-
+        /*
         //Then Place Masks to further expand 
         std::vector<ItemKey> masks = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_MASK;});
         AssumedFill(masks, allLocations, true);
-
+        */
         //Then Place Anju & Kafei Items in spots accessable on Day 1, this should prevent situations where you cant get an item in time for its use
         if(ShuffleTradeItems) {
         std::vector<LocationKey> day1Locations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cDayOne);});
