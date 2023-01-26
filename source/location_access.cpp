@@ -698,7 +698,7 @@ void AreaTable_Init() {
 		Entrance(TERMINA_FIELD_PEAHAT_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_DODONGO_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_BIO_BABA_GROTTO, {[]{return true;}}),
-		Entrance(TERMINA_FIELD_PILLAR_GROTTO, {[]{return MagicBean && WaterForBeans;}}),
+		Entrance(TERMINA_FIELD_PILLAR_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_GRASS_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_BUSINESS_SCRUB_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_COW_GROTTO, {[]{return true;}}),

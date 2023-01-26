@@ -317,6 +317,7 @@ namespace Settings {
   extern Option StartingGreatFairySword;
   extern Option StartingHerosShield;
   extern Option StartingMirrorShield;
+  extern Option StartingShield;
   extern Option StartingMagicMeter;
   extern Option StartingWallet;
   extern Option StartingDoubleDefense;
@@ -356,6 +357,7 @@ namespace Settings {
   extern Option StartingCouplesMask;
   extern Option StartingKamarosMask;
   extern Option StartingGibdosMask;
+  extern Option StartingGaroMask;
   extern Option StartingCaptainsHat;
   extern Option StartingGiantsMask;
   extern Option StartingFierceDietyMask;

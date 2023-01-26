@@ -863,15 +863,15 @@ void GenerateItemPool() {
 	//Fixed Item Locations
 	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
 	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME, true);
-	//PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);
 	PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);
+	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
+	PlaceItemInLocation(WOODFALL_TEMPLE_DEKU_PRINCESS, DEKU_PRINCESS);
+    //PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);
 	//PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);
 	//PlaceItemInLocation(WOODFALL_GREAT_FAIRY, SPIN_ATTACK);
 	//PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
 	//PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_HUMAN, GREAT_FAIRYS_MASK);
-	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
-	PlaceItemInLocation(WOODFALL_TEMPLE_DEKU_PRINCESS, DEKU_PRINCESS);
-
+	
 	//temp placement until bean suffle is fixed - or part of shop sanity
 	PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);
 	
@@ -977,10 +977,15 @@ void GenerateItemPool() {
 	//GREAT FAIRY SHUFFLE
 	if(ShuffleGFRewards){
 		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
-		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
-		AddItemToMainPool(SPIN_ATTACK);
+		//AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
+		//AddItemToMainPool(SPIN_ATTACK);
 		if(ShuffleMainInventory){AddItemToMainPool(GREAT_FAIRYS_SWORD);}
-		if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
+		//if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
+
+		//temporarily make these vanilla because they don't overrdide right?
+		PlaceItemInLocation(WOODFALL_GREAT_FAIRY, SPIN_ATTACK);
+		PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
+		PlaceItemInLocation(ZORA_CAPE_GREAT_FAIRY, DOUBLE_DEFENSE);
 	}
 	else{
 		PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);
