@@ -258,8 +258,8 @@ namespace Settings {
       //&ShuffleKokiriSword, --redundant
       //&ShuffleStartingShield, --redundant
       //&ShuffleBombersNotebook,
-      //&ShuffleTradeItems,
-      //&ShuffleMerchants,
+      &ShuffleTradeItems,
+      &ShuffleMerchants,
       &RemoveDoubleDefense,
       //&ShuffleMagicBeans,
       //&ShuffleOcarinas,
