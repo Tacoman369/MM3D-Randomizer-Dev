@@ -96,8 +96,8 @@ void GenerateStartingInventory() {
   AddItemToInventory(SONG_OF_HEALING,           StartingSongOfHealing.Value<u8>());
   AddItemToInventory(SONG_OF_SOARING,           StartingSongOfSoaring.Value<u8>());
   AddItemToInventory(PROGRESSIVE_SWORD,         StartingKokiriSword.Value<u8>());
-  AddItemToInventory(HEROS_SHIELD,              StartingHerosShield.Value<u8>());
-  AddItemToInventory(MIRROR_SHIELD,             StartingMirrorShield.Value<u8>());
+  if (StartingShield.Value<u8>() == 1){  AddItemToInventory(HEROS_SHIELD,              1);}
+  if (StartingShield.Value<u8>() == 2){  AddItemToInventory(MIRROR_SHIELD,             1);}
   AddItemToInventory(PROGRESSIVE_MAGIC_METER,   StartingMagicMeter.Value<u8>());
   AddItemToInventory(PROGRESSIVE_WALLET,        StartingWallet.Value<u8>());
   AddItemToInventory(DOUBLE_DEFENSE,            StartingDoubleDefense.Value<u8>());
@@ -127,6 +127,7 @@ void GenerateStartingInventory() {
   AddItemToInventory(COUPLES_MASK,              StartingCouplesMask.Value<u8>());
   AddItemToInventory(KAMAROS_MASK,              StartingKamarosMask.Value<u8>());
   AddItemToInventory(GIBDOS_MASK,               StartingGibdosMask.Value<u8>());
+  AddItemToInventory(GAROS_MASK,                StartingGaroMask.Value<u8>());
   AddItemToInventory(CAPTAINS_HAT,              StartingCaptainsHat.Value<u8>());
   AddItemToInventory(GIANTS_MASK,               StartingGiantsMask.Value<u8>());
   AddItemToInventory(FIERCE_DIETY_MASK,         StartingFierceDietyMask.Value<u8>());

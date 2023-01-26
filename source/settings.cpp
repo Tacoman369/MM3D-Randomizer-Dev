@@ -74,7 +74,7 @@ namespace Settings {
   Option StartingMaxRupees = Option::Bool("Start with Max Rupees", { "No",               "Yes" }, { startWithMaxRupeesDesc });
   Option StartingInventoryToggle = Option::U8("Inventory", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingNutCapacity = Option::U8("  Deku Nuts", { "20 Deku Nuts",     "30 Deku Nuts",     "40 Deku Nuts" }, { "" });
-  Option StartingOcarina = Option::U8("  Ocarina", { "None",             "Fairy Ocarina",    "Ocarina of Time" }, { "" });
+  Option StartingOcarina = Option::U8("  Ocarina", { "None",              "Ocarina of Time" }, { "" }, OptionCategory::Toggle, 1);
   Option StartingBombBag = Option::U8("  Bomb Bag", { "None",             "Bomb Bag 20",      "Bomb Bag 30",      "Bomb Bag 40" }, { "" });
   Option StartingBombchus = Option::U8("  Bombchus", { "None",             "Bombchus" }, { "" });
   Option StartingHookshot = Option::U8("  Hookshot", { "None",             "Hookshot",         "Longshot" }, { "" });
@@ -102,13 +102,12 @@ namespace Settings {
   Option StartingGoronsLullaby = Option::U8("  Gorons Lullaby", { "None",             "Gorons Lullaby" }, { "" });
   Option StartingNewWaveBossaNova = Option::U8("  New Wave Bossa Nova", { "None",             "New Wave Bossa Nova" }, { "" });
   Option StartingElegyOfEmptiness = Option::U8("  Elegy of Emptiness", { "None",             "Elegy of Emptiness" }, { "" });
-  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" });
+  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" });
-  Option StartingGreatFairySword = Option::U8("  Great Fairy Sword", { "None",             "Great Fairys Sword" }, { "" });
-  Option StartingHerosShield = Option::U8("  Hero's Shield", { "None",             "Hero's Shield" }, { "" });
-  Option StartingMirrorShield = Option::U8("  Mirror Shield", { "None",             "Mirror Shield" }, { "" });
+  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, 1);
+  Option StartingGreatFairySword = Option::U8("  Great Fairy Sword", { "None",             "G. F. S." }, { "" });
+  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, 1);
   Option StartingWallet = Option::U8("  Wallet Upgrade", { "None",             "Adult's Wallet",   "Giant's Wallet" ,  "Tycoon's Wallet" }, { "" });
   Option StartingHealth = Option::U8("  Health", healthOptions, { "" });
   Option StartingMagicMeter = Option::U8("  Magic Meter", { "None",             "Single Magic",     "Double Magic" }, { "" });
@@ -141,14 +140,15 @@ namespace Settings {
   Option StartingCouplesMask = Option::U8("  Couples Mask", { "None",             "Couples M." }, { "" });
   Option StartingKamarosMask = Option::U8("  Kamaro's Mask", { "None",             "Kamaros M." }, { "" });
   Option StartingGibdosMask = Option::U8("  Gibdos Mask", { "None",             "Gibdos M." }, { "" });
+  Option StartingGaroMask = Option::U8("  Garo Mask", {"None", "Garo M."},{""});
   Option StartingCaptainsHat = Option::U8("  Captain's Mask", { "None",             "Captains M." }, { "" });
   Option StartingGiantsMask = Option::U8("  Giants Mask", { "None",             "Giants M." }, { "" });
   Option StartingFierceDietyMask = Option::U8("  Fierce Diety Mask", { "None",             "F.D M." }, { "" });
   Option StartingMaskOfTruth = Option::U8("  Mask of Truth", { "None",             "Truth M." }, { "" });
 
-  Option StartingStickCapacity = Option::U8(" Stick Capacity", { "10 Sticks", "20 Sticks", "30 Sticks" }, { "" });
-  Option StartingPictographBox = Option::U8(" Pictograph Box", { "None", "PictoBox" }, { "" });
-  Option StartingPowderKeg = Option::U8(" Powder Keg", { "None", "Powder Keg" }, { "" });
+  Option StartingStickCapacity = Option::U8("  Stick Capacity", { "10 Sticks", "20 Sticks", "30 Sticks" }, { "" });
+  Option StartingPictographBox = Option::U8("  Pictograph Box", { "None", "PictoBox" }, { "" });
+  Option StartingPowderKeg = Option::U8("  Powder Keg", { "None", "Powder Keg" }, { "" });
   //Option StartingRazorSword = Option::U8(" Razor Sword", { "None", "R. Sword" }, { "" });
   //Option StartingGildedSword = Option::U8(" Gilded Sword", { "None", "G. Sword" }, { "" });
 
@@ -156,6 +156,7 @@ namespace Settings {
     &StartingConsumables,
     &StartingMaxRupees,
     &StartingInventoryToggle,
+    &StartingStickCapacity,
     &StartingNutCapacity,
     &StartingOcarina,
     &StartingBombBag,
@@ -167,6 +168,9 @@ namespace Settings {
     &StartingLightArrows,
     &StartingLensOfTruth,
     &StartingMagicBean,
+    &StartingPictographBox,
+    &StartingPowderKeg,
+    &StartingGreatFairySword,
     &StartingBottle1,
     &StartingBottle2,
     &StartingBottle3,
@@ -194,6 +198,7 @@ namespace Settings {
     &StartingCouplesMask,
     &StartingKamarosMask,
     &StartingGibdosMask,
+    &StartingGaroMask,
     &StartingCaptainsHat,
     &StartingGiantsMask,
     &StartingFierceDietyMask,
@@ -210,9 +215,7 @@ namespace Settings {
     &StartingSongOfSoaring,
     &StartingUpgradesToggle,
     &StartingKokiriSword,
-    &StartingGreatFairySword,
-    &StartingHerosShield,
-    &StartingMirrorShield,
+    &StartingShield,
     &StartingWallet,
     &StartingHealth,
     &StartingMagicMeter,
@@ -251,12 +254,12 @@ namespace Settings {
       //&ShuffleSoaring,
       //&Shopsanity,
       //&Tokensanity,
-      &ShuffleCows,
-      //&ShuffleKokiriSword,
-      //&ShuffleStartingShield,
+      //&ShuffleCows,
+      //&ShuffleKokiriSword, --redundant
+      //&ShuffleStartingShield, --redundant
       //&ShuffleBombersNotebook,
-      &ShuffleTradeItems,
-      &ShuffleMerchants,
+      //&ShuffleTradeItems,
+      //&ShuffleMerchants,
       &RemoveDoubleDefense,
       //&ShuffleMagicBeans,
       //&ShuffleOcarinas,
@@ -305,7 +308,7 @@ namespace Settings {
       &ShuffleFierceDiety,
       &ShuffleMasks,
       //&ShuffleChests,//basically same as main inventory & masks - anything else in a chest is junk
-      &ShuffleGFRewards,
+      //&ShuffleGFRewards,
       &ShufflePiecesOfHeart,
       &ShuffleMoonItems,
   };
@@ -524,7 +527,7 @@ namespace Settings {
     &shuffleItems,
     &shuffleDungeon,
     &itemPool,
-    //&startingInventory,
+    &startingInventory,
     &detailLogic,
     //&comfort,
     //&timeSaverSettings,
@@ -563,7 +566,7 @@ namespace Settings {
     ctx.tokensanity          = (Tokensanity) ? 1:0;
     //ctx.cowsanity = (ShuffleCows) ? 1 : 0;
     ctx.shuffleKokiriSword = (ShuffleKokiriSword) ? 1 : 0;
-    //ctx.shuffleStartingShield = (ShuffleStartingShield) ? 1 : 0;
+    ctx.shuffleStartingShield = (ShuffleStartingShield) ? 1 : 0;
     //ctx.shuffleTradeItems = (ShuffleTradeItems)?1:0;
     ctx.shuffleMerchants = (ShuffleMerchants) ? 1 : 0;
     //ctx.removeDoubleDefense = (RemoveDoubleDefense) ? 1 : 0;
@@ -648,7 +651,7 @@ namespace Settings {
     
     //ctx.progressiveGildedSword = (ProgressiveGildedSword) ? 1 : 0;
     
-/*
+
     //Starting Inventory
     ctx.startingConsumables = (StartingConsumables) ? 1 : 0;
     ctx.startingMaxRupees = (StartingMaxRupees) ? 1 : 0;
@@ -683,11 +686,12 @@ namespace Settings {
     ctx.startingNewWaveBossaNova = StartingNewWaveBossaNova.Value<u8>();
     ctx.startingElegyOfEmptiness = StartingElegyOfEmptiness.Value<u8>();
     ctx.startingSongOfSoaring = StartingSongOfSoaring.Value<u8>();
-    ctx.startingSongofHealing = StartingSongOfHealing.Value<u8>();
+    ctx.startingSongOfHealing = StartingSongOfHealing.Value<u8>();
     //Upgrades
     ctx.startingKokiriSword = StartingKokiriSword.Value<u8>();
-    ctx.startingRazorSword = StartingRazorSword.Value<u8>();
-    ctx.startingGildedSword = StartingGildedSword.Value<u8>();
+    ctx.startingShield = StartingShield.Value<u8>();
+    //ctx.startingRazorSword = StartingRazorSword.Value<u8>();
+    //ctx.startingGildedSword = StartingGildedSword.Value<u8>();
     ctx.startingMagicMeter = StartingMagicMeter.Value<u8>();
     ctx.startingDoubleDefense = StartingDoubleDefense.Value<u8>();
     ctx.startingHealth        = (StartingHealth.Value<u8>() + 2) % 20 + 1;
@@ -720,11 +724,12 @@ namespace Settings {
     ctx.startingCouplesMask = StartingCouplesMask.Value<u8>();
     ctx.startingKamarosMask = StartingKamarosMask.Value<u8>();
     ctx.startingGibdosMask = StartingGibdosMask.Value<u8>();
+    ctx.startingGaroMask = StartingGaroMask.Value<u8>();
     ctx.startingCaptainsHat = StartingCaptainsHat.Value<u8>();
     ctx.startingGiantsMask = StartingGiantsMask.Value<u8>();
     ctx.startingFierceDietyMask = StartingFierceDietyMask.Value<u8>();
     ctx.startingMaskOfTruth = StartingMaskOfTruth.Value<u8>();
-    */
+    
     //TODO: 
     //startingQuestItems;
     //startingDungeonRewards;
@@ -1027,11 +1032,11 @@ namespace Settings {
   void ForceChange(u32 kDown, Option* currentSetting) {
 
     //Groups the item categories; bottles are handled separately because the proper item is Empty Bottle (1)
-      CollapseCategory(StartingInventoryToggle, 3, 14);
-      CollapseCategory(StartingMaskToggle, 22, 45);
-      CollapseCategory(StartingSongsToggle, 46, 55);
-      CollapseCategory(StartingUpgradesToggle, 56, 64);
-      CollapseCategory(StartingQuestToggle, 65, 69);
+      CollapseCategory(StartingInventoryToggle, 3, 25);
+      CollapseCategory(StartingMaskToggle, 26, 50);
+      CollapseCategory(StartingSongsToggle, 51, 60);
+      CollapseCategory(StartingUpgradesToggle, 61, 67);
+      CollapseCategory(StartingQuestToggle, 68, 72);
     for(int i = 14; i < 21 ;++i){
       switch(StartingInventoryToggle.Value<u8>()) {
         case 0:
