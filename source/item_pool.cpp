@@ -977,15 +977,10 @@ void GenerateItemPool() {
 	//GREAT FAIRY SHUFFLE
 	if(ShuffleGFRewards){
 		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
-		//AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
-		//AddItemToMainPool(SPIN_ATTACK);
+		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
+		AddItemToMainPool(SPIN_ATTACK);
 		if(ShuffleMainInventory){AddItemToMainPool(GREAT_FAIRYS_SWORD);}
-		//if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
-
-		//temporarily make these vanilla because they don't overrdide right?
-		PlaceItemInLocation(WOODFALL_GREAT_FAIRY, SPIN_ATTACK);
-		PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
-		PlaceItemInLocation(ZORA_CAPE_GREAT_FAIRY, DOUBLE_DEFENSE);
+		if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
 	}
 	else{
 		PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);

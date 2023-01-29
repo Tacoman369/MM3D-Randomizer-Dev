@@ -102,12 +102,12 @@ namespace Settings {
   Option StartingGoronsLullaby = Option::U8("  Gorons Lullaby", { "None",             "Gorons Lullaby" }, { "" });
   Option StartingNewWaveBossaNova = Option::U8("  New Wave Bossa Nova", { "None",             "New Wave Bossa Nova" }, { "" });
   Option StartingElegyOfEmptiness = Option::U8("  Elegy of Emptiness", { "None",             "Elegy of Emptiness" }, { "" });
-  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
+  Option StartingSongOfHealing = Option::Bool("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Toggle, 1);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_NONE);
+  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_KOKIRI);
   Option StartingGreatFairySword = Option::U8("  Great Fairy Sword", { "None",             "G. F. S." }, { "" });
-  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, (u8)StartingSheildSetting::STARTINGSHIELD_NONE);
+  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, (u8)StartingSheildSetting::STARTINGSHIELD_HERO);
   Option StartingWallet = Option::U8("  Wallet Upgrade", { "None",             "Adult's Wallet",   "Giant's Wallet" ,  "Tycoon's Wallet" }, { "" });
   Option StartingHealth = Option::U8("  Health", healthOptions, { "" });
   Option StartingMagicMeter = Option::U8("  Magic Meter", { "None",             "Single Magic",     "Double Magic" }, { "" });
@@ -686,7 +686,7 @@ namespace Settings {
     ctx.startingNewWaveBossaNova = StartingNewWaveBossaNova.Value<u8>();
     ctx.startingElegyOfEmptiness = StartingElegyOfEmptiness.Value<u8>();
     ctx.startingSongOfSoaring = StartingSongOfSoaring.Value<u8>();
-    ctx.startingSongOfHealing = StartingSongOfHealing.Value<u8>();
+    ctx.startingSongOfHealing = (StartingSongOfHealing) ? 1 : 0;
     //Upgrades
     ctx.startingKokiriSword = StartingKokiriSword.Value<u8>();
     ctx.startingShield = StartingShield.Value<u8>();
