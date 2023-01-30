@@ -102,7 +102,7 @@ namespace Settings {
   Option StartingGoronsLullaby = Option::U8("  Gorons Lullaby", { "None",             "Gorons Lullaby" }, { "" });
   Option StartingNewWaveBossaNova = Option::U8("  New Wave Bossa Nova", { "None",             "New Wave Bossa Nova" }, { "" });
   Option StartingElegyOfEmptiness = Option::U8("  Elegy of Emptiness", { "None",             "Elegy of Emptiness" }, { "" });
-  Option StartingSongOfHealing = Option::Bool("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Toggle, 1);
+  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_KOKIRI);
@@ -304,11 +304,11 @@ namespace Settings {
   std::vector<Option*>itemPoolSettingsOptions = {
       &ItemPoolValue,
       &ShuffleMainInventory,
-      //&ShuffleTransformation,
+      &ShuffleTransformation,
       &ShuffleFierceDiety,
       &ShuffleMasks,
       //&ShuffleChests,//basically same as main inventory & masks - anything else in a chest is junk
-      //&ShuffleGFRewards,
+      &ShuffleGFRewards,
       &ShufflePiecesOfHeart,
       &ShuffleMoonItems,
   };
@@ -686,7 +686,7 @@ namespace Settings {
     ctx.startingNewWaveBossaNova = StartingNewWaveBossaNova.Value<u8>();
     ctx.startingElegyOfEmptiness = StartingElegyOfEmptiness.Value<u8>();
     ctx.startingSongOfSoaring = StartingSongOfSoaring.Value<u8>();
-    ctx.startingSongOfHealing = (StartingSongOfHealing) ? 1 : 0;
+    ctx.startingSongOfHealing = StartingSongOfHealing.Value<u8>();
     //Upgrades
     ctx.startingKokiriSword = StartingKokiriSword.Value<u8>();
     ctx.startingShield = StartingShield.Value<u8>();
