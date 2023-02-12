@@ -808,6 +808,7 @@ static void PlaceVanillaShopItems() {
 	PlaceItemInLocation(ZORA_SHOP_ITEM_3, BUY_RED_POTION);
 	PlaceItemInLocation(IKANA_CANYON_SCRUB_PURCHASE, BLUE_POTION_REFILL);
 	PlaceItemInLocation(ZORA_HALL_SCRUB_PURCHASE, GREEN_POTION_REFILL);
+	PlaceItemInLocation(MILK_ROAD_GORMAN_MILK_BUY, MILK);
 	//other 2 scrub sales handled in beans and main inventory
 };
 /*
@@ -866,13 +867,8 @@ void GenerateItemPool() {
 	PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);
 	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
 	PlaceItemInLocation(WOODFALL_TEMPLE_DEKU_PRINCESS, DEKU_PRINCESS);
-    //PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);
-	//PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);
-	//PlaceItemInLocation(WOODFALL_GREAT_FAIRY, SPIN_ATTACK);
-	//PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
-	//PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_HUMAN, GREAT_FAIRYS_MASK);
-	
-	//temp placement until bean suffle is fixed - or part of shop sanity
+    	
+	//temp placement until shopsanity works
 	PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);
 	
 
@@ -882,6 +878,11 @@ void GenerateItemPool() {
 	PlaceItemInLocation(PF_INT_INVISIBLE_SOLDIER_ALT, BLUE_RUPEE);
 	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, BLUE_RUPEE);
 	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(SOUTHERN_SWAMP_KOTAKE_IN_WOODS, BLUE_RUPEE);
+	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
+	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
+	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
+	PlaceItemInLocation(LAUNDRY_POOL_POSTBOX, BLUE_RUPEE);
 
 	//Check Non Dungeon Settings
 
@@ -904,6 +905,7 @@ void GenerateItemPool() {
 	//SHUFFLE BOMBERS NOTEBOOK
 	if(ShuffleBombersNotebook){
 		AddItemToMainPool(BOMBERS_NOTEBOOK);
+		PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, GREEN_RUPEE);//Place Junk Here because its not checkable
 	}
 	else {PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);}
 
@@ -920,6 +922,7 @@ void GenerateItemPool() {
 	}
 
 	//MAGIC BEAN SHUFFLE--NEEDS WORK
+	PlaceItemInLocation(DEKU_PALACE_BEAN_SELLER, MAGIC_BEAN);//vanilla for now because replacing causes odd occurances where you cannot buy beans elsewhere
 	/*
 	if(ShuffleMagicBeans) { //does not shuffle bean salesman yet
 		AddItemToMainPool(MAGIC_BEAN);

@@ -986,7 +986,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(DEKU_PALACE_BEAN_DADDY, {[] {return DekuMask;}}),
+		LocationAccess(DEKU_PALACE_BEAN_SELLER, {[] {return true;}}),
 		LocationAccess(DEKU_PALACE_BEAN_GROTTO_CHEST, {[] {return DekuMask && ((MagicBean && WaterForBeans) || Hookshot);}}),
 	},
 	{
