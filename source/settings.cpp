@@ -74,7 +74,7 @@ namespace Settings {
   Option StartingMaxRupees = Option::Bool("Start with Max Rupees", { "No",               "Yes" }, { startWithMaxRupeesDesc });
   Option StartingInventoryToggle = Option::U8("Inventory", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingNutCapacity = Option::U8("  Deku Nuts", { "20 Deku Nuts",     "30 Deku Nuts",     "40 Deku Nuts" }, { "" });
-  Option StartingOcarina = Option::U8("  Ocarina", { "None",              "Ocarina of Time" }, { "" }, OptionCategory::Toggle, 1);
+  Option StartingOcarina = Option::U8("  Ocarina", { "Ocarina of Time",              "Ocarina of Time" }, { "" }, OptionCategory::Toggle, 1);
   Option StartingBombBag = Option::U8("  Bomb Bag", { "None",             "Bomb Bag 20",      "Bomb Bag 30",      "Bomb Bag 40" }, { "" });
   Option StartingBombchus = Option::U8("  Bombchus", { "None",             "Bombchus" }, { "" });
   Option StartingHookshot = Option::U8("  Hookshot", { "None",             "Hookshot",         "Longshot" }, { "" });
@@ -102,7 +102,7 @@ namespace Settings {
   Option StartingGoronsLullaby = Option::U8("  Gorons Lullaby", { "None",             "Gorons Lullaby" }, { "" });
   Option StartingNewWaveBossaNova = Option::U8("  New Wave Bossa Nova", { "None",             "New Wave Bossa Nova" }, { "" });
   Option StartingElegyOfEmptiness = Option::U8("  Elegy of Emptiness", { "None",             "Elegy of Emptiness" }, { "" });
-  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
+  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "Song of Healing",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_KOKIRI);
@@ -121,7 +121,7 @@ namespace Settings {
   Option StartingOceanToken = Option::U8("Ocean Skulltula Tokens", {/*Options 0-30 defined in InitSettings()*/ }, { "" }, OptionCategory::Setting, 0, false);
   //Starting Masks 
   Option StartingMaskToggle = Option::U8("Masks", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingDekuMask = Option::U8("  Deku Mask", { "None",             "Deku M." }, { "" });
+  Option StartingDekuMask = Option::U8("  Deku Mask", { "Deku M.",             "Deku M." }, { "" });
   Option StartingGoronMask = Option::U8("  Goron Mask", { "None",             "Goron M." }, { "" });
   Option StartingZoraMask = Option::U8("  Zora Mask", { "None",             "Zora M." }, { "" });
   Option StartingBunnyHood = Option::U8("  Bunny Hood", { "None",             "Bunny H." }, { "" });
@@ -989,10 +989,10 @@ namespace Settings {
 
       //Force include Magic Bean salesman if Shuffle Magic Beans is off
       if (ShuffleMagicBeans) {
-          Unhide({ DEKU_PALACE_BEAN_DADDY });
+          Unhide({ DEKU_PALACE_BEAN_SELLER });
       }
       else {
-          IncludeAndHide({ DEKU_PALACE_BEAN_DADDY });
+          IncludeAndHide({ DEKU_PALACE_BEAN_SELLER });
       }
 
       //Force include Map and Compass Chests when Vanilla
