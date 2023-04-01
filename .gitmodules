@@ -1,6 +1,4 @@
 [submodule "mm3dr"]
 	path = mm3dr
-	url = https://github.com/PhlexPlexico/mm3dr/
-	branch = mikau
-[submodule "mikau"]
+	url = https://github.com/PhlexPlexico/mm3dr
 	branch = mikau
