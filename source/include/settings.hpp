@@ -258,6 +258,7 @@ namespace Settings {
   void SetDefaultSettings();
   void RandomizeAllSettings(const bool selectOptions = false);
   void ForceChange(u32 kDown, Option* currentSetting);
+  u8 StartingBottleConvert(u8 startingBottle);
   const std::vector<Menu*> GetAllMenus();
 
 

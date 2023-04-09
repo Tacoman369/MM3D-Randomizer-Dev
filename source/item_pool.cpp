@@ -887,20 +887,20 @@ void GenerateItemPool() {
 	//Check Non Dungeon Settings
 
 	//KOKIRISWORD SHUFFLE
-	if(ShuffleKokiriSword) {
+	if(StartingKokiriSword.Value<u8>() == 0) {//if starting with no sword we need to add an extra to the pool
 		AddItemToMainPool(PROGRESSIVE_SWORD);
 		IceTrapModels.push_back(0x37);//GetItemID::GI_KOKIRI_SWORD
 		PlaceItemInLocation(HMS_STARTING_SWORD,GREEN_RUPEE);//Add Junk to this location because theres no way to get it otherwise
 	} else {
-		PlaceItemInLocation(HMS_STARTING_SWORD, KOKIRI_SWORD);
+		PlaceItemInLocation(HMS_STARTING_SWORD, KOKIRI_SWORD); //if starting with any sword place this here because this location is unobtainable
 	}
 
 	//SHUFFLE STARTING SHIELD
-	if(ShuffleStartingShield){
+	if(StartingShield.Value<u8>() == 0){//if starting with no shield add an extra to the pool
 		AddItemToMainPool(HEROS_SHIELD);
 		PlaceItemInLocation(HMS_STARTING_SHIELD, GREEN_RUPEE);//PlaceJunk Here because you cant not get this
 	}
-	else { PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);}
+	else { PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);}//if starting with any other shield place this here because this location is unobtainable
 	
 	//SHUFFLE BOMBERS NOTEBOOK
 	if(ShuffleBombersNotebook){

@@ -23,7 +23,7 @@ namespace Settings {
   std::array<u8, 5> hashIconIndexes;
 
 
-  std::vector<std::string> bottleOptions = { "None", "Empty Bottle", "Red Potion", "Green Potion", "Blue Potion", "Fairy", "Fish", "Milk", "Bugs", "Big Poe", "Half Milk", "Poe" };
+  std::vector<std::string> bottleOptions = { "None", "Empty Bottle", "Red Potion", "Green Potion", "Blue Potion", "Fairy", "Deku Princess", "Milk", "Half Milk", "Fish", "Bugs", "Big Poe", "Spring Water", "Hot Spring Water", "Zora Egg", "Gold Dust", "Mushroom", "Seahorse", "Chateau Romani", "Mystery Milk", "Spoiled Mystery Milk" };
   std::vector<std::string> healthOptions = { "3 hearts",  "4 hearts",  "5 hearts",  "6 hearts",  "7 hearts",  "8 hearts",  "9 hearts", "10 hearts", "11 hearts", "12 hearts",
                                             "13 hearts", "14 hearts", "15 hearts", "16 hearts", "17 hearts", "18 hearts", "19 hearts", "20 hearts" };//,  "1 heart",   "2 hearts"}; // TODO: logic for lower health
 
@@ -84,13 +84,13 @@ namespace Settings {
   Option StartingLightArrows = Option::U8("  Light Arrow", { "None",             "Light Arrow" }, { "" });
   Option StartingLensOfTruth = Option::U8("  Lens of Truth", { "None",             "Lens of Truth" }, { "" });
   Option StartingMagicBean = Option::U8("  Magic Beans", { "None",             "Magic Beans" }, { "" });
-  Option StartingBottle1 = Option::U8("  Bottle Slot 1", bottleOptions, { "" });
-  Option StartingBottle2 = Option::U8("  Bottle Slot 2", bottleOptions, { "" });
-  Option StartingBottle3 = Option::U8("  Bottle Slot 3", bottleOptions, { "" });
-  Option StartingBottle4 = Option::U8("  Bottle Slot 4", bottleOptions, { "" });
-  Option StartingBottle5 = Option::U8("  Bottle Slot 5", bottleOptions, { "" });
-  Option StartingBottle6 = Option::U8("  Bottle Slot 6", bottleOptions, { "" });
-  Option StartingBottle7 = Option::U8("  Bottle Slot 7", bottleOptions, { "" });
+  Option StartingBottle1 = Option::U8("  Bottle Slot 1", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
+  Option StartingBottle2 = Option::U8("  Bottle Slot 2", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
+  Option StartingBottle3 = Option::U8("  Bottle Slot 3", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
+  Option StartingBottle4 = Option::U8("  Bottle Slot 4", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
+  Option StartingBottle5 = Option::U8("  Bottle Slot 5", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
+  Option StartingBottle6 = Option::U8("  Bottle Slot 6", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
+  Option StartingBottle7 = Option::U8("  Bottle Slot 7", bottleOptions, { "" }, OptionCategory::Setting, (u8)StartingBottleSetting::STARTINGBOTTLE_NONE);
   Option StartingSongsToggle = Option::U8("Ocarina Songs", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingOathToOrder = Option::U8("  Oath To Order", { "None",             "Oath to Order" }, { "" });
   Option StartingEponasSong = Option::U8("  Epona's Song", { "None",             "Epona's Song" }, { "" });
@@ -105,10 +105,10 @@ namespace Settings {
   Option StartingSongOfHealing = Option::U8("  Song of Healing", { "Song of Healing",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_KOKIRI);
+  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_NONE);
   Option StartingGreatFairySword = Option::U8("  Great Fairy Sword", { "None",             "G. F. S." }, { "" });
-  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, (u8)StartingSheildSetting::STARTINGSHIELD_HERO);
-  Option StartingWallet = Option::U8("  Wallet Upgrade", { "None",             "Adult's Wallet",   "Giant's Wallet" ,  "Tycoon's Wallet" }, { "" });
+  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, (u8)StartingSheildSetting::STARTINGSHIELD_NONE);
+  Option StartingWallet = Option::U8("  Wallet Upgrade", { "None",             "Adult's Wallet",   "Giant's Wallet" ,  "Tycoon's Wallet" }, { "" }, OptionCategory::Setting, (u8)StartingWalletSetting::STARTINGWALLET_NONE);
   Option StartingHealth = Option::U8("  Health", healthOptions, { "" });
   Option StartingMagicMeter = Option::U8("  Magic Meter", { "None",             "Single Magic",     "Double Magic" }, { "" });
   Option StartingDoubleDefense = Option::U8("  Double Defense", { "None",             "Double Defence" }, { "" });
@@ -670,13 +670,16 @@ namespace Settings {
     ctx.startingPowderKeg = StartingPowderKeg.Value<u8>();
     ctx.startingPictographBox = StartingPictographBox.Value<u8>();
     ctx.startingGreatFairySword = StartingGreatFairySword.Value<u8>();
-    ctx.startingBottle1 = StartingBottle1.Value<u8>();
-    ctx.startingBottle2 = StartingBottle2.Value<u8>();
-    ctx.startingBottle3 = StartingBottle3.Value<u8>();
-    ctx.startingBottle4 = StartingBottle4.Value<u8>();
-    ctx.startingBottle5 = StartingBottle5.Value<u8>();
-    ctx.startingBottle6 = StartingBottle6.Value<u8>();
-    ctx.startingBottle7 = StartingBottle7.Value<u8>();
+    //parse starting bottles from index > itemID
+    //ctx.startingBottle1 = StartingBottle1.Value<u8>();
+    ctx.startingBottle1 = StartingBottleConvert(StartingBottle1.Value<u8>());
+    //ctx.startingBottle2 = StartingBottle2.Value<u8>();
+    ctx.startingBottle2 = StartingBottleConvert(StartingBottle2.Value<u8>());
+    ctx.startingBottle3 = StartingBottleConvert(StartingBottle3.Value<u8>());
+    ctx.startingBottle4 = StartingBottleConvert(StartingBottle4.Value<u8>());
+    ctx.startingBottle5 = StartingBottleConvert(StartingBottle5.Value<u8>());
+    ctx.startingBottle6 = StartingBottleConvert(StartingBottle6.Value<u8>());
+    ctx.startingBottle7 = StartingBottleConvert(StartingBottle7.Value<u8>());
     //Songs
     ctx.startingOathToOrder = StartingOathToOrder.Value<u8>();
     ctx.startingEponasSong = StartingEponasSong.Value<u8>();
@@ -779,6 +782,73 @@ namespace Settings {
     ctx.startingUpgrades |= StartingWallet.Value<u8>() << 12;
     */
     return ctx;
+  }
+  
+  u8 startingBottleValue;
+  u8 StartingBottleConvert(u8 startingBottle) {
+      if (startingBottle == u8(1)) {
+        startingBottleValue = 0x12;//Empty Bottle
+      }
+      else if (startingBottle == u8(2)) {
+        startingBottleValue = 0x13;//Red Potion
+      }
+      else if (startingBottle == u8(3)) {
+        startingBottleValue = 0x14;//Green Potion
+      }
+      else if (startingBottle == u8(4)) {
+        startingBottleValue = 0x15;//Blue Potion
+      }
+      else if (startingBottle == u8(5)) {
+        startingBottleValue = 0x16;//Fairy
+      }
+      else if (startingBottle == u8(6)) {
+        startingBottleValue = 0x17;//Deku Princess
+      }
+      else if (startingBottle == u8(7)) {
+        startingBottleValue = 0x18;//Milk
+      }
+      else if (startingBottle == u8(8)) {
+        startingBottleValue = 0x19;//Half Milk
+      }
+      else if (startingBottle == u8(9)) {
+        startingBottleValue = 0x1a;//Fish
+      }
+      else if (startingBottle == u8(10)) {
+        startingBottleValue = 0x1b;//Bugs
+      }
+      else if (startingBottle == u8(11)) {
+        startingBottleValue = 0x1e;//Big Poe
+      }
+      else if (startingBottle == u8(12)) {
+        startingBottleValue = 0x1f;//Spring Water
+      }
+      else if (startingBottle == u8(13)) {
+        startingBottleValue = 0x20;//Hot Spring Water
+      }
+      else if (startingBottle == u8(14)) {
+        startingBottleValue = 0x21;//Zora Egg
+      }
+      else if (startingBottle == u8(15)) {
+        startingBottleValue = 0x22;//Gold Dust
+      }
+      else if (startingBottle == u8(16)) {
+        startingBottleValue = 0x23;//Mushroom
+      }
+      else if (startingBottle == u8(17)) {
+        startingBottleValue = 0x24;//Seahorse
+      }
+      else if (startingBottle == u8(18)) {
+        startingBottleValue = 0x25;//Chateau Romani
+      }
+      else if (startingBottle == u8(19)) {
+        startingBottleValue = 0x26;//Mystery Milk
+      }
+      else if (startingBottle == u8(20)) {
+        startingBottleValue = 0x27;//Spoiled Mystery Milk
+      }
+
+
+      return startingBottleValue;
   }
 
   //Set default cosmetics where the default is not the first option

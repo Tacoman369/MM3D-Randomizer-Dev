@@ -28,6 +28,7 @@ void LocationTable_Init() {
 	locationTable[DEKU_PALACE_BEAN_SELLER]									   = ItemLocation::Base		  (0x07, 0x35, "Deku Palace Bean Seller",						DEKU_PALACE_BEAN_SELLER,				            MAGIC_BEAN,					{Category::cDekuPalace,Category::cWoodfall,Category::cDayOne} );
 	locationTable[DEKU_PALACE_WEST_GARDEN]									   = ItemLocation::Collectable(0x2B, 0x00, "Deku Palace West Garden",						DEKU_PALACE_WEST_GARDEN,			            PIECE_OF_HEART,				{Category::cDekuPalace,Category::cWoodfall, Category::cFreestandingItems, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[DEKU_PALACE_BUTLER_RACE]									   = ItemLocation::Base		  (0x52, 0x8E, "Deku Palace Butler Race",						DEKU_PALACE_BUTLER_RACE,			            MASK_OF_SCENTS,				{Category::cDekuPalace,Category::cWoodfall, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[DEKU_PALACE_BUTLER_RACE_ALT]								   = ItemLocation::Base		  (0x52, 0xBA, "Deku Palace Butler Race Alt",					DEKU_PALACE_BUTLER_RACE_ALT,			        FISHING_PASS,				{Category::cDekuPalace,Category::cWoodfall, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[DEKU_PALACE_IMPRISONED_MONKEY]							   = ItemLocation::Base		  (0x3E, 0x4B, "Deku Palace Imprisoned Monkey",					DEKU_PALACE_IMPRISONED_MONKEY,		            SONATA_OF_AWAKENING,		{Category::cDekuPalace,Category::cSong,Category::cWoodfall,Category::cDayOne} );
 	locationTable[DEKU_PALACE_BEAN_GROTTO_CHEST]							   = ItemLocation::Chest	  (0x07, 0x05, "Deku Palace Bean Grotto Chest",					DEKU_PALACE_BEAN_GROTTO_CHEST,	    	        RED_RUPEE,					{Category::cDekuPalace,Category::cGrotto,Category::cWoodfall,Category::cChest,Category::cDayOne});
 	
@@ -70,7 +71,7 @@ void LocationTable_Init() {
 	//locationTable[GBC_OCEAN_SPIDER_DAY3]									   = ItemLocation::Base		  (0x28, 0x00, "Oceanside Spider House Day 3 Reward",			GBC_OCEAN_SPIDER_DAY3,				            RED_RUPEE,					{Category::cGreatBayCoast,Category::cDayThree} );
 	locationTable[GBC_FISHERMAN_GAME]										   = ItemLocation::Base		  (0x37, 0x06, "Great Bay Coast Fisherman's Game",				GBC_FISHERMAN_GAME,					            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cMinigame,Category::cDayOne} );
 	locationTable[GBC_OCEAN_SPIDER_CHEST]									   = ItemLocation::Chest	  (0x28, 0x00, "Oceanside Spider House Chest",					GBC_OCEAN_SPIDER_CHEST,				            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece ,Category::cDayOne} );//Category::cChest,
-	locationTable[GBC_LAB_FISH]												   = ItemLocation::Base		  (0x2F, 0x06, "Greay Bay Lab Fish",							GBC_LAB_FISH,						            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[GBC_LAB_FISH]												   = ItemLocation::Collectable(0x2F, 0x00, "Greay Bay Lab Fish",							GBC_LAB_FISH,						            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[GBC_LEDGE]												   = ItemLocation::Collectable(0x37, 0x00, "Great Bay Coast Ledge",							GBC_LEDGE,							            PIECE_OF_HEART,				{Category::cGreatBayCoast, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[GBC_MIKAU]												   = ItemLocation::Base		  (0x37, 0x7A, "Great Bay Coast Mikau",							GBC_MIKAU,							            ZORA_MASK,					{Category::cGreatBayCoast, Category::cTransformMask,Category::cDayOne} );
 	locationTable[GBC_BABY_ZORAS]											   = ItemLocation::Base		  (0x2F, 0x4E, "Great Bay Coast Baby Zoras",					GBC_BABY_ZORAS,						            NEW_WAVE_BOSSA_NOVA,		{Category::cGreatBayCoast, Category::cSong,Category::cDayOne} );
@@ -88,7 +89,7 @@ void LocationTable_Init() {
 	
 	//Ikana Graveyard
 	locationTable[IKANA_GRAVEYARD_DAMPE_DIGGING]							   = ItemLocation::Base 	  (0x30, 0x5A, "Ikana Graveyard Dampe Digging",					IKANA_GRAVEYARD_DAMPE_DIGGING,		            EMPTY_BOTTLE2,				{Category::cIkanaGraveyard, Category::cMinigame,Category::cDayOne} );
-	locationTable[IKANA_GRAVEYARD_IRON_KNUCKLE_CHEST]						   = ItemLocation::Chest 	  (0x0C, 0x06, "Ikana Graveyard Iron Knuckle Chest",			IKANA_GRAVEYARD_IRON_KNUCKLE_CHEST,	            PIECE_OF_HEART,				{Category::cIkanaGraveyard, Category::cVanillaHeartPiece,Category::cDayTwo} );//Category::cChest ,
+	locationTable[IKANA_GRAVEYARD_IRON_KNUCKLE_CHEST]						   = ItemLocation::Chest 	  (0x0C, 0x04, "Ikana Graveyard Iron Knuckle Chest",			IKANA_GRAVEYARD_IRON_KNUCKLE_CHEST,	            PIECE_OF_HEART,				{Category::cIkanaGraveyard, Category::cVanillaHeartPiece,Category::cDayTwo} );//Category::cChest ,
 	locationTable[IKANA_GRAVEYARD_CAPTAIN_KEETA_CHEST]						   = ItemLocation::Chest 	  (0x0C, 0x7C, "Ikana Graveyard Captain Keeta's Chest",			IKANA_GRAVEYARD_CAPTAIN_KEETA_CHEST,            CAPTAINS_HAT,				{Category::cIkanaGraveyard, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[IKANA_GRAVEYARD_DAY_ONE_GRAVE_TABLET]						   = ItemLocation::Base 	  (0x0C, 0x73, "Ikana Graveyard Day 1 Grave Tablet",			IKANA_GRAVEYARD_DAY_ONE_GRAVE_TABLET,           SONG_OF_STORMS,				{Category::cIkanaGraveyard, Category::cSong,Category::cDayOne} );
 	locationTable[IKANA_GRAVEYARD_DAY_ONE_GRAVE_BATS]						   = ItemLocation::Chest 	  (0x0C, 0x03, "Ikana Graveyard Day 1 Grave Bats",				IKANA_GRAVEYARD_DAY_ONE_GRAVE_BATS,	            PURPLE_RUPEE,				{Category::cIkanaGraveyard,Category::cChest ,Category::cDayOne} );
@@ -110,7 +111,7 @@ void LocationTable_Init() {
 	locationTable[MOUNTAIN_VILLAGE_SMITH_DAY_TWO]							   = ItemLocation::Base		  (0x2C, 0x4A, "Mountain Village Smith Day 2",					MOUNTAIN_VILLAGE_SMITH_DAY_TWO,		            GILDED_SWORD,			    {Category::cMountainVillage,Category::cDayTwo} );
 	locationTable[MOUNTAIN_VILLAGE_FROG_CHOIR]								   = ItemLocation::Base		  (0x5A, 0x0C, "Mountain Village Frog Choir",					MOUNTAIN_VILLAGE_FROG_CHOIR,		            PIECE_OF_HEART,				{Category::cMountainVillage, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[MOUNTAIN_VILLAGE_DARMANI]									   = ItemLocation::Base		  (0x4E, 0x79, "Mountain Village Darmani",						MOUNTAIN_VILLAGE_DARMANI,			            GORON_MASK,					{Category::cMountainVillage, Category::cTransformMask,Category::cDayOne} );
-	locationTable[MOUNTAIN_VILLAGE_HUNGRY_GORON]							   = ItemLocation::Base		  (0x5A, 0x88, "Mountain Village Hungry Goron",					MOUNTAIN_VILLAGE_HUNGRY_GORON,		            DON_GEROS_MASK,				{Category::cMountainVillage, Category::cVanillaMask,Category::cDayOne}); 
+	locationTable[MOUNTAIN_VILLAGE_HUNGRY_GORON]							   = ItemLocation::Base		  (0x50, 0x88, "Mountain Village Hungry Goron",					MOUNTAIN_VILLAGE_HUNGRY_GORON,		            DON_GEROS_MASK,				{Category::cMountainVillage, Category::cVanillaMask,Category::cDayOne}); 
 	locationTable[MOUNTAIN_WATERFALL_CHEST]							           = ItemLocation::Chest	  (0x5A, 0x00, "Mountain Village Waterfall Chest",				MOUNTAIN_WATERFALL_CHEST,	                    RED_RUPEE,					{Category::cMountainVillage,Category::cChest,Category::cDayOne } );
 	locationTable[MOUNTAIN_VILLAGE_SPRING_WATER_GROTTO_CHEST]				   = ItemLocation::Chest	  (0x07, 0x1B, "Mountain Village Spring Water Grotto",			MOUNTAIN_VILLAGE_SPRING_WATER_GROTTO_CHEST,     RED_RUPEE,					{Category::cMountainVillage, Category::cGrotto,Category::cChest,Category::cDayOne } );
 	
@@ -152,9 +153,10 @@ void LocationTable_Init() {
 	locationTable[ROMANI_RANCH_ALIEN_DEFENSE]								   = ItemLocation::Base		  (0x35, 0x60, "Romani Ranch Alien Defense",					ROMANI_RANCH_ALIEN_DEFENSE,				        BOTTLE_WITH_MILK,		    {Category::cRomaniRanch,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_DOG_RACE]									   = ItemLocation::Base		  (0x41, 0x0C, "Romani Ranch Dog Race",							ROMANI_RANCH_DOG_RACE,					        PIECE_OF_HEART,			    {Category::cRomaniRanch,Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_GROG]										   = ItemLocation::Base		  (0x42, 0x7F, "Romani Ranch Grog",								ROMANI_RANCH_GROG,						        BUNNY_HOOD,				    {Category::cRomaniRanch, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[ROMANI_RANCH_GROG_ALT]									   = ItemLocation::Base		  (0x42, 0xBA, "Romani Ranch Grog Alt",							ROMANI_RANCH_GROG_ALT,						    FISHING_PASS,				{Category::cRomaniRanch, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_CREMIA_ESCORT]								   = ItemLocation::Base		  (0x35, 0x82, "Romani Ranch Cremia Escort",					ROMANI_RANCH_CREMIA_ESCORT,				        ROMANIS_MASK,			    {Category::cRomaniRanch, Category::cVanillaMask,Category::cDayTwo} );
 	locationTable[ROMANI_RANCH_ROMANIS_GAME]								   = ItemLocation::Base		  (0x35, 0x6C, "Romani Ranch Romani's Game",					ROMANI_RANCH_ROMANIS_GAME,				        EPONAS_SONG,			    {Category::cRomaniRanch,Category::cSong,Category::cDayOne} );
-	locationTable[DOGGY_RACETRACK_ROOF_CHEST]					               = ItemLocation::Chest	  (0x41, 0x04, "Romani Ranch Doggy Racetrack Roof Chest",		DOGGY_RACETRACK_ROOF_CHEST,                     PURPLE_RUPEE,			    {Category::cRomaniRanch,Category::cChest,Category::cDayOne } );
+	locationTable[DOGGY_RACETRACK_ROOF_CHEST]					               = ItemLocation::Chest	  (0x41, 0x00, "Romani Ranch Doggy Racetrack Roof Chest",		DOGGY_RACETRACK_ROOF_CHEST,                     PURPLE_RUPEE,			    {Category::cRomaniRanch,Category::cChest,Category::cDayOne } );
 	
 	//S Clock Town
 	locationTable[S_CLOCK_TOWN_SCRUB_TRADE]									   = ItemLocation::Base		  (0x6F, 0x97, "S Clock Town Scrub Trade",						S_CLOCK_TOWN_SCRUB_TRADE,				        LAND_TITLE,				    {Category::cSouthClockTown,Category::cDekuScrub,Category::cDayOne} );
@@ -1099,19 +1101,19 @@ void CreateItemOverrides() {
 
 	auto loc2 = Location(ROAD_TO_SS_ARCHERY_1);
 	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, loc2->GetPlacedItemKey());
-
+	//Duplicate Stone Mask override onto fishing pass
 	auto loc3 = Location(PF_INT_INVISIBLE_SOLDIER);
 	PlaceItemInLocation(PF_INT_INVISIBLE_SOLDIER_ALT, loc3->GetPlacedItemKey());
-
+	//Cover both wallet options 
 	auto loc4 = Location(S_CLOCK_TOWN_BANK_REWARD_1);
 	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, loc4->GetPlacedItemKey());
-
+	//Cover both wallet options
 	auto loc5 = Location(GBC_OCEAN_SPIDER_DAY1);
 	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1_ALT, loc5->GetPlacedItemKey());
-
+	//Duplicate day 1 reward onto day 2/3 location
 	auto loc6 = Location(SOUTHERN_SWAMP_KOTAKE);
 	PlaceItemInLocation(SOUTHERN_SWAMP_KOTAKE_IN_WOODS, loc6->GetPlacedItemKey());
-
+	//cover all postbox locations
 	auto loc7 = Location(S_CLOCK_TOWN_POSTBOX);
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
