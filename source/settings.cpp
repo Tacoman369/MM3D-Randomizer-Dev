@@ -102,7 +102,7 @@ namespace Settings {
   Option StartingGoronsLullaby = Option::U8("  Gorons Lullaby", { "None",             "Gorons Lullaby" }, { "" });
   Option StartingNewWaveBossaNova = Option::U8("  New Wave Bossa Nova", { "None",             "New Wave Bossa Nova" }, { "" });
   Option StartingElegyOfEmptiness = Option::U8("  Elegy of Emptiness", { "None",             "Elegy of Emptiness" }, { "" });
-  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "Song of Healing",             "Song of Healing" }, { "" },OptionCategory::Setting, 1);
+  Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Setting);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_NONE);
@@ -121,7 +121,7 @@ namespace Settings {
   Option StartingOceanToken = Option::U8("Ocean Skulltula Tokens", {/*Options 0-30 defined in InitSettings()*/ }, { "" }, OptionCategory::Setting, 0, false);
   //Starting Masks 
   Option StartingMaskToggle = Option::U8("Masks", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingDekuMask = Option::U8("  Deku Mask", { "Deku M.",             "Deku M." }, { "" });
+  Option StartingDekuMask = Option::U8("  Deku Mask", { "None",             "Deku M." }, { "" });
   Option StartingGoronMask = Option::U8("  Goron Mask", { "None",             "Goron M." }, { "" });
   Option StartingZoraMask = Option::U8("  Zora Mask", { "None",             "Zora M." }, { "" });
   Option StartingBunnyHood = Option::U8("  Bunny Hood", { "None",             "Bunny H." }, { "" });
@@ -257,7 +257,7 @@ namespace Settings {
       //&ShuffleCows,
       //&ShuffleKokiriSword, --redundant
       //&ShuffleStartingShield, --redundant
-      //&ShuffleBombersNotebook,
+      &ShuffleBombersNotebook,
       &ShuffleTradeItems,
       &ShuffleMerchants,
       &RemoveDoubleDefense,
@@ -288,13 +288,13 @@ namespace Settings {
     &BossKeysanity,
     //&StrayFairysanity,
     //&ShuffleRewards,
-    &ShuffleHeartContainers,
+    //&ShuffleHeartContainers,
   };
 
   //Item Pool Settings
   Option ItemPoolValue = Option::U8("Item Pool", { "Plentiful", "Balanced", "Scarce", "Minimal" }, { itemPoolPlentiful, itemPoolBalanced, itemPoolScarce, itemPoolMinimal }, OptionCategory::Setting, (u8)ItemPoolSetting::ITEMPOOL_BALANCED);
   Option ShuffleChests = Option::Bool("Shuffle Chest Items", {"Vanilla", "Random"}, { shuffleChestItemsVanilla, shuffleChestItemsRandom }, OptionCategory::Toggle, (u8)ShuffleChestsSetting::SHUFFLECHESTS_RANDOM);
-  Option ShuffleMasks = Option::Bool("Shuffle Masks", {"Vanilla", "Random"}, { shuffleMasksVanilla, shuffleMasksRandom}, OptionCategory::Toggle, 1);
+  Option ShuffleMasks = Option::Bool("Shuffle Masks", {"Vanilla", "Random"}, { shuffleMasksVanilla, shuffleMasksRandom}, OptionCategory::Toggle);
   Option ShufflePiecesOfHeart = Option::Bool("Pieces of Heart", {"Vanilla", "Random"}, { shufflePiecesOfHeartDesc });
   Option ShuffleGFRewards = Option::U8("Great Fairy Rewards", { "Vanilla", "Great Fairies", "Anywhere" }, { shuffleGFVanilla, shuffleGFSelf, shuffleGFAnywhere }, OptionCategory::Setting, (u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_VANILLA);
   Option ShuffleMainInventory = Option::Bool("Main Inventory", {"Vanilla", "Random"}, { shuffleMainInventoryDesc});

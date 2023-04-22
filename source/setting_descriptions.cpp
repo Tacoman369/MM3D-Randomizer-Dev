@@ -39,15 +39,13 @@ string_view ToggleLogicExpertDesc     = "These are not implemented yet come back
 /*------------------------------                                                           //
 |     START WITH CONSUMABLES   |                                                           //
 ------------------------------*/                                                           //
-string_view startWithConsumablesDesc  = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Start the game with maxed out Deku Nuts.";        //
+string_view startWithConsumablesDesc  = "Start the game with maxed out Deku Nuts.";        //
                                                                                            //
                                                                                            //
 /*------------------------------                                                           //
 |     START WITH MAX RUPEES    |                                                           //
 ------------------------------*/                                                           //
-string_view startWithMaxRupeesDesc    = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Start the game with a full wallet.\n"             //
+string_view startWithMaxRupeesDesc    = "Start the game with a full wallet.\n"             //
                                         "Wallet upgrades will also fill the wallet.";      //
                                                                                            //
 /*------------------------------                                                           //
@@ -255,18 +253,15 @@ string_view shuffleStartShield       = "**OPTION CURRENTLY WIP**\n"             
 /*------------------------------                                                           //
 | SHUFFLE GREAT FAIRY REWARDS  |                                                           //
 ------------------------------*/                                                           //
-string_view shuffleGFVanilla          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Great Fairy Rewards will be Vanilla";             //
+string_view shuffleGFVanilla          = "Great Fairy Rewards will be Vanilla";             //
 string_view shuffleGFSelf             = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Great Fairy Rewards will be shuffled among \n"    //
                                         "other Great Fairy Locations";                     //
-string_view shuffleGFAnywhere         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Great Fairy Rewards can be anywhere";             //
+string_view shuffleGFAnywhere         = "Great Fairy Rewards can be anywhere";             //
 /*------------------------------                                                           //
 |       SHUFFLE MERCHANTS      |                                                           //
 ------------------------------*/                                                           //
-string_view shuffleMerchantsDesc      = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Shuffles Deku Scrub Merchant Items into the Pool";//
+string_view shuffleMerchantsDesc      = "Shuffles Deku Scrub Merchant Items into the Pool";//
 /*------------------------------                                                           //
 |       SKIP EPONA RACE        |                                                           //
 ------------------------------*/                                                           //
@@ -419,8 +414,7 @@ string_view iceTrapsOnslaught         = "**OPTION CURRENTLY WIP**\n"            
 /*------------------------------                                                           //
 |    REMOVE DOUBLE DEFENSE     |                                                           //
 ------------------------------*/                                                           //
-string_view removeDDDesc              = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "If set the double defense item will be removed\n" //
+string_view removeDDDesc              = "If set the double defense item will be removed\n" //
                                         "from the item pool for balanced and plentiful.";  //
                                                                                            //
 /*------------------------------                                                           //

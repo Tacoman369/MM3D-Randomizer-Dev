@@ -864,8 +864,6 @@ void GenerateItemPool() {
 	//Fixed Item Locations
 	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
 	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME, true);
-	PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);
-	PlaceItemInLocation(HMS_DEKU_MASK, DEKU_MASK);
 	PlaceItemInLocation(WOODFALL_TEMPLE_DEKU_PRINCESS, DEKU_PRINCESS);
     	
 	//temp placement until shopsanity works
@@ -882,7 +880,6 @@ void GenerateItemPool() {
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
-	PlaceItemInLocation(LAUNDRY_POOL_POSTBOX, BLUE_RUPEE);
 
 	//Check Non Dungeon Settings
 
@@ -905,7 +902,7 @@ void GenerateItemPool() {
 	//SHUFFLE BOMBERS NOTEBOOK
 	if(ShuffleBombersNotebook){
 		AddItemToMainPool(BOMBERS_NOTEBOOK);
-		PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, GREEN_RUPEE);//Place Junk Here because its not checkable
+		//PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, GREEN_RUPEE);//Need to add check if starting with Song of Healing 
 	}
 	else {PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, BOMBERS_NOTEBOOK);}
 
@@ -978,7 +975,7 @@ void GenerateItemPool() {
 
 	
 	//GREAT FAIRY SHUFFLE
-	if(ShuffleGFRewards){
+	if(ShuffleGFRewards.Is(GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ANYWHERE)){
 		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
 		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
 		AddItemToMainPool(SPIN_ATTACK);
@@ -1002,7 +999,7 @@ void GenerateItemPool() {
 	
 	//DEKU/GORON/ZORA MAASK SHUFFLE
 	if(ShuffleTransformation){
-		//AddItemToMainPool(DEKU_MASK);
+		AddItemToMainPool(DEKU_MASK);
 		AddItemToMainPool(GORON_MASK);
 		AddItemToMainPool(ZORA_MASK);
 	}

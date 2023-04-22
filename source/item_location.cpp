@@ -20,9 +20,9 @@ void LocationTable_Init() {
 	locationTable[HMS_SONG_OF_HEALING]										   = ItemLocation::Base		  (0x63, 0x54, "Song of Healing",					            HMS_SONG_OF_HEALING,				            SONG_OF_HEALING,			{Category::cClockTower, Category::cDayOne}	);
 	locationTable[CLOCK_TOWER_OCARINA_OF_TIME]								   = ItemLocation::Base		  (0x19, 0x4C, "Ocarina of Time",					            CLOCK_TOWER_OCARINA_OF_TIME,				    OCARINA_OF_TIME,			{Category::cClockTower, Category::cDayThree}	);
 	locationTable[HMS_DEKU_MASK]											   = ItemLocation::Base		  (0x63, 0x78, "Deku Mask",						                HMS_DEKU_MASK,						            DEKU_MASK,					{Category::cClockTower, Category::cTransformMask} );
-	locationTable[HMS_BOMBERS_NOTEBOOK]										   = ItemLocation::Base		  (0x6E, 0x50, "Bombers Notebook",				                HMS_BOMBERS_NOTEBOOK,				            BOMBERS_NOTEBOOK,			{Category::cClockTower, Category::cDayOne} );
-	locationTable[HMS_STARTING_SWORD]										   = ItemLocation::Base		  (0x63, 0x37, "Starting Sword",				                HMS_STARTING_SWORD,					            PROGRESSIVE_SWORD,		    {Category::cClockTower} );
-	locationTable[HMS_STARTING_SHIELD]                                         = ItemLocation::Base       (0x63, 0x32, "Starting Shield",                               HMS_STARTING_SHIELD,                            HEROS_SHIELD,               {Category::cClockTower} );
+	locationTable[HMS_BOMBERS_NOTEBOOK]										   = ItemLocation::Base		  (0x63, 0x50, "Bombers Notebook",				                HMS_BOMBERS_NOTEBOOK,				            BOMBERS_NOTEBOOK,			{Category::cClockTower, Category::cDayOne} );
+	locationTable[HMS_STARTING_SWORD]										   = ItemLocation::Base		  (0x00, 0x37, "Starting Sword",				                HMS_STARTING_SWORD,					            PROGRESSIVE_SWORD,		    {Category::cClockTower} );
+	locationTable[HMS_STARTING_SHIELD]                                         = ItemLocation::Base       (0x00, 0x32, "Starting Shield",                               HMS_STARTING_SHIELD,                            HEROS_SHIELD,               {Category::cClockTower} );
 	 
 	//Deku Palace
 	locationTable[DEKU_PALACE_BEAN_SELLER]									   = ItemLocation::Base		  (0x07, 0x35, "Deku Palace Bean Seller",						DEKU_PALACE_BEAN_SELLER,				            MAGIC_BEAN,					{Category::cDekuPalace,Category::cWoodfall,Category::cDayOne} );
@@ -100,7 +100,6 @@ void LocationTable_Init() {
 	locationTable[LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE]						   = ItemLocation::Base		  (0x70, 0x80, "Laundry Pool Curiosity Shop Man 1",				LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE,            KEATON_MASK,				{Category::cLaundryPool, Category::cVanillaMask,Category::cDayThree} );
 	locationTable[LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO]						   = ItemLocation::Base		  (0x70, 0xA1, "Laundry Pool Curiosity Shop Man 2",				LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO,            LETTER_MAMA,				{Category::cLaundryPool,Category::cDayThree} );
 	locationTable[LAUNDRY_POOL_GURU_GURU]									   = ItemLocation::Base		  (0x70, 0x8C, "Laundry Pool Guru Guru",						LAUNDRY_POOL_GURU_GURU,				            BREMEN_MASK,				{Category::cLaundryPool, Category::cVanillaMask,Category::cDayOne} );
-	locationTable[LAUNDRY_POOL_POSTBOX]										   = ItemLocation::Base		  (0x70, 0x0C, "Laundry Pool Postbox",							LAUNDRY_POOL_POSTBOX,					        PIECE_OF_HEART,			    {Category::cLaundryPool, Category::cVanillaHeartPiece,Category::cDayOne} );
 	
 	//Milk Road
 	locationTable[MILK_ROAD_GORMAN_RACE]									   = ItemLocation::Base 	  (0x22, 0x81, "Milk Road Gorman Bros Race",					MILK_ROAD_GORMAN_RACE,				            GAROS_MASK,					{Category::cMilkRoad, Category::cMinigame, Category::cVanillaMask,Category::cDayOne} );
@@ -1118,7 +1117,6 @@ void CreateItemOverrides() {
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
-	PlaceItemInLocation(LAUNDRY_POOL_POSTBOX, loc7->GetPlacedItemKey());
 
   for (LocationKey locKey : allLocations) {
     auto loc = Location(locKey);

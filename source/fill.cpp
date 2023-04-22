@@ -790,11 +790,7 @@ int Fill() {
         std::vector<ItemKey> mainadvancementItems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).IsAdvancement();});//&& ItemTable(i).GetItemType() == ITEMTYPE_ITEM
         //Then Place those to expand the amount of checks available
         AssumedFill(mainadvancementItems, allLocations,true);
-        /*
-        //Then Place Masks to further expand 
-        std::vector<ItemKey> masks = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_MASK;});
-        AssumedFill(masks, allLocations, true);
-        */
+        
         //Then Place Anju & Kafei Items in spots accessable on Day 1, this should prevent situations where you cant get an item in time for its use
         if(ShuffleTradeItems) {
         std::vector<LocationKey> day1Locations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cDayOne);});
@@ -828,6 +824,14 @@ int Fill() {
             }
             AssumedFill(songs, songLocations, true);
         }
+        /*
+        if (ShuffleGFRewards.Is(GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ALL_GREAT_FARIES)){
+            //get GF locations
+            std::vector<LocationKey> gfLocations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cFairyFountain);});
+            std::vector<ItemKey> gfItems = FilterAndEraseFromPool(ItemPool, [gfLocations](const ItemKey i) { return i == Location(gfLocations)->GetVanillaItem();});
+            
+
+        }*/
 
         //Then place dungeon items that are assigned to restrictive location pools
         RandomizeDungeonItems();
