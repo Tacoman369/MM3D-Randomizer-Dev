@@ -602,12 +602,12 @@ static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
         });
 
     //Add specific items that need be randomized within this dungeon
-    if (Keysanity.Is(rnd::KeysanitySetting::KEYSANITY_OWN_DUNGEON) && dungeon->GetSmallKey() != NONE) {
+    if (Keysanity.Is((u8)KeysanitySetting::KEYSANITY_OWN_DUNGEON) && dungeon->GetSmallKey() != NONE) {
         std::vector<ItemKey> dungeonSmallKeys = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetSmallKey();});
         AddElementsToPool(dungeonItems, dungeonSmallKeys);
     }
 
-    if (BossKeysanity.Is(rnd::BossKeysanitySetting::BOSSKEYSANITY_OWN_DUNGEON) && dungeon->GetBossKey() != NONE) {
+    if (BossKeysanity.Is((u8)BossKeysanitySetting::BOSSKEYSANITY_OWN_DUNGEON) && dungeon->GetBossKey() != NONE) {
         auto dungeonBossKey = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetBossKey();});
         AddElementsToPool(dungeonItems, dungeonBossKey);
     }
@@ -616,7 +616,7 @@ static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
     AssumedFill(dungeonItems, dungeonLocations);
 
     //randomize map and compass separately since they're not progressive
-    if (MapsAndCompasses.Is(rnd::MapsAndCompassesSetting::MAPSANDCOMPASSES_OWN_DUNGEON) && dungeon->GetMap() != NONE && dungeon->GetCompass() != NONE) {
+    if (MapsAndCompasses.Is((u8)MapsAndCompassesSetting::MAPSANDCOMPASSES_OWN_DUNGEON) && dungeon->GetMap() != NONE && dungeon->GetCompass() != NONE) {
         auto dungeonMapAndCompass = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetMap() || i == dungeon->GetCompass();});
         AssumedFill(dungeonMapAndCompass, dungeonLocations);
     }
@@ -642,20 +642,20 @@ static void RandomizeDungeonItems() {
     std::vector<ItemKey> overworldItems;
 
     for (auto dungeon : dungeonList) {
-        if (Keysanity.Is(rnd::KeysanitySetting::KEYSANITY_ANY_DUNGEON)) {
+        if (Keysanity.Is((u8)KeysanitySetting::KEYSANITY_ANY_DUNGEON)) {
             auto dungeonKeys = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) {return i == dungeon->GetSmallKey();});
             AddElementsToPool(anyDungeonItems, dungeonKeys);
         }
-        else if (Keysanity.Is(rnd::KeysanitySetting::KEYSANITY_OVERWORLD)) {
+        else if (Keysanity.Is((u8)KeysanitySetting::KEYSANITY_OVERWORLD)) {
             auto dungeonKeys = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) {return i == dungeon->GetSmallKey();});
             AddElementsToPool(overworldItems, dungeonKeys);
         }
 
-        if (BossKeysanity.Is(rnd::BossKeysanitySetting::BOSSKEYSANITY_ANY_DUNGEON) && dungeon->GetBossKey() != NONE) {
+        if (BossKeysanity.Is((u8)BossKeysanitySetting::BOSSKEYSANITY_ANY_DUNGEON) && dungeon->GetBossKey() != NONE) {
             auto bossKey = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) {return i == dungeon->GetBossKey();});
             AddElementsToPool(anyDungeonItems, bossKey);
         }
-        else if (BossKeysanity.Is(rnd::BossKeysanitySetting::BOSSKEYSANITY_OVERWORLD) && dungeon->GetBossKey() != NONE) {
+        else if (BossKeysanity.Is((u8)BossKeysanitySetting::BOSSKEYSANITY_OVERWORLD) && dungeon->GetBossKey() != NONE) {
             auto bossKey = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) {return i == dungeon->GetBossKey();});
             AddElementsToPool(overworldItems, bossKey);
         }
@@ -677,11 +677,11 @@ static void RandomizeDungeonItems() {
 
     //Randomize maps and compasses after since they're not advancement items
     for (auto dungeon : dungeonList) {
-        if (MapsAndCompasses.Is(rnd::MapsAndCompassesSetting::MAPSANDCOMPASSES_ANY_DUNGEON)) {
+        if (MapsAndCompasses.Is((u8)MapsAndCompassesSetting::MAPSANDCOMPASSES_ANY_DUNGEON)) {
             auto mapAndCompassItems = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) {return i == dungeon->GetMap() || i == dungeon->GetCompass();});
             AssumedFill(mapAndCompassItems, anyDungeonLocations, true);
         }
-        else if (MapsAndCompasses.Is(rnd::MapsAndCompassesSetting::MAPSANDCOMPASSES_OVERWORLD)) {
+        else if (MapsAndCompasses.Is((u8)MapsAndCompassesSetting::MAPSANDCOMPASSES_OVERWORLD)) {
             auto mapAndCompassItems = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) {return i == dungeon->GetMap() || i == dungeon->GetCompass();});
             AssumedFill(mapAndCompassItems, overworldLocations, true);
         }

@@ -53,6 +53,7 @@ void LocationTable_Init() {
 	//locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_ZORA]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Zora)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_ZORA,	        RED_RUPEE,				    {Category::cEClockTown,Category::cMinigame ,Category::cDayOne} );
 	//locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_DEKU]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Deku)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_DEKU,	        DEKU_NUTS_10,			    {Category::cEClockTown,Category::cMinigame,Category::cDayOne} );
 	locationTable[E_CLOCK_TOWN_POSTBOX]										   = ItemLocation::Base		  (0x6C, 0x0C, "E Clock Town Postbox",							E_CLOCK_TOWN_POSTBOX,					        PIECE_OF_HEART,			    {Category::cEastClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[E_CLOCK_TOWN_POSTMAN_FREEDOM_ALT]                            = ItemLocation::Base       (0x6C, 0x84, "E Clock Town Postman's Freedom",                E_CLOCK_TOWN_POSTMAN_FREEDOM_ALT,               POSTMANS_HAT,               {Category::cEastClockTown, Category::cVanillaMask, Category::cDayThree});
 	
 	//Goron Village
 	locationTable[GORON_VILLAGE_POWDER_KEG_CHALLENGE]						   = ItemLocation::Base		  (0x48, 0x34, "Powder Keg Challenge",							GORON_VILLAGE_POWDER_KEG_CHALLENGE,		        POWDER_KEG,				    {Category::cGoronVillage,Category::cDayOne} );
@@ -528,14 +529,25 @@ void LocationTable_Init() {
              --- TINGLE MAPS ---
       -------------------------------*/
 
-	locationTable[TINGLE_N_CLOCK_TOWN_1]                                       = ItemLocation::Base       (0x6E, 0xB4, "North Clock Town Tingle Clock Town Map Buy",                        TINGLE_N_CLOCK_TOWN_1,                  CLOCK_TOWN_MAP,           {Category::cNorthClockTown, Category::cTingleMap,Category::cDayOne});
-	locationTable[TINGLE_ROAD_TO_SS_1]                                         = ItemLocation::Base       (0x40, 0xB5, "Road To Southern Swamp Tingle Woodfall Map Buy",                    TINGLE_ROAD_TO_SS_1,                    WOODFALL_MAP,             {Category::cRoadToSouthernSwamp, Category::cTingleMap,Category::cDayOne});
-	locationTable[TINGLE_TWIN_ISLANDS_1]                                       = ItemLocation::Base       (0x5B, 0xB6, "Twin Islands Tingle Snowhead Map Buy",                              TINGLE_TWIN_ISLANDS_1,                  SNOWHEAD_MAP,             {Category::cTwinIslands, Category::cTingleMap,Category::cDayOne});
-	locationTable[TINGLE_MILK_ROAD_1]                                          = ItemLocation::Base       (0x22, 0xB7, "Milk Road Tingle Romani Ranch Map Buy",                             TINGLE_MILK_ROAD_1,                     ROMANI_RANCH_MAP,         {Category::cMilkRoad, Category::cTingleMap,Category::cDayOne});
-	locationTable[TINGLE_GBC_1]                                                = ItemLocation::Base       (0x37, 0xB8, "Great Bay Tingle Great Bay Map Buy",                                TINGLE_GBC_1,                           GREAT_BAY_MAP,            {Category::cGreatBayCoast, Category::cTingleMap,Category::cDayOne});
-	locationTable[TINGLE_IKANA_CANYON_1]                                       = ItemLocation::Base       (0x13, 0xB9, "Ikana Canyon Tingle Stone Tower Map Buy",                           TINGLE_IKANA_CANYON_1,                  STONE_TOWER_MAP,          {Category::cIkanaCanyon, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_N_CLOCK_TOWN_CT]                                      = ItemLocation::Base       (0x6E, 0xB4, "North Clock Town Tingle Clock Town Map Buy",                        TINGLE_N_CLOCK_TOWN_CT,                 CLOCK_TOWN_MAP,           {Category::cNorthClockTown, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_N_CLOCK_TOWN_WF]                                      = ItemLocation::Base       (0x6E, 0xB5, "North Clock Town Tingle Woodfall Map Buy",                          TINGLE_N_CLOCK_TOWN_WF,                 WOODFALL_MAP,             {Category::cNorthClockTown, Category::cTingleMap, Category::cDayOne});
 	
-    /*-------------------------------           
+	locationTable[TINGLE_ROAD_TO_SS_WF]                                        = ItemLocation::Base       (0x40, 0xB5, "Road To Southern Swamp Tingle Woodfall Map Buy",                    TINGLE_ROAD_TO_SS_WF,                   WOODFALL_MAP,             {Category::cRoadToSouthernSwamp, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_ROAD_TO_SS_SH]                                        = ItemLocation::Base       (0x40, 0xB6, "Road to Southern Swamp Tingle Snowhead Map Buy",                    TINGLE_ROAD_TO_SS_SH,                   SNOWHEAD_MAP,             {Category::cRoadToSouthernSwamp, Category::cTingleMap, Category::cDayOne});
+	
+	locationTable[TINGLE_TWIN_ISLANDS_SH]                                      = ItemLocation::Base       (0x5B, 0xB6, "Twin Islands Tingle Snowhead Map Buy",                              TINGLE_TWIN_ISLANDS_SH,                 SNOWHEAD_MAP,             {Category::cTwinIslands, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_TWIN_ISLANDS_RR]                                      = ItemLocation::Base       (0x5B, 0xB7, "Twin Islands Tingle Milk Road Buy",                                 TINGLE_TWIN_ISLANDS_RR,                 ROMANI_RANCH_MAP,         {Category::cTwinIslands, Category::cTingleMap, Category::cDayOne});
+	
+	locationTable[TINGLE_MILK_ROAD_RR]                                         = ItemLocation::Base       (0x22, 0xB7, "Milk Road Tingle Romani Ranch Map Buy",                             TINGLE_MILK_ROAD_RR,                    ROMANI_RANCH_MAP,         {Category::cMilkRoad, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_MILK_ROAD_GB]                                         = ItemLocation::Base       (0x22, 0xB8, "Milk Road Tingle Great Bay Map Buy",                                TINGLE_MILK_ROAD_GB,                    GREAT_BAY_MAP,            {Category::cMilkRoad, Category::cTingleMap, Category::cDayOne});
+	
+	locationTable[TINGLE_GBC_GB]                                               = ItemLocation::Base       (0x37, 0xB8, "Great Bay Tingle Great Bay Map Buy",                                TINGLE_GBC_GB,                          GREAT_BAY_MAP,            {Category::cGreatBayCoast, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_GBC_ST]                                               = ItemLocation::Base       (0x37, 0xB9, "Great Bay Tingle Stone Tower Map Buy",                              TINGLE_GBC_ST,                          STONE_TOWER_MAP,          {Category::cGreatBayCoast, Category::cTingleMap, Category::cDayOne});
+	
+	locationTable[TINGLE_IKANA_CANYON_ST]                                      = ItemLocation::Base       (0x13, 0xB9, "Ikana Canyon Tingle Stone Tower Map Buy",                           TINGLE_IKANA_CANYON_ST,                 STONE_TOWER_MAP,          {Category::cIkanaCanyon, Category::cTingleMap,Category::cDayOne});
+	locationTable[TINGLE_IKANA_CANYON_CT]                                      = ItemLocation::Base       (0x13, 0xB4, "Ikana Canyon Tingle Clock Town Map Buy",                            TINGLE_IKANA_CANYON_CT,                 CLOCK_TOWN_MAP,           {Category::cIkanaCanyon, Category::cTingleMap, Category::cDayOne});
+    
+	/*-------------------------------           
            --- TRADING POST ---                
       1     2               5     6          ------------------------
                                         OR          --SHOP--
@@ -686,12 +698,12 @@ std::vector<LocationKey> ZH_ShopLocations = {
 	ZORA_SHOP_ITEM_3,
 };
 std::vector<LocationKey> TingleMapLocations = {
-	TINGLE_N_CLOCK_TOWN_1,
-	TINGLE_ROAD_TO_SS_1,
-	TINGLE_TWIN_ISLANDS_1,
-	TINGLE_GBC_1,
-	TINGLE_MILK_ROAD_1,
-	TINGLE_IKANA_CANYON_1,
+	TINGLE_N_CLOCK_TOWN_CT,
+	TINGLE_ROAD_TO_SS_WF,
+	TINGLE_TWIN_ISLANDS_SH,
+	TINGLE_GBC_GB,
+	TINGLE_MILK_ROAD_RR,
+	TINGLE_IKANA_CANYON_ST,
 };
 //List of shop location lists, used for shop shuffle
 std::vector<std::vector<LocationKey>> ShopLocationLists = {
@@ -780,7 +792,8 @@ std::vector<LocationKey> overworldLocations = {
   GBC_GROTTO_COW1,
   GBC_GROTTO_COW2,
   GBC_FISHERMAN_PHOTO,
-  TINGLE_GBC_1,
+  TINGLE_GBC_GB,
+  TINGLE_GBC_ST,
 //Ikana Canyon
   IKANA_CANYON_GREAT_FAIRY,
   IKANA_CANYON_POE_HUT_HP,
@@ -789,7 +802,8 @@ std::vector<LocationKey> overworldLocations = {
   IKANA_CANYON_SECRET_SHRINE_GROTTO_CHEST,
   IKANA_CANYON_SCRUB_TRADE,
   IKANA_CANYON_SCRUB_PURCHASE,
-  TINGLE_IKANA_CANYON_1,
+  TINGLE_IKANA_CANYON_ST,
+  TINGLE_IKANA_CANYON_CT,
 //Ikana Graveyard
   IKANA_GRAVEYARD_DAMPE_DIGGING,
   IKANA_GRAVEYARD_IRON_KNUCKLE_CHEST,
@@ -806,7 +820,8 @@ std::vector<LocationKey> overworldLocations = {
 //Milk Road
   MILK_ROAD_GORMAN_RACE,
   MILK_ROAD_GORMAN_MILK_BUY,
-  TINGLE_MILK_ROAD_1,
+  TINGLE_MILK_ROAD_RR,
+  TINGLE_MILK_ROAD_GB,
 //Mountain Village
   MOUNTAIN_VILLAGE_SMITH_DAY_ONE,
   MOUNTAIN_VILLAGE_SMITH_DAY_TWO,
@@ -823,7 +838,8 @@ std::vector<LocationKey> overworldLocations = {
   N_CLOCK_TOWN_TREE,
   N_CLOCK_TOWN_OLD_LADY,
   N_CLOCK_TOWN_GREAT_FAIRY_HUMAN,
-  TINGLE_N_CLOCK_TOWN_1,
+  TINGLE_N_CLOCK_TOWN_CT,
+  TINGLE_N_CLOCK_TOWN_WF,
   //N_CLOCK_TOWN_DEKU_PLAYGROUND_ADAY,
 //Road to Snowhead
   ROAD_TO_SNOWHEAD_PILLAR,
@@ -844,7 +860,8 @@ std::vector<LocationKey> overworldLocations = {
   ROAD_TO_SS_ARCHERY_2,
   ROAD_TO_SS_TREE,
   ROAD_TO_SWAMP_GROTTO_CHEST,
-  TINGLE_ROAD_TO_SS_1,
+  TINGLE_ROAD_TO_SS_WF,
+  TINGLE_ROAD_TO_SS_SH,
 //Romani Ranch
   ROMANI_RANCH_ALIEN_DEFENSE,
   ROMANI_RANCH_DOG_RACE,
@@ -917,7 +934,8 @@ std::vector<LocationKey> overworldLocations = {
   TWIN_ISLANDS_GORON_RACETRACK_GROTTO_CHEST,
   TWIN_ISLANDS_UNDERWATER_RAMP_CHEST,
   TWIN_ISLANDS_CAVE_CHEST,
-  TINGLE_TWIN_ISLANDS_1,
+  TINGLE_TWIN_ISLANDS_SH,
+  TINGLE_TWIN_ISLANDS_RR,
 //W Clock Town
   W_CLOCK_TOWN_BOMB_BAG_BUY,
   W_CLOCK_TOWN_BIG_BOMB_BAG_BUY,
@@ -1117,6 +1135,19 @@ void CreateItemOverrides() {
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, loc7->GetPlacedItemKey());
+	//Duplicate Tingle Maps so each map buy is the same in both locaations
+	auto loc8 = Location(TINGLE_N_CLOCK_TOWN_CT); //get clocktown map item
+	auto loc9 = Location(TINGLE_ROAD_TO_SS_WF); //get swamp map item
+	auto loc10 = Location(TINGLE_TWIN_ISLANDS_SH); //get snowhead map item
+	auto loc11 = Location(TINGLE_MILK_ROAD_RR); //get ranch map item
+	auto loc12 = Location(TINGLE_GBC_GB); //get great bay map item
+	auto loc13 = Location(TINGLE_IKANA_CANYON_ST); //get stone tower map item
+	PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_WF, loc9->GetPlacedItemKey());//copy woodfall map into clocktown 
+	PlaceItemInLocation(TINGLE_ROAD_TO_SS_SH, loc10->GetPlacedItemKey());//copy snowhead map into swamp
+	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR, loc11->GetPlacedItemKey());//copy ranch map into snowhead
+	PlaceItemInLocation(TINGLE_MILK_ROAD_GB, loc12->GetPlacedItemKey());//copy great bay map into ranch
+	PlaceItemInLocation(TINGLE_GBC_ST, loc13->GetPlacedItemKey());//copy stone tower map into great bay
+	PlaceItemInLocation(TINGLE_IKANA_CANYON_CT, loc8->GetPlacedItemKey()); //copy clocktown into stone tower
 
   for (LocationKey locKey : allLocations) {
     auto loc = Location(locKey);
