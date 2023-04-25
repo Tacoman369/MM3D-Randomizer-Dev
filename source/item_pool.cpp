@@ -31,7 +31,7 @@ const std::array<ItemKey, 17> JunkPoolItems = {
 	BOMBCHU_5,
 	BOMBCHU_10,
 	RECOVERY_HEART,
-	ARROWS_5,
+	ARROWS_50,
 	ARROWS_10,
 	ARROWS_30,
 	BLUE_RUPEE,
@@ -570,13 +570,7 @@ static void PlaceVanillaMapsAndCompasses() {
 		dungeon->PlaceVanillaMap();
 		dungeon->PlaceVanillaCompass();
 	}
-	//Then Place Tingle Maps
-	PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_1, CLOCK_TOWN_MAP);
-	PlaceItemInLocation(TINGLE_ROAD_TO_SS_1, WOODFALL_MAP);
-	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_1, SNOWHEAD_MAP);
-	PlaceItemInLocation(TINGLE_GBC_1, GREAT_BAY_MAP);
-	PlaceItemInLocation(TINGLE_IKANA_CANYON_1, STONE_TOWER_MAP);
-	PlaceItemInLocation(TINGLE_MILK_ROAD_1, ROMANI_RANCH_MAP);
+	
 	/*
 	PlaceItemInLocation(WOODFALL_TEMPLE_COMPASS_CHEST, WOODFALL_TEMPLE_COMPASS);
 	PlaceItemInLocation(WOODFALL_TEMPLE_MAP_CHEST, WOODFALL_TEMPLE_MAP);
@@ -880,11 +874,12 @@ void GenerateItemPool() {
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
+	PlaceItemInLocation(E_CLOCK_TOWN_POSTMAN_FREEDOM_ALT, BLUE_RUPEE);
 
 	//Check Non Dungeon Settings
 
 	//KOKIRISWORD SHUFFLE
-	if(StartingKokiriSword.Value<u8>() == 0) {//if starting with no sword we need to add an extra to the pool
+	if(StartingKokiriSword.Value<u8>() == (u8)StartingSwordSetting::STARTINGSWORD_NONE) {//if starting with no sword we need to add an extra to the pool
 		AddItemToMainPool(PROGRESSIVE_SWORD);
 		IceTrapModels.push_back(0x37);//GetItemID::GI_KOKIRI_SWORD
 		PlaceItemInLocation(HMS_STARTING_SWORD,GREEN_RUPEE);//Add Junk to this location because theres no way to get it otherwise
@@ -893,7 +888,7 @@ void GenerateItemPool() {
 	}
 
 	//SHUFFLE STARTING SHIELD
-	if(StartingShield.Value<u8>() == 0){//if starting with no shield add an extra to the pool
+	if(StartingShield.Value<u8>() == (u8)StartingSheildSetting::STARTINGSHIELD_NONE){//if starting with no shield add an extra to the pool
 		AddItemToMainPool(HEROS_SHIELD);
 		PlaceItemInLocation(HMS_STARTING_SHIELD, GREEN_RUPEE);//PlaceJunk Here because you cant not get this
 	}
@@ -1085,6 +1080,34 @@ void GenerateItemPool() {
     AddItemsToPool(ItemPool, shopsanityRupees); //Shopsanity gets extra large rupees
 	PlaceVanillaShopItems();
   	}
+
+	//Then Place Tingle Maps
+	if (ShuffleTingleMaps) {
+		//Add the 6 maps
+		AddItemsToPool(ItemPool, tingleMaps);
+		//Place Junk in "Duplicate spots" so each map check contains the same item in both locations
+		PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_WF, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_ROAD_TO_SS_SH, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_MILK_ROAD_GB, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_GBC_ST, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_IKANA_CANYON_CT, BLUE_RUPEE);
+	}
+	else {
+		//Place Vanilla Maps
+	PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_CT, CLOCK_TOWN_MAP);
+	PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_WF, WOODFALL_MAP);
+	PlaceItemInLocation(TINGLE_ROAD_TO_SS_WF, WOODFALL_MAP);
+	PlaceItemInLocation(TINGLE_ROAD_TO_SS_SH, SNOWHEAD_MAP);
+	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_SH, SNOWHEAD_MAP);
+	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR, ROMANI_RANCH_MAP);
+	PlaceItemInLocation(TINGLE_MILK_ROAD_RR, ROMANI_RANCH_MAP);
+	PlaceItemInLocation(TINGLE_MILK_ROAD_GB, GREAT_BAY_MAP);
+	PlaceItemInLocation(TINGLE_GBC_GB, GREAT_BAY_MAP);
+	PlaceItemInLocation(TINGLE_GBC_ST, STONE_TOWER_MAP);
+	PlaceItemInLocation(TINGLE_IKANA_CANYON_ST, STONE_TOWER_MAP);
+	PlaceItemInLocation(TINGLE_IKANA_CANYON_CT, CLOCK_TOWN_MAP);
+	}
 
 	//DUNGEON STUFF 
 

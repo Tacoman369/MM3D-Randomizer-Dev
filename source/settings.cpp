@@ -105,13 +105,13 @@ namespace Settings {
   Option StartingSongOfHealing = Option::U8("  Song of Healing", { "None",             "Song of Healing" }, { "" },OptionCategory::Setting);
   Option StartingSongOfSoaring = Option::U8("  Song of Soaring", { "None",             "Song of Soaring" }, { "" });
   Option StartingUpgradesToggle = Option::U8("Equipment & Upgrades", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_NONE);
+  Option StartingKokiriSword = Option::U8("  Sword", { "None",             "Kokiri Sword", "Razor Sword", "Gilded Sword" }, { "" },OptionCategory::Setting, (u8)StartingSwordSetting::STARTINGSWORD_KOKIRI );
   Option StartingGreatFairySword = Option::U8("  Great Fairy Sword", { "None",             "G. F. S." }, { "" });
-  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, (u8)StartingSheildSetting::STARTINGSHIELD_NONE);
+  Option StartingShield = Option::U8("  Shield", { "None",             "Hero's Shield", "Mirror Shield" }, { "" },OptionCategory::Setting, (u8)StartingSheildSetting::STARTINGSHIELD_HERO);
   Option StartingWallet = Option::U8("  Wallet Upgrade", { "None",             "Adult's Wallet",   "Giant's Wallet" ,  "Tycoon's Wallet" }, { "" }, OptionCategory::Setting, (u8)StartingWalletSetting::STARTINGWALLET_NONE);
   Option StartingHealth = Option::U8("  Health", healthOptions, { "" });
   Option StartingMagicMeter = Option::U8("  Magic Meter", { "None",             "Single Magic",     "Double Magic" }, { "" });
-  Option StartingDoubleDefense = Option::U8("  Double Defense", { "None",             "Double Defence" }, { "" });
+  Option StartingDoubleDefense = Option::U8("  Double Defense", { "None",             "Double Defense" }, { "" });
   Option StartingQuestToggle = Option::U8("Quest Items", { "All Off",          "All On",           "Choose" }, { "" });
   Option StartingOdolwaRemains = Option::U8("  Odolwa's Remains", { "None",             "Odolwa's R." }, { "" });
   Option StartingGohtRemains = Option::U8("  Goht's Remains", { "None",             "Goht's R." }, { "" });
@@ -294,10 +294,10 @@ namespace Settings {
   //Item Pool Settings
   Option ItemPoolValue = Option::U8("Item Pool", { "Plentiful", "Balanced", "Scarce", "Minimal" }, { itemPoolPlentiful, itemPoolBalanced, itemPoolScarce, itemPoolMinimal }, OptionCategory::Setting, (u8)ItemPoolSetting::ITEMPOOL_BALANCED);
   Option ShuffleChests = Option::Bool("Shuffle Chest Items", {"Vanilla", "Random"}, { shuffleChestItemsVanilla, shuffleChestItemsRandom }, OptionCategory::Toggle, (u8)ShuffleChestsSetting::SHUFFLECHESTS_RANDOM);
-  Option ShuffleMasks = Option::Bool("Shuffle Masks", {"Vanilla", "Random"}, { shuffleMasksVanilla, shuffleMasksRandom}, OptionCategory::Toggle);
-  Option ShufflePiecesOfHeart = Option::Bool("Pieces of Heart", {"Vanilla", "Random"}, { shufflePiecesOfHeartDesc });
+  Option ShuffleMasks = Option::Bool("Shuffle Masks", {"Vanilla", "Random"}, { shuffleMasksVanilla, shuffleMasksRandom}, OptionCategory::Toggle, 1);
+  Option ShufflePiecesOfHeart = Option::Bool("Pieces of Heart", {"Vanilla", "Random"}, { shufflePiecesOfHeartDesc }, OptionCategory::Toggle, 1);
   Option ShuffleGFRewards = Option::U8("Great Fairy Rewards", { "Vanilla", "Great Fairies", "Anywhere" }, { shuffleGFVanilla, shuffleGFSelf, shuffleGFAnywhere }, OptionCategory::Setting, (u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_VANILLA);
-  Option ShuffleMainInventory = Option::Bool("Main Inventory", {"Vanilla", "Random"}, { shuffleMainInventoryDesc});
+  Option ShuffleMainInventory = Option::Bool("Main Inventory", {"Vanilla", "Random"}, { shuffleMainInventoryDesc}, OptionCategory::Toggle, 1);
   Option ShuffleTransformation  = Option::Bool("Transformation Masks", {"Vanilla", "Random"}, { shuffleTransformationDesc});
   Option ShuffleFierceDiety = Option::Bool("Fierce Diety Mask", {"Vanilla", "Random"}, { shuffleFierceDietyDesc});
   Option ShuffleMoonItems = Option::Bool("Shuffle Moon Items", {"Off", "On"}, {shuffleMoonItemsDesc});
