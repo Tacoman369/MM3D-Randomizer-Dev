@@ -73,7 +73,7 @@ namespace Settings {
   Option StartingConsumables = Option::Bool("Start with Consumables", { "No",               "Yes" }, { startWithConsumablesDesc });
   Option StartingMaxRupees = Option::Bool("Start with Max Rupees", { "No",               "Yes" }, { startWithMaxRupeesDesc });
   Option StartingInventoryToggle = Option::U8("Inventory", { "All Off",          "All On",           "Choose" }, { "" });
-  Option StartingNutCapacity = Option::U8("  Deku Nuts", { "20 Deku Nuts",     "30 Deku Nuts",     "40 Deku Nuts" }, { "" });
+  Option StartingNutCapacity = Option::U8("  Deku Nuts", { "None", "20 Deku Nuts",     "30 Deku Nuts",     "40 Deku Nuts" }, { "" });
   Option StartingOcarina = Option::U8("  Ocarina", { "Ocarina of Time",              "Ocarina of Time" }, { "" }, OptionCategory::Toggle, 1);
   Option StartingBombBag = Option::U8("  Bomb Bag", { "None",             "Bomb Bag 20",      "Bomb Bag 30",      "Bomb Bag 40" }, { "" });
   Option StartingBombchus = Option::U8("  Bombchus", { "None",             "Bombchus" }, { "" });
@@ -146,7 +146,7 @@ namespace Settings {
   Option StartingFierceDietyMask = Option::U8("  Fierce Diety Mask", { "None",             "F.D M." }, { "" });
   Option StartingMaskOfTruth = Option::U8("  Mask of Truth", { "None",             "Truth M." }, { "" });
 
-  Option StartingStickCapacity = Option::U8("  Stick Capacity", { "10 Sticks", "20 Sticks", "30 Sticks" }, { "" });
+  Option StartingStickCapacity = Option::U8("  Stick Capacity", { "None", "10 Sticks", "20 Sticks", "30 Sticks" }, { "" });
   Option StartingPictographBox = Option::U8("  Pictograph Box", { "None", "PictoBox" }, { "" });
   Option StartingPowderKeg = Option::U8("  Powder Keg", { "None", "Powder Keg" }, { "" });
   //Option StartingRazorSword = Option::U8(" Razor Sword", { "None", "R. Sword" }, { "" });
