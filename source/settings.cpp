@@ -260,6 +260,7 @@ namespace Settings {
       &ShuffleBombersNotebook,
       &ShuffleTradeItems,
       &ShuffleMerchants,
+      &ShuffleTingleMaps,
       &RemoveDoubleDefense,
       //&ShuffleMagicBeans,
       //&ShuffleOcarinas,

@@ -293,6 +293,7 @@ void AreaTable_Init() {
 		LocationAccess(N_CLOCK_TOWN_TREE, {[] {return true;}}),
 		LocationAccess(N_CLOCK_TOWN_OLD_LADY, {[] {return Fighting || Bow;}}),
 		LocationAccess(TINGLE_N_CLOCK_TOWN_CT, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_N_CLOCK_TOWN_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 
 	},
 	{
@@ -812,6 +813,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(ROAD_TO_SS_TREE, {[] {return DekuMask && (MagicMeter || Bow || Hookshot || ZoraMask);}}),//something to kill the dragonfly
 		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 	},
 	{
 		//Exits
@@ -1115,6 +1117,7 @@ void AreaTable_Init() {
 		LocationAccess(TWIN_ISLANDS_UNDERWATER_RAMP_CHEST, {[] {return SnowheadClear && ZoraMask;}}),
 		LocationAccess(TWIN_ISLANDS_CAVE_CHEST, {[] {return SnowheadClear && ZoraMask;}}),
 		LocationAccess(TINGLE_TWIN_ISLANDS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_TWIN_ISLANDS_RR, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 	},
 	{
 		//Exits
@@ -1283,6 +1286,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(TINGLE_MILK_ROAD_RR, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_MILK_ROAD_GB, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 	},
 	{
 		//Exits
@@ -1758,6 +1762,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(TINGLE_IKANA_CANYON_ST, {[]{return ZoraMask || Hookshot || Bow || (DekuMask && MagicMeter);}}),
+		LocationAccess(TINGLE_IKANA_CANYON_CT, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 	},
 	{
 		//Exits
