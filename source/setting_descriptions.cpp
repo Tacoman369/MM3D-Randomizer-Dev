@@ -470,9 +470,8 @@ string_view fierceDietyAnywhereDesc   = "**OPTION CURRENTLY WIP**\n"            
  string_view fastArrowSwitchDesc      = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Enables Cycling through arrow types by pressing R\n"//
                                         "with the bow equipped and an arrow drawn";        //
- string_view fastElegyStatuesDesc     = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Speeds up the animation of the elegy of emptiness\n"
-                                        "statues spawning";                                //
+ string_view fastElegyStatuesDesc     = "Speeds up the animation of the elegy of emptiness\n"
+                                        "statues spawning.";                               //
  string_view skipSongReplaysDesc      = "**OPTION CURRENTLY WIP**\n"                       //
                                         "The automatic replay after you play a song will\n"//
                                         "be skipped.\n"                                    //
@@ -637,6 +636,11 @@ string_view shuffleOcaMusicDesc      = "**OPTION CURRENTLY WIP**\n"             
                                        "The music that plays back after you play an ocarina"
                                        "song is randomized";                               //
                                                                                            //
+/*------------------------------                                                           //
+|      TIMESAVER OPTIONS       |                                                           //
+------------------------------*/                                                           //
+string_view fastZoraSwimDesc         = "Enables Fast Zora Swimming without magic.";        //
+string_view ocarinaDiveDesc          = "Enables Ocarina Diving";                           //
 
 /*------------------------------                                                                           //
 |           GLITCHES           |                                                                           //

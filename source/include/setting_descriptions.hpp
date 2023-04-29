@@ -209,3 +209,5 @@ extern string_view shuffleTransformationDesc;
 extern string_view shuffleFierceDietyDesc;
 extern string_view shuffleMoonItemsDesc;
 extern string_view shuffleBombersNotebookDesc;
+extern string_view ocarinaDiveDesc;
+extern string_view fastZoraSwimDesc;

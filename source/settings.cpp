@@ -378,17 +378,21 @@ namespace Settings {
   Option FastElegyStatues = Option::Bool("Fast Elegy Statues", { "No", "Yes" }, { fastElegyStatuesDesc });
   Option SkipSongReplays = Option::U8("Skip Song Replays", { "Don't Skip", "Skip (No SFX)", "Skip (Keep SFX)" },{skipSongReplaysDesc});
   Option SkipEponaRace = Option::Bool("Skip Epona Race", { "No", "Yes" }, { skipEponaRaceDesc });
+  Option OcarinaDive = Option::Bool("Ocarina Dive", {"No", "Yes" }, {ocarinaDiveDesc});
+  Option FastZoraSwim = Option::Bool("Fast Zora Swimming", {"No", "Yes"}, {fastZoraSwimDesc});
 
   std::vector<Option *> timesaverOptions = {
-    &SkipMinigamePhases,
-    &FastLabFish,
-    &FastBank,
-    &FastDogRace,
-    &GoodDampeRNG,
-    &IncreasePushSpeed,
-    &FastArrowSwitch,
+    //&SkipMinigamePhases,
+    //&FastLabFish,
+    //&FastBank,
+    //&FastDogRace,
+    //&GoodDampeRNG,
+    //&IncreasePushSpeed,
+    //&FastArrowSwitch,
     &FastElegyStatues,
-    &SkipSongReplays,
+    &FastZoraSwim,
+    &OcarinaDive,
+    //&SkipSongReplays,
   };
 
   /*TRIAL SKIPS*/
@@ -514,7 +518,7 @@ namespace Settings {
 
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
   Menu comfort = Menu::SubMenu("Comfort", &comfortOptions);
-  Menu timeSaverSettings = Menu::SubMenu("Time Saver", &timesaverOptions);
+  Menu timeSaverSettings = Menu::SubMenu("Time Saver Settings", &timesaverOptions);
   Menu settingsPresets          = Menu::SubMenu("Settings Presets",           &settingsPresetItems);
   Menu cosmetics                = Menu::SubMenu("Cosmetic Settings",          &cosmeticOptions);
   Menu generateRandomizer       = Menu::Action ("Generate Randomizer",        GENERATE_MODE);
@@ -531,7 +535,7 @@ namespace Settings {
     &startingInventory,
     &detailLogic,
     //&comfort,
-    //&timeSaverSettings,
+    &timeSaverSettings,
     &otherSettings,
     //&cosmetics,
     &settingsPresets,
@@ -733,6 +737,11 @@ namespace Settings {
     ctx.startingGiantsMask = StartingGiantsMask.Value<u8>();
     ctx.startingFierceDietyMask = StartingFierceDietyMask.Value<u8>();
     ctx.startingMaskOfTruth = StartingMaskOfTruth.Value<u8>();
+
+    //Timesavers
+    ctx.enableFastZoraSwim = (FastZoraSwim) ? 1 : 0;
+    ctx.enableOcarinaDiving = (OcarinaDive) ? 1 : 0;
+    ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 :0;
     
     //TODO: 
     //startingQuestItems;
