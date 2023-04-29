@@ -442,6 +442,8 @@ namespace Settings {
   extern Option FastArrowSwitch;
   extern Option FastElegyStatues;
   extern Option SkipSongReplays;
+  extern Option FastZoraSwim;
+  extern Option OcarinaDive;
 
   //Trial Skips
   extern Option OdolwaTrialSkip;
