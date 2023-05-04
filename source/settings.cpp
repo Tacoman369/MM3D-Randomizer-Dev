@@ -225,8 +225,8 @@ namespace Settings {
     &StartingGohtRemains,
     &StartingGyorgRemains,
     &StartingTwinmoldRemains,
-    &StartingSwampToken,
-    &StartingOceanToken,
+    //&StartingSwampToken,
+    //&StartingOceanToken,
     
   };
 
