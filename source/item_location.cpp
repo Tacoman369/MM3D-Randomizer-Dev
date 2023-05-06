@@ -40,7 +40,7 @@ void LocationTable_Init() {
 	locationTable[E_CLOCK_TOWN_ARCHERY_2]									   = ItemLocation::Base		  (0x20, 0x0C, "E Clock Town Archery #2",						E_CLOCK_TOWN_ARCHERY_2,				            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cMinigame , Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[E_CLOCK_TOWN_HONEY_DARLING_3DAYS]							   = ItemLocation::Base		  (0x11, 0x0C, "E Clock Town Honey and Darling 3 Days",			E_CLOCK_TOWN_HONEY_DARLING_3DAYS,	            PIECE_OF_HEART,				{Category::cEastClockTown, Category::cMinigame , Category::cVanillaHeartPiece,Category::cDayThree} );
 	locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_GORON]					   = ItemLocation::Chest	  (0x17, 0x00, "E Clock Town Treasure Chest Game (Goron)",		E_CLOCK_TOWN_TREASURE_CHEST_GAME_GORON,	        PIECE_OF_HEART,			    {Category::cEastClockTown, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[E_CLOCK_TOWN_POSTMAN_FREEDOM]								   = ItemLocation::Base		  (0x2E, 0x84, "Milk Bar Postman's Freedom",					E_CLOCK_TOWN_POSTMAN_FREEDOM,		            POSTMANS_HAT,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayThree} );
+	locationTable[E_CLOCK_TOWN_POSTMAN_FREEDOM]								   = ItemLocation::Base		  (0x6C, 0x84, "E Clock Town Postman's Freedom",				E_CLOCK_TOWN_POSTMAN_FREEDOM,		            POSTMANS_HAT,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayThree} );
 	locationTable[E_CLOCK_TOWN_GORMAN]										   = ItemLocation::Base		  (0x15, 0x83, "Milk Bar Gorman in the Bar",					E_CLOCK_TOWN_GORMAN,				            CIRCUS_LEADERS_MASK,		{Category::cEastClockTown, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[E_CLOCK_TOWN_AROMA_IN_OFFICE]								   = ItemLocation::Base		  (0x12, 0x8F, "E Clock Town Madame Aroma in the Mayor's Office",E_CLOCK_TOWN_AROMA_IN_OFFICE,		            KAFEIS_MASK,				{Category::cEastClockTown, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[BOMBERS_HIDEOUT_CHEST]						               = ItemLocation::Chest	  (0x29, 0x00, "Bombers' Hideout Chest",						BOMBERS_HIDEOUT_CHEST,	                        SILVER_RUPEE,				{Category::cEastClockTown,Category::cChest,Category::cDayOne } );
@@ -53,7 +53,6 @@ void LocationTable_Init() {
 	//locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_ZORA]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Zora)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_ZORA,	        RED_RUPEE,				    {Category::cEClockTown,Category::cMinigame ,Category::cDayOne} );
 	//locationTable[E_CLOCK_TOWN_TREASURE_CHEST_GAME_DEKU]					   = ItemLocation::Base		  (0x17, 0x00, "Treasure Chest Game (Deku)",					E_CLOCK_TOWN_TREASURE_CHEST_GAME_DEKU,	        DEKU_NUTS_10,			    {Category::cEClockTown,Category::cMinigame,Category::cDayOne} );
 	locationTable[E_CLOCK_TOWN_POSTBOX]										   = ItemLocation::Base		  (0x6C, 0x0C, "E Clock Town Postbox",							E_CLOCK_TOWN_POSTBOX,					        PIECE_OF_HEART,			    {Category::cEastClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
-	locationTable[E_CLOCK_TOWN_POSTMAN_FREEDOM_ALT]                            = ItemLocation::Base       (0x6C, 0x84, "E Clock Town Postman's Freedom",                E_CLOCK_TOWN_POSTMAN_FREEDOM_ALT,               POSTMANS_HAT,               {Category::cEastClockTown, Category::cVanillaMask, Category::cDayThree});
 	
 	//Goron Village
 	locationTable[GORON_VILLAGE_POWDER_KEG_CHALLENGE]						   = ItemLocation::Base		  (0x48, 0x34, "Powder Keg Challenge",							GORON_VILLAGE_POWDER_KEG_CHALLENGE,		        POWDER_KEG,				    {Category::cGoronVillage,Category::cDayOne} );
@@ -103,8 +102,8 @@ void LocationTable_Init() {
 	locationTable[LAUNDRY_POOL_GURU_GURU]									   = ItemLocation::Base		  (0x70, 0x8C, "Laundry Pool Guru Guru",						LAUNDRY_POOL_GURU_GURU,				            BREMEN_MASK,				{Category::cLaundryPool, Category::cVanillaMask,Category::cDayOne} );
 	
 	//Milk Road
-	locationTable[MILK_ROAD_GORMAN_RACE]									   = ItemLocation::Base 	  (0x22, 0x81, "Milk Road Gorman Bros Race",					MILK_ROAD_GORMAN_RACE,				            GAROS_MASK,					{Category::cMilkRoad, Category::cMinigame, Category::cVanillaMask,Category::cDayOne} );
-	locationTable[MILK_ROAD_GORMAN_MILK_BUY]								   = ItemLocation::Base       (0x22, 0x92, "Milk Road Gorman Bros Milk Purchase",			MILK_ROAD_GORMAN_MILK_BUY,			            MILK,						{Category::cMilkRoad,Category::cDayOne} );
+	locationTable[MILK_ROAD_GORMAN_RACE]									   = ItemLocation::Base 	  (0x6A, 0x81, "Milk Road Gorman Bros Race",					MILK_ROAD_GORMAN_RACE,				            GAROS_MASK,					{Category::cMilkRoad, Category::cMinigame, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[MILK_ROAD_GORMAN_MILK_BUY]								   = ItemLocation::Base       (0x6A, 0x92, "Milk Road Gorman Bros Milk Purchase",			MILK_ROAD_GORMAN_MILK_BUY,			            MILK,						{Category::cMilkRoad,Category::cDayOne} );
 		
 	//Mountain Village
 	locationTable[MOUNTAIN_VILLAGE_SMITH_DAY_ONE]							   = ItemLocation::Base		  (0x2C, 0x4A, "Mountain Village Smith Day 1",					MOUNTAIN_VILLAGE_SMITH_DAY_ONE,		            RAZOR_SWORD,			    {Category::cMountainVillage,Category::cDayOne} );
@@ -743,6 +742,7 @@ std::vector<LocationKey> overworldLocations = {
   DEKU_PALACE_BEAN_SELLER,
   DEKU_PALACE_WEST_GARDEN,
   DEKU_PALACE_BUTLER_RACE,
+  DEKU_PALACE_BUTLER_RACE_ALT,
   DEKU_PALACE_BEAN_GROTTO_CHEST,
   DEKU_PALACE_IMPRISONED_MONKEY,
 //East Clock Town
@@ -758,6 +758,7 @@ std::vector<LocationKey> overworldLocations = {
   E_CLOCK_TOWN_AROMA_IN_OFFICE,
   BOMBERS_HIDEOUT_CHEST,
   E_CLOCK_TOWN_CHEST,
+  E_CLOCK_TOWN_POSTBOX,
   //E_CLOCK_TOWN_MILK_BAR_CHATEAU,
   //E_CLOCK_TOWN_MILK_BAR_MILK,
   E_CLOCK_TOWN_GORMAN_QUEST,
@@ -840,6 +841,7 @@ std::vector<LocationKey> overworldLocations = {
   N_CLOCK_TOWN_GREAT_FAIRY_HUMAN,
   TINGLE_N_CLOCK_TOWN_CT,
   TINGLE_N_CLOCK_TOWN_WF,
+  N_CLOCK_TOWN_POSTBOX,
   //N_CLOCK_TOWN_DEKU_PLAYGROUND_ADAY,
 //Road to Snowhead
   ROAD_TO_SNOWHEAD_PILLAR,
@@ -866,6 +868,7 @@ std::vector<LocationKey> overworldLocations = {
   ROMANI_RANCH_ALIEN_DEFENSE,
   ROMANI_RANCH_DOG_RACE,
   ROMANI_RANCH_GROG,
+  ROMANI_RANCH_GROG_ALT,
   ROMANI_RANCH_CREMIA_ESCORT,
   ROMANI_RANCH_COW_1,
   ROMANI_RANCH_COW_2,
@@ -886,6 +889,7 @@ std::vector<LocationKey> overworldLocations = {
 //Southern Swamp
   SOUTHERN_SWAMP_KOUME,
   SOUTHERN_SWAMP_KOTAKE,
+  SOUTHERN_SWAMP_KOTAKE_IN_WOODS,
   SOUTHERN_SWAMP_SCRUB_TRADE,
   SOUTHERN_SWAMP_PICTOGRAPH_WINNER,
   SOUTHERN_SWAMP_BOAT_ARCHERY,
@@ -944,6 +948,7 @@ std::vector<LocationKey> overworldLocations = {
   W_CLOCK_TOWN_SWORDSMANS_SCHOOL,
   W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY,
   W_CLOCK_TOWN_BOMB_SHOP_GORON,
+  W_CLOCK_TOWN_POSTBOX,
   //W_CLOCK_TOWN_LOTTERY,
   TRADING_POST_ITEM_1,
   TRADING_POST_ITEM_2,
@@ -1148,6 +1153,16 @@ void CreateItemOverrides() {
 	PlaceItemInLocation(TINGLE_MILK_ROAD_GB, loc12->GetPlacedItemKey());//copy great bay map into ranch
 	PlaceItemInLocation(TINGLE_GBC_ST, loc13->GetPlacedItemKey());//copy stone tower map into great bay
 	PlaceItemInLocation(TINGLE_IKANA_CANYON_CT, loc8->GetPlacedItemKey()); //copy clocktown into stone tower
+	//account for if you have the mask already
+	auto loc14 = Location(DEKU_PALACE_BUTLER_RACE);
+	PlaceItemInLocation(DEKU_PALACE_BUTLER_RACE_ALT, loc14->GetPlacedItemKey());
+	//account for if you have the mask already
+	auto loc15 = Location(ROMANI_RANCH_GROG);
+	PlaceItemInLocation(ROMANI_RANCH_GROG_ALT, loc15->GetPlacedItemKey());
+	//cover both wallet options
+	auto loc16 = Location(S_CLOCK_TOWN_BANK_REWARD_1);
+	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, loc16->GetPlacedItemKey());
+
 
   for (LocationKey locKey : allLocations) {
     auto loc = Location(locKey);
