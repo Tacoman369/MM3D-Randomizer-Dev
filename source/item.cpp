@@ -13,9 +13,10 @@
 
 using namespace rnd;
 
-Item::Item(bool advancement_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
+Item::Item(bool advancement_, bool repeatable_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
     : 
     advancement(advancement_),
+    repeatable(repeatable_),
     logicVar(logicVar_),
     name(std::move(name_)),
     hintKey(hintKey_),
@@ -23,9 +24,10 @@ Item::Item(bool advancement_, bool* logicVar_, Text name_, HintKey hintKey_, u32
     type(type_), 
     price(price_) {}
 
-Item::Item(bool advancement_, u8* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
+Item::Item(bool advancement_, bool repeatable_, u8* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
     :
     advancement(advancement_),
+    repeatable(repeatable_),
     logicVar(logicVar_),
     name(std::move(name_)),
     hintKey(hintKey_),

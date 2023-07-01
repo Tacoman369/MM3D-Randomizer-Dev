@@ -455,6 +455,7 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
                 PlacementLog_Msg("\n");
                 CitraPrint(Location(loc)->GetName());
                 }*/
+
             //retry if there are no more locations to place items
             if (accessibleLocations.empty()) {
 
@@ -478,28 +479,36 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
                 break;
             }
 
-            //place the item within one of the allowed locations
+            //place the item within one of the allowed locations accounting for if this item needs to be able to be obtained more than once and if location allows that
+            //the only situation we don't want is a non repeatable location with a repeatable item
             LocationKey selectedLocation = RandomElement(accessibleLocations);
-            PlaceItemInLocation(selectedLocation, item);
-            //CitraPrint("Placed " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
-            attemptedLocations.push_back(selectedLocation);
+            if ( !(Location(selectedLocation)->IsRepeatable()) && ItemTable(item).IsRepeatable() ){
+                    //unsuccessfulPlacement = true;
+                    PlacementLog_Msg("\n Attempted to place " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
+                    itemsToPlace.push_back(item);
+                }
+            else { 
+                PlaceItemInLocation(selectedLocation, item); 
+                //CitraPrint("Placed " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
+                attemptedLocations.push_back(selectedLocation);
 
-            //This tells us the location went through the randomization algorithm
-            //to distinguish it from locations which did not or that the player already
-            //knows
-            if (setLocationsAsHintable) {
-                Location(selectedLocation)->SetAsHintable();
-            }
+                //This tells us the location went through the randomization algorithm
+                //to distinguish it from locations which did not or that the player already
+                //knows
+                if (setLocationsAsHintable) {
+                    Location(selectedLocation)->SetAsHintable();
+                }
 
-            //If ALR is off, then we check beatability after placing the item.
-            //If the game is beatable, then we can stop placing items with logic.
-            if (!LocationsReachable) {
-                playthroughBeatable = false;
-                Logic::LogicReset();
-                GetAccessibleLocations(allLocations, SearchMode::CheckBeatable);
-                if (playthroughBeatable) {
-                    FastFill(itemsToPlace, GetAllEmptyLocations(), true);
-                    return;
+                //If ALR is off, then we check beatability after placing the item.
+                //If the game is beatable, then we can stop placing items with logic.
+                if (!LocationsReachable) {
+                    playthroughBeatable = false;
+                    Logic::LogicReset();
+                    GetAccessibleLocations(allLocations, SearchMode::CheckBeatable);
+                    if (playthroughBeatable) {
+                        FastFill(itemsToPlace, GetAllEmptyLocations(), true);
+                        return;
+                    }
                 }
             }
         }
