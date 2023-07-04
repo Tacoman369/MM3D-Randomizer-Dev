@@ -11,10 +11,12 @@
 #include "version.hpp"
 #include "setting_descriptions.hpp"
 #include "keys.hpp"
+#include "../mm3dr/code/include/game/pad.h"
 
 using namespace Cosmetics;
 using namespace Dungeon;
 using namespace rnd;
+using namespace game::pad;
 //using namespace Music;
 
 namespace Settings {
@@ -26,6 +28,8 @@ namespace Settings {
   std::vector<std::string> bottleOptions = { "None", "Empty Bottle", "Red Potion", "Green Potion", "Blue Potion", "Fairy", "Deku Princess", "Milk", "Half Milk", "Fish", "Bugs", "Big Poe", "Spring Water", "Hot Spring Water", "Zora Egg", "Gold Dust", "Mushroom", "Seahorse", "Chateau Romani", "Mystery Milk", "Spoiled Mystery Milk" };
   std::vector<std::string> healthOptions = { "3 hearts",  "4 hearts",  "5 hearts",  "6 hearts",  "7 hearts",  "8 hearts",  "9 hearts", "10 hearts", "11 hearts", "12 hearts",
                                             "13 hearts", "14 hearts", "15 hearts", "16 hearts", "17 hearts", "18 hearts", "19 hearts", "20 hearts" };//,  "1 heart",   "2 hearts"}; // TODO: logic for lower health
+  std::vector<std::string> buttonOptions = { "Default", "Start", "Select", "Start + Select", "L + Start", "L + Select", "R + Start", "R + Select", "L + ZL", "L + ZR", "R + ZL", "R + ZR", "ZL + ZR", "ZL + Start", "ZL + Select", 
+                                             "ZR + Start", "ZR + Select"};//L+R not included as its too easy to accidentally do in normal gameplay, can be added later
 
   //Function to avoid accidentally naming the options wrong, as logic.cpp requires these exact names
   std::vector<std::string> GlitchDifficultyOptions(u8 enabledDifficulties) {
@@ -516,6 +520,21 @@ namespace Settings {
       //&glitchSettings,
   };
 
+  Option CustomMapButton      = Option::U8("Map",              { buttonOptions }, { customMapButtonDesc });
+  Option CustomItemsButton    = Option::U8("Items",            { buttonOptions }, { customItemsButtonDesc });
+  Option CustomMasksButton    = Option::U8("Masks",            { buttonOptions }, { customMasksButtonDesc });
+  Option CustomNotebookButton = Option::U8("Bombers Notebook", { buttonOptions }, { customNotebookDesc });
+  Option IngameSpoilersButton = Option::U8("Ingame Spoler Log",{ buttonOptions }, { ingameSpoilersButtonDesc });
+
+  std::vector<Option *> customButtons = {
+    &CustomMapButton,
+    &CustomItemsButton,
+    &CustomMasksButton,
+    &CustomNotebookButton,
+    //&IngameSpoilersButton, to be included whenever the ingame menu works
+  };
+  
+
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
   Menu comfort = Menu::SubMenu("Comfort", &comfortOptions);
   Menu timeSaverSettings = Menu::SubMenu("Time Saver Settings", &timesaverOptions);
@@ -526,6 +545,8 @@ namespace Settings {
   Menu shuffleDungeon           = Menu::SubMenu("Dungeon Settings",           &dungeonSettingsOptions);
   Menu itemPool                 = Menu::SubMenu("Item Pool Settings",         &itemPoolSettingsOptions);
   Menu detailLogic              = Menu::SubMenu("Detailed Logic Settings",    &detailLogicSettings);
+  Menu customInputs             = Menu::SubMenu("Custom Button Mapping",      &customButtons);
+
   //adding a menu with no options crashes, might fix later
   std::vector<Menu *> mainMenu = {
     &logicSettings,
@@ -537,6 +558,7 @@ namespace Settings {
     //&comfort,
     &timeSaverSettings,
     &otherSettings,
+    &customInputs,
     //&cosmetics,
     &settingsPresets,
     &generateRandomizer,
@@ -743,11 +765,14 @@ namespace Settings {
     ctx.enableOcarinaDiving = (OcarinaDive) ? 1 : 0;
     ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 :0;
     
+    //CustomButtons
+    ctx.customMapButton = CustomButtonConvert(CustomMapButton.Value<u8>());
+    ctx.customItemButton = CustomButtonConvert(CustomItemsButton.Value<u8>());
+    ctx.customMaskButton = CustomButtonConvert(CustomMasksButton.Value<u8>());
+    ctx.customNotebookButton = CustomButtonConvert(CustomNotebookButton.Value<u8>());
+    //ctx.customIngameSpoilerButton = CustomButtonConvert(IngameSpoilersButton.Value<u8>()); 
+
     //TODO: 
-    //startingQuestItems;
-    //startingDungeonRewards;
-    //startingEquipment;
-    //startingUpgrades;
     /*ctx.toggleAllTricks = ToggleAllTricks.Value<u8>();
     //ctx.logicGrottosWithoutAgony = LogicGrottosWithoutAgony.Value<u8>();
 
@@ -757,39 +782,6 @@ namespace Settings {
     //    ctx.shuffleCows          = (ShuffleCows) ? 1 : 0;
     //    ctx.shuffleOcarinas      = (ShuffleOcarinas) ? 1 : 0;
     
-
-    
-    //Starting Quest Items
-    ctx.startingQuestItems |= StartingSonataOfAwakening.Value<u8>()   << 6;
-    ctx.startingQuestItems |= StartingGoronsLullaby.Value<u8>()     << 7;
-    ctx.startingQuestItems |= StartingNewWaveBossaNova.Value<u8>()  << 8;
-    ctx.startingQuestItems |= StartingElegyOfEmptiness.Value<u8>()  << 9;
-    ctx.startingQuestItems |= StartingSongOfHealing.Value<u8>() << 10;
-    ctx.startingQuestItems |= StartingSongOfSoaring.Value<u8>()   << 11;
-    ctx.startingQuestItems |= StartingOathToOrder.Value<u8>()    << 12;
-    ctx.startingQuestItems |= StartingEponasSong.Value<u8>()       << 13;
-    //ctx.startingQuestItems |= StartingDoubleSong.Value<u8>()       << 14;
-    //ctx.startingQuestItems |= StartingInvertedSong.Value<u8>()      << 15;
-    //ctx.startingQuestItems |= StartingSongOfTime.Value<u8>()       << 16;
-    ctx.startingQuestItems |= StartingSongOfStorms.Value<u8>()     << 17;
-    ctx.startingDungeonReward |= StartingOdolwaRemains.Value<u8>()    << 18;
-    ctx.startingDungeonReward |= StartingGohtRemains.Value<u8>()        << 19;
-    ctx.startingDungeonReward |= StartingGyorgRemains.Value<u8>()     << 20;
-    ctx.startingDungeonReward |= StartingTwinmoldRemains.Value<u8>()   << 5;
-
-//    ctx.startingTokens        = StartingSwampToken.Value<u8>();
-//    ctx.startingTokens        = StartingOceanToken.Value<u8>();
-
-    //Starting Masks
-    //To-DO
-    //Starting Equipment
-    ctx.startingEquipment |= StartingKokiriSword.Value<u8>();
-    ctx.startingEquipment |= (StartingGreatFairySword.Value<u8>() ? 1: 0) << 2;
-    ctx.startingEquipment |= StartingHerosShield.Value<u8>()  << 5;
-    ctx.startingEquipment |= StartingMirrorShield.Value<u8>()  << 6;
- 
-    //Starting Upgrades
-    ctx.startingUpgrades |= StartingWallet.Value<u8>() << 12;
     */
     return ctx;
   }
@@ -859,6 +851,64 @@ namespace Settings {
 
 
       return startingBottleValue;
+  }
+
+  u32 customButtonValue;
+  u32 CustomButtonConvert(u8 customButton)
+  {
+    if (customButton == u8(0)) {//Default
+      customButtonValue = 0;
+    } 
+    else if (customButton == u8(1)) {//Start
+      customButtonValue = u32(Button::Start);
+    } 
+    else if (customButton == u8(2)) {//Select
+      customButtonValue = u32(Button::Select);
+    } 
+    else if (customButton == u8(3)) {//Start + Select
+      customButtonValue = u32(Button::Start) + u32(Button::Select);
+    } 
+    else if (customButton == u8(4)) {//L + Start 
+      customButtonValue = u32(Button::L) + u32(Button::Start);
+    } 
+    else if (customButton == u8(5)) {//L + Select
+      customButtonValue = u32(Button::L) + u32(Button::Select);
+    } 
+    else if (customButton == u8(6)) {//R + Start
+      customButtonValue = u32(Button::R) + u32(Button::Start);
+    } 
+    else if (customButton == u8(7)) {//R + Select
+      customButtonValue = u32(Button::R) + u32(Button::Select);
+    } 
+    else if (customButton == u8(8)) {//L + ZL
+      customButtonValue = u32(Button::L) + u32(Button::ZL);
+    } 
+    else if (customButton == u8(9)) {//L + ZR
+      customButtonValue = u32(Button::L) + u32(Button::ZR);
+    } 
+    else if (customButton == u8(10)) {//R + ZL
+      customButtonValue = u32(Button::R) + u32(Button::ZL);
+    } 
+    else if (customButton == u8(11)) {//R + ZR
+      customButtonValue = u32(Button::R) + u32(Button::ZR);
+    } 
+    else if (customButton == u8(12)) {//ZL + ZR
+      customButtonValue = u32(Button::ZL) + u32(Button::ZR);
+    } 
+    else if (customButton == u8(13)) {//ZL + Start
+      customButtonValue = u32(Button::ZL) + u32(Button::Start);
+    } 
+    else if (customButton == u8(14)) {//ZL + Select
+      customButtonValue = u32(Button::ZL) + u32(Button::Select);
+    } 
+    else if (customButton == u8(15)) {//ZR + Start
+      customButtonValue = u32(Button::ZR) + u32(Button::Start);
+    } 
+    else if (customButton == u8(16)) {//ZR + Select
+      customButtonValue = u32(Button::ZR) + u32(Button::Select);
+    } 
+
+    return customButtonValue;
   }
 
   //Set default cosmetics where the default is not the first option
@@ -1106,6 +1156,7 @@ namespace Settings {
       }
       
   }
+
   //Hide certain settings if they aren't relevant or Lock settings if they
   //can't be changed due to another setting that was chosen. (i.e. Closed Forest
   //will force Starting Age to Child).
@@ -1132,6 +1183,8 @@ namespace Settings {
           break;
       }
     }
+
+   
 
     //Only hide the options for now, select them later in UpdateSettings()
     //RandomizeAllSettings();
@@ -1374,5 +1427,100 @@ namespace Settings {
     }
     return allMenus;
   }
+
+ //we dont want users to select the same values for multiple inputs, so check if any of the selected options match
+ //multiple options can be index 0 or Default as this won't cause issues in game.
+  bool CheckCustomButtons() {
+    u8 mapButtonValue = CustomMapButton.Value<u8>();
+    u8 itemButtonValue = CustomItemsButton.Value<u8>();
+    u8 maskButtonValue = CustomMasksButton.Value<u8>();
+    u8 notebookButtonValue = CustomNotebookButton.Value<u8>();
+    u8 spoilerButtonValue = IngameSpoilersButton.Value<u8>();
+
+    //If an option is not set to Default (0) then check if it matches any other selections
+    //If it does match return false unless the value it's matching is Default (0)
+    if (mapButtonValue != 0)
+    {
+      if (mapButtonValue == itemButtonValue && itemButtonValue != 0) {
+       return false;
+      } 
+      if (mapButtonValue == maskButtonValue && mapButtonValue != 0) {
+        return false;
+      } 
+      if (mapButtonValue == maskButtonValue && maskButtonValue != 0) {
+        return false;
+      }
+      if (mapButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
+        return false;
+      }
+    }
+    
+    if (itemButtonValue != 0)
+    {
+      if (itemButtonValue == mapButtonValue && mapButtonValue != 0) {
+        return false;
+      } 
+      if (itemButtonValue == maskButtonValue && maskButtonValue != 0) {
+        return false;
+      }
+      if (itemButtonValue == notebookButtonValue && notebookButtonValue != 0) {
+       return false;
+      }
+      if (itemButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
+        return false;
+      }
+    }
+
+    if (maskButtonValue != 0)
+    {
+      if (maskButtonValue == mapButtonValue && mapButtonValue != 0) {
+        return false;
+      }
+      if (maskButtonValue == itemButtonValue && itemButtonValue != 0) {
+        return false;
+      }
+      if (maskButtonValue == notebookButtonValue && notebookButtonValue != 0) {
+        return false;
+      }
+      if (maskButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
+        return false;
+      }
+    }
+
+    if (notebookButtonValue != 0)
+    {
+      if (notebookButtonValue == mapButtonValue && mapButtonValue != 0) {
+        return false;
+      }
+      if (notebookButtonValue == itemButtonValue && itemButtonValue != 0) {
+        return false;
+      }
+      if (notebookButtonValue == maskButtonValue && maskButtonValue != 0) {
+        return false;
+      }
+      if (notebookButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
+        return false;
+      }
+    }
+
+    if (spoilerButtonValue != 0)
+    {
+      if (spoilerButtonValue == mapButtonValue && mapButtonValue != 0) {
+        return false;
+      }
+      if (spoilerButtonValue == itemButtonValue && itemButtonValue != 0) {
+        return false;
+      }
+      if (spoilerButtonValue == maskButtonValue && maskButtonValue != 0) {
+        return false;
+      }
+      if (spoilerButtonValue == notebookButtonValue && notebookButtonValue != 0) {
+        return false;
+      }
+    }
+    //if none of the buttons match return true.
+      return true;
+  }
+
   
 } // namespace Settings

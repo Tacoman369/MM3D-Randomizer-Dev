@@ -260,6 +260,8 @@ namespace Settings {
   void ForceChange(u32 kDown, Option* currentSetting);
   u8 StartingBottleConvert(u8 startingBottle);
   const std::vector<Menu*> GetAllMenus();
+  u32 CustomButtonConvert(u8 customButton);
+  bool CheckCustomButtons();
 
 
   extern std::string seed;
@@ -500,6 +502,16 @@ namespace Settings {
   extern Menu shuffleDungeon;
   extern Menu itemPool;
   extern Menu detailLogic;
+
+  //Custom Buttons
+  extern Menu customInputs;
+  extern std::vector<Option*> customButtons;
+  extern Option CustomMapButton;
+  extern Option CustomItemsButton;
+  extern Option CustomMasksButton;
+  extern Option CustomNotebookButton;
+  extern Option IngameSpoilersButton;
+
   extern std::vector<Menu *> mainMenu;
 
 

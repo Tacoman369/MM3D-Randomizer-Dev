@@ -211,3 +211,8 @@ extern string_view shuffleMoonItemsDesc;
 extern string_view shuffleBombersNotebookDesc;
 extern string_view ocarinaDiveDesc;
 extern string_view fastZoraSwimDesc;
+extern string_view customMapButtonDesc;
+extern string_view customItemsButtonDesc;
+extern string_view customMasksButtonDesc;
+extern string_view customNotebookDesc;
+extern string_view ingameSpoilersButtonDesc;

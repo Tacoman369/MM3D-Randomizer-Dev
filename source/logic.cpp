@@ -323,7 +323,7 @@ namespace Logic {
 	u8 PlacedMasks = 0;
 	u8 PiecesOfHeart = 0;
 	u8 HeartContainers = 0;
-
+    
 	bool CanPlay(bool song) {
 		return Ocarina && song;
 	}
@@ -668,11 +668,11 @@ namespace Logic {
 	  TwinmoldRemains = false;
 	  
 	//Progressive Items
-	u8 ProgressiveBow = 0;
-	u8 ProgressiveMagic = 0;
-	u8 ProgressiveWallet = 0;
-	u8 ProgressiveBombBag = 0;
-	u8 ProgressiveSword = 0;
+	ProgressiveBow = 0;
+	ProgressiveMagic = 0;
+	ProgressiveWallet = 0;
+	ProgressiveBombBag = 0;
+	ProgressiveSword = 0;
 	//Keys
 	 WoodfallTempleKeys = 0;
 	 SnowheadTempleKeys = 0;
@@ -684,13 +684,13 @@ namespace Logic {
 	  BossKeyGreatBayTemple = false;
 	  BossKeyStoneTowerTemple = false;
 	//Skulltula Counts
-	u8 SwampSkulltulaTokens = 0;
-	u8 OceanSkulltulaTokens = 0;
+	SwampSkulltulaTokens = 0;
+	OceanSkulltulaTokens = 0;
 	//Stray Fairies
-	u8 WoodfallStrayFairies = 0;
-	u8 SnowheadStrayFairies = 0;
-	u8 GreatBayStrayFairies = 0;
-	u8 StoneTowerStrayFairies = 0;
+	WoodfallStrayFairies = 0;
+	SnowheadStrayFairies = 0;
+	GreatBayStrayFairies = 0;
+	StoneTowerStrayFairies = 0;
 	//Drops & Bottle Contents Access
 	  DekuNutDrop = false;
 	  NutPot = false;
@@ -845,18 +845,19 @@ namespace Logic {
 	  ZoraEgg = 0;
 	CanGoToMoon = false;
 	//placement tracking
-	u8 AddedProgressiveBombBags = 0;
-	u8 AddedProgressiveMagics = 0;
-	u8 AddedProgressiveBows = 0;
-	u8 AddedProgressiveWallets = 0;
-	u8 SwampTokensInPool = 0;
-	u8 OceanTokensInPool = 0;
-	u8 WFStraysInPool = 0;
-	u8 SHStraysInPool = 0;
-	u8 STStraysInPool = 0;
-	u8 PlacedMasks = 0;
-	u8 PiecesOfHeart = 0;
-	u8 HeartContainers = 0;
+	AddedProgressiveBombBags = 0;
+	AddedProgressiveMagics = 0;
+	AddedProgressiveBows = 0;
+	AddedProgressiveWallets = 0;
+	SwampTokensInPool = 0;
+	OceanTokensInPool = 0;
+	WFStraysInPool = 0;
+	SHStraysInPool = 0;
+	STStraysInPool = 0;
+	PlacedMasks = 0;
+	PiecesOfHeart = 0;
+	HeartContainers = 0;
+	
 	}
 }
 

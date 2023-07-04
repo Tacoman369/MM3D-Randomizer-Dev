@@ -414,7 +414,7 @@ const std::array<ItemKey, 13> nonProgressiveItemsList = {
 	RAZOR_SWORD,
 	GILDED_SWORD,
 };
-
+/*
 static void PlaceVanillaNonProgressive() {
 	PlaceItemInLocation(WOODFALL_TEMPLE_HEROS_BOW_CHEST, HEROS_BOW);
 	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1, LARGE_QUIVER);
@@ -429,7 +429,7 @@ static void PlaceVanillaNonProgressive() {
 	PlaceItemInLocation(HMS_STARTING_SWORD, KOKIRI_SWORD);
 	PlaceItemInLocation(MOUNTAIN_VILLAGE_SMITH_DAY_ONE, RAZOR_SWORD);
 	PlaceItemInLocation(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, GILDED_SWORD);
-};
+};*/
 
 static void PlaceVanillaHeartPieces() {
    for (LocationKey loc: GetLocations(allLocations, Category::cVanillaHeartPiece)) {

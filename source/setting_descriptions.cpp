@@ -641,6 +641,20 @@ string_view shuffleOcaMusicDesc      = "**OPTION CURRENTLY WIP**\n"             
 ------------------------------*/                                                           //
 string_view fastZoraSwimDesc         = "Enables Fast Zora Swimming without magic.";        //
 string_view ocarinaDiveDesc          = "Enables Ocarina Diving";                           //
+                                                                                           //
+/*-------------------------------                                                          //
+|   CUSTOM BUTTON MAPPING       |                                                          //
+-------------------------------*/                                                          //
+string_view customMapButtonDesc      = "Change the button to open the Map.\n"              //
+                                       "Default is Touch Screen";                          //
+string_view customItemsButtonDesc    = "Change the button to open the Items Menu\n"        //
+                                       "Default is Touch Screen";                          //
+string_view customMasksButtonDesc    = "Change the button to open the Masks Menu\n"        //
+                                       "Default is Touch Screen";                          //
+string_view customNotebookDesc       = "Change the button to open the Bomber's Notebook\n" //
+                                       "Default is Select";                                //
+string_view ingameSpoilersButtonDesc = "Change the button to open the ingame Spoiler Log\n"//
+                                       "Default is XXX";                                   //
 
 /*------------------------------                                                                           //
 |           GLITCHES           |                                                                           //
