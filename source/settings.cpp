@@ -558,7 +558,7 @@ namespace Settings {
     //&comfort,
     &timeSaverSettings,
     &otherSettings,
-    &customInputs,
+    //&customInputs,
     //&cosmetics,
     &settingsPresets,
     &generateRandomizer,
@@ -984,6 +984,10 @@ namespace Settings {
 
       for (auto loc : allLocations) {
       Location(loc)->GetExcludedOption()->SetToDefault();
+    }
+
+    for (auto op : customButtons) {
+      op->SetToDefault();
     }
     //Don't let users exclude these locations
     //TODO: Make sure the defaults are set appropriately for these?

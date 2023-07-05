@@ -231,9 +231,6 @@ void MenuUpdate(u32 kDown) {
     }
   } else if (currentMenu->mode == SUB_MENU) {
     PrintSubMenu();
-  } else if (currentMenu->mode == INPUT_MENU) {
-    UpdateOptionSubMenu(kDown);
-    PrintOptionSubMenu();
   }
 }
 
