@@ -175,6 +175,7 @@ all: $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
 
 $(BUILD):
 	@git submodule update --init
+	@cp mm3dr/romfs/* ./romfs/
 	$(MAKE) -C mm3dr/code
 	@mv mm3dr/code/basecode.ips $(ROMFS)/basecode.ips
 	@mv mm3dr/source/patch_symbols.hpp $(CURDIR)/source/include/

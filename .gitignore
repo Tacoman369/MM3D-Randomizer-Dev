@@ -8,6 +8,8 @@ mm3dr/code/build/*
 oldcode/*.bin
 oldcode/*/*.bin
 oldcode/loader/build
+romfs/*.bin
+romfs/*.ips
 *.txt
 *.elf
 *.cia
