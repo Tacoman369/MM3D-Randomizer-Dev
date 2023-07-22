@@ -480,10 +480,11 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
             }
 
             //place the item within one of the allowed locations accounting for if this item needs to be able to be obtained more than once and if location allows that
-            //the only situation we don't want is a non repeatable location with a repeatable item
+            //the only situation we don't want is a non repeatable location with a reusable item
             LocationKey selectedLocation = RandomElement(accessibleLocations);
-            if ( !(Location(selectedLocation)->IsRepeatable()) && ItemTable(item).IsRepeatable() ){
+            if ( !(Location(selectedLocation)->IsRepeatable()) && ItemTable(item).IsReusable() ){
                     //unsuccessfulPlacement = true;
+                    CitraPrint("Attemting to place things where they shouldnt be");
                     PlacementLog_Msg("\n Attempted to place " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
                     itemsToPlace.push_back(item);
                 }
@@ -600,6 +601,7 @@ static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
     std::vector<ItemKey> dungeonItems;
 
     //filter out locations that may be required to have songs placed at them
+    /*
     dungeonLocations = FilterFromPool(dungeonLocations, [](const LocationKey loc) {
         if (ShuffleSongs.Is(rnd::SongShuffleSetting::SONGSHUFFLE_SONG_LOCATIONS)) {
             return !(Location(loc)->IsCategory(Category::cSong));
@@ -609,7 +611,7 @@ static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
         }
         return true;
         });
-
+     */
     //Add specific items that need be randomized within this dungeon
     if (Keysanity.Is((u8)KeysanitySetting::KEYSANITY_OWN_DUNGEON) && dungeon->GetSmallKey() != NONE) {
         std::vector<ItemKey> dungeonSmallKeys = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetSmallKey();});
@@ -818,6 +820,7 @@ int Fill() {
         
         
         //Then Place songs if song shuffle is set to specific locations
+        /*
         if (ShuffleSongs.IsNot(SongShuffleSetting::SONGSHUFFLE_ANYWHERE)) {
 
             //Get each song
@@ -832,9 +835,9 @@ int Fill() {
                 songLocations = allLocations;
             }
             AssumedFill(songs, songLocations, true);
-        }
-        /*
-        if (ShuffleGFRewards.Is(GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ALL_GREAT_FARIES)){
+        }*/
+        
+        /*if (ShuffleGFRewards.Is(GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ALL_GREAT_FARIES)){
             //get GF locations
             std::vector<LocationKey> gfLocations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cFairyFountain);});
             std::vector<ItemKey> gfItems = FilterAndEraseFromPool(ItemPool, [gfLocations](const ItemKey i) { return i == Location(gfLocations)->GetVanillaItem();});
@@ -902,10 +905,3 @@ int Fill() {
     //All retries failed
     return -1;
 }
-        
-
-        /*
-        
-        
-       
-}*/

@@ -14,7 +14,7 @@ static std::array<ItemLocation, KEY_ENUM_MAX> locationTable;
 
 void LocationTable_Init() {
     locationTable[NONE]                                                        = ItemLocation::Base       (0x00, 0x00, false, "Invalid Location",                              NONE,                                           NONE,                       {} );
-    //LocationTable                                                             itemlocation::type        scene, flag, name                                   			hint key (hint_list.cpp)                       vanilla item                 categories                                                     collection check???                                                                                                
+    //LocationTable                                                             itemlocation::type        scene, flag, Repeatable, name                                   			hint key (hint_list.cpp)                       vanilla item                 categories                                                     collection check???                                                                                                
     
 	//Happy Mask Salesman - Starting Items
 	locationTable[HMS_SONG_OF_HEALING]										   = ItemLocation::Base		  (0x63, 0x54, false, "Song of Healing",					            HMS_SONG_OF_HEALING,				            SONG_OF_HEALING,			{Category::cClockTower, Category::cDayOne}	);
@@ -96,9 +96,9 @@ void LocationTable_Init() {
 	locationTable[IKANA_GRAVEYARD_GROTTO_CHEST]								   = ItemLocation::Chest 	  (0x07, 0x18, true, "Ikana Graveyard Grotto",						IKANA_GRAVEYARD_GROTTO_CHEST,				    BOMBCHU_5,					{Category::cIkanaGraveyard, Category::cGrotto,Category::cChest ,Category::cDayOne} );
 	
 	//Laundry Pool
-	locationTable[LAUNDRY_POOL_KAFEI]										   = ItemLocation::Base		  (0x70, 0xAB, true, "Laundry Pool Kafei",							LAUNDRY_POOL_KAFEI,					            PENDANT_MEMORIES,		    {Category::cLaundryPool,Category::cDayOne} );
-	locationTable[LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE]						   = ItemLocation::Base		  (0x70, 0x80, false, "Laundry Pool Curiosity Shop Man 1",				LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE,            KEATON_MASK,				{Category::cLaundryPool, Category::cVanillaMask,Category::cDayThree} );
-	locationTable[LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO]						   = ItemLocation::Base		  (0x70, 0xA1, true, "Laundry Pool Curiosity Shop Man 2",				LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO,            LETTER_MAMA,				{Category::cLaundryPool,Category::cDayThree} );
+	locationTable[LAUNDRY_POOL_KAFEI]										   = ItemLocation::Base		  (0x0D, 0xAB, true, "Laundry Pool Kafei",							LAUNDRY_POOL_KAFEI,					            PENDANT_MEMORIES,		    {Category::cLaundryPool,Category::cDayOne} );
+	locationTable[LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE]						   = ItemLocation::Base		  (0x0D, 0x80, false, "Laundry Pool Curiosity Shop Man 1",			LAUNDRY_POOL_CURIOSITY_SHOP_MAN_ONE,            KEATON_MASK,				{Category::cLaundryPool, Category::cVanillaMask,Category::cDayThree} );
+	locationTable[LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO]						   = ItemLocation::Base		  (0x0D, 0xA1, true, "Laundry Pool Curiosity Shop Man 2",			LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO,            LETTER_MAMA,				{Category::cLaundryPool,Category::cDayThree} );
 	locationTable[LAUNDRY_POOL_GURU_GURU]									   = ItemLocation::Base		  (0x70, 0x8C, false, "Laundry Pool Guru Guru",						LAUNDRY_POOL_GURU_GURU,				            BREMEN_MASK,				{Category::cLaundryPool, Category::cVanillaMask,Category::cDayOne} );
 	
 	//Milk Road

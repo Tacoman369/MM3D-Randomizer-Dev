@@ -144,17 +144,15 @@ void MenuUpdate(u32 kDown) {
     }
   }
   //if they're pressing B in the inputs menu check if any options are the same
-  else if (kDown & KEY_B && currentMenu->name == customInputs.name){
+    if (kDown & KEY_B && currentMenu->name == customInputs.name){
      if (!CheckCustomButtons())
      {
        consoleSelect(&bottomScreen);
        printf("\x1b[1;%dH\n\n\n\n\n\n\n\n\n\n\n\nYou Cannot Have Duplicate \nButton Combinations!", 1+(BOTTOM_WIDTH-18)/2);
+       CitraPrint("Checking Custom Button in Menus");
      }
-     else{//if no duplicates then go back
-      //Want to reset generate menu when leaving
-      if (currentMenu->mode == POST_GENERATE) {
-        currentMenu->mode = GENERATE_MODE;
-      }
+     else 
+     {
       consoleSelect(&topScreen);
       PrintTopScreen();
       menuList.pop_back();
@@ -162,7 +160,7 @@ void MenuUpdate(u32 kDown) {
       ModeChangeInit();
       kDown = 0;
      }
-  } 
+    }
   //If they pressed B on any menu other than main, go backwards to the previous menu
   else if (kDown & KEY_B && currentMenu->mode != MAIN_MENU) {
     

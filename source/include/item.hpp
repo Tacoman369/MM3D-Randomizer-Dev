@@ -38,8 +38,8 @@ enum ItemType {
 class Item {
 public:
     Item() = default;
-    Item(bool advancement_, bool repeatable_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_ = 0);
-    Item(bool advancement_, bool repeatable, u8* logicVar_,   Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_ = 0);
+    Item(bool advancement_, bool reusable_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_ = 0);
+    Item(bool advancement_, bool reusable_, u8* logicVar_,   Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_ = 0);
     ~Item();
 
     void ApplyEffect();
@@ -51,8 +51,8 @@ public:
         return advancement;
     }
 
-    bool IsRepeatable() const {
-        return repeatable;
+    bool IsReusable() const {
+        return reusable;
     }
     const Text& GetName() const {
         return name;
@@ -112,7 +112,7 @@ public:
 
 private:
     bool advancement;
-    bool repeatable;  
+    bool reusable;  
     std::variant<bool*, u8*> logicVar;
     Text name;
     HintKey hintKey;

@@ -13,10 +13,10 @@
 
 using namespace rnd;
 
-Item::Item(bool advancement_, bool repeatable_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
+Item::Item(bool advancement_, bool reusable_, bool* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
     : 
     advancement(advancement_),
-    repeatable(repeatable_),
+    reusable(reusable_),
     logicVar(logicVar_),
     name(std::move(name_)),
     hintKey(hintKey_),
@@ -24,10 +24,10 @@ Item::Item(bool advancement_, bool repeatable_, bool* logicVar_, Text name_, Hin
     type(type_), 
     price(price_) {}
 
-Item::Item(bool advancement_, bool repeatable_, u8* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
+Item::Item(bool advancement_, bool reusable_, u8* logicVar_, Text name_, HintKey hintKey_, u32 getItemId_, ItemType type_, u16 price_)
     :
     advancement(advancement_),
-    repeatable(repeatable_),
+    reusable(reusable_),
     logicVar(logicVar_),
     name(std::move(name_)),
     hintKey(hintKey_),
@@ -64,12 +64,12 @@ ItemOverride_Value Item::Value() const {
     if (getItemId == 0x12) {
         val.looksLikeItemId = RandomElement(IceTrapModels);
     }
-    if (!Settings::ColoredBossKeys && (getItemId >= 0x95 && getItemId <= 0x9A)) { //Boss keys
-        val.looksLikeItemId = (u32)GetItemID::GI_KEY_BOSS;
-    }
-    if (!Settings::ColoredKeys && (getItemId >= 0xAF && getItemId <= 0xB7)) { //Small keys
-        val.looksLikeItemId = (u32)GetItemID::GI_KEY_SMALL;
-    }
+    //if (!Settings::ColoredBossKeys && (getItemId >= 0x95 && getItemId <= 0x9A)) { //Boss keys
+    //    val.looksLikeItemId = (u32)GetItemID::GI_KEY_BOSS;
+    //}
+    //if (!Settings::ColoredKeys && (getItemId >= 0xAF && getItemId <= 0xB7)) { //Small keys
+    //    val.looksLikeItemId = (u32)GetItemID::GI_KEY_SMALL;
+    //}
     if (type == ITEMTYPE_SHOP) {
         // With the current shopsanity implementation, we need a way to detect
         // regular shop items. This method should have no unintended side effects

@@ -836,6 +836,7 @@ void GenerateItemPool() {
 	  0x4A, //ProgressiveSword
 	};
 	//Check song shuffle and dungeon reward shuffle just for ice traps
+	/*
 	if (ShuffleSongs.Is(rnd::SongShuffleSetting::SONGSHUFFLE_ANYWHERE)) {
 		//Push item ids for songs
 		IceTrapModels.push_back(0x4B);
@@ -855,7 +856,7 @@ void GenerateItemPool() {
 		IceTrapModels.push_back(0x57);
 		IceTrapModels.push_back(0x58);
 	}
-
+     */
 	//Fixed Item Locations
 	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
 	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME, true);
@@ -906,14 +907,14 @@ void GenerateItemPool() {
 	//ShuffleOcarina
 
 	//COWSANITY
-	if (ShuffleCows) {
+	//if (ShuffleCows) {
 		//8 total cows -- rather have junk than 8 extra milk refills
-		for (u8 i = 0; i < 8; i++) {
-      AddItemToMainPool(GetJunkItem());
-    	}
-	} else {
+	//	for (u8 i = 0; i < 8; i++) {
+    //  AddItemToMainPool(GetJunkItem());
+    //	}
+	//} else {
 		PlaceVanillaCowMilk();
-	}
+	//}
 
 	//MAGIC BEAN SHUFFLE--NEEDS WORK
 	PlaceItemInLocation(DEKU_PALACE_BEAN_SELLER, MAGIC_BEAN);//vanilla for now because replacing causes odd occurances where you cannot buy beans elsewhere
@@ -954,21 +955,23 @@ void GenerateItemPool() {
 
 	//SONG SHUFFLE
 	//add extra songs only if song shuffle is anywhere
-	if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE)){
-		AddItemsToPool(ItemPool, songList);
-	}
-	else if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE) && ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)) {
-		AddItemsToPool(PendingJunkPool, songList);
-	}
-	else {
+	//if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE)){
+	//	AddItemsToPool(ItemPool, songList);
+	//}
+	//else if (ShuffleSongs.Is(SongShuffleSetting::SONGSHUFFLE_ANYWHERE) && ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)) {
+	//	AddItemsToPool(PendingJunkPool, songList);
+	//}
+	//else {
 		PlaceVanillaSongs();
-	}
+	//}
 
-	if (ShuffleSoaring)
-	{
-		AddItemToPool(ItemPool, SONG_OF_SOARING);
-	}
-	else {PlaceItemInLocation(SOUTHERN_SWAMP_MUSIC_STATUE, SONG_OF_SOARING); }
+	//if (ShuffleSoaring)
+	//{
+	//	AddItemToPool(ItemPool, SONG_OF_SOARING);
+	//}
+	//else {
+		PlaceItemInLocation(SOUTHERN_SWAMP_MUSIC_STATUE, SONG_OF_SOARING); 
+	//	}
 
 	
 	//GREAT FAIRY SHUFFLE
@@ -1037,11 +1040,13 @@ void GenerateItemPool() {
 	}
 
 	//TOKENSANITY
-	if(Tokensanity){
-		AddItemToMainPool(SWAMP_SKULLTULA_TOKEN, 30);
-		AddItemToMainPool(OCEANSIDE_SKULLTULA_TOKEN, 30);
-	}
-	else {PlaceVanillaSkulltulaTokens();}
+	//if(Tokensanity){
+	//	AddItemToMainPool(SWAMP_SKULLTULA_TOKEN, 30);
+	//	AddItemToMainPool(OCEANSIDE_SKULLTULA_TOKEN, 30);
+	//}
+	//else {
+		PlaceVanillaSkulltulaTokens();
+	//}
 
 	//DEKU MERCHANT TRADE QUEST
 	if (ShuffleMerchants){//Merchants is Deku Scrub Trade Quest
@@ -1075,13 +1080,13 @@ void GenerateItemPool() {
 
 	//TO-DO----SHOP SANITY
 	//for now... its all vanilla lol
-	if (Settings::Shopsanity.Is(ShopsanitySetting::SHOPSANITY_OFF) || Settings::Shopsanity.Is(ShopsanitySetting::SHOPSANITY_ZERO)) {
+	//if (Settings::Shopsanity.Is(ShopsanitySetting::SHOPSANITY_OFF) || Settings::Shopsanity.Is(ShopsanitySetting::SHOPSANITY_ZERO)) {
     AddItemsToPool(ItemPool, normalRupees);
 	PlaceVanillaShopItems();
- 	 } else { //Shopsanity 1-4, random
-    AddItemsToPool(ItemPool, shopsanityRupees); //Shopsanity gets extra large rupees
-	PlaceVanillaShopItems();
-  	}
+ 	// } else { //Shopsanity 1-4, random
+    //AddItemsToPool(ItemPool, shopsanityRupees); //Shopsanity gets extra large rupees
+	//PlaceVanillaShopItems();
+  	//}
 
 	//Then Place Tingle Maps
 	if (ShuffleTingleMaps) {

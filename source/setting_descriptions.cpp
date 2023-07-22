@@ -361,6 +361,7 @@ string_view ingameSpoilersHideDesc    = "**OPTION CURRENTLY WIP**\n"            
                                         "Hides the spheres page and only shows a\n"        //
                                         "location's item after it has been found.";        //
                                                                                            //
+string_view genSpoilerLogDesc         = "Choose to Generate a Spoiler Log";                //
 /*------------------------------                                                           //
 |      MENU OPENING BUTTON     |                                                           //
 ------------------------------*/                                                           //
