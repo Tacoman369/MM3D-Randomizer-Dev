@@ -14,6 +14,8 @@
 
 int main() {
     gfxInitDefault();
+    // Register graphics to quit at exit. New to libctru update.
+    atexit(gfxExit);
     HintTable_Init();
     ItemTable_Init();
     LocationTable_Init();
@@ -59,7 +61,6 @@ int main() {
         //Wait for VBlank
         gspWaitForVBlank();
     }
-
-    gfxExit();
+    
     return 0;
 }
