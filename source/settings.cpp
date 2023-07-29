@@ -547,7 +547,7 @@ namespace Settings {
     //&comfort,
     &timeSaverSettings,
     &otherSettings,
-    //&customInputs,
+    &customInputs,
     //&cosmetics,
     &settingsPresets,
     &generateRandomizer,

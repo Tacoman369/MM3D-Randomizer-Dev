@@ -367,13 +367,13 @@ static void PlaceVanillaMainInventory() {
 	PlaceItemInLocation(GBC_FISHERMAN_PHOTO, SEAHORSE);
 };
 
-const std::array<ItemKey, 10> progressiveItemsList = {
+const std::array<ItemKey, 8> progressiveItemsList = {
 	PROGRESSIVE_BOW,
 	PROGRESSIVE_BOW,
 	PROGRESSIVE_BOW, //1 Bow + 2 Quiver Upgrades
 	PROGRESSIVE_BOMB_BAG,
-	PROGRESSIVE_BOMB_BAG,
-	PROGRESSIVE_BOMB_BAG, //3 Bomb Bags
+	//PROGRESSIVE_BOMB_BAG,
+	//PROGRESSIVE_BOMB_BAG, //3 Bomb Bags - 2 are in Bomb Shop - part of Shopsanity
 	//PROGRESSIVE_MAGIC_METER,
 	//PROGRESSIVE_MAGIC_METER,//2 Magic Meters part of Great Fairy Reward Shuffle
 	PROGRESSIVE_WALLET,
@@ -554,14 +554,21 @@ static void ReplaceMaxItem(const ItemKey itemToReplace, int max) {
 
 void PlaceJunkInExcludedLocation(const LocationKey il) {
 	//place a non-advancement item in this location
-	for (size_t i = 0; i < ItemPool.size(); i++) {
-		if (!ItemTable(ItemPool[i]).IsAdvancement()) {
-			PlaceItemInLocation(il, ItemPool[i]);
-			ItemPool.erase(ItemPool.begin() + i);
-			return;
-		}
+	if (JunkPoolItems.size() != 0) {
+		PlaceItemInLocation(il, GetJunkItem());
+		return;
 	}
-	printf("ERROR: No Junk to Place!!!\n");
+	else {
+		printf("ERROR: No Junk to Place!!!\n:");
+	}
+	//for (size_t i = 0; i < ItemPool.size(); i++) {
+	//	if (!ItemTable(ItemPool[i]).IsAdvancement()) {
+	//		PlaceItemInLocation(il, ItemPool[i]);
+	//		ItemPool.erase(ItemPool.begin() + i);
+	//		return;
+	//	}
+	//}
+	//printf("ERROR: No Junk to Place!!!\n");
 };
 
 static void PlaceVanillaMapsAndCompasses() {
@@ -861,6 +868,8 @@ void GenerateItemPool() {
 	PlaceItemInLocation(MAJORA, MAJORAS_MASK, true);
 	PlaceItemInLocation(CLOCK_TOWER_OCARINA_OF_TIME, OCARINA_OF_TIME, true);
 	PlaceItemInLocation(WOODFALL_TEMPLE_DEKU_PRINCESS, DEKU_PRINCESS);
+	PlaceItemInLocation(W_CLOCK_TOWN_BOMB_BAG_BUY, PROGRESSIVE_BOMB_BAG);
+	PlaceItemInLocation(W_CLOCK_TOWN_BIG_BOMB_BAG_BUY, PROGRESSIVE_BOMB_BAG);
     	
 	//temp placement until shopsanity works
 	PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE, MAGIC_BEAN);

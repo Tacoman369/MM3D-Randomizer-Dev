@@ -50,7 +50,7 @@ int main() {
 
         //launch MM3d directly by holding L and R (cartridge only)
         if (kHeld & KEY_L && kHeld & KEY_R) {
-            aptSetChainloader(0x00040000000125500, 2);
+            aptSetChainloader(0x0004000000125500, 2);
             break;
         }
 
