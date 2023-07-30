@@ -196,7 +196,7 @@ void LocationTable_Init() {
 	locationTable[STOCKPOTINN_GRANDMA_LONG_STORY]							   = ItemLocation::Base		  (0x61, 0xBA, true, "Stock Pot Inn Grandma Long Story",				STOCKPOTINN_GRANDMA_LONG_STORY,			        PIECE_OF_HEART,			    {Category::cStockPotInn, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[STOCKPOTINN_ANJU_AND_KAFEI]								   = ItemLocation::Base		  (0x61, 0x85, true, "Stock Pot Inn Anju And Kafei",					STOCKPOTINN_ANJU_AND_KAFEI,				        COUPLES_MASK,			    {Category::cStockPotInn, Category::cVanillaMask,Category::cDayThree} );
 	locationTable[STOCKPOTINN_STAFF_ROOM_CHEST]				   			 	   = ItemLocation::Chest	  (0x61, 0x01, true, "Stock Pot Inn Staff Room Chest",				STOCKPOTINN_STAFF_ROOM_CHEST,			        SILVER_RUPEE,			    {Category::cStockPotInn,Category::cChest ,Category::cDayThree} );
-	locationTable[STOCKPOTINN_GUEST_ROOM_CHEST]								   = ItemLocation::Chest	  (0x61, 0x06, true, "Stock Pot Inn Guest Room Chest",				STOCKPOTINN_GUEST_ROOM_CHEST,			        SILVER_RUPEE,			    {Category::cStockPotInn,Category::cChest ,Category::cDayOne} );
+	locationTable[STOCKPOTINN_GUEST_ROOM_CHEST]								   = ItemLocation::Chest	  (0x61, 0x00, true, "Stock Pot Inn Guest Room Chest",				STOCKPOTINN_GUEST_ROOM_CHEST,			        SILVER_RUPEE,			    {Category::cStockPotInn,Category::cChest ,Category::cDayOne} );
 	
 	//Stone Tower
 	locationTable[STONE_TOWER_INVERTED_RIGHT_CHEST]							   = ItemLocation::Chest	  (0x18, 0x1D, true, "Inverted Stone Tower Right Chest",				STONE_TOWER_INVERTED_RIGHT_CHEST,		        SILVER_RUPEE,		    	{Category::cStoneTower,Category::cChest,Category::cDayOne } );
