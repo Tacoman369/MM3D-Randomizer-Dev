@@ -151,6 +151,7 @@ void LocationTable_Init() {
 	//Romani Ranch
 	locationTable[ROMANI_RANCH_ALIEN_DEFENSE]								   = ItemLocation::Base		  (0x35, 0x60, true, "Romani Ranch Alien Defense",					ROMANI_RANCH_ALIEN_DEFENSE,				        BOTTLE_WITH_MILK,		    {Category::cRomaniRanch,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_DOG_RACE]									   = ItemLocation::Base		  (0x41, 0x0C, true, "Romani Ranch Dog Race",							ROMANI_RANCH_DOG_RACE,					        PIECE_OF_HEART,			    {Category::cRomaniRanch,Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[ROMANI_RANCH_DOG_RACE_ALT]								   = ItemLocation::Base		  (0x41, 0xBA, true, "Romani Ranch Dog Race Alt",						ROMANI_RANCH_DOG_RACE_ALT,					    FISHING_PASS,			    {Category::cRomaniRanch,Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_GROG]										   = ItemLocation::Base		  (0x42, 0x7F, false, "Romani Ranch Grog",								ROMANI_RANCH_GROG,						        BUNNY_HOOD,				    {Category::cRomaniRanch, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_GROG_ALT]									   = ItemLocation::Base		  (0x42, 0xBA, false, "Romani Ranch Grog Alt",							ROMANI_RANCH_GROG_ALT,						    FISHING_PASS,				{Category::cRomaniRanch, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_CREMIA_ESCORT]								   = ItemLocation::Base		  (0x35, 0x82, true, "Romani Ranch Cremia Escort",					ROMANI_RANCH_CREMIA_ESCORT,				        ROMANIS_MASK,			    {Category::cRomaniRanch, Category::cVanillaMask,Category::cDayTwo} );
@@ -180,6 +181,7 @@ void LocationTable_Init() {
 	locationTable[SOUTHERN_SWAMP_BOAT_ARCHERY]								   = ItemLocation::Base       (0x57, 0x0C, false, "Southern Swamp Boat Archery",					SOUTHERN_SWAMP_BOAT_ARCHERY,		            PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[SWAMP_TOURIST_CENTER_ROOF]								   = ItemLocation::Collectable(0x45, 0x00, false, "Southern Swamp Tourist Center Roof",			SWAMP_TOURIST_CENTER_ROOF,		                PIECE_OF_HEART,			    {Category::cSouthernSwamp, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD]						   = ItemLocation::Base       (0x27, 0x8A, true, "Southern Swamp Spider House Reward",			SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD,	            MASK_OF_TRUTH,			    {Category::cSouthernSwamp, Category::cVanillaMask,Category::cDayOne} );
+	locationTable[SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT]					   = ItemLocation::Base       (0x27, 0xBA, true, "Southern Swamp Spider House Reward Alt",			SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT,	            FISHING_PASS,			    {Category::cSouthernSwamp, Category::cVanillaMask,Category::cDayOne} );
 	locationTable[SOUTHERN_SWAMP_MUSIC_STATUE]								   = ItemLocation::Base       (0x45, 0x72, false, "Southern Swamp Music Statue",					SOUTHERN_SWAMP_MUSIC_STATUE,		            SONG_OF_SOARING,		    {Category::cSouthernSwamp, Category::cSong,Category::cDayOne} );
 	locationTable[SOUTHERN_SWAMP_NEAR_SPIDER_HOUSE_GROTTO_CHEST]			   = ItemLocation::Chest      (0x07, 0x1D, true, "Southern Swamp Near Spider House Grotto",	    SOUTHERN_SWAMP_NEAR_SPIDER_HOUSE_GROTTO_CHEST,  RED_RUPEE,			        {Category::cSouthernSwamp,Category::cGrotto,Category::cChest,Category::cDayOne } );
 	locationTable[SOUTHERN_SWAMP_MYSTERY_WOODS_GROTTO_CHEST]				   = ItemLocation::Chest      (0x07, 0x1C, true, "Southern Swamp Mystery Woods Grotto",			SOUTHERN_SWAMP_MYSTERY_WOODS_GROTTO_CHEST,      PURPLE_RUPEE,			    {Category::cSouthernSwamp, Category::cGrotto,Category::cChest ,Category::cDayOne} );
@@ -230,6 +232,7 @@ void LocationTable_Init() {
 	locationTable[W_CLOCK_TOWN_POSTMANS_GAME]								   = ItemLocation::Base		  (0x2E, 0x0C, true, "W Clock Town Postman's Game",					W_CLOCK_TOWN_POSTMANS_GAME,			            PIECE_OF_HEART,				{Category::cWestClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[W_CLOCK_TOWN_ROSA_SISTERS]								   = ItemLocation::Base		  (0x6D, 0x0C, true, "W Clock Town Rosa Sisters",						W_CLOCK_TOWN_ROSA_SISTERS,			            PIECE_OF_HEART,				{Category::cWestClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[W_CLOCK_TOWN_SWORDSMANS_SCHOOL]							   = ItemLocation::Base		  (0x54, 0x0C, true, "W Clock Town Swordsman's School",				W_CLOCK_TOWN_SWORDSMANS_SCHOOL,		            PIECE_OF_HEART,				{Category::cWestClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
+	locationTable[W_CLOCK_TOWN_SWORDSMANS_SCHOOL_ALT]						   = ItemLocation::Base		  (0x54, 0xBA, true, "W Clock Town Swordsman's School Alt",				W_CLOCK_TOWN_SWORDSMANS_SCHOOL_ALT,		            FISHING_PASS,				{Category::cWestClockTown, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY]							   = ItemLocation::Base		  (0x0D, 0x7E, true, "W Clock Town All-Night Mask Purchase",			W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY,	            ALL_NIGHT_MASK,				{Category::cWestClockTown, Category::cVanillaMask,Category::cDayThree} );
 	//locationTable[W_CLOCK_TOWN_LOTTERY]								  	     = ItemLocation::Base	    (0x39, 0x00, true, "W Clock Town Lottery",						  W_CLOCK_TOWN_LOTTERY,				            PURPLE_RUPEE,				{Category::cWestClockTown} );
 	locationTable[W_CLOCK_TOWN_BOMB_SHOP_GORON]                                = ItemLocation::Base       (0x0D, 0x34, true, "W Clock Town Bomb Shop Goron",                  W_CLOCK_TOWN_BOMB_SHOP_GORON,                   POWDER_KEG,                 {Category::cWestClockTown, Category::cMerchant,Category::cDayOne});
@@ -867,6 +870,7 @@ std::vector<LocationKey> overworldLocations = {
 //Romani Ranch
   ROMANI_RANCH_ALIEN_DEFENSE,
   ROMANI_RANCH_DOG_RACE,
+  ROMANI_RANCH_DOG_RACE_ALT,
   ROMANI_RANCH_GROG,
   ROMANI_RANCH_GROG_ALT,
   ROMANI_RANCH_CREMIA_ESCORT,
@@ -896,6 +900,7 @@ std::vector<LocationKey> overworldLocations = {
   SWAMP_TOURIST_CENTER_ROOF,
   SOUTHERN_SWAMP_NEAR_SPIDER_HOUSE_GROTTO_CHEST,
   //SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD,--Handled in Dungeon.cpp
+  SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT,
   SOUTHERN_SWAMP_MYSTERY_WOODS_GROTTO_CHEST,
   SOUTHERN_SWAMP_KOTAKE_MUSHROOM_SALE,
   //SOUTHERN_SWAMP_PICTOGRAPH_STANDARD,
@@ -946,6 +951,7 @@ std::vector<LocationKey> overworldLocations = {
   W_CLOCK_TOWN_POSTMANS_GAME,
   W_CLOCK_TOWN_ROSA_SISTERS,
   W_CLOCK_TOWN_SWORDSMANS_SCHOOL,
+  W_CLOCK_TOWN_SWORDSMANS_SCHOOL_ALT,
   W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY,
   W_CLOCK_TOWN_BOMB_SHOP_GORON,
   W_CLOCK_TOWN_POSTBOX,
@@ -1162,6 +1168,16 @@ void CreateItemOverrides() {
 	//cover both wallet options
 	auto loc16 = Location(S_CLOCK_TOWN_BANK_REWARD_1);
 	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, loc16->GetPlacedItemKey());
+	//Romani Ranch Dog Race Repeats
+	auto loc17 = Location(ROMANI_RANCH_DOG_RACE);
+	PlaceItemInLocation(ROMANI_RANCH_DOG_RACE_ALT, loc17->GetPlacedItemKey());
+	//Swamp Spider House Reward Repeats
+	auto loc18 = Location(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD);
+	PlaceItemInLocation(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT, loc18->GetPlacedItemKey());
+	//Swordsman School Repeats
+	auto loc19 = Location(W_CLOCK_TOWN_SWORDSMANS_SCHOOL);
+	PlaceItemInLocation(W_CLOCK_TOWN_SWORDSMANS_SCHOOL_ALT, loc19->GetPlacedItemKey());
+
 
 
   for (LocationKey locKey : allLocations) {

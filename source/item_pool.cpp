@@ -887,6 +887,9 @@ void GenerateItemPool() {
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(ROMANI_RANCH_GROG_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(ROMANI_RANCH_DOG_RACE_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT, BLUE_RUPEE);
+	PlaceItemInLocation(W_CLOCK_TOWN_SWORDSMANS_SCHOOL_ALT, BLUE_RUPEE);
 
 	//Check Non Dungeon Settings
 

@@ -517,6 +517,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(W_CLOCK_TOWN_SWORDSMANS_SCHOOL, {[] {return Fighting;}}),
+		LocationAccess(W_CLOCK_TOWN_SWORDSMANS_SCHOOL, {[] {return Fighting;}}),
 	},
 	{
 		//Exits
@@ -1340,6 +1341,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(ROMANI_RANCH_DOG_RACE, {[] {return true;}}),
+		LocationAccess(ROMANI_RANCH_DOG_RACE_ALT, {[] {return true;}}),
 		LocationAccess(DOGGY_RACETRACK_ROOF_CHEST, {[] {return Hookshot || (WaterForBeans && MagicBean);}}),
 	},
 	{
@@ -3727,6 +3729,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD, {[] {return SkulltulaCount(SwampSkulltulaTokens, 30);}}),
+		LocationAccess(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT, {[] {return SkulltulaCount(SwampSkulltulaTokens, 30);}}),
 	},
 	{
 		//Exits
