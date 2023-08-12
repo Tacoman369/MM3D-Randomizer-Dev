@@ -269,7 +269,7 @@ std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& 
     return accessibleLocations;
     
 }
-/*
+
 static void GeneratePlaythrough() {
     playthroughBeatable = false;
     Logic::LogicReset();
@@ -356,7 +356,7 @@ static void CalculateWotH() {
     playthroughBeatable = true;
     Logic::LogicReset();
     GetAccessibleLocations(allLocations);
-}*/
+}
 
 //Will place things completely randomly, no logic checks are performed
 static void FastFill(std::vector<ItemKey> items, std::vector<LocationKey> locations, bool endOnItemsEmpty = false) {
@@ -748,7 +748,7 @@ int NoLogicFill() {
     RandomizeDungeonRewards();
     std::vector<ItemKey> remainingPool = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return true;});
     FastFill(remainingPool, GetAllEmptyLocations(), false);
-    //GeneratePlaythrough();
+    GeneratePlaythrough();
     //Successful placement, produced beatable result
     //if (playthroughBeatable && !placementFailure) {
     //    printf("Done");
@@ -869,15 +869,15 @@ int Fill() {
         FastFill(remainingPool, GetAllEmptyLocations(), false);
         CitraPrint("Fast Fill of Remaining locations was sucessful");
         //CitraPrint("Generating Playthrough...");
-        //GeneratePlaythrough(); TODO::FIX PLAYTHROUGH
+        GeneratePlaythrough(); //TODO::FIX PLAYTHROUGH
 
         //Successful placement, produced beatable result
         if (!placementFailure) { //&& playthroughBeatable 
             printf("Done");
-            //printf("\x1b[9;10HCalculating Playthrough..."); TO-DO::FIX PLAYTHROUGH
-            //printf("\x1b[9;10HCalculating Way of the Hero..."); TO-DO::FIX WOTH
-            //PareDownPlaythrough();
-            //CalculateWotH();
+            printf("\x1b[9;10HCalculating Playthrough..."); //TO-DO::FIX PLAYTHROUGH
+            printf("\x1b[9;10HCalculating Way of the Hero..."); //TO-DO::FIX WOTH
+            PareDownPlaythrough();
+            CalculateWotH();
             CitraPrint("Creating Item Overrides");
             CreateItemOverrides();
            // CreateEntranceOverrides();

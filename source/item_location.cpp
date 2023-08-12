@@ -149,7 +149,7 @@ void LocationTable_Init() {
 	locationTable[ROAD_TO_SWAMP_GROTTO_CHEST]								   = ItemLocation::Chest	  (0x07, 0x1E, true,  "Road to Southern Swamp Grotto",					ROAD_TO_SWAMP_GROTTO_CHEST,						RED_RUPEE,			        {Category::cRoadToSouthernSwamp,Category::cGrotto, Category::cChest,Category::cDayOne} );
 	
 	//Romani Ranch
-	locationTable[ROMANI_RANCH_ALIEN_DEFENSE]								   = ItemLocation::Base		  (0x35, 0x60, true,  "RRanch Alien Defense",				ROMANI_RANCH_ALIEN_DEFENSE,				        BOTTLE_WITH_MILK,		    {Category::cRomaniRanch,Category::cDayOne} );
+	locationTable[ROMANI_RANCH_ALIEN_DEFENSE]								   = ItemLocation::Base		  (0x35, 0x60, true,  "RR Alien Defense",				    ROMANI_RANCH_ALIEN_DEFENSE,				        BOTTLE_WITH_MILK,		    {Category::cRomaniRanch,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_DOG_RACE]									   = ItemLocation::Base		  (0x41, 0x0C, true,  "RR Dog Race",						ROMANI_RANCH_DOG_RACE,					        PIECE_OF_HEART,			    {Category::cRomaniRanch,Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_DOG_RACE_ALT]								   = ItemLocation::Base		  (0x41, 0xBA, true,  "RR Dog Race Alt",					ROMANI_RANCH_DOG_RACE_ALT,					    FISHING_PASS,			    {Category::cRomaniRanch,Category::cMinigame, Category::cVanillaHeartPiece,Category::cDayOne} );
 	locationTable[ROMANI_RANCH_GROG]										   = ItemLocation::Base		  (0x42, 0x7F, false, "RR Grog",							ROMANI_RANCH_GROG,						        BUNNY_HOOD,				    {Category::cRomaniRanch, Category::cVanillaMask,Category::cDayOne} );
