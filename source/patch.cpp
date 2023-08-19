@@ -1,7 +1,7 @@
 #include "patch.hpp"
 
 #include "cosmetics.hpp"
-//#include "custom_messages.hpp"
+#include "custom_messages.hpp"
 //#include "music.hpp"
 //#include "shops.hpp"
 #include "spoiler_log.hpp"
@@ -291,19 +291,11 @@ bool WriteAllPatches() {
   /*--------------------------------
   |     rCustomMessageEntries      |
   ---------------------------------*/
-  /*
-  std::pair<const char*, u32> messageDataInfo = CustomMessages::RawMessageData();
-  std::pair<const char*, u32> messageEntriesInfo = CustomMessages::RawMessageEntryData();
 
-  // Write message data to patch
-  u32 messageDataOffset = V_TO_P(RCUSTOMMESSAGES_ADDR);
-  s32 messageDataSize = messageDataInfo.second;
-  if (!WritePatch(messageDataOffset, messageDataSize, (char*)messageDataInfo.first, code, bytesWritten, totalRW, buf)) {
-    return false;
-  }
+  std::pair<const char*, u32> messageEntriesInfo = CustomMessages::RawMessageData();
 
   // Write message entries to patch
-  u32 messageEntriesOffset = (messageDataOffset + messageDataSize + 3) & ~3; //round up and align with u32
+  u32 messageEntriesOffset = V_TO_P(RCUSTOMMESSAGES_ADDR);
   s32 messageEntriesSize = messageEntriesInfo.second;
   if (!WritePatch(messageEntriesOffset, messageEntriesSize, (char*)messageEntriesInfo.first, code, bytesWritten, totalRW, buf)) {
     return false;
@@ -323,7 +315,7 @@ bool WriteAllPatches() {
   u32 numCustomMessageEntriesData = CustomMessages::NumMessages();
   if (!WritePatch(patchOffset, patchSize, (char*)(&numCustomMessageEntriesData), code, bytesWritten, totalRW, buf)) {
     return false;
-  }*/
+  }
 
   /*--------------------------------
   |         rBGMOverrides          |
