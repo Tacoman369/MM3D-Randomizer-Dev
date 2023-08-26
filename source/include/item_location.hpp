@@ -44,6 +44,7 @@ public:
     SpoilerCollectionCheckType type = SpoilerCollectionCheckType::SPOILER_CHK_NONE;
     u8 scene = 0;
     u8 flag = 0;
+    u16 textID = 0;
 
     SpoilerCollectionCheck() {
     }
@@ -104,7 +105,7 @@ public:
 class ItemLocation {
 public:
     ItemLocation() = default;
-    ItemLocation(ItemLocationType type_, u8 scene_, u8 flag_, bool repeatable_, std::string name_, HintKey hintKey_, ItemKey vanillaItem_, std::vector<Category> categories_, u16 price_ = 0, SpoilerCollectionCheck collectionCheck_ = SpoilerCollectionCheck(), SpoilerCollectionCheckGroup collectionCheckGroup_ = SpoilerCollectionCheckGroup::GROUP_NO_GROUP)
+    ItemLocation(ItemLocationType type_, u8 scene_, u8 flag_ ,bool repeatable_, std::string name_, HintKey hintKey_, ItemKey vanillaItem_, std::vector<Category> categories_, u16 price_ = 0, SpoilerCollectionCheck collectionCheck_ = SpoilerCollectionCheck(), SpoilerCollectionCheckGroup collectionCheckGroup_ = SpoilerCollectionCheckGroup::GROUP_NO_GROUP, u16 textID_ = 0)
         : 
         scene(scene_), 
         flag(flag_),
@@ -116,7 +117,8 @@ public:
         categories(std::move(categories_)), 
         price(price_),
         collectionCheck(collectionCheck_),
-        collectionCheckGroup(collectionCheckGroup_) {}
+        collectionCheckGroup(collectionCheckGroup_),
+        textID(textID_) {}
     
     ItemOverride_Key Key() const {
         ItemOverride_Key key;
@@ -373,8 +375,8 @@ public:
         return ItemLocation{ ItemLocationType::OtherHint, scene, flag, repeatable, std::move(name), NONE, NONE, std::move(categories) };
     }
 
-    static auto HintStone(u8 scene, u8 flag, bool repeatable, std::string&& name, std::vector<Category>&& categories) {
-        return ItemLocation{ ItemLocationType::HintStone, scene, flag, repeatable, std::move(name), NONE, NONE, std::move(categories) };
+    static auto HintStone(u8 scene, u16 textID, bool repeatable, std::string&& name, std::vector<Category>&& categories) {
+        return ItemLocation{ ItemLocationType::HintStone, scene, 0x0, repeatable, std::move(name), NONE, NONE, std::move(categories), NONE, SpoilerCollectionCheck(), rnd::GROUP_NO_GROUP, textID};
     }
 
     void ResetVariables() {
@@ -407,6 +409,7 @@ private:
     u16 price = 0;
     SpoilerCollectionCheck collectionCheck;
     SpoilerCollectionCheckGroup collectionCheckGroup;
+    u16 textID;
     bool isHintable = false;
     AreaKey parentRegion = NONE;
     bool hasShopsanityPrice = false;
