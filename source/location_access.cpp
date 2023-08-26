@@ -292,8 +292,8 @@ void AreaTable_Init() {
 		LocationAccess(N_CLOCK_TOWN_KEATON_QUIZ, {[] {return KeatonMask;}}),
 		LocationAccess(N_CLOCK_TOWN_TREE, {[] {return true;}}),
 		LocationAccess(N_CLOCK_TOWN_OLD_LADY, {[] {return Fighting || Bow;}}),
-		LocationAccess(TINGLE_N_CLOCK_TOWN_CT, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
-		LocationAccess(TINGLE_N_CLOCK_TOWN_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_N_CLOCK_TOWN_CT, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_N_CLOCK_TOWN_WF, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(N_CLOCK_TOWN_POSTBOX, {[]{return PostmansHat;}}),
 
 	},
@@ -478,6 +478,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
+		LocationAccess(E_CLOCK_TOWN_MAYOR, {[]{return CouplesMask;}}),
 		LocationAccess(E_CLOCK_TOWN_AROMA_IN_OFFICE, {[] {return true;}}),
 	},
 	{
@@ -818,8 +819,8 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(ROAD_TO_SS_TREE, {[] {return DekuMask && (MagicMeter || Bow || Hookshot || ZoraMask);}}),//something to kill the dragonfly
-		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
-		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 	},
 	{
 		//Exits
@@ -865,6 +866,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(SOUTHERN_SWAMP_SCRUB_TRADE, {[] {return LandTitle;}}),
+		LocationAccess(SOUTHERN_SWAMP_SCRUB_PURCHASE, {[]{return DekuMask;}}),
 		LocationAccess(SOUTHERN_SWAMP_MUSIC_STATUE, {[] {return true;}}),
 		LocationAccess(SWAMP_TOURIST_CENTER_ROOF, {[] {return DekuMask && LandTitle;}}),
 	},
@@ -901,6 +903,10 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(SOUTHERN_SWAMP_KOTAKE, {[] {return true;}}),
 		LocationAccess(SOUTHERN_SWAMP_KOTAKE_MUSHROOM_SALE, {[] {return Mushroom;}}),
+		LocationAccess(POTION_SHOP_ITEM_1, {[]{return AnyBottle;}}),
+		LocationAccess(POTION_SHOP_ITEM_2, {[]{return AnyBottle;}}),
+		LocationAccess(POTION_SHOP_ITEM_3, {[]{return AnyBottle;}}),
+		
 	},
 	{
 		//Exits
@@ -955,7 +961,6 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(SOUTHERN_SWAMP, {[]{return true;}}),//just fall off 
 		Entrance(WOODFALL, {[]{return DekuMask;}}),
-		Entrance(DEKU_PALACE, {[]{return DekuMask;}}),
 	});
 
 	areaTable[DEKU_PALACE] = Area("Deku Palace", "Deku Palace", DEKU_PALACE, {
@@ -1009,8 +1014,8 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(DEKU_PALACE_BUTLER_RACE, {[] {return DekuPrincessReturned;}}),
-		LocationAccess(DEKU_PALACE_BUTLER_RACE_ALT, {[]{return DekuPrincessReturned;}}),
+		LocationAccess(DEKU_PALACE_BUTLER_RACE, {[] {return DekuMask;}}),// && DekuPrincessReturned
+		LocationAccess(DEKU_PALACE_BUTLER_RACE_ALT, {[]{return DekuMask;}}),// && DekuPrincessReturned
 	},
 	{
 		//Exits
@@ -1125,8 +1130,8 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(TWIN_ISLANDS_UNDERWATER_RAMP_CHEST, {[] {return SnowheadClear && ZoraMask;}}),
 		LocationAccess(TWIN_ISLANDS_CAVE_CHEST, {[] {return SnowheadClear && ZoraMask;}}),
-		LocationAccess(TINGLE_TWIN_ISLANDS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
-		LocationAccess(TINGLE_TWIN_ISLANDS_RR, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_TWIN_ISLANDS_SH, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_TWIN_ISLANDS_RR, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 	},
 	{
 		//Exits
@@ -1294,8 +1299,8 @@ void AreaTable_Init() {
 	}, 
 	{
 		//Locations
-		LocationAccess(TINGLE_MILK_ROAD_RR, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
-		LocationAccess(TINGLE_MILK_ROAD_GB, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_MILK_ROAD_RR, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_MILK_ROAD_GB, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 	},
 	{
 		//Exits
@@ -1312,6 +1317,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(MILK_ROAD_GORMAN_RACE,     {[]{return CanPlay(EponasSong);}}),
 		LocationAccess(MILK_ROAD_GORMAN_MILK_BUY, {[]{return AnyBottle;}}),
+		LocationAccess(GORMAN_TRACK_MYSTERY_MILK_QUEST, {[] {return CircusLeadersMask;}}),
 	},
 	{
 		//Exits
@@ -1333,6 +1339,7 @@ void AreaTable_Init() {
 		Entrance(DOGGY_RACETRACK, {[]{return true;}}),
 		Entrance(CUCCO_SHACK, {[]{return true;}}),
 		Entrance(ROMANI_RANCH_HOUSE, {[]{return true;}}),
+		Entrance(ROMANI_RANCH_BARN, {[]{return true;}}),
 	});
 
 	areaTable[DOGGY_RACETRACK] = Area("Doggy Racetrack", "Doggy Racetrack", NONE, {
@@ -1373,6 +1380,20 @@ void AreaTable_Init() {
 		Entrance(ROMANI_RANCH, {[]{return true;}}),
 	});
 
+	areaTable[ROMANI_RANCH_BARN] = Area("Romani Ranch Barn", "Romani Ranch Barn", NONE, {
+		//Events
+	},
+	{
+		//Locations
+		LocationAccess(ROMANI_RANCH_COW_1, {[]{return EponasSong && AnyBottle;}}),
+		LocationAccess(ROMANI_RANCH_COW_2, {[]{return EponasSong && AnyBottle;}}),
+		LocationAccess(ROMANI_RANCH_COW_3, {[]{return EponasSong && AnyBottle;}}),
+	},
+	{
+		//Exits
+		Entrance(ROMANI_RANCH, {[]{return true;}}),
+	});
+
 	areaTable[GREAT_BAY_COAST] = Area("Great Bay Coast", "Great Bay Coast", GREAT_BAY_COAST, {
 		//Events
 	}, 
@@ -1381,6 +1402,8 @@ void AreaTable_Init() {
 		LocationAccess(GBC_FISHERMAN_GAME, {[] {return GreatBayClear && Hookshot;}}),
 		LocationAccess(GBC_LEDGE, {[] {return Hookshot && MagicBean && AnyBottle;}}),
 		LocationAccess(GBC_MIKAU, {[] {return CanPlay(SongOfHealing);}}),
+		LocationAccess(TINGLE_GBC_GB, {[]{ return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_GBC_ST, {[]{ return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 	},
 	{
 		//Exits
@@ -1389,6 +1412,7 @@ void AreaTable_Init() {
 		Entrance(GREAT_BAY_COAST_MARINE_LAB, {[]{return true;}}),
 		Entrance(ZORA_CAPE,  {[]{return true;}}),
 		Entrance(GREAT_BAY_COAST_GROTTO, {[]{return true;}}),
+		Entrance(GREAT_BAY_COAST_COW_GROTTO, {[]{return Hookshot;}}),
 		Entrance(PIRATE_FORTRESS_EXTERIOR, {[]{return ZoraMask;}}),
 		Entrance(PINNACLE_ROCK, {[]{return ZoraMask;}}),
 		Entrance(FISHERMAN_HUT, {[]{return true;}}),
@@ -1414,6 +1438,19 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(GBC_GROTTO_CHEST, {[] {return CanPlay(EponasSong);}}),
+	},
+	{
+		//Exits
+		Entrance(GREAT_BAY_COAST, {[]{return true;}}),
+	});
+
+	areaTable[GREAT_BAY_COAST_COW_GROTTO] = Area("Great Bay Coast Cow Grotto", "Great Bay Coast Cow Grotto", NONE, {
+		//Events
+	},
+	{
+		//Locations
+		LocationAccess(GBC_GROTTO_COW1, {[]{return EponasSong && AnyBottle;}}),
+		LocationAccess(GBC_GROTTO_COW2, {[]{return EponasSong && AnyBottle;}}),
 	},
 	{
 		//Exits
@@ -1756,6 +1793,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(IKANA_CANYON_LEDGE, {[] {return ZoraMask && OceanTitle && DekuMask;}}),
 		LocationAccess(IKANA_CANYON_SCRUB_TRADE, {[] {return ZoraMask && OceanTitle;}}),
+		LocationAccess(IKANA_CANYON_SCRUB_PURCHASE, {[]{return AnyWallet && AnyBottle;}}),
 	},
 	{
 		//Exits
@@ -1772,8 +1810,8 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(TINGLE_IKANA_CANYON_ST, {[]{return ZoraMask || Hookshot || Bow || (DekuMask && MagicMeter);}}),
-		LocationAccess(TINGLE_IKANA_CANYON_CT, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
+		LocationAccess(TINGLE_IKANA_CANYON_ST, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_IKANA_CANYON_CT, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 	},
 	{
 		//Exits
@@ -2095,10 +2133,11 @@ void AreaTable_Init() {
 
 	areaTable[WOODFALL_TEMPLE_PRINCESS_ROOM] = Area("Deku Princess Room", "Deku Princess Room", WOODFALL_TEMPLE, {
 		//Events
+		EventAccess(&DekuPrincess, {[]{return WoodfallClear;}}),
 	},
 	{
 		//Locations
-		LocationAccess(WOODFALL_TEMPLE_DEKU_PRINCESS, {[]{return HasBottle;}}),
+		LocationAccess(WOODFALL_TEMPLE_DEKU_PRINCESS, {[]{return AnyBottle;}}),
 	},
 	{
 		//Exits
@@ -3991,7 +4030,7 @@ void AreaTable_Init() {
 }
 
 namespace Areas {
-	static std::array < const AreaKey, 263> allAreas = {
+	static std::array < const AreaKey, 265> allAreas = {
 		ROOT,
 		ROOT_EXITS,
 		N_CLOCK_TOWN,
@@ -4068,9 +4107,11 @@ namespace Areas {
 		DOGGY_RACETRACK,
 		CUCCO_SHACK,
 		ROMANI_RANCH_HOUSE,
+		ROMANI_RANCH_BARN,
 		GREAT_BAY_COAST,
 		GREAT_BAY_COAST_MARINE_LAB,
 		GREAT_BAY_COAST_GROTTO,
+		GREAT_BAY_COAST_COW_GROTTO,
 		FISHERMAN_HUT,
 		PINNACLE_ROCK,
 		ZORA_CAPE,

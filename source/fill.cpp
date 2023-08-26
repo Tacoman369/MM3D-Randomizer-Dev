@@ -872,12 +872,14 @@ int Fill() {
         GeneratePlaythrough(); //TODO::FIX PLAYTHROUGH
 
         //Successful placement, produced beatable result
-        if (!placementFailure) { //&& playthroughBeatable 
+        if (!placementFailure ) {//&& playthroughBeatable  
             printf("Done");
-            printf("\x1b[9;10HCalculating Playthrough..."); //TO-DO::FIX PLAYTHROUGH
-            printf("\x1b[9;10HCalculating Way of the Hero..."); //TO-DO::FIX WOTH
+            printf("\x1b[9;10HCalculating Playthrough..."); 
             PareDownPlaythrough();
+            printf("Done");
+            printf("\x1b[10;10HCalculating Way of the Hero..."); 
             CalculateWotH();
+            printf("Done");
             CitraPrint("Creating Item Overrides");
             CreateItemOverrides();
            // CreateEntranceOverrides();

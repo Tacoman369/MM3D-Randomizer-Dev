@@ -209,15 +209,15 @@ bool WriteAllPatches() {
   /*------------------------ -
   |       gSpoilerData      |
   --------------------------*/
-  /*
-  u32 patchOffset = V_TO_P(GSPOILERDATA_ADDR);
-  s32 patchSize = sizeof(SpoilerData);
+  
+   patchOffset = V_TO_P(GSPOILERDATA_ADDR);
+   patchSize = sizeof(SpoilerData);
   //Get the spoiler data
   SpoilerData spoilerData = GetSpoilerData();
   if (!WritePatch(patchOffset, patchSize, (char*)(&spoilerData), code, bytesWritten, totalRW, buf)) {
     return false;
   }
-  */
+  
   /*------------------------------ -
   |     rScrubRandomItemPrices    |
   |     rScrubTextIdTable         |

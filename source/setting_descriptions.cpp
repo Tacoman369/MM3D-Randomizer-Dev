@@ -390,8 +390,7 @@ string_view advancedTrapDmgDesc       = "**OPTION CURRENTLY WIP**\n"            
 ------------------------------*/                                                           //
 string_view itemPoolPlentiful         = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Extra major items are added to the pool.";        //
-string_view itemPoolBalanced          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Original item pool.";                             //
+string_view itemPoolBalanced          = "Original item pool.";                             //
 string_view itemPoolScarce            = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Some excess items are removed, including health\n"//
                                         "upgrades.";                                       //
@@ -401,16 +400,12 @@ string_view itemPoolMinimal           = "**OPTION CURRENTLY WIP**\n"            
 /*------------------------------                                                           //
 |          ICE TRAPS           |                                                           //
 ------------------------------*/                                                           //
-string_view iceTrapsOff               = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "All Ice Traps are removed.";                      //
+string_view iceTrapsOff               = "All Ice Traps are removed.";                      //
 string_view iceTrapsNormal            = "Only Ice Traps from the base item pool are placed.";
-string_view iceTrapsExtra             = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Chance to add extra Ice Traps when junk items are\n"
+string_view iceTrapsExtra             = "Chance to add extra Ice Traps when junk items are\n"
                                         "added to the itempool.";                          //
-string_view iceTrapsMayhem            = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "All added junk items will be Ice Traps.";         //
-string_view iceTrapsOnslaught         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "All junk items will be replaced by Ice Traps, even"
+string_view iceTrapsMayhem            = "All added junk items will be Ice Traps.";         //
+string_view iceTrapsOnslaught         = "All junk items will be replaced by Ice Traps, even"
                                         "those in the base pool.";                         //
 /*------------------------------                                                           //
 |    REMOVE DOUBLE DEFENSE     |                                                           //

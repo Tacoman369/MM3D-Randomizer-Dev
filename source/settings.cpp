@@ -60,7 +60,7 @@ namespace Settings {
     &CustomItemsButton,
     &CustomMasksButton,
     &CustomNotebookButton,
-    //&IngameSpoilersButton, to be included whenever the ingame menu works
+    &IngameSpoilersButton, 
   };
   
   //Mode/Logic Settings
