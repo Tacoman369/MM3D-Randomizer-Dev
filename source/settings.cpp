@@ -338,13 +338,15 @@ namespace Settings {
   Option RandomTrapDmg        = Option::U8("Random Trap Damage",       { "Off", "Basic", "Advanced" },                      { randomTrapDmgDesc, basicTrapDmgDesc, advancedTrapDmgDesc });
   Option RsDurability         = Option::U8("Razor Sword Durability",   { "Vanilla", "Infinite" },                           { rsDurabilityVanilla, rsDurabilityInf});
   Option IceTrapValue         = Option::U8("Ice Traps",                { "Off", "Normal", "Extra", "Mayhem", "Onslaught" }, { iceTrapsOff, iceTrapsNormal, iceTrapsExtra, iceTrapsMayhem, iceTrapsOnslaught }, OptionCategory::Setting, (u8)IceTrapSetting::ICETRAPS_NORMAL);
-  
+  Option CompassShowWoTH      = Option::Bool("Compasses Show WotH",    {"Off", "On"},                                       { compassShowWotHDesc});
+
   std::vector<Option*>otherSettingsOptions = {
-      &IceTrapValue
+      &IceTrapValue,
       //&RandomTrapDmg,
-      //&GossipStoneHints,
+      &GossipStoneHints,
       //&ClearerHints,
       //&HintDistribution,
+      &CompassShowWoTH,
       //&DamageMultiplier,
       //&ChestAnimations,
       //&ChestSize,
@@ -651,7 +653,7 @@ namespace Settings {
     //ctx.scrubsanity          = Scrubsanity.Value<u8>();
     //ctx.shuffleMagicBeans = (ShuffleMagicBeans) ? 1 : 0;
     
-    
+    ctx.compassesShowWotH = (CompassShowWoTH) ? 1 : 0;
     
     ctx.generateSpoilerLog = (GenerateSpoilerLog) ? 1 : 0;
     
@@ -1374,7 +1376,7 @@ namespace Settings {
       ShuffleGFRewards.SetSelectedIndex(0);
       ShufflePiecesOfHeart.SetSelectedIndex(0);
       ShuffleMoonItems.SetSelectedIndex(0);
-      //GossipStoneHints.SetSelectedIndex(0);
+      GossipStoneHints.SetSelectedIndex(0);
     }
     /*
     InitMusicRandomizer();

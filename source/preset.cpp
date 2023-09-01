@@ -50,13 +50,16 @@ bool CreatePresetDirectories() {
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds"), FS_ATTRIBUTE_DIRECTORY);
   //Create the presets directory if it doesn't exist
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds/presets"), FS_ATTRIBUTE_DIRECTORY);
-  //Create the oot3d directory if it doesn't exist
+  //Create the mm3dr directory if it doesn't exist
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds/presets/mm3dr"), FS_ATTRIBUTE_DIRECTORY);
   //Create the cosmetics directory if it doesn't exist
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds/presets/mm3dr/cosmetics"), FS_ATTRIBUTE_DIRECTORY);
   //Create the settings directory if it doesn't exist
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds/presets/mm3dr/settings"), FS_ATTRIBUTE_DIRECTORY);
-
+  //Create mm3dr directory if it doesnt exist
+  FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds/mm3dr"), FS_ATTRIBUTE_DIRECTORY);
+  //create spoiler_logs directory if it doesnst exist
+  FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/3ds/mm3dr/spoiler_logs"), FS_ATTRIBUTE_DIRECTORY);
   // Close SD archive
   FSUSER_CloseArchive(sdmcArchive);
   return true;

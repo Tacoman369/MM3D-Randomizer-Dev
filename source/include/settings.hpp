@@ -413,6 +413,7 @@ namespace Settings {
   extern Option GossipStoneHints; 
   extern Option ClearerHints;
   extern Option HintDistribution;
+  extern Option CompassShowWoTH;
   extern Option DamageMultiplier;
   extern Option ChestAnimations;
   extern Option ChestSize;

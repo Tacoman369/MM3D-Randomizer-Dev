@@ -876,21 +876,11 @@ void GenerateItemPool() {
 	
 
 	//Place Temp Items at alt locations so they don't get filled with important stuff - will be replaced later
-	PlaceItemInLocation(DEKU_PALACE_BUTLER_RACE_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(E_CLOCK_TOWN_ARCHERY_1_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(ROAD_TO_SS_ARCHERY_1_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(PF_INT_INVISIBLE_SOLDIER_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(S_CLOCK_TOWN_BANK_REWARD_1_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(GBC_OCEAN_SPIDER_DAY1_ALT, BLUE_RUPEE);
 	PlaceItemInLocation(SOUTHERN_SWAMP_KOTAKE_IN_WOODS, BLUE_RUPEE);
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
-	PlaceItemInLocation(ROMANI_RANCH_GROG_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(ROMANI_RANCH_DOG_RACE_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT, BLUE_RUPEE);
-	PlaceItemInLocation(W_CLOCK_TOWN_SWORDSMANS_SCHOOL_ALT, BLUE_RUPEE);
-
+	
 	//Check Non Dungeon Settings
 
 	//KOKIRISWORD SHUFFLE

@@ -362,6 +362,8 @@ string_view ingameSpoilersHideDesc    = "**OPTION CURRENTLY WIP**\n"            
                                         "location's item after it has been found.";        //
                                                                                            //
 string_view genSpoilerLogDesc         = "Choose to Generate a Spoiler Log";                //
+string_view compassShowWotHDesc       = "Getting a Dungeon's Compass will show if the\n"   //
+                                        "Dungeon is WotH";                                 //
 /*------------------------------                                                           //
 |      MENU OPENING BUTTON     |                                                           //
 ------------------------------*/                                                           //

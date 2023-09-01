@@ -122,7 +122,7 @@ const SpoilerData& GetSpoilerData() {
 }
 
 static auto GetGeneralPath() {
-  return "/3ds/" + Settings::seed + " (" + GetRandomizerHashAsString() + ")";
+  return "/3ds/mm3dr/spoiler_logs/" + Settings::seed + " (" + GetRandomizerHashAsString() + ")";
 }
 
 static auto GetSpoilerLogPath() {

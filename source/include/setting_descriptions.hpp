@@ -217,3 +217,4 @@ extern string_view customItemsButtonDesc;
 extern string_view customMasksButtonDesc;
 extern string_view customNotebookDesc;
 extern string_view ingameSpoilersButtonDesc;
+extern string_view compassShowWotHDesc;

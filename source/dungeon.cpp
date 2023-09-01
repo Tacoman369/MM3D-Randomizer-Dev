@@ -352,7 +352,6 @@ std::vector<LocationKey> DungeonInfo::GetEveryLocation() const {
 							PF_INT_UPPER_CHEST,
 							PF_INT_TANK_CHEST,
 							PF_INT_INVISIBLE_SOLDIER,
-							PF_INT_INVISIBLE_SOLDIER_ALT,
                           },{} );
 
   DungeonInfo BeneathTheWell = DungeonInfo("Beneath The Well", NONE, NONE, NONE, NONE, 0, {

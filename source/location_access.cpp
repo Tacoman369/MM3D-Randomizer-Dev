@@ -466,7 +466,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(E_CLOCK_TOWN_ARCHERY_1, {[] {return Bow;}}),
-		LocationAccess(E_CLOCK_TOWN_ARCHERY_1_ALT, {[]{return Bow;}}),
 		LocationAccess(E_CLOCK_TOWN_ARCHERY_2, {[] {return Bow;}}),
 	},
 	{
@@ -608,7 +607,6 @@ void AreaTable_Init() {
 		LocationAccess(S_CLOCK_TOWN_STRAW_ROOF_CHEST, {[] {return Hookshot || (DekuMask && MoonsTear);}}),
 		LocationAccess(S_CLOCK_TOWN_FINAL_DAY_CHEST, {[] {return Hookshot || (DekuMask && MoonsTear);}}),
 		LocationAccess(S_CLOCK_TOWN_BANK_REWARD_1, {[] {return true;}}),
-		LocationAccess(S_CLOCK_TOWN_BANK_REWARD_1_ALT, {[]{return true;}}),
 		LocationAccess(S_CLOCK_TOWN_BANK_REWARD_2, {[] {return AnyWallet;}}),
 		LocationAccess(S_CLOCK_TOWN_BANK_REWARD_3, {[] {return AnyWallet;}}),
 	},
@@ -837,7 +835,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(ROAD_TO_SS_ARCHERY_1, {[] {return Bow;}}),
-		LocationAccess(ROAD_TO_SS_ARCHERY_1_ALT, {[]{return Bow;}}),
 		LocationAccess(ROAD_TO_SS_ARCHERY_2, {[] {return Bow;}}),
 		
 	},
@@ -1015,7 +1012,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(DEKU_PALACE_BUTLER_RACE, {[] {return DekuMask;}}),// && DekuPrincessReturned
-		LocationAccess(DEKU_PALACE_BUTLER_RACE_ALT, {[]{return DekuMask;}}),// && DekuPrincessReturned
 	},
 	{
 		//Exits
@@ -1348,7 +1344,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(ROMANI_RANCH_DOG_RACE, {[] {return true;}}),
-		LocationAccess(ROMANI_RANCH_DOG_RACE_ALT, {[] {return true;}}),
 		LocationAccess(DOGGY_RACETRACK_ROOF_CHEST, {[] {return Hookshot || (WaterForBeans && MagicBean);}}),
 	},
 	{
@@ -1362,7 +1357,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(ROMANI_RANCH_GROG, {[] {return BremenMask;}}),
-		LocationAccess(ROMANI_RANCH_GROG_ALT, {[]{return BremenMask;}}),
 	},
 	{
 		//Exits
@@ -3081,7 +3075,6 @@ void AreaTable_Init() {
 		LocationAccess(PF_INT_LOWER_CHEST, {[] {return ZoraMask && Hookshot;}}),
 		LocationAccess(PF_INT_UPPER_CHEST, {[] {return ZoraMask && Hookshot;}}),
 		LocationAccess(PF_INT_INVISIBLE_SOLDIER, {[] {return LensOfTruth && MagicMeter && AnyHealingPotion;}}),
-		LocationAccess(PF_INT_INVISIBLE_SOLDIER_ALT, {[]{return LensOfTruth && MagicMeter && AnyHealingPotion;}}),
 	},
 	{
 		//Exits
@@ -3768,7 +3761,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD, {[] {return SkulltulaCount(SwampSkulltulaTokens, 30);}}),
-		LocationAccess(SOUTHERN_SWAMP_SPIDER_HOUSE_REWARD_ALT, {[] {return SkulltulaCount(SwampSkulltulaTokens, 30);}}),
 	},
 	{
 		//Exits
@@ -3925,7 +3917,6 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(GBC_OCEAN_SPIDER_DAY1, {[] {return SkulltulaCount(OceanSkulltulaTokens, 30);}}),
-		LocationAccess(GBC_OCEAN_SPIDER_DAY1_ALT, {[]{return SkulltulaCount(OceanSkulltulaTokens, 30);}}),
 
 		//Skulltulas
 		LocationAccess(OSH_ENTRANCE_LEFT_WALL, {[] {return (AnyBombBag || BlastMask) && (Hookshot || ZoraMask);}}),
