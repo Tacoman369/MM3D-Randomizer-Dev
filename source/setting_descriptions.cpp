@@ -316,8 +316,7 @@ string_view shuffleSoaringRandom      = "**OPTION CURRENTLY WIP**\n"            
 /*------------------------------                                                           //
 |     GOSSIP STONE HINTS       |                                                           //
 ------------------------------*/                                                           //
-string_view gossipStonesHintsDesc     = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Gossip Stones can be made to give hints about\n"  //
+string_view gossipStonesHintsDesc     = "Gossip Stones can be made to give hints about\n"  //
                                         "where items can be found.\n"                      //
                                         "Different settings can be chosen to decide which\n"
                                         "item is needed to speak to Gossip Stones. Choosing"

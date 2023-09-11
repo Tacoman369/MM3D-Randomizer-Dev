@@ -573,6 +573,8 @@ namespace Settings {
     ctx.hashIndexes[3] = hashIconIndexes[3];
     ctx.hashIndexes[4] = hashIconIndexes[4];
 
+    ctx.playOption = PlayOption;
+
 ///things commented out below here need to be added or match up to SettingsContext in \mm3dr\code\include\rnd\settings.h
     ctx.logic                = Logic.Value<u8>();
     ctx.locationsReachable = (LocationsReachable) ? 1 : 0;
