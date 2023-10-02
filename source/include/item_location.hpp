@@ -160,6 +160,19 @@ public:
       return flag;
     }
 
+    ItemOverride_Type GetOverrideType() const {
+        ItemOverride_Type ovrtype;
+        if (type == ItemLocationType::Chest) { ovrtype = ItemOverride_Type::OVR_CHEST;}
+        else if (type == ItemLocationType::Base) { ovrtype = ItemOverride_Type::OVR_BASE_ITEM;}
+        else if (type == ItemLocationType::Collectable) {ovrtype = ItemOverride_Type::OVR_COLLECTABLE;}
+        else if (type == ItemLocationType::OGSToken) { ovrtype = ItemOverride_Type::OVR_SKULL;}
+        else if (type == ItemLocationType::SGSToken) { ovrtype = ItemOverride_Type::OVR_SKULL;}
+        else if (type == ItemLocationType::GrottoScrub) {ovrtype = ItemOverride_Type::OVR_GROTTO_SCRUB;}
+        else if (type == ItemLocationType::Delayed) {ovrtype = ItemOverride_Type::OVR_DELAYED;}
+        else if (type == ItemLocationType::TempleReward) {ovrtype = ItemOverride_Type::OVR_TEMPLE;}
+        return ovrtype;
+    }
+
     bool IsRepeatable() const {
         return repeatable;
     }
