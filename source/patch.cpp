@@ -300,14 +300,6 @@ bool WriteAllPatches() {
   if (!WritePatch(messageEntriesOffset, messageEntriesSize, (char*)messageEntriesInfo.first, code, bytesWritten, totalRW, buf)) {
     return false;
   }
-  
-  // Write ptrCustomMessageEntries to patch
-  patchOffset = V_TO_P(PTRCUSTOMMESSAGEENTRIES_ADDR);
-  patchSize = 4;
-  u32 ptrCustomMessageEntriesData = P_TO_V(messageEntriesOffset);
-  if (!WritePatch(patchOffset, patchSize, (char*)(&ptrCustomMessageEntriesData), code, bytesWritten, totalRW, buf)) {
-    return false;
-  }
 
   // Write numCustomMessageEntries to code
   patchOffset = V_TO_P(NUMCUSTOMMESSAGEENTRIES_ADDR);
