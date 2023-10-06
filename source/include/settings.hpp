@@ -524,6 +524,7 @@ namespace Settings {
   extern std::array<u32, 9> rDungeonRewardOverrides;
 
   extern u8 PlayOption;
+  extern u8 Version;
 
 }
   

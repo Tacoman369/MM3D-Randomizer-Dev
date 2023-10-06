@@ -561,6 +561,7 @@ namespace Settings {
 
   //declared here, set in menu.cpp
   u8 PlayOption;
+  u8 Version;
 
   //Fills and returns a SettingsContext struct.
   //This struct is written to the code.ips patch and allows the game

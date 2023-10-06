@@ -139,7 +139,8 @@ bool WriteAllPatches() {
   }
 
   // Copy basecode to code
-  if (auto basecode = FILEPtr{std::fopen("romfs:/basecode.ips", "r"), std::fclose}) {
+  const char* basecodeFile = Settings::Version == 0 ? "romfs:/basecode.ips" : "romfs/basecode1.1.ips";
+  if (auto basecode = FILEPtr{std::fopen(basecodeFile, "r"), std::fclose}) {
     // obtain basecode.ips file size
     fseek(basecode.get(), 0, SEEK_END);
     const auto lSize = static_cast<size_t>(ftell(basecode.get()));

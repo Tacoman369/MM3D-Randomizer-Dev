@@ -20,6 +20,7 @@ using namespace Settings;
 
 namespace {
   bool seedChanged;
+  bool choosePlayOption;
   u16 pastSeedLength;
   u16 settingBound = 0;
   PrintConsole topScreen, bottomScreen;
@@ -47,6 +48,7 @@ void MenuInit() {
   Settings::InitSettings();
 
   seedChanged = false;
+  choosePlayOption = false;
   pastSeedLength = Settings::seed.length();
 
   settingBound = 0;
@@ -162,7 +164,7 @@ void MenuUpdate(u32 kDown) {
      }
     }
   //If they pressed B on any menu other than main, go backwards to the previous menu
-  else if (kDown & KEY_B && currentMenu->mode != MAIN_MENU) {
+  else if (kDown & KEY_B && currentMenu->mode != MAIN_MENU && !choosePlayOption) {
     
     //Want to reset generate menu when leaving
     if (currentMenu->mode == POST_GENERATE) {
@@ -320,15 +322,31 @@ void UpdateResetToDefaultsMenu(u32 kDown) {
 }
 
 void UpdateGenerateMenu(u32 kDown) {
-  if ((kDown & KEY_A) != 0) {
-    Settings::PlayOption = currentMenu->menuIdx;
-    consoleSelect(&bottomScreen);
-    consoleClear();
-    GenerateRandomizer();
-    //This is just a dummy mode to stop the prompt from appearing again
-    currentMenu->mode = POST_GENERATE;
+  if (!choosePlayOption) {
+    if ((kDown & KEY_A) != 0) {
+      Settings::PlayOption = currentMenu->menuIdx;
+      consoleSelect(&bottomScreen);
+      consoleClear();
+      choosePlayOption = true;
+    }
   }
-}
+  else {
+    if ((kDown & KEY_B) !=0) {
+       consoleSelect(&bottomScreen);
+       consoleClear();
+       choosePlayOption = false;
+     }
+    else if ((kDown & KEY_A) !=0) {
+        Settings::Version = currentMenu->menuIdx;
+        consoleSelect(&bottomScreen);
+        consoleClear();
+        GenerateRandomizer();
+        //This is just a dummy mode to stop the prompt from appearing again
+        currentMenu->mode = POST_GENERATE;
+        choosePlayOption = false;
+      }
+    }
+  }
 
 void PrintMainMenu() {
   printf("\x1b[0;%dHMain Settings", 1+(BOTTOM_WIDTH-13)/2);
@@ -471,20 +489,41 @@ void PrintGenerateMenu() {
 
   consoleSelect(&bottomScreen);
 
-  printf("\x1b[3;%dHHow will you play?", 1+(BOTTOM_WIDTH-18)/2);
-  std::vector<std::string> playOptions = {"3ds Console", "Citra Emulator"};
+  if (!choosePlayOption) {
+    printf("\x1b[3;%dHHow will you play?", 1+(BOTTOM_WIDTH-18)/2);
+    std::vector<std::string> playOptions = {"3ds Console", "Citra Emulator"};
 
-  for (u8 i = 0; i < playOptions.size(); i++) {
+    for (u8 i = 0; i < playOptions.size(); i++) {
 
-    std::string option = playOptions[i];
-    u8 row = 6 + (i * 2);
-    //make the current selection green
-    if (currentMenu->menuIdx == i) {
-      printf("\x1b[%d;%dH%s>",   row, 14, GREEN);
-      printf("\x1b[%d;%dH%s%s",  row, 15, option.c_str(), RESET);
-    } else {
-      printf("\x1b[%d;%dH%s",    row, 15, option.c_str());
+      std::string option = playOptions[i];
+      u8 row = 6 + (i * 2);
+      //make the current selection green
+      if (currentMenu->menuIdx == i) {
+        printf("\x1b[%d;%dH%s>",   row, 14, GREEN);
+        printf("\x1b[%d;%dH%s%s",  row, 15, option.c_str(), RESET);
+      } else {
+        printf("\x1b[%d;%dH%s",    row, 15, option.c_str());
+      }
     }
+  }
+  else {
+    printf("\x1b[3;%dHSelect your game version", 1 + (BOTTOM_WIDTH -18) / 2);
+    std::vector<std::string> versionOptions = {"1.0", "1.1"};
+
+    for (u8 i=0; i < versionOptions.size(); i++) {
+      std::string option = versionOptions[i];
+      u8 row             = 6 + (i * 2);
+      //make the current selection green
+      if (currentMenu->menuIdx == i) {
+        printf("\x1b[%d;%dH%s>",   row, 14, GREEN);
+        printf("\x1b[%d;%dH%s%s",  row, 15, option.c_str(), RESET);
+      } else {
+        printf("\x1b[%d;%dH%s",    row, 15, option.c_str());
+      }
+    }
+    ClearDescription();
+    PrintVersionDescription();
+
   }
 }
 
@@ -500,6 +539,15 @@ void ClearDescription() {
 void PrintOptionDescription() {
   ClearDescription();
   std::string_view description = currentSetting->GetSelectedOptionDescription();
+
+  printf("\x1b[22;0H%s", description.data());
+}
+
+void PrintVersionDescription() {
+  ClearDescription();          //"Description must fit in this space ---------------//"
+  std::string_view description = "Due to patch size when using version 1.1 it can \n"
+                                 "take up to 30 seconds to launch the game, this is\n"
+                                 "expected and will not effect gameplay";
 
   printf("\x1b[22;0H%s", description.data());
 }
