@@ -12,6 +12,8 @@ void CreateMessage(u16 textId, u16 field_2, u32 field_4, u32 flags, const char* 
 
 u32 NumMessages();
 
+void CreateKeyAndMapMessages();
+
 std::pair<const char*, u32> RawMessageData();
 
 }

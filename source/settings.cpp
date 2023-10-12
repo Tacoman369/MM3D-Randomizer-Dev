@@ -659,11 +659,7 @@ namespace Settings {
     ctx.compassesShowWotH = (CompassShowWoTH) ? 1 : 0;
     
     ctx.generateSpoilerLog = (GenerateSpoilerLog) ? 1 : 0;
-    
-    ctx.rsDurability = RsDurability.Value<u8>();
-    
-    
-    
+  
     
 
     

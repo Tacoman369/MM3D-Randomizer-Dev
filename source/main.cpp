@@ -22,7 +22,7 @@ int main() {
     LocationTable_Init();
     MenuInit();
 
-    CustomMessages::CreateMessage(0x0224, 0x8000, 0x3FFFFFFF, 0xFF0000,
+    /*CustomMessages::CreateMessage(0x0224, 0x8000, 0x3FFFFFFF, 0xFF0000,
         "This is a test scrolling #custom message# with #multiple# #colours#, %d%e%l%a%y%s, and icons $ $ $^Let's also test filename:&#@#",
         { QM_GREEN, QM_MAGENTA, QM_CYAN, QM_RED }, { ZL_BUTTON, MAJORA_ICON, ZR_BUTTON }, { 5, 10, 15, 20, 25, 30 },
         0x0000, false, false
@@ -31,7 +31,9 @@ int main() {
         "This is a test instant #custom message# with #multiple# #colours#, %d%e%l%a%y%s, and icons $ $ $^Let's also test filename:&#@#",
         { QM_GREEN, QM_MAGENTA, QM_CYAN, QM_RED }, { ZL_BUTTON, MAJORA_ICON, ZR_BUTTON }, { 5, 10, 15, 20, 25, 30 },
         0x0000, true, false
-    );
+    );*/
+
+    CustomMessages::CreateKeyAndMapMessages();
 
     u64 initialHoldTime = svcGetSystemTick();
     u64 intervalTime = initialHoldTime;
