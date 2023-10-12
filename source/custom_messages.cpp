@@ -63,19 +63,19 @@ void CreateKeyAndMapMessages() {
     // Small Keys
     // Woodfall
     CreateMessage(0x6133, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got a #small key# for the #Woodfall Temple#!&Use it to open a locked door in that temple.",
+    "You got a #small key# for the #Woodfall Temple#! Use it to open a locked door in that temple.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
     // Snowhead
     CreateMessage(0x6134, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got a #small key# for the #Snowhead Temple#!&Use it to open a locked door in that temple.",
+    "You got a #small key# for the #Snowhead Temple#! Use it to open a locked door in that temple.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
     // Great Bay
     CreateMessage(0x6135, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got a #small key# for the #Great Bay Temple#!&Use it to open a locked door in that temple.",
+    "You got a #small key# for the #Great Bay Temple#! Use it to open a locked door in that temple.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
     // Stone Tower
     CreateMessage(0x6136, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got a #small key# for the #Stone Tower Temple#!&Use it to open a locked door in that temple.",
+    "You got a #small key# for the #Stone Tower Temple#! Use it to open a locked door in that temple.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Maps
@@ -102,43 +102,43 @@ void CreateKeyAndMapMessages() {
     // Compasses
     // Woodfall
     CreateMessage(0x613B, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #compass# for the #Woodfall Temple#!&Now many of the dungeon's hidden things will appear on the map!",
+    "You got the #compass# for the #Woodfall Temple#! Now many of the dungeon's hidden things will appear on the map!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Snowhead
     CreateMessage(0x613C, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #compass# for the #Snowhead Temple#!&Now many of the dungeon's hidden things will appear on the map!",
+    "You got the #compass# for the #Snowhead Temple#! Now many of the dungeon's hidden things will appear on the map!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Great Bay
     CreateMessage(0x613D, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #compass# for the #Great Bay Temple#!&Now many of the dungeon's hidden things will appear on the map!",
+    "You got the #compass# for the #Great Bay Temple#! Now many of the dungeon's hidden things will appear on the map!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Stone Tower
     CreateMessage(0x613E, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #compass# for the #Stone Tower Temple#!&Now many of the dungeon's hidden things will appear on the map!",
+    "You got the #compass# for the #Stone Tower Temple#! Now many of the dungeon's hidden things will appear on the map!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Boss Keys
     // Woodfall
     CreateMessage(0x613F, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #boss key# for the #Woodfall Temple#!&Now you can enter the chamber where the boss lurks!",
+    "You got the #boss key# for the #Woodfall Temple#! Now you can enter the chamber where the boss lurks!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Snowhead
     CreateMessage(0x6140, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #boss key# for the #Snowhead Temple#!&Now you can enter the chamber where the boss lurks!",
+    "You got the #boss key# for the #Snowhead Temple#! Now you can enter the chamber where the boss lurks!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Great Bay
     CreateMessage(0x6141, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #boss key# for the #Great Bay Temple#!&Now you can enter the chamber where the boss lurks!",
+    "You got the #boss key# for the #Great Bay Temple#! ow you can enter the chamber where the boss lurks!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Stone Tower
     CreateMessage(0x6142, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #boss key# for the #Stone Tower Temple#!&Now you can enter the chamber where the boss lurks!",
+    "You got the #boss key# for the #Stone Tower Temple#! Now you can enter the chamber where the boss lurks!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 }
 
