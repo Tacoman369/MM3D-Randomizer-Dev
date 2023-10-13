@@ -326,7 +326,6 @@ namespace Settings {
   };
 
   Option GossipStoneHints     = Option::U8("Gossip Stone Hints",       { "No Hints", "Need Nothing", "Mask of Truth" },    { gossipStonesHintsDesc },                                                     OptionCategory::Setting, (u8)GossipStoneHintsSetting::HINTS_NEED_NOTHING);
-  Option MaskOfTruthRequired  = Option::Bool("Mask of Truth Required", {"No", "Yes"},                                      { maskofTruthReqDesc });
   Option ClearerHints         = Option::Bool("  Clearer Hints",        { "Off", "On" },                                    { clearerHintsDesc });
   Option HintDistribution     = Option::U8("  Hint Distribution",      { "Useless", "Balanced", "Strong", "Very Strong" },  { uselessHintsDesc, balancedHintsDesc, strongHintsDesc, veryStrongHintsDesc }, OptionCategory::Setting, 1); // Balanced
   Option DamageMultiplier     = Option::U8("Damage Multiplier",        { "x1/2", "x1", "x2", "x4", "x8", "x16", "OHKO"},    {damageMultiDesc},                                                             OptionCategory::Setting,   (u8)DamageMultiplierSetting::DAMAGEMULTIPLIER_DEFAULT);
@@ -345,7 +344,6 @@ namespace Settings {
       &IceTrapValue,
       //&RandomTrapDmg,
       &GossipStoneHints,
-      &MaskOfTruthRequired,
       //&ClearerHints,
       //&HintDistribution,
       &CompassShowWoTH,
@@ -627,8 +625,7 @@ namespace Settings {
 
     ctx.iceTrapValue = IceTrapValue.Value<u8>();
     //ctx.randomTrapDmg = RandomTrapDmg.Value<u8>();
-    ctx.gossipStoneHints = GossipStoneHints.Value<u8>();
-    ctx.maskOfTruthRequiredForGossip = MaskOfTruthRequired.Value<u8>();
+    ctx.maskOfTruthRequiredForGossip = GossipStoneHints.Value<u8>() == 1 ? 0 : 1;
     //ctx.clearHints = (ClearerHints) ? 1 : 0;
     //ctx.hintDistribution = HintDistribution.Value<u8>();
     ctx.damageMultiplier     = DamageMultiplier.Value<u8>();

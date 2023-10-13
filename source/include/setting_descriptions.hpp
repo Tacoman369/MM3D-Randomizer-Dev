@@ -64,7 +64,6 @@ extern string_view shuffleSoaringVanilla;
 extern string_view shuffleSoaringRandom;
 
 extern string_view gossipStonesHintsDesc;
-extern string_view maskofTruthReqDesc;
 
 extern string_view clearerHintsDesc;
 

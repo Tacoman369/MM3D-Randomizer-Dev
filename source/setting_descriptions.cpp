@@ -325,8 +325,6 @@ string_view gossipStonesHintsDesc     = "Gossip Stones can be made to give hints
                                         "Hints for 'on the way of the hero' are locations\n"
                                         "that contain items that are required to beat the\n"
                                         "game.";                                           //
-string_view maskofTruthReqDesc       =  "Whether or not you need to wear the mask of\n"    //
-                                        "truth to speak to the Gossip Stones.";            //
                                                                                            //
 /*------------------------------                                                           //
 |        CLEARER HINTS         |                                                           //
