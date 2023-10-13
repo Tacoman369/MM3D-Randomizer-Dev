@@ -218,3 +218,6 @@ extern string_view customMasksButtonDesc;
 extern string_view customNotebookDesc;
 extern string_view ingameSpoilersButtonDesc;
 extern string_view compassShowWotHDesc;
+extern string_view skipHMSCutsceneDesc;
+extern string_view skipDarmaniCutsceneDesc;
+extern string_view skipMikauCutsceneDesc;

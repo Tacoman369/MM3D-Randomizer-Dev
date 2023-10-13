@@ -657,3 +657,10 @@ string_view ingameSpoilersButtonDesc = "Change the button to open the ingame Spo
 |           GLITCHES           |                                                                           //
 ------------------------------*/                                                                           //
 const std::vector<string_view> GlitchDifficulties{"Novice", "Intermediate", "Advanced", "Expert", "Hero"};
+
+/*------------------------------                                                                           //
+|       CUTSCENE OPTIONS       |                                                                           //
+------------------------------*/  
+string_view skipHMSCutsceneDesc     = "Skips the initial Happy Mask Salesman's cutscenes"; //
+string_view skipDarmaniCutsceneDesc = "Skips the Song of Healing Cutscene for Darmani";    //
+string_view skipMikauCutsceneDesc   = "Skips the Song of Healing Cutscene for Mikau";      //

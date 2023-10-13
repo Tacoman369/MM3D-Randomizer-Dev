@@ -407,7 +407,15 @@ namespace Settings {
     //&SkipSongReplays,
   };
 
-  
+  //Cutscene Skips
+  Option SkipHMSCutscenes     = Option::Bool("Skip HMS Cutscenes",  {"Don't Skip", "Skip"},     {skipHMSCutsceneDesc});
+  Option SkipDarmaniCutscenes = Option::Bool("Skip Darmani Cutscenes",  {"Don't Skip", "Skip"}, {skipDarmaniCutsceneDesc});
+  Option SkipMikauCutscenes   = Option::Bool("Skip Mikau Cutscenes",  {"Don't Skip", "Skip"},   {skipMikauCutsceneDesc});
+  std::vector<Option *> cutsceneOptions = {
+    &SkipHMSCutscenes,
+    &SkipDarmaniCutscenes,
+    &SkipMikauCutscenes
+  };
 
   /*TRIAL SKIPS*/
   Option OdolwaTrialSkip = Option::Bool("Odolwa Trial Skip", { "Don't Skip", "Skip" }, { odolwaTrialSkipDesc });
@@ -529,6 +537,7 @@ namespace Settings {
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
   Menu comfort = Menu::SubMenu("Comfort", &comfortOptions);
   Menu timeSaverSettings = Menu::SubMenu("Time Saver Settings", &timesaverOptions);
+  Menu cutsceneSettings = Menu::SubMenu("Cutscene Settings", &cutsceneOptions);
   Menu settingsPresets          = Menu::SubMenu("Settings Presets",           &settingsPresetItems);
   Menu cosmetics                = Menu::SubMenu("Cosmetic Settings",          &cosmeticOptions);
   Menu generateRandomizer       = Menu::Action ("Generate Randomizer",        GENERATE_MODE);
@@ -548,6 +557,7 @@ namespace Settings {
     &detailLogic,
     //&comfort,
     &timeSaverSettings,
+    &cutsceneSettings,
     &otherSettings,
     &customInputs,
     //&cosmetics,
@@ -753,6 +763,11 @@ namespace Settings {
     ctx.enableFastZoraSwim = (FastZoraSwim) ? 1 : 0;
     ctx.enableOcarinaDiving = (OcarinaDive) ? 1 : 0;
     ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 :0;
+
+    //Cutscene Skips
+    ctx.skipHMSCutscenes = (SkipHMSCutscenes) ? 1 : 0;
+    ctx.skipDarmaniCutscene = (SkipDarmaniCutscenes) ? 1 : 0;
+    ctx.skipMikauCutscene = (SkipMikauCutscenes) ? 1 : 0;
     
     //CustomButtons
     CitraPrint("Adding Custom Inputs to SettingsContext");
@@ -941,6 +956,9 @@ namespace Settings {
       for (auto op : timesaverOptions) {
           op->SetToDefault();
       }
+    for (auto op : cutsceneOptions) {
+        op->SetToDefault();
+    }
       for (auto op : cosmeticOptions) {
           op->SetToDefault();
       }
