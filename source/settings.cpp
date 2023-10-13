@@ -326,6 +326,7 @@ namespace Settings {
   };
 
   Option GossipStoneHints     = Option::U8("Gossip Stone Hints",       { "No Hints", "Need Nothing", "Mask of Truth" },    { gossipStonesHintsDesc },                                                     OptionCategory::Setting, (u8)GossipStoneHintsSetting::HINTS_NEED_NOTHING);
+  Option MaskOfTruthRequired  = Option::Bool("Mask of Truth Required", {"No", "Yes"},                                      { maskofTruthReqDesc });
   Option ClearerHints         = Option::Bool("  Clearer Hints",        { "Off", "On" },                                    { clearerHintsDesc });
   Option HintDistribution     = Option::U8("  Hint Distribution",      { "Useless", "Balanced", "Strong", "Very Strong" },  { uselessHintsDesc, balancedHintsDesc, strongHintsDesc, veryStrongHintsDesc }, OptionCategory::Setting, 1); // Balanced
   Option DamageMultiplier     = Option::U8("Damage Multiplier",        { "x1/2", "x1", "x2", "x4", "x8", "x16", "OHKO"},    {damageMultiDesc},                                                             OptionCategory::Setting,   (u8)DamageMultiplierSetting::DAMAGEMULTIPLIER_DEFAULT);
@@ -344,6 +345,7 @@ namespace Settings {
       &IceTrapValue,
       //&RandomTrapDmg,
       &GossipStoneHints,
+      &MaskOfTruthRequired,
       //&ClearerHints,
       //&HintDistribution,
       &CompassShowWoTH,
@@ -379,7 +381,7 @@ namespace Settings {
      //&BombchusInLogic,
   };
  
-  //Timesaver Settings
+  //Restoration Settings
   Option SkipMinigamePhases  = Option::Bool("Minigames repetitions",  {"Don't Skip", "Skip"},                                {skipMinigamePhasesDesc});
   Option FastLabFish         = Option::Bool("Fast Lab Fish",          { "No", "Yes" },                                       { fastLabFishDesc });
   Option FastBank            = Option::Bool("Fast Bank Rewards",      { "No", "Yes" },                                       { fastBankDesc });
@@ -392,8 +394,11 @@ namespace Settings {
   Option SkipEponaRace       = Option::Bool("Skip Epona Race",        { "No", "Yes" },                                       { skipEponaRaceDesc });
   Option OcarinaDive         = Option::Bool("Ocarina Dive",           { "No", "Yes" },                                       {ocarinaDiveDesc});
   Option FastZoraSwim        = Option::Bool("Fast Zora Swimming",     { "No", "Yes" },                                       {fastZoraSwimDesc});
+  Option DpadTransform       = Option::Bool("DPad Transformation",    { "No", "Yes" },                                       {dpadMaskDesc});
+  Option DpadOcarina         = Option::Bool("DPad Ocarina",           { "No", "Yes" },                                       {dpadOcarinaDesc});
+  Option DpadArrows          = Option::Bool("Dpad Arrow Swap",        { "No", "Yes" },                                       {dpadArrowDesc});
 
-  std::vector<Option *> timesaverOptions = {
+  std::vector<Option *> restorationOptions = {
     //&SkipMinigamePhases,
     //&FastLabFish,
     //&FastBank,
@@ -404,6 +409,9 @@ namespace Settings {
     &FastElegyStatues,
     &FastZoraSwim,
     &OcarinaDive,
+    &DpadTransform,
+    &DpadOcarina,
+    &DpadArrows,
     //&SkipSongReplays,
   };
 
@@ -536,7 +544,7 @@ namespace Settings {
 
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
   Menu comfort = Menu::SubMenu("Comfort", &comfortOptions);
-  Menu timeSaverSettings = Menu::SubMenu("Time Saver Settings", &timesaverOptions);
+  Menu restorationSettings = Menu::SubMenu("Restoration Settings", &restorationOptions);
   Menu cutsceneSettings = Menu::SubMenu("Cutscene Settings", &cutsceneOptions);
   Menu settingsPresets          = Menu::SubMenu("Settings Presets",           &settingsPresetItems);
   Menu cosmetics                = Menu::SubMenu("Cosmetic Settings",          &cosmeticOptions);
@@ -556,7 +564,7 @@ namespace Settings {
     &startingInventory,
     &detailLogic,
     //&comfort,
-    &timeSaverSettings,
+    &restorationSettings,
     &cutsceneSettings,
     &otherSettings,
     &customInputs,
@@ -620,6 +628,7 @@ namespace Settings {
     ctx.iceTrapValue = IceTrapValue.Value<u8>();
     //ctx.randomTrapDmg = RandomTrapDmg.Value<u8>();
     ctx.gossipStoneHints = GossipStoneHints.Value<u8>();
+    ctx.maskOfTruthRequiredForGossip = MaskOfTruthRequired.Value<u8>();
     //ctx.clearHints = (ClearerHints) ? 1 : 0;
     //ctx.hintDistribution = HintDistribution.Value<u8>();
     ctx.damageMultiplier     = DamageMultiplier.Value<u8>();
@@ -759,10 +768,13 @@ namespace Settings {
     ctx.startingFierceDietyMask = StartingFierceDietyMask.Value<u8>();
     ctx.startingMaskOfTruth = StartingMaskOfTruth.Value<u8>();
 
-    //Timesavers
+    //Restoration Features
     ctx.enableFastZoraSwim = (FastZoraSwim) ? 1 : 0;
     ctx.enableOcarinaDiving = (OcarinaDive) ? 1 : 0;
-    ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 :0;
+    ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 : 0;
+    ctx.enableFastMaskTransform = (DpadTransform) ? 1 : 0;
+    ctx.enableFastOcarina = (DpadOcarina) ? 1 : 0;
+    ctx.enableFastArrowSwap = (DpadArrows) ? 1 : 0;
 
     //Cutscene Skips
     ctx.skipHMSCutscenes = (SkipHMSCutscenes) ? 1 : 0;
@@ -953,7 +965,7 @@ namespace Settings {
       for (auto op : comfortOptions) {
           op->SetToDefault();
       }
-      for (auto op : timesaverOptions) {
+      for (auto op : restorationOptions) {
           op->SetToDefault();
       }
     for (auto op : cutsceneOptions) {

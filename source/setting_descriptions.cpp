@@ -325,6 +325,8 @@ string_view gossipStonesHintsDesc     = "Gossip Stones can be made to give hints
                                         "Hints for 'on the way of the hero' are locations\n"
                                         "that contain items that are required to beat the\n"
                                         "game.";                                           //
+string_view maskofTruthReqDesc       =  "Whether or not you need to wear the mask of\n"    //
+                                        "truth to speak to the Gossip Stones.";            //
                                                                                            //
 /*------------------------------                                                           //
 |        CLEARER HINTS         |                                                           //
@@ -634,10 +636,17 @@ string_view shuffleOcaMusicDesc      = "**OPTION CURRENTLY WIP**\n"             
                                        "song is randomized";                               //
                                                                                            //
 /*------------------------------                                                           //
-|      TIMESAVER OPTIONS       |                                                           //
+|      RESTORATION OPTIONS     |                                                           //
 ------------------------------*/                                                           //
 string_view fastZoraSwimDesc         = "Enables Fast Zora Swimming without magic.";        //
 string_view ocarinaDiveDesc          = "Enables Ocarina Diving";                           //
+string_view dpadMaskDesc             = "Enables using the 3 D-Pad buttons to use\n"        //
+                                       "transformation masks. This option will also patch" //
+                                       "Using Down A with Mask Storage.";                  //
+string_view dpadOcarinaDesc          = "Enables using D-Pad down to activate your\n"       //
+                                       "ocarina.";                                         //
+string_view dpadArrowDesc            = "Enables using D-Pad up to change your current\n"   //
+                                       "arrow that is being used.";                        //
                                                                                            //
 /*-------------------------------                                                          //
 |   CUSTOM BUTTON MAPPING       |                                                          //

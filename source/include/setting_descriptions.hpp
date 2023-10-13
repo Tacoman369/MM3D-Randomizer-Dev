@@ -64,6 +64,7 @@ extern string_view shuffleSoaringVanilla;
 extern string_view shuffleSoaringRandom;
 
 extern string_view gossipStonesHintsDesc;
+extern string_view maskofTruthReqDesc;
 
 extern string_view clearerHintsDesc;
 
@@ -212,6 +213,9 @@ extern string_view shuffleMoonItemsDesc;
 extern string_view shuffleBombersNotebookDesc;
 extern string_view ocarinaDiveDesc;
 extern string_view fastZoraSwimDesc;
+extern string_view dpadMaskDesc;
+extern string_view dpadOcarinaDesc;
+extern string_view dpadArrowDesc;
 extern string_view customMapButtonDesc;
 extern string_view customItemsButtonDesc;
 extern string_view customMasksButtonDesc;
