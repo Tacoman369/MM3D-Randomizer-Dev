@@ -178,6 +178,7 @@ $(BUILD):
 	@cp mm3dr/romfs/* ./romfs/
 	$(MAKE) -C mm3dr/code
 	@mv mm3dr/code/basecode.ips $(ROMFS)/basecode.ips
+	@mv mm3dr/code/basecode1.1.ips $(ROMFS)/basecode1.1.ips
 	@mv mm3dr/source/patch_symbols.hpp $(CURDIR)/source/include/
 	@mkdir -p $@
 
