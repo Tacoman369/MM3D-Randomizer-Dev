@@ -37,6 +37,7 @@ compile() {
   export commitHashShort=$(echo ${GITHUB_SHA::6})
   sed -i "s/develop/${commitHashShort:-develop}/" ./source/include/version.hpp
   make -j
+  sed -i "s/${commitHashShort}/develop/" ./source/include/version.hpp
   $BANNERTOOLAPP makebanner -i ./banner.png -a ./audio.wav -o ./banner.bnr
   $BANNERTOOLAPP makesmdh -s "Majora's Mask 3D Randomizer" -l "A Randomized Majoras Mask Experience" -p "Z3DR Team" -i icon.png -o ./icon.icn
   3dstool -cvtf romfs ./romfs.bin --romfs-dir ./romfs
