@@ -195,7 +195,7 @@ endif
 #---------------------------------------------------------------------------------
 clean:
 	@echo Cleaning app and basecode ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(GFXBUILD) $(ROMFS)/basecode.ips source/include/patch_symbols.hpp
+	@rm -fr $(BUILD) $(TARGET).3dsx $(TARGET).cia $(OUTPUT).smdh $(TARGET).elf $(GFXBUILD) $(ROMFS)/basecode.ips source/include/patch_symbols.hpp
 	$(MAKE) clean -f mm3dr/code/Makefile 
 	@rm -rf mm3dr/code/build
 #---------------------------------------------------------------------------------
