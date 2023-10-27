@@ -33,7 +33,7 @@ int main() {
         0x0000, true, false
     );*/
 
-    CustomMessages::CreateKeyAndMapMessages();
+    CustomMessages::CreateBaselineCustomMessages();
 
     u64 initialHoldTime = svcGetSystemTick();
     u64 intervalTime = initialHoldTime;

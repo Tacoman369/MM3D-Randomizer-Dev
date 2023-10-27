@@ -59,7 +59,7 @@ void CreateMessage(u16 textId, u16 field_2, u32 field_4, u32 flags, const char* 
     messageEntries.insert(newEntry);
 }
 
-void CreateKeyAndMapMessages() {
+void CreateBaselineCustomMessages() {
     // Small Keys
     // Woodfall
     CreateMessage(0x6133, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
@@ -139,6 +139,11 @@ void CreateKeyAndMapMessages() {
     // Stone Tower
     CreateMessage(0x6142, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
     "You got the #boss key# for the #Stone Tower Temple#! Now you can enter the chamber where the boss lurks!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Kokiri Sword
+    CreateMessage(0x0037, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #kokiri sword!# The trusty sword you're familiar with. A treasure from Kokiri Forest.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 }
 
