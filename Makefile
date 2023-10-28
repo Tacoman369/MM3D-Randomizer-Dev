@@ -62,8 +62,8 @@ LDFLAGS	=	-specs=3dsx.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
 LIBS	:= -lctru -lm
 
-debug ?= 0
-ifneq ($(debug),0)
+debug_app ?= 0
+ifneq ($(debug_app),0)
 	CFLAGS += -g -DENABLE_DEBUG
 	CXXFLAGS += -g -DENABLE_DEBUG
 endif
