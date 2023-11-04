@@ -62,8 +62,8 @@ LDFLAGS	=	-specs=3dsx.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
 LIBS	:= -lctru -lm
 
-debug ?= 0
-ifneq ($(debug),0)
+debug_app ?= 0
+ifneq ($(debug_app),0)
 	CFLAGS += -g -DENABLE_DEBUG
 	CXXFLAGS += -g -DENABLE_DEBUG
 endif
@@ -178,6 +178,7 @@ $(BUILD):
 	@cp mm3dr/romfs/* ./romfs/
 	$(MAKE) -C mm3dr/code
 	@mv mm3dr/code/basecode.ips $(ROMFS)/basecode.ips
+	@mv mm3dr/code/basecode1.1.ips $(ROMFS)/basecode1.1.ips
 	@mv mm3dr/source/patch_symbols.hpp $(CURDIR)/source/include/
 	@mkdir -p $@
 
@@ -194,7 +195,7 @@ endif
 #---------------------------------------------------------------------------------
 clean:
 	@echo Cleaning app and basecode ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(GFXBUILD) $(ROMFS)/basecode.ips source/include/patch_symbols.hpp
+	@rm -fr $(BUILD) $(TARGET).3dsx $(TARGET).cia $(OUTPUT).smdh $(TARGET).elf $(GFXBUILD) $(ROMFS)/basecode.ips source/include/patch_symbols.hpp
 	$(MAKE) clean -f mm3dr/code/Makefile 
 	@rm -rf mm3dr/code/build
 #---------------------------------------------------------------------------------

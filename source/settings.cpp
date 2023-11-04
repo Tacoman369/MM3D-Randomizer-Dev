@@ -379,7 +379,7 @@ namespace Settings {
      //&BombchusInLogic,
   };
  
-  //Timesaver Settings
+  //Restoration Settings
   Option SkipMinigamePhases  = Option::Bool("Minigames repetitions",  {"Don't Skip", "Skip"},                                {skipMinigamePhasesDesc});
   Option FastLabFish         = Option::Bool("Fast Lab Fish",          { "No", "Yes" },                                       { fastLabFishDesc });
   Option FastBank            = Option::Bool("Fast Bank Rewards",      { "No", "Yes" },                                       { fastBankDesc });
@@ -392,8 +392,11 @@ namespace Settings {
   Option SkipEponaRace       = Option::Bool("Skip Epona Race",        { "No", "Yes" },                                       { skipEponaRaceDesc });
   Option OcarinaDive         = Option::Bool("Ocarina Dive",           { "No", "Yes" },                                       {ocarinaDiveDesc});
   Option FastZoraSwim        = Option::Bool("Fast Zora Swimming",     { "No", "Yes" },                                       {fastZoraSwimDesc});
+  Option DpadTransform       = Option::Bool("DPad Transformation",    { "No", "Yes" },                                       {dpadMaskDesc});
+  Option DpadOcarina         = Option::Bool("DPad Ocarina",           { "No", "Yes" },                                       {dpadOcarinaDesc});
+  Option DpadArrows          = Option::Bool("Dpad Arrow Swap",        { "No", "Yes" },                                       {dpadArrowDesc});
 
-  std::vector<Option *> timesaverOptions = {
+  std::vector<Option *> restorationOptions = {
     //&SkipMinigamePhases,
     //&FastLabFish,
     //&FastBank,
@@ -404,10 +407,21 @@ namespace Settings {
     &FastElegyStatues,
     &FastZoraSwim,
     &OcarinaDive,
+    &DpadTransform,
+    &DpadOcarina,
+    &DpadArrows,
     //&SkipSongReplays,
   };
 
-  
+  //Cutscene Skips
+  Option SkipHMSCutscenes     = Option::Bool("Skip HMS Cutscenes",  {"Don't Skip", "Skip"},     {skipHMSCutsceneDesc});
+  Option SkipDarmaniCutscenes = Option::Bool("Skip Darmani Cutscenes",  {"Don't Skip", "Skip"}, {skipDarmaniCutsceneDesc});
+  Option SkipMikauCutscenes   = Option::Bool("Skip Mikau Cutscenes",  {"Don't Skip", "Skip"},   {skipMikauCutsceneDesc});
+  std::vector<Option *> cutsceneOptions = {
+    &SkipHMSCutscenes,
+    &SkipDarmaniCutscenes,
+    &SkipMikauCutscenes
+  };
 
   /*TRIAL SKIPS*/
   Option OdolwaTrialSkip = Option::Bool("Odolwa Trial Skip", { "Don't Skip", "Skip" }, { odolwaTrialSkipDesc });
@@ -528,7 +542,8 @@ namespace Settings {
 
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
   Menu comfort = Menu::SubMenu("Comfort", &comfortOptions);
-  Menu timeSaverSettings = Menu::SubMenu("Time Saver Settings", &timesaverOptions);
+  Menu restorationSettings = Menu::SubMenu("Restoration Settings", &restorationOptions);
+  Menu cutsceneSettings = Menu::SubMenu("Cutscene Settings", &cutsceneOptions);
   Menu settingsPresets          = Menu::SubMenu("Settings Presets",           &settingsPresetItems);
   Menu cosmetics                = Menu::SubMenu("Cosmetic Settings",          &cosmeticOptions);
   Menu generateRandomizer       = Menu::Action ("Generate Randomizer",        GENERATE_MODE);
@@ -547,7 +562,8 @@ namespace Settings {
     &startingInventory,
     &detailLogic,
     //&comfort,
-    &timeSaverSettings,
+    &restorationSettings,
+    &cutsceneSettings,
     &otherSettings,
     &customInputs,
     //&cosmetics,
@@ -609,7 +625,7 @@ namespace Settings {
 
     ctx.iceTrapValue = IceTrapValue.Value<u8>();
     //ctx.randomTrapDmg = RandomTrapDmg.Value<u8>();
-    ctx.gossipStoneHints = GossipStoneHints.Value<u8>();
+    ctx.maskOfTruthRequiredForGossip = GossipStoneHints.Value<u8>() == 1 ? 0 : 1;
     //ctx.clearHints = (ClearerHints) ? 1 : 0;
     //ctx.hintDistribution = HintDistribution.Value<u8>();
     ctx.damageMultiplier     = DamageMultiplier.Value<u8>();
@@ -659,11 +675,7 @@ namespace Settings {
     ctx.compassesShowWotH = (CompassShowWoTH) ? 1 : 0;
     
     ctx.generateSpoilerLog = (GenerateSpoilerLog) ? 1 : 0;
-    
-    ctx.rsDurability = RsDurability.Value<u8>();
-    
-    
-    
+  
     
 
     
@@ -753,10 +765,18 @@ namespace Settings {
     ctx.startingFierceDietyMask = StartingFierceDietyMask.Value<u8>();
     ctx.startingMaskOfTruth = StartingMaskOfTruth.Value<u8>();
 
-    //Timesavers
+    //Restoration Features
     ctx.enableFastZoraSwim = (FastZoraSwim) ? 1 : 0;
     ctx.enableOcarinaDiving = (OcarinaDive) ? 1 : 0;
-    ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 :0;
+    ctx.enableFastElegyStatues = (FastElegyStatues) ? 1 : 0;
+    ctx.enableFastMaskTransform = (DpadTransform) ? 1 : 0;
+    ctx.enableFastOcarina = (DpadOcarina) ? 1 : 0;
+    ctx.enableFastArrowSwap = (DpadArrows) ? 1 : 0;
+
+    //Cutscene Skips
+    ctx.skipHMSCutscenes = (SkipHMSCutscenes) ? 1 : 0;
+    ctx.skipDarmaniCutscene = (SkipDarmaniCutscenes) ? 1 : 0;
+    ctx.skipMikauCutscene = (SkipMikauCutscenes) ? 1 : 0;
     
     //CustomButtons
     CitraPrint("Adding Custom Inputs to SettingsContext");
@@ -942,9 +962,12 @@ namespace Settings {
       for (auto op : comfortOptions) {
           op->SetToDefault();
       }
-      for (auto op : timesaverOptions) {
+      for (auto op : restorationOptions) {
           op->SetToDefault();
       }
+    for (auto op : cutsceneOptions) {
+        op->SetToDefault();
+    }
       for (auto op : cosmeticOptions) {
           op->SetToDefault();
       }

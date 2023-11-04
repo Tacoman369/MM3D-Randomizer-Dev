@@ -496,6 +496,7 @@ namespace Settings {
   extern Menu mainSettings;
   extern Menu comfort;
   extern Menu timeSaverSettings;
+  extern Menu cutsceneSettings;
   extern Menu settingsPresets;
   extern Menu cosmetics;
   extern Menu generateRandomizer;

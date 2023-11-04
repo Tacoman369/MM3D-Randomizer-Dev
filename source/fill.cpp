@@ -528,7 +528,10 @@ std::vector<ItemKey> rewards = FilterAndEraseFromPool(ItemPool, [](const ItemKey
             }
         }
         else { //Randomize dungeon rewards with assumed fill -- for now both place vanilla as random dungeon rewards is not implemented yet
-              AssumedFill(rewards, dungeonRewardLocations);
+            for (LocationKey loc : dungeonRewardLocations) {
+                Location(loc)->PlaceVanillaItem();
+            }
+              // AssumedFill(rewards, dungeonRewardLocations);
         }
 /*
     //quest item bit mask of each stone/medallion for the savefile

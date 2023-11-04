@@ -634,10 +634,17 @@ string_view shuffleOcaMusicDesc      = "**OPTION CURRENTLY WIP**\n"             
                                        "song is randomized";                               //
                                                                                            //
 /*------------------------------                                                           //
-|      TIMESAVER OPTIONS       |                                                           //
+|      RESTORATION OPTIONS     |                                                           //
 ------------------------------*/                                                           //
 string_view fastZoraSwimDesc         = "Enables Fast Zora Swimming without magic.";        //
 string_view ocarinaDiveDesc          = "Enables Ocarina Diving";                           //
+string_view dpadMaskDesc             = "Enables using the 3 D-Pad buttons to use\n"        //
+                                       "transformation masks. This option will also\n"     //
+                                       "patch using Down A with Mask Storage.";            //
+string_view dpadOcarinaDesc          = "Enables using D-Pad down to activate your\n"       //
+                                       "ocarina.";                                         //
+string_view dpadArrowDesc            = "Enables using D-Pad up to change your current\n"   //
+                                       "arrow that is being used.";                        //
                                                                                            //
 /*-------------------------------                                                          //
 |   CUSTOM BUTTON MAPPING       |                                                          //
@@ -657,3 +664,10 @@ string_view ingameSpoilersButtonDesc = "Change the button to open the ingame Spo
 |           GLITCHES           |                                                                           //
 ------------------------------*/                                                                           //
 const std::vector<string_view> GlitchDifficulties{"Novice", "Intermediate", "Advanced", "Expert", "Hero"};
+
+/*------------------------------                                                                           //
+|       CUTSCENE OPTIONS       |                                                                           //
+------------------------------*/  
+string_view skipHMSCutsceneDesc     = "Skips the initial Happy Mask Salesman's cutscenes"; //
+string_view skipDarmaniCutsceneDesc = "Skips the Song of Healing Cutscene for Darmani";    //
+string_view skipMikauCutsceneDesc   = "Skips the Song of Healing Cutscene for Mikau";      //
