@@ -59,6 +59,94 @@ void CreateMessage(u16 textId, u16 field_2, u32 field_4, u32 flags, const char* 
     messageEntries.insert(newEntry);
 }
 
+void CreateBaselineCustomMessages() {
+    // Small Keys
+    // Woodfall
+    CreateMessage(0x6133, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got a #small key# for the #Woodfall Temple#! Use it to open a locked door in that temple.",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+    // Snowhead
+    CreateMessage(0x6134, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got a #small key# for the #Snowhead Temple#! Use it to open a locked door in that temple.",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+    // Great Bay
+    CreateMessage(0x6135, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got a #small key# for the #Great Bay Temple#! Use it to open a locked door in that temple.",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+    // Stone Tower
+    CreateMessage(0x6136, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got a #small key# for the #Stone Tower Temple#! Use it to open a locked door in that temple.",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Maps
+    // Woodfall
+    CreateMessage(0x6137, 0x003E, 0x3FFFFFFF, 0xFF0000, 
+    "You found the #dungeon map# for the #Woodfall#!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Snowhead
+    CreateMessage(0x6138, 0x003E, 0x3FFFFFFF, 0xFF0000, 
+    "You found the #dungeon map# for the #Snowhead#!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Great Bay
+    CreateMessage(0x6139, 0x003E, 0x3FFFFFFF, 0xFF0000, 
+    "You found the #dungeon map# for the #Great Bay#!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Stone Tower
+    CreateMessage(0x613A, 0x003E, 0x3FFFFFFF, 0xFF0000, 
+    "You found the #dungeon map# for the #Stone Tower#!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Compasses
+    // Woodfall
+    CreateMessage(0x613B, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #compass# for the #Woodfall Temple#! Now many of the dungeon's hidden things will appear on the map!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Snowhead
+    CreateMessage(0x613C, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #compass# for the #Snowhead Temple#! Now many of the dungeon's hidden things will appear on the map!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Great Bay
+    CreateMessage(0x613D, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #compass# for the #Great Bay Temple#! Now many of the dungeon's hidden things will appear on the map!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Stone Tower
+    CreateMessage(0x613E, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #compass# for the #Stone Tower Temple#! Now many of the dungeon's hidden things will appear on the map!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Boss Keys
+    // Woodfall
+    CreateMessage(0x613F, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #boss key# for the #Woodfall Temple#! Now you can enter the chamber where the boss lurks!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Snowhead
+    CreateMessage(0x6140, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #boss key# for the #Snowhead Temple#! Now you can enter the chamber where the boss lurks!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Great Bay
+    CreateMessage(0x6141, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #boss key# for the #Great Bay Temple#! ow you can enter the chamber where the boss lurks!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Stone Tower
+    CreateMessage(0x6142, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #boss key# for the #Stone Tower Temple#! Now you can enter the chamber where the boss lurks!",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Kokiri Sword
+    CreateMessage(0x0037, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "You got the #kokiri sword!# The trusty sword you're familiar with. A treasure from Kokiri Forest.",
+    {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+}
+
 u32 NumMessages() {
     return messageEntries.size();
 }

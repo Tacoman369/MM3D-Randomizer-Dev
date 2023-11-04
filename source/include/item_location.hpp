@@ -161,7 +161,7 @@ public:
     }
 
     ItemOverride_Type GetOverrideType() const {
-        ItemOverride_Type ovrtype;
+        ItemOverride_Type ovrtype = {};
         if (type == ItemLocationType::Chest) { ovrtype = ItemOverride_Type::OVR_CHEST;}
         else if (type == ItemLocationType::Base) { ovrtype = ItemOverride_Type::OVR_BASE_ITEM;}
         else if (type == ItemLocationType::Collectable) {ovrtype = ItemOverride_Type::OVR_COLLECTABLE;}
