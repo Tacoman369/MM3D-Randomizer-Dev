@@ -880,6 +880,7 @@ void GenerateItemPool() {
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(W_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
+	PlaceItemInLocation(MILK_ROAD_KEATON_QUIZ, BLUE_RUPEE);
 	
 	//Check Non Dungeon Settings
 
@@ -1098,6 +1099,8 @@ void GenerateItemPool() {
 		PlaceItemInLocation(TINGLE_N_CLOCK_TOWN_WF, BLUE_RUPEE);
 		PlaceItemInLocation(TINGLE_ROAD_TO_SS_SH, BLUE_RUPEE);
 		PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_TWIN_ISLANDS_SH_SPRING, BLUE_RUPEE);
+		PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR_SPRING, BLUE_RUPEE);
 		PlaceItemInLocation(TINGLE_MILK_ROAD_GB, BLUE_RUPEE);
 		PlaceItemInLocation(TINGLE_GBC_ST, BLUE_RUPEE);
 		PlaceItemInLocation(TINGLE_IKANA_CANYON_CT, BLUE_RUPEE);
@@ -1110,6 +1113,8 @@ void GenerateItemPool() {
 	PlaceItemInLocation(TINGLE_ROAD_TO_SS_SH, SNOWHEAD_MAP);
 	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_SH, SNOWHEAD_MAP);
 	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR, ROMANI_RANCH_MAP);
+	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_SH_SPRING, SNOWHEAD_MAP);
+	PlaceItemInLocation(TINGLE_TWIN_ISLANDS_RR_SPRING, ROMANI_RANCH_MAP);
 	PlaceItemInLocation(TINGLE_MILK_ROAD_RR, ROMANI_RANCH_MAP);
 	PlaceItemInLocation(TINGLE_MILK_ROAD_GB, GREAT_BAY_MAP);
 	PlaceItemInLocation(TINGLE_GBC_GB, GREAT_BAY_MAP);

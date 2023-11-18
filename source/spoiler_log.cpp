@@ -38,7 +38,7 @@ namespace {
       "Pictograph Box",
       "Lens of Truth",
       "Hookshot",
-      "Greay Fairy Sword",
+      "Great Fairy Sword",
       "Empty Bottle",
       "Deku Princess",
       "Bottled Bugs",

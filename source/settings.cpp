@@ -1467,15 +1467,23 @@ namespace Settings {
       if (mapButtonValue == itemButtonValue && itemButtonValue != 0) {
        return false;
       } 
-      if (mapButtonValue == maskButtonValue && mapButtonValue != 0) {
-        return false;
-      } 
       if (mapButtonValue == maskButtonValue && maskButtonValue != 0) {
         return false;
+      } 
+      //if notebook button is not default make sure they dont match && if notebook button IS default then make sure map button isnt Start
+      if (mapButtonValue == notebookButtonValue && notebookButtonValue != 0) {
+        return false;
       }
+      if (mapButtonValue == 1 && notebookButtonValue == 0) {
+        return false;
+      }
+      //If spoiler button is not default make sure they dont match & if spoiler button IS default then make sure map button isnt Select
       if (mapButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
         return false;
       }
+      if (mapButtonValue == 2 && spoilerButtonValue == 0 ) {
+            return false;
+        }
     }
     
     if (itemButtonValue != 0)
@@ -1486,10 +1494,18 @@ namespace Settings {
       if (itemButtonValue == maskButtonValue && maskButtonValue != 0) {
         return false;
       }
+      //if notebook button is not default make sure they dont match && if notebook button IS default then make sure map button isnt Start
       if (itemButtonValue == notebookButtonValue && notebookButtonValue != 0) {
        return false;
       }
+      if (itemButtonValue == 1 && notebookButtonValue == 0) {
+        return false;
+      }
+      //If spoiler button is not default make sure they dont match & if spoiler button IS default then make sure map button isnt Select
       if (itemButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
+        return false;
+      }
+      if (itemButtonValue == 2 && spoilerButtonValue == 0) {
         return false;
       }
     }
@@ -1502,10 +1518,18 @@ namespace Settings {
       if (maskButtonValue == itemButtonValue && itemButtonValue != 0) {
         return false;
       }
+      //if notebook button is not default make sure they dont match && if notebook button IS default then make sure map button isnt Start
       if (maskButtonValue == notebookButtonValue && notebookButtonValue != 0) {
         return false;
       }
+      if (maskButtonValue == 1 && notebookButtonValue == 0) {
+        return false;
+      }
+      //If spoiler button is not default make sure they dont match & if spoiler button IS default then make sure map button isnt Select
       if (maskButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
+        return false;
+      }
+      if (maskButtonValue == 2 && notebookButtonValue == 0) {
         return false;
       }
     }
@@ -1524,6 +1548,10 @@ namespace Settings {
       if (notebookButtonValue == spoilerButtonValue && spoilerButtonValue != 0) {
         return false;
       }
+      //If notebook button is not default make sure it its not Select to cover default spoilerButton
+      if (notebookButtonValue == 2 && spoilerButtonValue == 0) {
+        return false;
+      }
     }
 
     if (spoilerButtonValue != 0)
@@ -1538,6 +1566,10 @@ namespace Settings {
         return false;
       }
       if (spoilerButtonValue == notebookButtonValue && notebookButtonValue != 0) {
+        return false;
+      }
+      //If spoiler button is not default make sure its not Start to cover default NotebookButton
+      if (spoilerButtonValue == 1 && notebookButtonValue == 0) {
         return false;
       }
     }

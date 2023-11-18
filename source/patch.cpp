@@ -117,6 +117,8 @@ bool WriteAllPatches() {
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/luma/titles/0004000000125500/romfs"), FS_ATTRIBUTE_DIRECTORY);
   //Create the actor directory if it doesn't exist
   FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/luma/titles/0004000000125500/romfs/actor"), FS_ATTRIBUTE_DIRECTORY);
+  //Create the actors directory if it doesn't exist
+  FSUSER_CreateDirectory(sdmcArchive, fsMakePath(PATH_ASCII, "/luma/titles/0004000000125500/romfs/actors"), FS_ATTRIBUTE_DIRECTORY);
 
   /*romfs is used to get files from the romfs folder.This allows us to copy
   //from basecode and write the exheader without the user needing to worry about
@@ -387,6 +389,40 @@ bool WriteAllPatches() {
     }
   }
   FSFILE_Close(assetsOut);
+
+  //FSUSER_CloseArchive(sdmcArchive);
+
+  /*-------------------
+  |  TITLESCREEN LZS  |
+  -------------------*/
+
+  // Delete assets if it exists
+  Handle titleassetsOut;
+  const char* titleassetsOutPath = "/luma/titles/0004000000125500/romfs/actors/zelda2_mag.gar.lzs";
+  const char* titleassetsInPath = "romfs:/zelda2_mag.gar.lzs";
+  FSUSER_DeleteFile(sdmcArchive, fsMakePath(PATH_ASCII, titleassetsOutPath));
+
+  // Open assets destination
+  if (!R_SUCCEEDED(res = FSUSER_OpenFile(&titleassetsOut, sdmcArchive, fsMakePath(PATH_ASCII, titleassetsOutPath), FS_OPEN_WRITE | FS_OPEN_CREATE, 0))) {
+    return false;
+  }
+
+  if (auto file = FILEPtr{std::fopen(titleassetsInPath, "r"), std::fclose}) {
+    // obtain assets size
+    fseek(file.get(), 0, SEEK_END);
+    const auto lSize = static_cast<size_t>(ftell(file.get()));
+    rewind(file.get());
+
+    // copy assets into the buffer
+    std::vector<char> buffer(lSize);
+    fread(buffer.data(), 1, buffer.size(), file.get());
+
+    // Write the assets to final destination
+    if (!R_SUCCEEDED(res = FSFILE_Write(titleassetsOut, &bytesWritten, 0, buffer.data(), buffer.size(), FS_WRITE_FLUSH))) {
+      return false;
+    }
+  }
+  FSFILE_Close(titleassetsOut);
 
   FSUSER_CloseArchive(sdmcArchive);
 

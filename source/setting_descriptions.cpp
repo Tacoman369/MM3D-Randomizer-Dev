@@ -656,9 +656,9 @@ string_view customItemsButtonDesc    = "Change the button to open the Items Menu
 string_view customMasksButtonDesc    = "Change the button to open the Masks Menu\n"        //
                                        "Default is Touch Screen";                          //
 string_view customNotebookDesc       = "Change the button to open the Bomber's Notebook\n" //
-                                       "Default is Select";                                //
+                                       "Default is Start";                                 //
 string_view ingameSpoilersButtonDesc = "Change the button to open the ingame Spoiler Log\n"//
-                                       "Default is XXX";                                   //
+                                       "Default is Select";                                //
 
 /*------------------------------                                                                           //
 |           GLITCHES           |                                                                           //

@@ -1128,6 +1128,8 @@ void AreaTable_Init() {
 		LocationAccess(TWIN_ISLANDS_CAVE_CHEST, {[] {return SnowheadClear && ZoraMask;}}),
 		LocationAccess(TINGLE_TWIN_ISLANDS_SH, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(TINGLE_TWIN_ISLANDS_RR, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_TWIN_ISLANDS_SH_SPRING, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(TINGLE_TWIN_ISLANDS_RR_SPRING, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 	},
 	{
 		//Exits
@@ -1297,6 +1299,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(TINGLE_MILK_ROAD_RR, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(TINGLE_MILK_ROAD_GB, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		LocationAccess(MILK_ROAD_KEATON_QUIZ, {[] {return KeatonMask;}}),
 	},
 	{
 		//Exits
