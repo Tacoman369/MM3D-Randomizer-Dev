@@ -510,11 +510,11 @@ void PrintGenerateMenu() {
     printf("\x1b[3;%dHSelect your game version", 1 + (BOTTOM_WIDTH -18) / 2);
     std::vector<std::string> versionOptions = {"1.0", "1.1"};
 
-    for (u8 i=0; i < versionOptions.size(); i++) {
-      std::string option = versionOptions[i];
-      u8 row             = 6 + (i * 2);
+    for (u8 j=0; j < versionOptions.size(); j++) {
+      std::string option = versionOptions[j];
+      u8 row             = 6 + (j * 2);
       //make the current selection green
-      if (currentMenu->menuIdx == i) {
+      if (currentMenu->menuIdx == j) {
         printf("\x1b[%d;%dH%s>",   row, 14, GREEN);
         printf("\x1b[%d;%dH%s%s",  row, 15, option.c_str(), RESET);
       } else {
