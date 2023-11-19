@@ -175,11 +175,10 @@ all: $(BUILD) $(GFXBUILD) $(DEPSDIR) $(ROMFS_T3XFILES) $(T3XHFILES)
 
 $(BUILD):
 	@git submodule update --init
-	@cp mm3dr/romfs/* ./romfs/
-	$(MAKE) -C mm3dr/code
-	@mv mm3dr/code/basecode.ips $(ROMFS)/basecode.ips
-	@mv mm3dr/code/basecode1.1.ips $(ROMFS)/basecode1.1.ips
-	@mv mm3dr/source/patch_symbols.hpp $(CURDIR)/source/include/
+	$(MAKE) -C Z3DR/patch_code/mm3d/
+	@mv Z3DR/patch_code/mm3d/basecode.ips $(ROMFS)/basecode.ips
+	@mv Z3DR/patch_code/mm3d/basecode1.1.ips $(ROMFS)/basecode1.1.ips
+	@mv Z3DR/patch_code/mm3d/patch_symbols.hpp $(CURDIR)/source/include/
 	@mkdir -p $@
 
 ifneq ($(GFXBUILD),$(BUILD))
@@ -196,8 +195,8 @@ endif
 clean:
 	@echo Cleaning app and basecode ...
 	@rm -fr $(BUILD) $(TARGET).3dsx $(TARGET).cia $(OUTPUT).smdh $(TARGET).elf $(GFXBUILD) $(ROMFS)/basecode.ips source/include/patch_symbols.hpp
-	$(MAKE) clean -f mm3dr/code/Makefile 
-	@rm -rf mm3dr/code/build
+	$(MAKE) clean -f Z3DR/patch_code/mm3d/Makefile 
+	@rm -rf Z3DR/patch_code/mm3d/build
 #---------------------------------------------------------------------------------
 $(GFXBUILD)/%.t3x	$(BUILD)/%.h	:	%.t3s
 #---------------------------------------------------------------------------------
