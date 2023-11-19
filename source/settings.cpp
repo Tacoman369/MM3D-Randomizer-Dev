@@ -783,8 +783,22 @@ namespace Settings {
     ctx.customMapButton = CustomButtonConvert(CustomMapButton.Value<u8>());
     ctx.customItemButton = CustomButtonConvert(CustomItemsButton.Value<u8>());
     ctx.customMaskButton = CustomButtonConvert(CustomMasksButton.Value<u8>());
-    ctx.customNotebookButton = CustomButtonConvert(CustomNotebookButton.Value<u8>());
-    ctx.customIngameSpoilerButton = CustomButtonConvert(IngameSpoilersButton.Value<u8>()); 
+  
+    //If CustomNotebookButton is Default set it to Start
+    if (CustomNotebookButton.Value<u8>() == u8(0)) {
+      ctx.customNotebookButton = u32(Button::Start);
+    }
+    else {//otherwise run normal conversion
+      ctx.customNotebookButton = CustomButtonConvert(CustomNotebookButton.Value<u8>());
+    }
+    
+    //If IngameSpoilersButton is Default set it to Select
+    if (IngameSpoilersButton.Value<u8>() == u8(0)) {
+      ctx.customIngameSpoilerButton = u32(Button::Select);
+    }
+    else {//otherwise run normal conversion
+      ctx.customIngameSpoilerButton = CustomButtonConvert(IngameSpoilersButton.Value<u8>()); 
+    }
 
     //TODO: 
     /*ctx.toggleAllTricks = ToggleAllTricks.Value<u8>();
@@ -871,6 +885,7 @@ namespace Settings {
   u32 CustomButtonConvert(u8 customButton)
   {
     CitraPrint("Converting Custom Inputs");
+    
     if (customButton == u8(0)) {//Default
       customButtonValue = 0;
     } 
@@ -921,7 +936,7 @@ namespace Settings {
     } 
     else if (customButton == u8(16)) {//ZR + Select
       customButtonValue = u32(Button::ZR) + u32(Button::Select);
-    } 
+    }     
 
     return customButtonValue;
   }
