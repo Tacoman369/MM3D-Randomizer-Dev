@@ -24,7 +24,6 @@ using namespace Logic;
 using namespace Settings;
 
 static bool placementFailure = false;
-
 static void RemoveStartingItemsFromPool() {
     for (ItemKey startingItem : StartingInventory) {
         for (size_t i = 0; i < ItemPool.size(); i++) {
@@ -414,10 +413,12 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
 
         unsuccessfulPlacement = false;
         std::vector<ItemKey> itemsToPlace = items;
-
         //copy all not yet placed advancement items so that we can apply their effects for the fill algorithm
         std::vector<ItemKey> itemsToNotPlace = FilterFromPool(ItemPool, [](const ItemKey i) { return ItemTable(i).IsAdvancement();});
 
+
+
+                
 
         //shuffle the order of items to place
         Shuffle(itemsToPlace);
@@ -447,22 +448,26 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
             //CitraPrint("Accessible Locations: ");
             const std::vector<LocationKey> accessibleLocations = GetAccessibleLocations(allowedLocations);
             //print accessable locations to see what's accessable 
-            /*CitraPrint("Accessable Locations are:");
-            PlacementLog_Msg("\nAccessable Locations are: \n");
-            for (LocationKey loc : accessibleLocations)
-                {                
-                PlacementLog_Msg(Location(loc)->GetName());
-                PlacementLog_Msg("\n");
-                CitraPrint(Location(loc)->GetName());
-                }*/
+            // CitraPrint("Accessable Locations are:");
+            // PlacementLog_Msg("\nAccessable Locations are: \n");
+            // for (LocationKey loc : accessibleLocations) {                
+            //     PlacementLog_Msg(Location(loc)->GetName());
+            //     PlacementLog_Msg("\n");
+            //     CitraPrint(Location(loc)->GetName());
+            // }
+            // 
+            // CitraPrint("Allowed Locations");
+            // for (LocationKey loc : allowedLocations) {                
+            //     PlacementLog_Msg(Location(loc)->GetName());
+            //     PlacementLog_Msg("\n");
+            //     CitraPrint(Location(loc)->GetName());
+            // }
+            
 
             //retry if there are no more locations to place items
             if (accessibleLocations.empty()) {
 
-                PlacementLog_Msg("\nCANNOT PLACE ");
-                PlacementLog_Msg(ItemTable(item).GetName().GetEnglish());
-                PlacementLog_Msg(". TRYING AGAIN...\n");
-                //DebugPrint("%s: accessable locations according to code %u\n", __func__, accessibleLocations);
+                PlacementLog_Msg("\nCANNOT PLACE " + ItemTable(item).GetName().GetEnglish() + ". TRYING AGAIN...\n");
                 
                 #ifdef ENABLE_DEBUG
                 PlacementLog_Write();
@@ -484,7 +489,7 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
             LocationKey selectedLocation = RandomElement(accessibleLocations);
             if ( !(Location(selectedLocation)->IsRepeatable()) && ItemTable(item).IsReusable() ){
                     //unsuccessfulPlacement = true;
-                    CitraPrint("Attemting to place things where they shouldnt be");
+                    CitraPrint("Attempting to place things where they shouldnt be...");
                     PlacementLog_Msg("\n Attempted to place " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
                     itemsToPlace.push_back(item);
                 }
@@ -625,10 +630,9 @@ static void RandomizeOwnDungeon(const Dungeon::DungeonInfo* dungeon) {
         auto dungeonBossKey = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetBossKey();});
         AddElementsToPool(dungeonItems, dungeonBossKey);
     }
-
     //randomize boss key and small keys together for even distribution
     AssumedFill(dungeonItems, dungeonLocations);
-
+    
     //randomize map and compass separately since they're not progressive
     if (MapsAndCompasses.Is((u8)MapsAndCompassesSetting::MAPSANDCOMPASSES_OWN_DUNGEON) && dungeon->GetMap() != NONE && dungeon->GetCompass() != NONE) {
         auto dungeonMapAndCompass = FilterAndEraseFromPool(ItemPool, [dungeon](const ItemKey i) { return i == dungeon->GetMap() || i == dungeon->GetCompass();});
@@ -898,7 +902,7 @@ int Fill() {
             return 1;
         }
         //Unsuccessful placement
-        if (retries < 4) {
+        if (retries < 0) {
             GetAccessibleLocations(allLocations, SearchMode::AllLocationsReachable);
             printf("\x1b[9;10HFailed. Retrying... %d", retries + 2);
             CitraPrint("Failed. Retrying...");
