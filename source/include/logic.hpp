@@ -309,13 +309,6 @@ namespace Logic {
 	extern bool GreatBayFrog;
 	extern bool ThinBridgeCrystalChest;
 	
-	extern bool AtDay;
-	extern bool AtNight;
-	extern u8 Day;
-	extern bool IsDay1;
-	extern bool IsDay2;
-	extern bool IsDay3;
-
 	extern bool CanGoToMoon;
 
 	void UpdateHelpers();
