@@ -14,35 +14,10 @@
 using namespace Logic;
 using namespace Settings;
 
-bool LocationAccess::CheckConditionAtDay(bool& day, bool& time) const{
-
-	IsDay1  = false;
-	IsDay2  = false;
-	IsDay3  = false;
-	AtDay   = false;
-	AtNight = false;
-	
-	day = true;
-	time = true;
-
-	UpdateHelpers();
-	return GetConditionsMet();
-}
 
 bool LocationAccess::ConditionsMet() const {
-	Area* parentRegion = AreaTable(Location(location)->GetParentRegionKey());
-	bool conditionsMet = false;
-	
-	if(
-	(parentRegion->day1Day && CheckConditionAtDay(IsDay1, AtDay)) ||
-	(parentRegion->day2Day && CheckConditionAtDay(IsDay2, AtDay)) ||
-	(parentRegion->day3Day && CheckConditionAtDay(IsDay3, AtDay)) ||
-	(parentRegion->day1Night && CheckConditionAtDay(IsDay1, AtNight)) ||
-	(parentRegion->day2Night && CheckConditionAtDay(IsDay2, AtNight)) ||
-	(parentRegion->day3Night && CheckConditionAtDay(IsDay3, AtNight)) )
-	{
-		conditionsMet = true;
-	}
+	//Area* parentRegion = AreaTable(Location(location)->GetParentRegionKey());
+	bool conditionsMet =  true;
 	
 	return conditionsMet;// && CanBuy();
 }
@@ -94,33 +69,6 @@ Area::~Area() = default;
 
 bool Area::UpdateEvents() {
 
-	if (timePass) {
-		if(Day1()){
-			day1Day   = true;
-			day1Night = true;
-			AreaTable(ROOT)->day1Day = true;
-			AreaTable(ROOT)->day1Night = true;
-		}
-		if(Day2()){
-			day1Day   = true;
-			day1Night = true;
-			day2Day   = true;
-			day2Night = true;
-			AreaTable(ROOT)->day2Day = true;
-			AreaTable(ROOT)->day2Night = true;
-		}
-		if(Day3()){
-			day1Day   = true;
-			day1Night = true;
-			day2Day   = true;
-			day2Night = true;
-			day3Day   = true;
-			day3Night = true;
-			AreaTable(ROOT)->day3Day = true;
-			AreaTable(ROOT)->day3Night = true;
-		}
-	}
-
 	bool eventsUpdated = false;
 
 	for (EventAccess& event : events)
@@ -130,12 +78,7 @@ bool Area::UpdateEvents() {
 			continue;
 		}
 		//check condition on all days/nights
-		if((day1Day && event.CheckConditionAtDay(IsDay1, AtDay)) ||
-		   (day2Day && event.CheckConditionAtDay(IsDay2, AtDay)) ||
-		   (day3Day && event.CheckConditionAtDay(IsDay3, AtDay)) ||
-		   (day1Night && event.CheckConditionAtDay(IsDay1, AtNight)) ||
-		   (day2Night && event.CheckConditionAtDay(IsDay2, AtNight)) ||
-		   (day3Night && event.CheckConditionAtDay(IsDay3, AtNight)) ){
+		if (event.ConditionsMet()){
 			event.EventOccurred();
 			eventsUpdated=true;
 		}
@@ -218,12 +161,7 @@ bool Area::CheckAllAccess(const AreaKey exitKey) {
 
 	for(Entrance& exit: exits) {
 		if(exit.GetAreaKey() == exitKey) {
-			return exit.CheckConditionAtDayTime(Logic::IsDay1, Logic::AtDay) &&
-			       exit.CheckConditionAtDayTime(Logic::IsDay2, Logic::AtDay) &&
-				   exit.CheckConditionAtDayTime(Logic::IsDay3, Logic::AtDay) &&
-				   exit.CheckConditionAtDayTime(Logic::IsDay1, Logic::AtNight) &&
-			       exit.CheckConditionAtDayTime(Logic::IsDay2, Logic::AtNight) &&
-				   exit.CheckConditionAtDayTime(Logic::IsDay3, Logic::AtNight);
+			exit.ConditionsMet();
 		}
 	}
 	return false;
@@ -231,12 +169,6 @@ bool Area::CheckAllAccess(const AreaKey exitKey) {
 
 
 void Area::ResetVariables() {
-	day1Day = true;
-	day2Day = false;
-	day3Day = false;
-	day1Night = false;
-	day2Night = false;
-	day3Night = false;
 	addedToPool = false;
 	for (auto& exit : exits) {
 		exit.RemoveFromPool();

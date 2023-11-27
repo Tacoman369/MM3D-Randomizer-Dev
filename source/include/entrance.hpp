@@ -65,44 +65,20 @@ public:
         return name;
     }
 
-    bool ConditionsMet(bool allDayTimes = false) const {
+    bool ConditionsMet() const {
 
         Area* parent = AreaTable(parentRegion);
         //PlacementLog_Msg("\nConditions Met parent = ");
         //PlacementLog_Msg(parent->regionName+"\n"); 
-        int conditionsMet = 0;
-
-        if (allDayTimes && !parent->AllAccess()){
+        if (!parent->AllAccess()){
             return false;
         }
-
-        //check all possible day/night condition combonations
-        conditionsMet = (parent->day1Day && CheckConditionAtDayTime(Logic::IsDay1, Logic::AtDay)) + 
-                        (parent->day2Day && CheckConditionAtDayTime(Logic::IsDay2, Logic::AtDay)) + 
-                        (parent->day3Day && CheckConditionAtDayTime(Logic::IsDay3, Logic::AtDay)) + 
-                        (parent->day1Night && CheckConditionAtDayTime(Logic::IsDay1, Logic::AtNight)) + 
-                        (parent->day2Night && CheckConditionAtDayTime(Logic::IsDay2, Logic::AtNight)) + 
-                        (parent->day3Night && CheckConditionAtDayTime(Logic::IsDay3, Logic::AtNight));
-        return conditionsMet &&(!allDayTimes || conditionsMet == 6);
+        Logic::UpdateHelpers();
+        return GetConditionsMet();
     }
 
     AreaKey GetAreaKey() const {
         return connectedRegion;
-    }
-
-    //set the logic to be a specific day and time to see if condition still holds
-    bool CheckConditionAtDayTime(bool& day, bool& time) const {
-        Logic::IsDay1 = false;
-        Logic::IsDay2 = false;
-        Logic::IsDay3 = false;
-        Logic::AtDay = false;
-        Logic::AtNight = false;
-
-        time = true;
-        day = true;
-
-        Logic::UpdateHelpers();
-        return GetConditionsMet();
     }
     
  //Yes this is the exact same function as above, trust me on this

@@ -290,12 +290,6 @@ namespace Logic {
 	bool ArmosRoomLightHole = false;
 	bool InvertedChestSpawn = false;
 	bool EnterSakonHideout = false;
-	bool AtDay = false;
-	bool AtNight = false;
-	u8 Day =0;
-	bool IsDay1 = false;
-	bool IsDay2 = false;
-	bool IsDay3 = false;
 	bool SunMask = false;
 	bool WatchMoonTearFall =false;
 	bool OldLadySaved = false;
@@ -835,14 +829,8 @@ namespace Logic {
 	GreatBayFrog = false;
 	ThinBridgeCrystalChest = false;
 
-	AtDay = false;
-	AtNight = false;
-	Day =0;
-	IsDay1 = false;
-	IsDay2 = false;
-	IsDay3 = false;
 	
-	  ZoraEgg = 0;
+	ZoraEgg = 0;
 	CanGoToMoon = false;
 	//placement tracking
 	AddedProgressiveBombBags = 0;
