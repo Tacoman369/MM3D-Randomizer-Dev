@@ -50,22 +50,23 @@ static void RemoveStartingItemsFromPool() {
 
 
 //This function propigates time of day access through entrances
+/*
 static bool UpdateToDAccess(Entrance* entrance) {
 
     bool ageTimePropigated = false;
 
-    //Area* parent = entrance->GetParentRegion();
+    Area* parent = entrance->GetParentRegion();
     //PlacementLog_Msg("\nparent = ");
     //PlacementLog_Msg(parent->regionName+"\n");
     Area* connection = entrance->GetConnectedRegion();
     //PlacementLog_Msg("\nconnection = ");
     //PlacementLog_Msg(connection->regionName+"\n");
-    if (!connection){
+    if (!connection && parent->HereCheck() && entrance->ConditionsMet()){
         ageTimePropigated = true;
     }
 
     return ageTimePropigated;
-}
+}*/
 
 std::vector<LocationKey> GetAllEmptyLocations() {
     return FilterFromPool(allLocations, [](const LocationKey loc) { return Location(loc)->GetPlacedItemKey() == NONE;});
@@ -76,7 +77,11 @@ std::vector<LocationKey> GetAllEmptyLocations() {
 //specifies the pool of locations that we're trying to search for an accessible location in
 std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& allowedLocations, SearchMode mode) {
     std::vector<LocationKey> accessibleLocations;
-    
+    //PlacementLog_Msg("Allowed Locations passed to AcceessibleLocations Function:\n");
+    //for (LocationKey loc : allowedLocations)
+    //{
+    //    PlacementLog_Msg(Location(loc)->GetName() + "\n");
+    //}
     //Reset all access to begin a new search
     ApplyStartingInventory();
    
@@ -92,13 +97,13 @@ std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& 
     //Variables for search
     std::vector<ItemLocation*> newItemLocations;
     bool updatedEvents = false;
-    bool ageTimePropigated = false;
+    //bool ageTimePropigated = false;
     bool firstIteration = true;
 
     //If no new items are found and no events are updated, then the next iteration won't provide any new location
-    while (newItemLocations.size() > 0  || ageTimePropigated || firstIteration || updatedEvents) { // - events not included in mm3dr yet
+    while (newItemLocations.size() > 0  || firstIteration || updatedEvents) { // || ageTimePropigated 
         firstIteration = false;
-        ageTimePropigated = false;
+        //ageTimePropigated = false;
         updatedEvents = false;
 
         for (ItemLocation* location : newItemLocations) {
@@ -121,9 +126,9 @@ std::vector<LocationKey> GetAccessibleLocations(const std::vector<LocationKey>& 
             for (auto& exit : area->exits) {
 
                 //Update Time of Day Access for the exit
-                if (UpdateToDAccess(&exit)){
-                    ageTimePropigated=true;
-                }
+                //if (UpdateToDAccess(&exit)){
+                //    ageTimePropigated=true;
+               // }
 
                 //if the exit is accessable and hasn't been added yet, add it to pool
                 Area* exitArea = exit.GetConnectedRegion();
@@ -392,11 +397,16 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
         std::vector<ItemKey> itemsToPlace = items;
 
         //copy all not yet placed advancement items so that we can apply their effects for the fill algorithm
-        std::vector<ItemKey> itemsToNotPlace = FilterFromPool(ItemPool, [](const ItemKey i) { 
+        //std::vector<ItemKey> itemsToNotPlace = FilterFromPool(ItemPool, [](const ItemKey i) { 
             //CitraPrint("Added item to itemsToNotPlace: ");
             //CitraPrint(ItemTable(i).GetName().GetEnglish());
-            return ItemTable(i).IsAdvancement();});
-
+          //  return ItemTable(i).IsAdvancement();});
+        std::vector<ItemKey> itemsToNotPlace = ItemPool;
+        //PlacementLog_Msg("ItemsNotToPlace:\n");
+        //for (ItemKey items : itemsToNotPlace)
+        //{
+        //    PlacementLog_Msg(" " + ItemTable(items).GetName().GetEnglish() + "," );
+        //}
 
         //shuffle the order of items to place
         Shuffle(itemsToPlace);
@@ -407,33 +417,37 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
 
             //assume we have all unplaced items
             LogicReset();
+            //PlacementLog_Msg("\nCurrent item for placement is: " + ItemTable(item).GetName().GetEnglish());
+            //PlacementLog_Msg("\nitemsToPlace: ");
             for (ItemKey unplacedItem : itemsToPlace) {
                 ItemTable(unplacedItem).ApplyEffect();
+                //PlacementLog_Msg(" " + ItemTable(unplacedItem).GetName().GetEnglish() + ", ");
             }
             for (ItemKey unplacedItem : itemsToNotPlace) {
                 ItemTable(unplacedItem).ApplyEffect();
             }
             //Print allowed locations to view active list at this point
-            /*PlacementLog_Msg("\nAllowed Locations are: \n"); 
-            CitraPrint("Allowed Locations are:");
-            for (LocationKey loc : allowedLocations)
-                {                PlacementLog_Msg(Location(loc)->GetName());
-                PlacementLog_Msg("\n");
-                CitraPrint(Location(loc)->GetName());
-                }*/
+            //PlacementLog_Msg("\nAllowed Locations are: \n"); 
+            //CitraPrint("Allowed Locations are:");
+            //for (LocationKey loc : allowedLocations)
+            //   {                
+            //      PlacementLog_Msg(Location(loc)->GetName());
+            //      PlacementLog_Msg("\n");
+            //      CitraPrint(Location(loc)->GetName());
+            //    }
 
             //get all accessible locations that are allowed
             //CitraPrint("Accessible Locations: ");
             const std::vector<LocationKey> accessibleLocations = GetAccessibleLocations(allowedLocations);
             //print accessable locations to see what's accessable 
-            /*CitraPrint("Accessable Locations are:");
-            PlacementLog_Msg("\nAccessable Locations are: \n");
-            for (LocationKey loc : accessibleLocations)
-                {                
-                PlacementLog_Msg(Location(loc)->GetName());
-                PlacementLog_Msg("\n");
-                CitraPrint(Location(loc)->GetName());
-                }*/
+            //CitraPrint("Accessable Locations are:");
+            //PlacementLog_Msg("\nAccessable Locations are: \n");
+            //for (LocationKey loc : accessibleLocations)
+            //    {                
+            //    PlacementLog_Msg(Location(loc)->GetName());
+            //    PlacementLog_Msg("\n");
+            //    //CitraPrint(Location(loc)->GetName());
+            //    }
 
             //retry if there are no more locations to place items
             if (accessibleLocations.empty()) {
@@ -469,6 +483,7 @@ static void AssumedFill(const std::vector<ItemKey>& items, const std::vector<Loc
                 }
             else { 
                 PlaceItemInLocation(selectedLocation, item); 
+                //PlacementLog_Msg("Placed " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
                 //CitraPrint("Placed " + ItemTable(item).GetName().GetEnglish() + " at " + Location(selectedLocation)->GetName());
                 attemptedLocations.push_back(selectedLocation);
 
@@ -779,6 +794,9 @@ int Fill() {
         FillExcludedLocations();
         
         showItemProgress = true;
+
+        //Place dungeon rewards - always vanilla for now
+        RandomizeDungeonRewards();
         
         //Place dungeon items restricted to their Own Dungeon
         
@@ -804,10 +822,6 @@ int Fill() {
             std::vector<ItemKey> dekuTrades = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_TRADE;});
             AssumedFill(dekuTrades, allLocations);
         }   
-
-        //Place dungeon rewards - always vanilla for now
-        RandomizeDungeonRewards();
-        
         
         //Then Place songs if song shuffle is set to specific locations
         /*

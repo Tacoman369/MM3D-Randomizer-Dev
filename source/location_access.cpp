@@ -16,8 +16,12 @@ using namespace Settings;
 
 
 bool LocationAccess::ConditionsMet() const {
-	//Area* parentRegion = AreaTable(Location(location)->GetParentRegionKey());
-	bool conditionsMet =  true;
+	Area* parentRegion = AreaTable(Location(location)->GetParentRegionKey());
+	bool conditionsMet =  false;
+
+	if (parentRegion->HasAccess()) {
+		conditionsMet= true;
+	}
 	
 	return conditionsMet;// && CanBuy();
 }
