@@ -99,7 +99,7 @@ namespace Settings {
   Option StartingOcarina           = Option::U8("  Ocarina",                { "Ocarina of Time",  "Ocarina of Time" },                                         { "" }, OptionCategory::Toggle, 1);
   Option StartingBombBag           = Option::U8("  Bomb Bag",               { "None",             "Bomb Bag 20",      "Bomb Bag 30",      "Bomb Bag 40" },     { "" });
   Option StartingBombchus          = Option::U8("  Bombchus",               { "None",             "Bombchus" },                                                { "" });
-  Option StartingHookshot          = Option::U8("  Hookshot",               { "None",             "Hookshot",         "Longshot" },                            { "" });
+  Option StartingHookshot          = Option::U8("  Hookshot",               { "None",             "Hookshot" },                                                { "" });
   Option StartingBow               = Option::U8("  Bow",                    { "None",             "Bow + Quiver 30",  "Bow + Quiver 40",  "Bow + Quiver 50" }, { "" });
   Option StartingFireArrows        = Option::U8("  Fire Arrow",             { "None",             "Fire Arrow" },                                              { "" });
   Option StartingIceArrows         = Option::U8("  Ice Arrow",              { "None",             "Ice Arrow" },                                               { "" });
