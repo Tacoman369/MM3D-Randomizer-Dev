@@ -804,6 +804,14 @@ int Fill() {
             RandomizeOwnDungeon(dungeon);
         }
 
+        if (ShuffleGFRewards.Is((u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ALL_GREAT_FARIES)){
+            //get GF locations
+            std::vector<LocationKey> gfLocations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cFairyFountain);});
+            std::vector<ItemKey> gfItems = FilterAndEraseFromPool(ItemPool, [gfLocations](const ItemKey i) { return ItemTable(i).GetItemType() == ITEMTYPE_GFAIRY;});
+            
+            AssumedFill(gfItems, gfLocations, true);
+        }
+
         //Place Main Inventory First
         //So first get all items in the pool + DekuMask,
         std::vector<ItemKey> mainadvancementItems = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).IsAdvancement();});//&& ItemTable(i).GetItemType() == ITEMTYPE_ITEM
@@ -841,13 +849,7 @@ int Fill() {
             AssumedFill(songs, songLocations, true);
         }*/
         
-        /*if (ShuffleGFRewards.Is(GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ALL_GREAT_FARIES)){
-            //get GF locations
-            std::vector<LocationKey> gfLocations = FilterFromPool(allLocations, [](const LocationKey loc) {return Location(loc)->IsCategory(Category::cFairyFountain);});
-            std::vector<ItemKey> gfItems = FilterAndEraseFromPool(ItemPool, [gfLocations](const ItemKey i) { return i == Location(gfLocations)->GetVanillaItem();});
-            
-
-        }*/
+        
 
         //Then place dungeon items that are assigned to restrictive location pools
         RandomizeDungeonItems();

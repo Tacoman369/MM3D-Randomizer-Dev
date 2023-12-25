@@ -978,19 +978,20 @@ void GenerateItemPool() {
 
 	
 	//GREAT FAIRY SHUFFLE
-	if(ShuffleGFRewards.Is(GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ANYWHERE)){
-		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
-		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
-		AddItemToMainPool(SPIN_ATTACK);
-		if(ShuffleMainInventory){AddItemToMainPool(GREAT_FAIRYS_SWORD);}
-		if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
-	}
-	else{
+	if(ShuffleGFRewards.Is((u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_VANILLA)){
 		PlaceItemInLocation(N_CLOCK_TOWN_GREAT_FAIRY_DEKU, PROGRESSIVE_MAGIC_METER);
 		PlaceItemInLocation(WOODFALL_GREAT_FAIRY, SPIN_ATTACK);
 		PlaceItemInLocation(SNOWHEAD_GREAT_FAIRY, PROGRESSIVE_MAGIC_METER);
 		if(!ShuffleMainInventory){PlaceItemInLocation(IKANA_CANYON_GREAT_FAIRY, GREAT_FAIRYS_SWORD);}
 		if(!RemoveDoubleDefense){PlaceItemInLocation(ZORA_CAPE_GREAT_FAIRY, DOUBLE_DEFENSE);}
+	}
+	else{
+		
+		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
+		AddItemToMainPool(PROGRESSIVE_MAGIC_METER); 
+		AddItemToMainPool(SPIN_ATTACK);
+		if(ShuffleMainInventory){AddItemToMainPool(GREAT_FAIRYS_SWORD);}
+		if(!RemoveDoubleDefense){AddItemToMainPool(DOUBLE_DEFENSE);}
 	}
 	
 	//REMOVE DD MAYBE?

@@ -814,8 +814,9 @@ namespace Settings {
     return ctx;
   }
   
-  u8 startingBottleValue;
   u8 StartingBottleConvert(u8 startingBottle) {
+      u8 startingBottleValue = 0;
+      
       if (startingBottle == u8(1)) {
         startingBottleValue = 0x12;//Empty Bottle
       }
@@ -876,7 +877,6 @@ namespace Settings {
       else if (startingBottle == u8(20)) {
         startingBottleValue = 0x27;//Spoiled Mystery Milk
       }
-
 
       return startingBottleValue;
   }

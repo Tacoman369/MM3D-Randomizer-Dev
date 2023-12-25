@@ -320,7 +320,7 @@ void UpdateResetToDefaultsMenu(u32 kDown) {
     printf("\x1b[24;5HSettings have been reset to defaults.");
   }
 }
-
+u16 menuIdx2;
 void UpdateGenerateMenu(u32 kDown) {
   if (!choosePlayOption) {
     if ((kDown & KEY_A) != 0) {
@@ -328,6 +328,8 @@ void UpdateGenerateMenu(u32 kDown) {
       consoleSelect(&bottomScreen);
       consoleClear();
       choosePlayOption = true;
+      menuIdx2 = currentMenu->menuIdx;
+      currentMenu->menuIdx = 0;
     }
   }
   else {
@@ -335,6 +337,7 @@ void UpdateGenerateMenu(u32 kDown) {
        consoleSelect(&bottomScreen);
        consoleClear();
        choosePlayOption = false;
+       currentMenu->menuIdx = menuIdx2;
      }
     else if ((kDown & KEY_A) !=0) {
         Settings::Version = currentMenu->menuIdx;
