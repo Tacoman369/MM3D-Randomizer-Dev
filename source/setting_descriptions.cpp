@@ -659,6 +659,11 @@ string_view customNotebookDesc       = "Change the button to open the Bomber's N
                                        "Default is Start";                                 //
 string_view ingameSpoilersButtonDesc = "Change the button to open the ingame Spoiler Log\n"//
                                        "Default is Select";                                //
+/*-------------------------------                                                          //
+|     BOMBERS MINIGAME SKIP     |                                                          //
+-------------------------------*/                                                          //
+string_view skipBombersMinigameDesc  = "Skip Bomber's Minigame to get the code.\n"         //
+                                       "Sets the code to 11111.";                          //
 
 /*------------------------------                                                                           //
 |           GLITCHES           |                                                                           //

@@ -421,6 +421,7 @@ namespace Settings {
   extern Option IngameSpoilers;
   extern Option MenuOpeningButton;
   extern Option RsDurability;
+  extern Option SkipBombersMinigame;
   extern std::vector<Option*>otherSettingsOptions;
 
   //Comfort
