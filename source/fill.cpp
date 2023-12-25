@@ -826,10 +826,10 @@ int Fill() {
         }
 
         //Then Place Deku Merchant Items
-        if(ShuffleMerchants) {
+       /* if(ShuffleMerchants) {
             std::vector<ItemKey> dekuTrades = FilterAndEraseFromPool(ItemPool, [](const ItemKey i) {return ItemTable(i).GetItemType() == ITEMTYPE_TRADE;});
             AssumedFill(dekuTrades, allLocations);
-        }   
+        }   */
         
         //Then Place songs if song shuffle is set to specific locations
         /*
