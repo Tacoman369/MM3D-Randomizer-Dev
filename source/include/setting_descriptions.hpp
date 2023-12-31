@@ -224,3 +224,4 @@ extern string_view compassShowWotHDesc;
 extern string_view skipHMSCutsceneDesc;
 extern string_view skipDarmaniCutsceneDesc;
 extern string_view skipMikauCutsceneDesc;
+extern string_view skipBombersMinigameDesc;

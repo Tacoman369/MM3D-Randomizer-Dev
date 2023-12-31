@@ -912,6 +912,7 @@ std::vector<LocationKey> overworldLocations = {
   ROMANI_RANCH_DOG_RACE,
   ROMANI_RANCH_GROG,
   ROMANI_RANCH_CREMIA_ESCORT,
+  ROMANI_RANCH_ROMANIS_GAME,
   ROMANI_RANCH_COW_1,
   ROMANI_RANCH_COW_2,
   ROMANI_RANCH_COW_3,
@@ -1201,8 +1202,8 @@ void CreateItemOverrides() {
  //PlacementLog_Msg(std::to_string(loc->GetScene()));
     PlacementLog_Msg("\tScene: ");
     PlacementLog_Msg(std::to_string(loc->Key().scene));
-    //PlacementLog_Msg("\tType: ");
-    //PlacementLog_Msg(std::to_string(loc->Key().type));
+    PlacementLog_Msg("\tType: ");
+    PlacementLog_Msg(std::to_string((u8)loc->Key().type));
  //PlacementLog_Msg("\tLoc's Flag: ");
  //PlacementLog_Msg(std::to_string(loc->GetFlag()));
     PlacementLog_Msg("\tFlag:  ");

@@ -210,8 +210,10 @@ static void WriteIngameSpoilerLog() {
             spoilerData.ItemLocations[spoilerItemIndex].ItemStrOffset = stringOffsetMap[locItem];
             spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = loc->GetCollectionCheck().type;
             spoilerData.ItemLocations[spoilerItemIndex].OverrideType = loc->GetOverrideType();
-            spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetCollectionCheck().scene;
-            spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetCollectionCheck().flag;
+            //spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetCollectionCheck().scene;
+            //spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetCollectionCheck().flag;
+            spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetScene();
+            spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetFlag();
             //Always Reveal unreachable checks
             if (key == CLOCK_TOWER_OCARINA_OF_TIME)
             {

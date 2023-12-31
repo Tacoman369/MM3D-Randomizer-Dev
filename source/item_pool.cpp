@@ -813,13 +813,27 @@ static void PlaceVanillaShopItems() {
 	PlaceItemInLocation(MILK_ROAD_GORMAN_MILK_BUY, MILK);
 	//other 2 scrub sales handled in beans and main inventory
 };
-/*
+
 static void SetScarceItemPool() {
-	//todo
+	ReplaceMaxItem(BOMBCHU_5, 1);
+	ReplaceMaxItem(BOMBCHU_10, 3);
+	ReplaceMaxItem(PROGRESSIVE_MAGIC_METER, 1);
+	ReplaceMaxItem(DOUBLE_DEFENSE, 0);
+	ReplaceMaxItem(PROGRESSIVE_BOW, 2);
+	ReplaceMaxItem(PROGRESSIVE_BOMB_BAG, 2);
+	ReplaceMaxItem(HEART_CONTAINER, 0);
+
 };
 static void SetMinimalItemPool(){
-	//todo
-};*/
+	ReplaceMaxItem(BOMBCHU_5, 1);
+	ReplaceMaxItem(BOMBCHU_10, 0);
+	ReplaceMaxItem(BOMBCHU_20,0);
+	ReplaceMaxItem(PROGRESSIVE_MAGIC_METER, 1);
+	ReplaceMaxItem(PROGRESSIVE_BOW,1);
+	ReplaceMaxItem(PROGRESSIVE_BOMB_BAG, 1);
+	ReplaceMaxItem(PIECE_OF_HEART,0);
+	//ReplaceMaxItem(HEART_CONTAINER, 2);
+};
 
 void GenerateItemPool() {
 	
@@ -1209,18 +1223,18 @@ void GenerateItemPool() {
 
 
 	// TO-DO ItemPool for extra items & Scarce and Minimal pools
-	/*if (ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
+	//if (ItemPoolValue.Is(ITEMPOOL_PLENTIFUL)) {
 		//AddItemsToPool(ItemPool, easyItems);
-	}
-	else {
+	//}
+	//else {
 		//AddItemsToPool(ItemPool, normalItems);
-	}
-	if (ItemPoolValue.Is(ITEMPOOL_SCARCE)) {//TO DO 
+	//}
+	if (ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_SCARCE)) {//TO DO 
 		SetScarceItemPool();
 	}
-	else if (ItemPoolValue.Is(ITEMPOOL_MINIMAL)) {
+	else if (ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_MINIMAL)) {
 		SetMinimalItemPool();
-	}*/
+	}
 
 	if (ItemPoolValue.Is(ItemPoolSetting::ITEMPOOL_PLENTIFUL)) {
 
@@ -1244,7 +1258,6 @@ void GenerateItemPool() {
 			AddItemToPool(PendingJunkPool, STONE_TOWER_TEMPLE_BOSS_KEY);
 		}
     
-
 	}
 	
 	//Replace ice traps with junk from the pending junk pool if necessary

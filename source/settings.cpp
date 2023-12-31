@@ -339,9 +339,11 @@ namespace Settings {
   Option RsDurability         = Option::U8("Razor Sword Durability",   { "Vanilla", "Infinite" },                           { rsDurabilityVanilla, rsDurabilityInf});
   Option IceTrapValue         = Option::U8("Ice Traps",                { "Off", "Extra", "Mayhem", "Onslaught" },           { iceTrapsOff, iceTrapsExtra, iceTrapsMayhem, iceTrapsOnslaught }, OptionCategory::Setting, (u8)IceTrapSetting::ICETRAPS_OFF);
   Option CompassShowWoTH      = Option::Bool("Compasses Show WotH",    {"Off", "On"},                                       { compassShowWotHDesc});
+  Option SkipBombersMinigame  = Option::Bool("Skip Bombers' Minigame", {"Off", "On"},                                       { skipBombersMinigameDesc});
 
   std::vector<Option*>otherSettingsOptions = {
       &IceTrapValue,
+      &SkipBombersMinigame,
       //&RandomTrapDmg,
       &GossipStoneHints,
       //&ClearerHints,
@@ -673,6 +675,7 @@ namespace Settings {
     //ctx.shuffleMagicBeans = (ShuffleMagicBeans) ? 1 : 0;
     
     ctx.compassesShowWotH = (CompassShowWoTH) ? 1 : 0;
+    ctx.skipBombersMinigame = (SkipBombersMinigame) ? 1 : 0;
     
     ctx.generateSpoilerLog = (GenerateSpoilerLog) ? 1 : 0;
   
@@ -816,7 +819,7 @@ namespace Settings {
   
   u8 StartingBottleConvert(u8 startingBottle) {
       u8 startingBottleValue = 0;
-      
+
       if (startingBottle == u8(1)) {
         startingBottleValue = 0x12;//Empty Bottle
       }

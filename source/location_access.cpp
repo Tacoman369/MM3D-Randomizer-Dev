@@ -283,7 +283,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(N_CLOCK_TOWN, {[]{return true;}}),
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
-		Entrance(CLOCK_TOWN_OBSERVATORY, {[]{return true;}}),
+		Entrance(CLOCK_TOWN_OBSERVATORY, {[]{return BombersNotebook || SkipBombersMinigame;}}),
 		Entrance(STOCKPOTINN, {[]{return true;}}),//to-Do StockPotInn Night Access
 		Entrance(CLOCK_TOWN_BAR, {[]{return RomanisMask;}}),
 		Entrance(CLOCK_TOWN_HONEY_DARLING, {[]{return true;}}),
