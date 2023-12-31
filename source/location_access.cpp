@@ -16,10 +16,11 @@ using namespace Settings;
 
 
 bool LocationAccess::ConditionsMet() const {
-	Area* parentRegion = AreaTable(Location(location)->GetParentRegionKey());
+	
 	bool conditionsMet =  false;
 
-	if (parentRegion->HasAccess()) {
+	UpdateHelpers();
+	if (GetConditionsMet()) {
 		conditionsMet= true;
 	}
 	

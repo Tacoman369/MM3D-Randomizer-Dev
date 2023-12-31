@@ -210,9 +210,79 @@ static void WriteIngameSpoilerLog() {
             spoilerData.ItemLocations[spoilerItemIndex].ItemStrOffset = stringOffsetMap[locItem];
             spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = loc->GetCollectionCheck().type;
             spoilerData.ItemLocations[spoilerItemIndex].OverrideType = loc->GetOverrideType();
-            spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetCollectionCheck().scene;
-            spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetCollectionCheck().flag;
-
+            //spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetCollectionCheck().scene;
+            //spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetCollectionCheck().flag;
+            spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetScene();
+            spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetFlag();
+            //Always Reveal unreachable checks
+            if (key == CLOCK_TOWER_OCARINA_OF_TIME)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (key == HMS_STARTING_SWORD)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;    
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;        
+            }
+            if (key == HMS_STARTING_SHIELD)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;              
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;            
+            }
+            //Reveal Stray Fairies and Skulltula Tokens as they're not randomized yet
+            if (Location(key)->GetPlacedItemKey() == CT_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == WF_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == SH_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == GBT_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == ST_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == OCEANSIDE_SKULLTULA_TOKEN)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == SWAMP_SKULLTULA_TOKEN)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            //Reveal Songs as they're not randomized yet
+            if (Location(key)->IsCategory(Category::cSong))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
             auto checkGroup = loc->GetCollectionCheckGroup();
             spoilerData.ItemLocations[spoilerItemIndex].Group = checkGroup;
 

@@ -371,7 +371,7 @@ const std::array<ItemKey, 8> progressiveItemsList = {
 	PROGRESSIVE_BOW,
 	PROGRESSIVE_BOW,
 	PROGRESSIVE_BOW, //1 Bow + 2 Quiver Upgrades
-	PROGRESSIVE_BOMB_BAG,
+	//PROGRESSIVE_BOMB_BAG,
 	//PROGRESSIVE_BOMB_BAG,
 	//PROGRESSIVE_BOMB_BAG, //3 Bomb Bags - 2 are in Bomb Shop - part of Shopsanity
 	//PROGRESSIVE_MAGIC_METER,
@@ -459,8 +459,8 @@ const std::array<ItemKey,4> scrubPurchaseItems = {
 
 const std::array<ItemKey, 6> moonItemList = {
 	//2Chests and 4 trial rewards, FDM separate
-	ARROWS_30,
-	BOMBCHU_10,
+	//ARROWS_30,  -just replace with junk
+	//BOMBCHU_10,
 	PIECE_OF_HEART,
 	PIECE_OF_HEART,
 	PIECE_OF_HEART,
@@ -968,7 +968,9 @@ void GenerateItemPool() {
 	if (ShuffleMasks) {
 		AddItemsToPool(ItemPool, maskList);
 	}
-	else {PlaceVanillaMasks();}
+	else {
+		PlaceVanillaMasks();
+	}
 
 	//SONG SHUFFLE
 	//add extra songs only if song shuffle is anywhere
