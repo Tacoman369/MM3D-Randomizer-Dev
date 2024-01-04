@@ -283,6 +283,10 @@ static void WriteIngameSpoilerLog() {
               spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
               spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
             }
+            if (Location(key)->IsRepeatable())
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_REPEATABLE;
+            }
             auto checkGroup = loc->GetCollectionCheckGroup();
             spoilerData.ItemLocations[spoilerItemIndex].Group = checkGroup;
 
