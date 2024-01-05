@@ -145,6 +145,11 @@ void CreateBaselineCustomMessages() {
     CreateMessage(0x0037, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
     "You got the #kokiri sword!# The trusty sword you're familiar with. A treasure from Kokiri Forest.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Ice Trap
+    CreateMessage(0x0012, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "          #FOOL!#",
+    {QM_RED}, {}, {}, 0x0, false, false);
 }
 
 u32 NumMessages() {
