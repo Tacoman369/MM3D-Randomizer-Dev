@@ -347,7 +347,7 @@ namespace Settings {
       //&RandomTrapDmg,
       &GossipStoneHints,
       //&ClearerHints,
-      //&HintDistribution,
+      &HintDistribution,
       &CompassShowWoTH,
       //&DamageMultiplier,
       //&ChestAnimations,

@@ -890,12 +890,12 @@ int Fill() {
             CreateItemOverrides();
            // CreateEntranceOverrides();
            // CreateAlwaysIncludedMessages();
-            /*if (GossipStoneHints.IsNot(HINTS_NO_HINTS)) {
-                printf("\x1b[10;10HCreating Hints...");
+            if (GossipStoneHints.IsNot(rnd::GossipStoneHintsSetting::HINTS_NO_HINTS)) {
+                printf("\x1b[11;10HCreating Hints...");
                 CreateAllHints();
                 printf("Done");
-            }
-            if (ShuffleMerchants.Is(SHUFFLEMERCHANTS_HINTS)) {
+             }
+            /*if (ShuffleMerchants.Is(SHUFFLEMERCHANTS_HINTS)) {
                 CreateMerchantsHints();
             }*/
             return 1;

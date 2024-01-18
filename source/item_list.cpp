@@ -99,8 +99,11 @@ void ItemTable_Init() {    //repeatable denotes that an item in a vanilla playth
     itemTable[BOTTLE_WITH_MYSTERY_MILK]          = Item(true,      true,           &MysteryMilkBottle,           Text{"Bottle with Mystery Milk",        "Bottle with Mystery Milk",                         "Bottle with Mystery Milk"},                         BOTTLE_WITH_MYSTERY_MILK,     (u32)GetItemID::GI_BOTTLE_MYSTERY_MILK,       ITEMTYPE_ITEM);
     //Other bottle items
     itemTable[DEKU_PRINCESS]                     = Item(true,      true,           &DekuPrincess,                Text{"Deku Princess",   			     "Princesse Mojo",       	                         "Princesa Deku"},                                    DEKU_PRINCESS,                (u32)GetItemID::GI_DEKU_PRINCESS_FAIRY,       ITEMTYPE_ITEM);
+    itemTable[BOTTLE_WITH_GREEN_POTION]          = Item(false,     false,          &HasBottle,                   Text{"Bottle with Green Potion",        "Flacon de potion verde",                           "Botella de poción verte"},                          BOTTLE_WITH_GREEN_POTION,     (u32)GetItemID::GI_POTION_GREEN,              ITEMTYPE_ITEM);
+    itemTable[BOTTLE_WITH_BLUE_POTION]           = Item(false,     false,          &HasBottle,                   Text{"Bottle with Blue Potion",         "Flacon de potion azul",                            "Botella de poción bleu"},                           BOTTLE_WITH_BLUE_POTION,      (u32)GetItemID::GI_POTION_BLUE,               ITEMTYPE_ITEM);
     itemTable[BOTTLE_WITH_FAIRY]                 = Item(false,     true,           &HasBottle,                   Text{"Bottle with Fairy",               "Bottle with Fairy",                                "Bottle with Fairy",},                               BOTTLE_WITH_FAIRY,            (u32)GetItemID::GI_FAIRY,                     ITEMTYPE_ITEM);
     itemTable[BOTTLE_WITH_BUGS]                  = Item(false,     true,           &HasBottle,                   Text{"Bottle with Bugs",                "Bottle with Bugs",                                 "Bottle with Bugs",},                                BOTTLE_WITH_BUGS,             (u32)GetItemID::GI_BOTTLE_BUG,                ITEMTYPE_ITEM);
+    itemTable[BOTTLE_WITH_FISH]                  = Item(false,     true,           &HasBottle,                   Text{"Bottle with Fish",                "Bottle with Fish",                                 "Bottle with Fish"},                                 BOTTLE_WITH_FISH,             (u32)GetItemID::GI_BOTTLE_FISH,               ITEMTYPE_ITEM);
     itemTable[BOTTLE_WITH_POE]                   = Item(false,     true,           &HasBottle,                   Text{"Bottle with Poe",                 "Bottle with Poe",                                  "Bottle with Poe",},                                 BOTTLE_WITH_POE,              (u32)GetItemID::GI_BOTTLE_POE_TEXT,           ITEMTYPE_ITEM);
     itemTable[BOTTLE_WITH_BIG_POE]               = Item(false,     true,           &HasBottle,                   Text{"Bottle with Big Poe",             "Bottle with Big Poe",                              "Bottle with Big Poe",},                             BOTTLE_WITH_BIG_POE,          (u32)GetItemID::GI_BOTTLE_BIG_POE,            ITEMTYPE_ITEM);
     itemTable[BOTTLE_WITH_SPRING_WATER]          = Item(false,     true,           &HasBottle,                   Text{"Bottle with Spring Water",        "Bottle with Spring Water",                         "Bottle with Spring Water",},                        BOTTLE_WITH_SPRING_WATER,     (u32)GetItemID::GI_BOTTLE_SPRING_WATER,       ITEMTYPE_ITEM);
@@ -206,10 +209,6 @@ void ItemTable_Init() {    //repeatable denotes that an item in a vanilla playth
     itemTable[RED_POTION_REFILL]                 = Item(false,     true,           &noVariable,                  Text{"Red Potion Refill",               "Potion rouge",                                     "Recarga de poción roja" },                          RED_POTION_REFILL,                 (u32)GetItemID::GI_POTION_RED,    ITEMTYPE_REFILL);
     itemTable[GREEN_POTION_REFILL]               = Item(false,     true,           &noVariable,                  Text{"Green Potion Refill",             "Potion verte",                                     "Recarga de poción verde" },                         GREEN_POTION_REFILL,               (u32)GetItemID::GI_POTION_GREEN,  ITEMTYPE_REFILL);
     itemTable[BLUE_POTION_REFILL]                = Item(false,     true,           &noVariable,                  Text{"Blue Potion Refill",              "Potion bleue",                                     "Recarga de poción azul" },                          BLUE_POTION_REFILL,                (u32)GetItemID::GI_POTION_BLUE,   ITEMTYPE_REFILL);
-    
-    itemTable[MAJORAS_MASK]                      = Item(true,      false,          &noVariable,                  Text{"Majora's Mask",                   "Majora's Mask",                                    "Majora's Mask" },                                   MAJORAS_MASK,                      (u32)GetItemID::GI_ERROR_NOTHING_40,   ITEMTYPE_EVENT);
-    itemTable[HINT]                              = Item(true,      true,           &noVariable,                  Text{"Hint",                            "Indice",                                           "Pista" },                                           HINT,                              (u32)GetItemID::GI_ERROR_NOTHING_40,   ITEMTYPE_EVENT);
-    
     //Shop Items                                              Repeatable				price
     itemTable[BUY_ARROWS_10]                     = Item(false,     true,           &noVariable,                  Text{"Buy Arrows (10)",                 "Acheter: Flèches (10)",                            "Comprar flechas (10)"},                             BUY_ARROWS_10,       (u32)GetItemID::GI_ARROWS_MEDIUM, ITEMTYPE_SHOP);  
     itemTable[BUY_ARROWS_30]                     = Item(false,     true,           &noVariable,                  Text{"Buy Arrows (30)",                 "Acheter: Flèches (30)",                            "Comprar flechas (30)"},                             BUY_ARROWS_30,	   (u32)GetItemID::GI_ARROWS_LARGE,  ITEMTYPE_SHOP);
@@ -231,6 +230,9 @@ void ItemTable_Init() {    //repeatable denotes that an item in a vanilla playth
     itemTable[PROGRESSIVE_WALLET]                = Item(true,     false,          &ProgressiveWallet,           Text{"Progressive Wallet",              "Bourse (prog.)",                                  "Bolsa de rupias progresiva" },                       PROGRESSIVE_WALLET,      0x48,                           ITEMTYPE_ITEM);
     itemTable[PROGRESSIVE_MAGIC_METER]           = Item(true,     false,          &ProgressiveMagic,            Text{"Progressive Magic Meter",         "Jauge de magie (prog.)",                          "Poder mágico progresivo" },                          PROGRESSIVE_MAGIC_METER, 0x49,                           ITEMTYPE_GFAIRY);
 
+    itemTable[MAJORAS_MASK]                      = Item(true,      false,          &noVariable,                  Text{"Majora's Mask",                   "Majora's Mask",                                    "Majora's Mask" },                                   MAJORAS_MASK,                      (u32)GetItemID::GI_ERROR_NOTHING_40,   ITEMTYPE_EVENT);
+    itemTable[HINT]                              = Item(true,      true,           &noVariable,                  Text{"Hint",                            "Indice",                                           "Pista" },                                           HINT,                              (u32)GetItemID::GI_ERROR_NOTHING_40,   ITEMTYPE_EVENT);
+    
   //itemTable[PROGRESSIVE_BOMBCHUS] = Item(Text{ "Progressive Bombchu",             "Bombchus (prog.)",                 "Bombchus progresivos" }, ITEMTYPE_ITEM, 0x89, true, &Bombchus, PROGRESSIVE_BOMBCHUS, false, );
   //  itemTable[PROGRESSIVE_NUT_UPGRADE]           = Item(Text{"Progressive Nut Capacity",        "Capacité de noix (prog.)",         "Capacidad de nueces deku progresiva"},     ITEMTYPE_ITEM,     0x87,              false,      &noVariable,             PROGRESSIVE_NUT_UPGRADE,     false,);
   //  itemTable[PROGRESSIVE_STICK_UPGRADE]         = Item(Text{"Progressive Stick Capacity",      "Capacité de bâtons (prog.)",       "Capacidad de palos deku progresiva"},      ITEMTYPE_ITEM,     0x88,              false,       &noVariable,            PROGRESSIVE_STICK_UPGRADE,   false,);
@@ -241,3 +243,13 @@ void ItemTable_Init() {    //repeatable denotes that an item in a vanilla playth
 Item& ItemTable(const ItemKey itemKey) {
     return itemTable[itemKey];
 };
+
+//This function should only be used to place items containing hint text
+//at gossip stone locations
+void NewItem(const ItemKey itemKey, const Item item) {
+    if (itemKey <= PROGRESSIVE_MAGIC_METER) {
+        printf("\x1b[25;0HWARNING: ATTEMPTED TO OVERWRITE ITEM %lu\n", itemKey);
+        return;
+    }
+    itemTable[itemKey] = item;
+}

@@ -630,7 +630,19 @@ void AreaTable_Init() {
 		LocationAccess(TERMINA_FIELD_UNDERWATER_CHEST, {[] {return ZoraMask;}}),
 		LocationAccess(TERMINA_FIELD_GRASS_CHEST, {[] {return true;}}),
 		LocationAccess(TERMINA_FIELD_STUMP_CHEST, {[] {return Hookshot || (MagicBean && WaterForBeans);}}),
-
+		LocationAccess(TF_TOP_SNOWHEAD_GOSSIP, { [] { return true; } }),
+		LocationAccess(TF_MILK_ROAD_TREE_GOSSIP, { [] { return true; } }),
+		LocationAccess(TF_IKANA_SNOWHEAD_GOSSIP, { [] { return true; } }),
+		LocationAccess(TF_OBSERVATORY_GOSSIP, { [] { return true; } }),
+		LocationAccess(TF_LOWER_SNOWHEAD_GOSSIP, { [] { return true; } }),
+		LocationAccess(TF_NEAR_GRASS_CHEST_GOSSIP, { [] { return true; } }),
+		//Gossip Stones
+		LocationAccess(TF_MILK_ROAD_TREE_GOSSIP, {[] {return true;}}),
+		LocationAccess(TF_IKANA_SNOWHEAD_GOSSIP, {[] {return true;}}),
+		LocationAccess(TF_OBSERVATORY_GOSSIP, {[] {return true;}}),
+		LocationAccess(TF_TOP_SNOWHEAD_GOSSIP, {[] {return true;}}),
+		LocationAccess(TF_LOWER_SNOWHEAD_GOSSIP, {[] {return true;}}),
+		LocationAccess(TF_NEAR_GRASS_CHEST_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -653,7 +665,7 @@ void AreaTable_Init() {
 		Entrance(ROAD_TO_IKANA, {[]{return true;}}),
 	});
 
-	areaTable[TERMINA_FIELD_PEAHAT_GROTTO] = Area("Termina Field Peahat Grotto","Termina Field Peahat Grotto", NONE,{
+	areaTable[TERMINA_FIELD_PEAHAT_GROTTO] = Area("Termina Field Peahat Grotto","Termina Field Peahat Grotto", TERMINA_FIELD_PEAHAT_GROTTO,{
 		//Events
 	},
 	{
@@ -665,7 +677,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
 	});
-	areaTable[TERMINA_FIELD_DODONGO_GROTTO] = Area("Termina Field Dodongo Grotto","Termina Field Dodongo Grotto", NONE,{
+	areaTable[TERMINA_FIELD_DODONGO_GROTTO] = Area("Termina Field Dodongo Grotto","Termina Field Dodongo Grotto", TERMINA_FIELD_DODONGO_GROTTO,{
 		//Events
 	},
 	{
@@ -677,7 +689,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
 	});
-	areaTable[TERMINA_FIELD_BIO_BABA_GROTTO] = Area("Termina Field Bio Baba Grotto","Termina Field Bio Baba Grotto", NONE,{
+	areaTable[TERMINA_FIELD_BIO_BABA_GROTTO] = Area("Termina Field Bio Baba Grotto","Termina Field Bio Baba Grotto", TERMINA_FIELD_BIO_BABA_GROTTO,{
 		//Events
 	},
 	{
@@ -688,7 +700,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
 	});
-	areaTable[TERMINA_FIELD_PILLAR_GROTTO] = Area("Termina Field Pillar Grotto","Termina Field Pillar Grotto", NONE,{
+	areaTable[TERMINA_FIELD_PILLAR_GROTTO] = Area("Termina Field Pillar Grotto","Termina Field Pillar Grotto", TERMINA_FIELD_PILLAR_GROTTO,{
 		//Events
 	},
 	{
@@ -699,7 +711,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
 	});
-	areaTable[TERMINA_FIELD_GRASS_GROTTO] = Area("Termina Field Grass Grotto","Termina Field Grass Grotto", NONE,{
+	areaTable[TERMINA_FIELD_GRASS_GROTTO] = Area("Termina Field Grass Grotto","Termina Field Grass Grotto", TERMINA_FIELD_GRASS_GROTTO,{
 		//Events
 	},
 	{
@@ -710,7 +722,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 	});
-	areaTable[TERMINA_FIELD_BUSINESS_SCRUB_GROTTO] = Area("Termina Field Business Scrub Grotto","Termina Field Business Scrub Grotto", NONE,{
+	areaTable[TERMINA_FIELD_BUSINESS_SCRUB_GROTTO] = Area("Termina Field Business Scrub Grotto","Termina Field Business Scrub Grotto", TERMINA_FIELD_BUSINESS_SCRUB_GROTTO,{
 		//Events
 	},
 	{
@@ -721,7 +733,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
 	});
-	areaTable[TERMINA_FIELD_COW_GROTTO] = Area("Termina Field Cow Grotto","Termina Field Cow Grotto", NONE,{
+	areaTable[TERMINA_FIELD_COW_GROTTO] = Area("Termina Field Cow Grotto","Termina Field Cow Grotto", TERMINA_FIELD_COW_GROTTO,{
 		//Events
 	},
 	{
@@ -733,7 +745,7 @@ void AreaTable_Init() {
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
 	});
-	areaTable[TERMINA_FIELD_GOSSIP_STONES_GROTTO] = Area("Termina Field Gossip Stones Grotto","Termina Field Gossip Stones Grotto", NONE,{
+	areaTable[TERMINA_FIELD_GOSSIP_STONES_GROTTO] = Area("Termina Field Gossip Stones Grotto","Termina Field Gossip Stones Grotto", TERMINA_FIELD_GOSSIP_STONES_GROTTO,{
 		//Events
 	},
 	{
@@ -741,7 +753,10 @@ void AreaTable_Init() {
 		LocationAccess(TERMINA_FIELD_GOSSIP_STONES, {[] {return (GoronMask && CanPlay(GoronsLullaby)) || 
 																(DekuMask && CanPlay(SonataOfAwakening)) ||  
 																(ZoraMask && CanPlay(NewWaveBossaNova));}}),
-		
+		LocationAccess(TF_FOUR_STONE_GROTTO_1, {[] {return true;}}),
+		LocationAccess(TF_FOUR_STONE_GROTTO_2, {[] {return true;}}),
+		LocationAccess(TF_FOUR_STONE_GROTTO_3, {[] {return true;}}),
+		LocationAccess(TF_FOUR_STONE_GROTTO_4, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -756,6 +771,8 @@ void AreaTable_Init() {
 		LocationAccess(ROAD_TO_SS_TREE, {[] {return DekuMask && (MagicMeter || Bow || Hookshot || ZoraMask);}}),//something to kill the dragonfly
 		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		//Gossip Stones
+		LocationAccess(ROAD_TO_SS_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -803,6 +820,8 @@ void AreaTable_Init() {
 		LocationAccess(SOUTHERN_SWAMP_SCRUB_PURCHASE, {[]{return DekuMask;}}),
 		LocationAccess(SOUTHERN_SWAMP_MUSIC_STATUE, {[] {return true;}}),
 		LocationAccess(SWAMP_TOURIST_CENTER_ROOF, {[] {return DekuMask && LandTitle;}}),
+		//Gossip Stones
+		LocationAccess(SS_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -991,6 +1010,8 @@ void AreaTable_Init() {
 	{
 		//Locations
 		//Path Grotto - requires Bombs & (maybe)Mask of Truth? - has no items just freestanding money
+		//Gossip Stones
+		LocationAccess(PATH_TO_MV_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1006,7 +1027,9 @@ void AreaTable_Init() {
 		LocationAccess(MOUNTAIN_VILLAGE_FROG_CHOIR, {[] {return SnowheadClear && LaundryFrog && SwampFrog && WoodfallFrog && GreatBayFrog && DonGerosMask;}}), 
 		LocationAccess(MOUNTAIN_VILLAGE_HUNGRY_GORON, {[] {return GoronMask && MagicMeter;}}),
 		LocationAccess(MOUNTAIN_WATERFALL_CHEST, {[] {return SnowheadClear;}}),
-
+		//Gossip Stones
+		LocationAccess(MV_NEAR_FROGS_GOSSIP, {[] {return true;}}),
+		LocationAccess(MV_NEAR_GROTTO_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1237,6 +1260,8 @@ void AreaTable_Init() {
 		LocationAccess(TINGLE_MILK_ROAD_RR, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(TINGLE_MILK_ROAD_GB, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(MILK_ROAD_KEATON_QUIZ, {[] {return KeatonMask;}}),
+		//Gossip Stones
+		LocationAccess(MR_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1268,6 +1293,10 @@ void AreaTable_Init() {
 		LocationAccess(ROMANI_RANCH_ALIEN_DEFENSE, {[] {return GoronMask && PowderKeg && Bow;}}),//Day1 Night
 		LocationAccess(ROMANI_RANCH_CREMIA_ESCORT, {[] {return GoronMask && PowderKeg && Bow;}}),//Day2
 		LocationAccess(ROMANI_RANCH_ROMANIS_GAME,  {[] {return GoronMask && PowderKeg && Bow;}}),//Day1
+		//Gossip Stones
+		LocationAccess(RR_ENTRANCE_GOSSIP, {[] {return true;}}),
+		LocationAccess(RR_BARN_GOSSIP, {[] {return true;}}),
+		LocationAccess(RR_FIELD_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1285,6 +1314,8 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(ROMANI_RANCH_DOG_RACE, {[] {return true;}}),
 		LocationAccess(DOGGY_RACETRACK_ROOF_CHEST, {[] {return Hookshot || (WaterForBeans && MagicBean);}}),
+		//Gossip Stones
+		LocationAccess(DOGGY_RACETRACK_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1297,6 +1328,8 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(ROMANI_RANCH_GROG, {[] {return BremenMask;}}),
+		//Gossip Stones
+		LocationAccess(CUCCO_SHACK_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1338,6 +1371,9 @@ void AreaTable_Init() {
 		LocationAccess(GBC_MIKAU, {[] {return CanPlay(SongOfHealing);}}),
 		LocationAccess(TINGLE_GBC_GB, {[]{ return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(TINGLE_GBC_ST, {[]{ return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		//Gossip Stones
+		LocationAccess(GBC_BENEATH_COW_GROTTO_GOSSIP, {[] {return true;}}),
+		LocationAccess(GBC_OUTSIDE_FORTRESS_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1430,7 +1466,8 @@ void AreaTable_Init() {
 		LocationAccess(ZORA_CAPE_LEDGE_NO_TREE, {[] {return Hookshot;}}),
 		LocationAccess(ZORA_CAPE_LEDGE_WITH_TREE, {[] {return Hookshot;}}),
 		LocationAccess(ZORA_CAPE_UNDERWATER_CHEST, {[] {return ZoraMask;}}),
-
+		//Gossip Stones
+		LocationAccess(ZC_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1728,6 +1765,9 @@ void AreaTable_Init() {
 		LocationAccess(IKANA_CANYON_LEDGE, {[] {return ZoraMask && OceanTitle && DekuMask;}}),
 		LocationAccess(IKANA_CANYON_SCRUB_TRADE, {[] {return ZoraMask && OceanTitle;}}),
 		LocationAccess(IKANA_CANYON_SCRUB_PURCHASE, {[]{return AnyWallet && AnyBottle;}}),
+		//Gossip Stones
+		LocationAccess(IC_DOCK_GOSSIP, {[] {return true;}}),
+		LocationAccess(IC_SAKON_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -1746,6 +1786,8 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(TINGLE_IKANA_CANYON_ST, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
 		LocationAccess(TINGLE_IKANA_CANYON_CT, {[]{return (ProgressiveMagic = 0) || ( (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask );}}),
+		//Gossip Stones
+		LocationAccess(IC_SPIRIT_HOUSE_GOSSIP, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -3415,7 +3457,7 @@ void AreaTable_Init() {
 	});
 
 
-	areaTable[SECRET_SHRINE_ENTRANCE] = Area("Secret Shrine Entrance", "Secret Shrine Entrance", SECRET_SHRINE_ENTRANCE, {
+	areaTable[SECRET_SHRINE_ENTRANCE] = Area("Secret Shrine Entrance", "Secret Shrine Entrance", SECRET_SHRINE, {
 		//Events
 	}, 
 	{
@@ -3427,7 +3469,7 @@ void AreaTable_Init() {
 		Entrance(SECRET_SHRINE_CENTER_ROOM, {[]{return LightArrows && Bow && MagicMeter;}}),
 	});
 
-	areaTable[SECRET_SHRINE_CENTER_ROOM] = Area("Secret Shrine Center Room", "Secret Shrine Center Room", SECRET_SHRINE_CENTER_ROOM, {
+	areaTable[SECRET_SHRINE_CENTER_ROOM] = Area("Secret Shrine Center Room", "Secret Shrine Center Room", SECRET_SHRINE, {
 		//Events
 	},
 	{
@@ -3443,7 +3485,7 @@ void AreaTable_Init() {
 		Entrance(SECRET_SHRINE_GARO_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[SECRET_SHRINE_DINOLFOS_ROOM] = Area("Secret Shrine Dinolfos Room", "Secret Shrine Dinolfos Room", SECRET_SHRINE_DINOLFOS_ROOM, {
+	areaTable[SECRET_SHRINE_DINOLFOS_ROOM] = Area("Secret Shrine Dinolfos Room", "Secret Shrine Dinolfos Room", SECRET_SHRINE, {
 		//Events
 	},
 	{
@@ -3455,7 +3497,7 @@ void AreaTable_Init() {
 		Entrance(SECRET_SHRINE_CENTER_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[SECRET_SHRINE_WIZZROBE_ROOM] = Area("Secret Shrine Wizzrobe Room", "Secret Shrine Wizzrobe Room", SECRET_SHRINE_WIZZROBE_ROOM, {
+	areaTable[SECRET_SHRINE_WIZZROBE_ROOM] = Area("Secret Shrine Wizzrobe Room", "Secret Shrine Wizzrobe Room", SECRET_SHRINE, {
 		//Events
 	},
 	{
@@ -3467,7 +3509,7 @@ void AreaTable_Init() {
 		Entrance(SECRET_SHRINE_CENTER_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[SECRET_SHRINE_WART_ROOM] = Area("Secret Shrine Wart Room", "Secret Shrine Wart Room", SECRET_SHRINE_WART_ROOM, {
+	areaTable[SECRET_SHRINE_WART_ROOM] = Area("Secret Shrine Wart Room", "Secret Shrine Wart Room", SECRET_SHRINE, {
 		//Events
 	},
 	{
@@ -3479,7 +3521,7 @@ void AreaTable_Init() {
 		Entrance(SECRET_SHRINE_CENTER_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[SECRET_SHRINE_GARO_ROOM] = Area("Secret Shrine Garo Room", "Secret Shrine Garo Room", SECRET_SHRINE_GARO_ROOM, {
+	areaTable[SECRET_SHRINE_GARO_ROOM] = Area("Secret Shrine Garo Room", "Secret Shrine Garo Room", SECRET_SHRINE, {
 		//Events
 	},
 	{
@@ -3508,12 +3550,18 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_ENTRANCE, {[]{return (TotalMaskCount() >= 4);}}),
 	});
 
-	areaTable[THE_MOON_DEKU_TRIAL] = Area("The Moon Deku Trial", "The Moon Deku Trial", THE_MOON_DEKU_TRIAL, {
+	areaTable[THE_MOON_DEKU_TRIAL] = Area("The Moon Deku Trial", "The Moon Deku Trial", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
 		LocationAccess(THE_MOON_DEKU_TRIAL_BONUS, {[] {return DekuMask;}}),
+		//Gossip Stones
+		LocationAccess(MOON_DEKU_GOSSIP_1, {[] {return DekuMask;}}),
+		LocationAccess(MOON_DEKU_GOSSIP_2, {[] {return DekuMask;}}),
+		LocationAccess(MOON_DEKU_GOSSIP_3, {[] {return DekuMask;}}),
+		LocationAccess(MOON_DEKU_GOSSIP_4, {[] {return DekuMask;}}),
+		LocationAccess(MOON_DEKU_GOSSIP_5, {[] {return DekuMask;}}),
 	},
 	{
 		//Exits
@@ -3521,7 +3569,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_DEKU_TRIAL_KID_ROOM, {[]{return DekuMask;}}),
 	});
 
-	areaTable[THE_MOON_DEKU_TRIAL_KID_ROOM] = Area("The Moon Deku Trial Kid Room", "The Moon Deku Trial Kid Room", THE_MOON_DEKU_TRIAL_KID_ROOM, {
+	areaTable[THE_MOON_DEKU_TRIAL_KID_ROOM] = Area("The Moon Deku Trial Kid Room", "The Moon Deku Trial Kid Room", THE_MOON, {
 		//Events
 	},
 	{
@@ -3533,12 +3581,18 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_DEKU_TRIAL, {[]{return true;}}),
 	});
 
-	areaTable[THE_MOON_GORON_TRIAL] = Area("The Moon Goron Trial", "The Moon Goron Trial", THE_MOON_GORON_TRIAL, {
+	areaTable[THE_MOON_GORON_TRIAL] = Area("The Moon Goron Trial", "The Moon Goron Trial", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
 		LocationAccess(THE_MOON_GORON_TRIAL_BONUS, {[] {return GoronMask && MagicMeter;}}),
+		//Gossip Stones
+		LocationAccess(MOON_GORON_GOSSIP_1, {[] {return GoronMask;}}),
+		LocationAccess(MOON_GORON_GOSSIP_2, {[] {return GoronMask;}}),
+		LocationAccess(MOON_GORON_GOSSIP_3, {[] {return GoronMask;}}),
+		LocationAccess(MOON_GORON_GOSSIP_4, {[] {return GoronMask;}}),
+		LocationAccess(MOON_GORON_GOSSIP_5, {[] {return GoronMask;}}),
 	},
 	{
 		//Exits
@@ -3546,7 +3600,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_GORON_TRIAL_KID_ROOM, {[]{return GoronMask;}}),
 	});
 
-	areaTable[THE_MOON_GORON_TRIAL_KID_ROOM] = Area("The Moon Goron Trial Kid Room", "The Moon Goron Trial Kid Room", THE_MOON_GORON_TRIAL_KID_ROOM, {
+	areaTable[THE_MOON_GORON_TRIAL_KID_ROOM] = Area("The Moon Goron Trial Kid Room", "The Moon Goron Trial Kid Room", THE_MOON, {
 		//Events
 	},
 	{
@@ -3558,12 +3612,18 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_GORON_TRIAL, {[]{return GoronMask;}}),
 	});
 
-	areaTable[THE_MOON_ZORA_TRIAL] = Area("The Moon Zora Trial", "The Moon Zora Trial", THE_MOON_ZORA_TRIAL, {
+	areaTable[THE_MOON_ZORA_TRIAL] = Area("The Moon Zora Trial", "The Moon Zora Trial", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
 		LocationAccess(THE_MOON_ZORA_TRIAL_BONUS, {[] {return ZoraMask && MagicMeter;}}),
+		//Gossip Stones
+		LocationAccess(MOON_ZORA_GOSSIP_1, {[] {return ZoraMask;}}),
+		LocationAccess(MOON_ZORA_GOSSIP_2, {[] {return ZoraMask;}}),
+		LocationAccess(MOON_ZORA_GOSSIP_3, {[] {return ZoraMask;}}),
+		LocationAccess(MOON_ZORA_GOSSIP_4, {[] {return ZoraMask;}}),
+		LocationAccess(MOON_ZORA_GOSSIP_5, {[] {return ZoraMask;}}),
 	},
 	{
 		//Exits
@@ -3571,7 +3631,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_ZORA_TRIAL_KID_ROOM, {[]{return ZoraMask && MagicMeter;}}),
 	});
 
-	areaTable[THE_MOON_ZORA_TRIAL_KID_ROOM] = Area("The Moon Zora Trial Kid Room", "The Moon Zora Trial Kid Room", THE_MOON_ZORA_TRIAL_KID_ROOM, {
+	areaTable[THE_MOON_ZORA_TRIAL_KID_ROOM] = Area("The Moon Zora Trial Kid Room", "The Moon Zora Trial Kid Room", THE_MOON, {
 		//Events
 	},
 	{
@@ -3583,7 +3643,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_ZORA_TRIAL, {[]{return true;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_ENTRANCE] = Area("The Moon Link Trial Entrance", "The Moon Link Trial Entrance", THE_MOON_LINK_TRIAL_ENTRANCE, {
+	areaTable[THE_MOON_LINK_TRIAL_ENTRANCE] = Area("The Moon Link Trial Entrance", "The Moon Link Trial Entrance", THE_MOON, {
 		//Events
 	},
 	{
@@ -3595,7 +3655,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_DINOLFOS_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_DINOLFOS_ROOM] = Area("The Moon Link Trial Dinolfos Room", "The Moon Link Trial Dinolfos Room", THE_MOON_LINK_TRIAL_DINOLFOS_ROOM, {
+	areaTable[THE_MOON_LINK_TRIAL_DINOLFOS_ROOM] = Area("The Moon Link Trial Dinolfos Room", "The Moon Link Trial Dinolfos Room", THE_MOON, {
 		//Events
 	},
 	{
@@ -3607,11 +3667,13 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_GOSSIP_ROOM_1, {[]{return Fighting;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_GOSSIP_ROOM_1] = Area("The Moon Link Trial Gossip Room 1", "The Moon Link Trial Gossip Room 1", THE_MOON_LINK_TRIAL_GOSSIP_ROOM_1, {
+	areaTable[THE_MOON_LINK_TRIAL_GOSSIP_ROOM_1] = Area("The Moon Link Trial Gossip Room 1", "The Moon Link Trial Gossip Room 1", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
+		//Gossip Stones
+		LocationAccess(MOON_LINK_GOSSIP_1, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -3619,7 +3681,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_GARO_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_GARO_ROOM] = Area("The Moon Link Trial Garo Room", "The Moon Link Trial Garo Room", THE_MOON_LINK_TRIAL_GARO_ROOM, {
+	areaTable[THE_MOON_LINK_TRIAL_GARO_ROOM] = Area("The Moon Link Trial Garo Room", "The Moon Link Trial Garo Room", THE_MOON, {
 		//Events
 	},
 	{
@@ -3632,11 +3694,13 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_GOSSIP_ROOM_2, {[]{return Fighting && Hookshot;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_GOSSIP_ROOM_2] = Area("The Moon Link Trial Gossip Room 2", "The Moon Link Trial Gossip Room 2", THE_MOON_LINK_TRIAL_GOSSIP_ROOM_2, {
+	areaTable[THE_MOON_LINK_TRIAL_GOSSIP_ROOM_2] = Area("The Moon Link Trial Gossip Room 2", "The Moon Link Trial Gossip Room 2", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
+		//Gossip Stones
+		LocationAccess(MOON_LINK_GOSSIP_2, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -3644,12 +3708,15 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_IRON_KNUCKLE_ROOM, {[]{return true;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_IRON_KNUCKLE_ROOM] = Area("The Moon Link Trial Iron Knuckle Room", "The Moon Link Trial Iron Knuckle Room", THE_MOON_LINK_TRIAL_IRON_KNUCKLE_ROOM, {
+	areaTable[THE_MOON_LINK_TRIAL_IRON_KNUCKLE_ROOM] = Area("The Moon Link Trial Iron Knuckle Room", "The Moon Link Trial Iron Knuckle Room", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
 		LocationAccess(THE_MOON_IRON_KNUCKLE_CHEST, {[] {return Fighting;}}),
+		//Gossip Stones
+		LocationAccess(MOON_LINK_GOSSIP_3, {[] {return true;}}),
+		LocationAccess(MOON_LINK_GOSSIP_4, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -3657,12 +3724,14 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_PIECE_OF_HEART_ROOM, {[]{return Fighting && AnyBombBag && Bow;}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_PIECE_OF_HEART_ROOM] = Area("The Moon Link Trial Piece of Heart Room", "The Moon Link Trial Piece of Heart Room", THE_MOON_LINK_TRIAL_PIECE_OF_HEART_ROOM, {
+	areaTable[THE_MOON_LINK_TRIAL_PIECE_OF_HEART_ROOM] = Area("The Moon Link Trial Piece of Heart Room", "The Moon Link Trial Piece of Heart Room", THE_MOON, {
 		//Events
 	},
 	{
 		//Locations
 		LocationAccess(THE_MOON_LINK_TRIAL_BONUS, {[] {return true;}}),
+		//Gossip Stones
+		LocationAccess(MOON_LINK_GOSSIP_5, {[] {return true;}}),
 	},
 	{
 		//Exits
@@ -3670,7 +3739,7 @@ void AreaTable_Init() {
 		Entrance(THE_MOON_LINK_TRIAL_KID_ROOM, {[]{return (AnyBombBag && FireArrows && Bow && MagicMeter) || CanPlay(SongOfStorms);}}),
 	});
 
-	areaTable[THE_MOON_LINK_TRIAL_KID_ROOM] = Area("The Moon Link Trial Kid Room", "The Moon Link Trial Kid Room", THE_MOON_LINK_TRIAL_KID_ROOM, {
+	areaTable[THE_MOON_LINK_TRIAL_KID_ROOM] = Area("The Moon Link Trial Kid Room", "The Moon Link Trial Kid Room", THE_MOON, {
 		//Events
 	},
 	{
