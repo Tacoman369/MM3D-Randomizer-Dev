@@ -1,5 +1,7 @@
 # MM3D_Randomizer
 
+THIS IS NOT WHERE THE CURRENT RELEASES OF THE FULL RANDOMIZER CAN BE FOUND. FOR THE LATEST UPDATES PLEASE GO TO https://github.com/Z3DR/MM3D_Randomizer/releases/latest
+
 This is an item randomizer app for _The Legend of Zelda: Majora's Mask 3D_ for the Nintendo 3DS.
 
 * [General Description](#general-description)
@@ -30,7 +32,7 @@ As a service to the player in this very long game, various tedious elements of t
 
 Please be sure to explore the many customizable settings which are available when using the app! There are many options which can alter the length or difficulty of each playthrough.
 
-Want to discuss the randomizer with others? Join our [Discord server](https://discord.gg/EVvzb6varj)!
+Want to discuss the randomizer with others? Join our [Discord server](https://discord.gg/73ZNdjbfFp)!
 
 
 ## Installation
@@ -58,7 +60,7 @@ Right now, save files are shared between any playthroughs you create and the bas
 ### Getting Stuck
 
 With a game the size of _Majora's Mask 3D_, it's quite easy for players to get stuck in certain situations with no apparent path to progressing.
-Before reporting an issue, please make sure to check out the [Discord server](https://discord.gg/EVvzb6varj) to see if that issue has been reported already.
+Before reporting an issue, please make sure to check out the [Discord server](https://discord.gg/73ZNdjbfFp) to see if that issue has been reported already.
 
 You may also find a map tracker helpful, as these allow you to see all checks which are available with your current items, and check which ones you've gotten already although keep in mind these were designed for the original Majora's Mask Randomizer so there may be some slight discrepancies.
 
@@ -77,4 +79,4 @@ For faster compilation using multiple threads, you can use `make -j4` (in this e
 
 ## Reporting Bugs
 
-Let us know if you believe you have discovered a bug by posting in our Discord server, or by opening an issue. In the [Discord](https://discord.gg/EVvzb6varj), we have a list of currently known issues and fixes which are pending release, which we try to keep fairly up to date.
+Let us know if you believe you have discovered a bug by posting in our Discord server, or by opening an issue. In the [Discord](https://discord.gg/73ZNdjbfFp), we have a list of currently known issues and fixes which are pending release, which we try to keep fairly up to date.
