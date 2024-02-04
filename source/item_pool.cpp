@@ -257,7 +257,7 @@ const std::array<ItemKey, 8> chestItems = {
 	MIRROR_SHIELD,
 };
 
-const std::array<ItemKey, 11> songList = {
+const std::array<ItemKey, 12> songList = {
 	//SONG_OF_TIME,
 	//SONG_OF_DOUBLE_TIME,
 	//INVERTED_SONG_OF_TIME, //SoT not included yet
@@ -266,6 +266,7 @@ const std::array<ItemKey, 11> songList = {
 	SONG_OF_HEALING,
 	//SONG_OF_SOARING,
 	SONATA_OF_AWAKENING,
+	LULLABY_INTRO,
 	GORONS_LULLABY,
 	NEW_WAVE_BOSSA_NOVA,
 	ELEGY_OF_EMPTINESS,
@@ -275,6 +276,7 @@ const std::array<ItemKey, 11> songList = {
 static void PlaceVanillaSongs() {
 	PlaceItemInLocation(HMS_SONG_OF_HEALING, SONG_OF_HEALING);
 	PlaceItemInLocation(DEKU_PALACE_IMPRISONED_MONKEY, SONATA_OF_AWAKENING);
+	PlaceItemInLocation(TWIN_ISLANDS_LULLABY_INTRO, LULLABY_INTRO);
 	PlaceItemInLocation(GORON_VILLAGE_GORON_LULLABY, GORONS_LULLABY);
 	PlaceItemInLocation(ROMANI_RANCH_ROMANIS_GAME, EPONAS_SONG);
 	PlaceItemInLocation(GBC_BABY_ZORAS, NEW_WAVE_BOSSA_NOVA);
@@ -902,6 +904,7 @@ void GenerateItemPool() {
 	PlaceItemInLocation(N_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(E_CLOCK_TOWN_POSTBOX, BLUE_RUPEE);
 	PlaceItemInLocation(MILK_ROAD_KEATON_QUIZ, BLUE_RUPEE);
+	PlaceItemInLocation(MOUNTAIN_VILLAGE_KEATON_QUIZ, BLUE_RUPEE);
 	PlaceItemInLocation(GORON_VILLAGE_POWDER_KEG_CHALLENGE_SPRING, BLUE_RUPEE);
     PlaceItemInLocation(GORON_VILLAGE_SCRUB_PURCHASE_SPRING, BLUE_RUPEE);
     PlaceItemInLocation(GORON_VILLAGE_SCRUB_TRADE_SPRING, BLUE_RUPEE);
@@ -911,7 +914,7 @@ void GenerateItemPool() {
 
 	//KOKIRISWORD SHUFFLE
 	if(StartingKokiriSword.Value<u8>() == (u8)StartingSwordSetting::STARTINGSWORD_NONE) {//if starting with no sword we need to add an extra to the pool
-		AddItemToMainPool(PROGRESSIVE_SWORD);
+		AddItemToMainPool(PROGRESSIVE_SWORD, 1);
 		IceTrapModels.push_back(0x37);//GetItemID::GI_KOKIRI_SWORD
 		PlaceItemInLocation(HMS_STARTING_SWORD,GREEN_RUPEE);//Add Junk to this location because theres no way to get it otherwise
 	} else {
@@ -920,7 +923,7 @@ void GenerateItemPool() {
 
 	//SHUFFLE STARTING SHIELD
 	if(StartingShield.Value<u8>() == (u8)StartingSheildSetting::STARTINGSHIELD_NONE){//if starting with no shield add an extra to the pool
-		AddItemToMainPool(HEROS_SHIELD);
+		AddItemToMainPool(HEROS_SHIELD, 1);
 		PlaceItemInLocation(HMS_STARTING_SHIELD, GREEN_RUPEE);//PlaceJunk Here because you cant not get this
 	}
 	else { PlaceItemInLocation(HMS_STARTING_SHIELD, HEROS_SHIELD);}//if starting with any other shield place this here because this location is unobtainable
@@ -994,6 +997,10 @@ void GenerateItemPool() {
 	//else {
 		PlaceVanillaSongs();
 	//}
+	if (StartingSongOfHealing.Value<u8>() == u8(1)){//if starting with song of healing fill deku mask and notebook spots as they are unobtainable
+		PlaceItemInLocation(HMS_DEKU_MASK, GREEN_RUPEE);
+		PlaceItemInLocation(HMS_BOMBERS_NOTEBOOK, GREEN_RUPEE);
+	}
 
 	//if (ShuffleSoaring)
 	//{
