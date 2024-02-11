@@ -405,6 +405,9 @@ void HintTable_Init() {
   //hintTable[SOUTHERN_SWAMP_PICTOGRAPH_STANDARD] = HintText::Sometimes({Text{"", "", ""}});
   //hintTable[SOUTHERN_SWAMP_PICTOGRAPH_GOOD] = HintText::Sometimes({Text{"", "", ""}});
     hintTable[SOUTHERN_SWAMP_SCRUB_PURCHASE] = HintText::Sometimes({Text{"a southern merchant sells", "", ""}});
+    hintTable[SOUTHERN_SWAMP_SCRUB_PURCHASE_CLEAR] = HintText::Sometimes({Text{"a southern merchant sells", "", ""}});
+    hintTable[SOUTHERN_SWAMP_SCRUB_TRADE_CLEAR] = HintText::Sometimes({Text{"a southern merchant trades", "", ""}});
+    hintTable[SWAMP_TOURIST_CENTER_ROOF_CLEAR] = HintText::Sometimes({Text{"a tourist center contains", "", ""}});
     hintTable[POTION_SHOP_ITEM_1] = HintText::Sometimes({Text{"a potion maker sells", "", ""}});
     hintTable[POTION_SHOP_ITEM_2] = HintText::Sometimes({Text{"a potion maker sells", "", ""}});
     hintTable[POTION_SHOP_ITEM_3] = HintText::Sometimes({Text{"a potion maker sells", "", ""}});

@@ -524,7 +524,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY, {[] {return AnyWallet;}}),
+		LocationAccess(W_CLOCK_TOWN_ALL_NIGHT_MASK_BUY, {[] {return (ProgressiveWallet >= 2);}}),
 	},
 	{
 		//Exits
@@ -818,6 +818,9 @@ void AreaTable_Init() {
 		LocationAccess(SOUTHERN_SWAMP_SCRUB_PURCHASE, {[]{return DekuMask;}}),
 		LocationAccess(SOUTHERN_SWAMP_MUSIC_STATUE, {[] {return true;}}),
 		LocationAccess(SWAMP_TOURIST_CENTER_ROOF, {[] {return DekuMask && LandTitle;}}),
+		LocationAccess(SOUTHERN_SWAMP_SCRUB_TRADE_CLEAR, {[] {return LandTitle && WoodfallClear;}}),
+		LocationAccess(SOUTHERN_SWAMP_SCRUB_PURCHASE_CLEAR, {[]{return DekuMask && WoodfallClear;}}),
+		LocationAccess(SWAMP_TOURIST_CENTER_ROOF_CLEAR, {[] {return DekuMask && LandTitle && WoodfallClear;}}),
 		//Gossip Stones
 		LocationAccess(SS_GOSSIP, {[] {return true;}}),
 	},

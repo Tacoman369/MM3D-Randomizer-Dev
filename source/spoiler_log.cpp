@@ -283,10 +283,12 @@ static void WriteIngameSpoilerLog() {
               spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
               spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
             }
+            //Set Repeatable locations CollectType(Used for changing color in spoiler log)
             if (Location(key)->IsRepeatable())
             {
               spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_REPEATABLE;
             }
+            //If Starting with Song of Healing reveal Deku Mask and Bombers Notebook as they're unobtainable and junk
             if (key == HMS_DEKU_MASK && Settings::StartingSongOfHealing.Value<u8>() == u8(1))
             {
               spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
@@ -294,6 +296,43 @@ static void WriteIngameSpoilerLog() {
               spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
             }
             if (key == HMS_BOMBERS_NOTEBOOK && Settings::StartingSongOfHealing.Value<u8>() == u8(1))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            //If !ShuffleTradeItems Show Anju and Kafei Items in default locations
+            if (key == E_CLOCK_TOWN_AROMA_IN_OFFICE && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == STOCKPOTINN_ANJU_AND_KAFEI && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == STOCKPOTINN_MIDNIGHT_MEETING && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == STOCKPOTINN_RESERVATION && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == LAUNDRY_POOL_KAFEI && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO && (Settings::ShuffleTradeItems.Value<bool>() == false))
             {
               spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
               spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;

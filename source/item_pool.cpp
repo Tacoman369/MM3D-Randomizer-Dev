@@ -909,7 +909,9 @@ void GenerateItemPool() {
     PlaceItemInLocation(GORON_VILLAGE_SCRUB_PURCHASE_SPRING, BLUE_RUPEE);
     PlaceItemInLocation(GORON_VILLAGE_SCRUB_TRADE_SPRING, BLUE_RUPEE);
     PlaceItemInLocation(GORON_VILLAGE_LEDGE_SPRING, BLUE_RUPEE);
-	
+    PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_PURCHASE_CLEAR, BLUE_RUPEE);
+    PlaceItemInLocation(SOUTHERN_SWAMP_SCRUB_TRADE_CLEAR, BLUE_RUPEE);
+    PlaceItemInLocation(SWAMP_TOURIST_CENTER_ROOF_CLEAR, BLUE_RUPEE);
 	//Check Non Dungeon Settings
 
 	//KOKIRISWORD SHUFFLE
@@ -1102,14 +1104,14 @@ void GenerateItemPool() {
 	if (ShuffleTradeItems){//TradeItems refers to Anju&Kafei Items
 		AddItemsToPool(ItemPool, anjuKafeiTradeItems);
 	} else {
-		if(ShuffleMasks){
-			AddItemToMainPool(KAFEIS_MASK);
-			AddItemToMainPool(COUPLES_MASK);
-		}
-		else{
+		//if(ShuffleMasks){ //-Kafei & Couples Mask part of A&K not masks
+		//	AddItemToMainPool(KAFEIS_MASK);
+		//	AddItemToMainPool(COUPLES_MASK);
+		//}
+		//else{
 		PlaceItemInLocation(E_CLOCK_TOWN_AROMA_IN_OFFICE, KAFEIS_MASK);
 		PlaceItemInLocation(STOCKPOTINN_ANJU_AND_KAFEI, COUPLES_MASK);
-		}
+		//}
 		PlaceItemInLocation(STOCKPOTINN_MIDNIGHT_MEETING, LETTER_KAFEI);
 		PlaceItemInLocation(LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO, LETTER_MAMA);
 		PlaceItemInLocation(STOCKPOTINN_RESERVATION, ROOM_KEY);
@@ -1199,7 +1201,6 @@ void GenerateItemPool() {
 				AddItemToMainPool(dungeon->GetCompass());
 			}
 		}
-		AddItemsToPool(ItemPool, tingleMaps);
 	}
 
 	if (Keysanity.Is(KeysanitySetting::KEYSANITY_VANILLA)) {
