@@ -37,7 +37,7 @@ namespace Logic {
 	extern bool AlienBottle;
 	extern bool GoronRaceBottle;
 	extern bool BeaverRaceBottle;
-	extern bool DampeBottle;
+	extern bool ArcheryBottle;
 	extern bool ChateauBottle;
 	extern bool MysteryMilkBottle;
 	extern bool BombersNotebook;
