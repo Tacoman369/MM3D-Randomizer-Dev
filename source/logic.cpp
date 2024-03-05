@@ -301,6 +301,7 @@ namespace Logic {
 	bool WoodfallFrog = false;
 	bool GreatBayFrog = false;
 	bool ThinBridgeCrystalChest = false;
+	bool MilkQuestStart = false;
 
 	bool CanGoToMoon = false;
 	
@@ -497,7 +498,6 @@ namespace Logic {
 		//Item Helpers
 		AnyMagicBean = MagicBean || LimitlessBeans;
 		AnyWallet = Townwallet200 || OceanWallet500 || (ProgressiveWallet >= 1);
-		UsableMysteryMilkBottle = MysteryMilkBottle && CircusLeadersMask;
 		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || ArcheryBottle || GoronRaceBottle || ChateauBottle || UsableMysteryMilkBottle || HasBottle;
 		MagicMeter = (ProgressiveMagic >= 1) || MagicPower || ExtendedMagicPower;
 		WaterForBeans = (AnyBottle && (SpringWater || HotSpringWater)) || SongOfStorms;
@@ -833,6 +833,7 @@ namespace Logic {
 	WoodfallFrog = false;
 	GreatBayFrog = false;
 	ThinBridgeCrystalChest = false;
+	MilkQuestStart = false;
 
 	
 	ZoraEgg = 0;

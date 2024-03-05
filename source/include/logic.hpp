@@ -310,6 +310,7 @@ namespace Logic {
 	extern bool WoodfallFrog;
 	extern bool GreatBayFrog;
 	extern bool ThinBridgeCrystalChest;
+	extern bool MilkQuestStart;
 	
 	extern bool CanGoToMoon;
 
