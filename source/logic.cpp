@@ -48,6 +48,7 @@ namespace Logic {
 	bool ArcheryBottle = false;
 	bool ChateauBottle = false;
 	bool MysteryMilkBottle = false;
+	bool UsableMysteryMilkBottle = false;
 	bool BombersNotebook = false;
 	bool MirrorShield = false;
 	bool HerosShield = false;
@@ -496,7 +497,8 @@ namespace Logic {
 		//Item Helpers
 		AnyMagicBean = MagicBean || LimitlessBeans;
 		AnyWallet = Townwallet200 || OceanWallet500 || (ProgressiveWallet >= 1);
-		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || ArcheryBottle || GoronRaceBottle || ChateauBottle || MysteryMilkBottle || HasBottle;
+		UsableMysteryMilkBottle = MysteryMilkBottle && CircusLeadersMask;
+		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || ArcheryBottle || GoronRaceBottle || ChateauBottle || UsableMysteryMilkBottle || HasBottle;
 		MagicMeter = (ProgressiveMagic >= 1) || MagicPower || ExtendedMagicPower;
 		WaterForBeans = (AnyBottle && (SpringWater || HotSpringWater)) || SongOfStorms;
 		Scarecrow = Hookshot && CanPlay(ScarecrowSong);
@@ -520,8 +522,8 @@ namespace Logic {
 					(AlienBottle && BeaverRaceBottle) || (AlienBottle && ArcheryBottle) || (AlienBottle && ChateauBottle) ||
 					(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && ArcheryBottle) || (GoronRaceBottle && ChateauBottle) ||
 					(BeaverRaceBottle && ArcheryBottle) || (BeaverRaceBottle && ChateauBottle) || (ArcheryBottle && ChateauBottle) ||
-					(WitchBottle && MysteryMilkBottle) || (AlienBottle && MysteryMilkBottle) || (BeaverRaceBottle && MysteryMilkBottle) ||
-					(ArcheryBottle && MysteryMilkBottle) || (GoronRaceBottle && MysteryMilkBottle) || (ChateauBottle && MysteryMilkBottle)};
+					(WitchBottle && UsableMysteryMilkBottle) || (AlienBottle && UsableMysteryMilkBottle) || (BeaverRaceBottle && UsableMysteryMilkBottle) ||
+					(ArcheryBottle && UsableMysteryMilkBottle) || (GoronRaceBottle && UsableMysteryMilkBottle) || (ChateauBottle && UsableMysteryMilkBottle)};
 		
 		//Tricks
 		PoisonWaterAsZora = ZoraMask && TakeDamage;
@@ -576,6 +578,7 @@ namespace Logic {
 	  ArcheryBottle = false;
 	  ChateauBottle = false;
 	  MysteryMilkBottle = false;
+	  UsableMysteryMilkBottle = false;
 	  BombersNotebook = false;
 	  MirrorShield = false;
 	  HerosShield = false;
