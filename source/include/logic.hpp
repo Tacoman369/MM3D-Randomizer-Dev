@@ -82,7 +82,7 @@ namespace Logic {
 	extern bool GarosMask;
 	extern bool CaptainsHat;
 	extern bool GiantsMask;
-	extern bool FierceDietyMask;
+	extern bool FierceDeityMask;
 	extern bool MaskOfTruth;
 	extern bool OneMask;
 	extern bool TwoMasks;
@@ -114,6 +114,7 @@ namespace Logic {
 	extern bool SongOfStorms;
 	extern bool SongOfHealing;
 	extern bool SonataOfAwakening;
+	extern bool LullabyIntro;
 	extern bool GoronsLullaby;
 	extern bool NewWaveBossaNova;
 	extern bool ElegyOfEmptiness;

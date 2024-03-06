@@ -141,7 +141,7 @@ bool WriteAllPatches() {
   }
 
   // Copy basecode to code
-  const char* basecodeFile = Settings::Version == 0 ? "romfs:/basecode.ips" : "romfs/basecode1.1.ips";
+  const char* basecodeFile = Settings::Version == 0 ? "romfs:/basecode.ips" : "romfs:/basecode1.1.ips";
   if (auto basecode = FILEPtr{std::fopen(basecodeFile, "r"), std::fclose}) {
     // obtain basecode.ips file size
     fseek(basecode.get(), 0, SEEK_END);
@@ -356,7 +356,7 @@ bool WriteAllPatches() {
   
 
   // Delete assets if it exists
-  Handle assetsOut;
+  /*Handle assetsOut;
   const char* assetsOutPath = "/luma/titles/0004000000125500/romfs/actor/zelda_gi_melody.zar";
   const char* assetsInPath = "romfs:/zelda_gi_melody.zar";
   FSUSER_DeleteFile(sdmcArchive, fsMakePath(PATH_ASCII, assetsOutPath));
@@ -390,7 +390,7 @@ bool WriteAllPatches() {
   }
   FSFILE_Close(assetsOut);
 
-  //FSUSER_CloseArchive(sdmcArchive);
+  //FSUSER_CloseArchive(sdmcArchive);*/
 
   /*-------------------
   |  TITLESCREEN LZS  |
@@ -423,6 +423,27 @@ bool WriteAllPatches() {
     }
   }
   FSFILE_Close(titleassetsOut);
+
+  /*-------------------
+  | LOCALE EMULATION  |
+  -------------------*/
+
+  if (Settings::PlayOption == PATCH_CONSOLE) {
+    Handle localeOut;
+    const char* localeOutPath = "/luma/titles/0004000000125500/locale.txt";
+    FSUSER_DeleteFile(sdmcArchive, fsMakePath(PATH_ASCII, localeOutPath));
+
+    if (!R_SUCCEEDED(res = FSUSER_OpenFile(&localeOut, sdmcArchive, fsMakePath(PATH_ASCII, localeOutPath), FS_OPEN_WRITE | FS_OPEN_CREATE, 0))) {
+      return false;
+    }
+
+    std::vector<char> buffer = { 'U', 'S', 'A', ' ', 'E', 'N' };
+
+    if (!R_SUCCEEDED(res = FSFILE_Write(localeOut, &bytesWritten, 0, buffer.data(), buffer.size(), FS_WRITE_FLUSH))) {
+      return false;
+    }
+    FSFILE_Close(localeOut);
+  }
 
   FSUSER_CloseArchive(sdmcArchive);
 

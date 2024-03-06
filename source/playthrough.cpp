@@ -19,10 +19,10 @@ namespace Playthrough {
       //resolved to something random
       Random_Init(seed);
 
-      //overrides.clear();
+      overrides.clear();
       //CustomMessages::ClearMessages();
       ItemReset();
-      //HintReset();
+      HintReset();
       Areas::AccessReset();
 
       Settings::UpdateSettings();
@@ -76,7 +76,7 @@ namespace Playthrough {
         clockTownMap = ItemTable(Location(TINGLE_N_CLOCK_TOWN_CT)->GetPlacedItemKey()).GetName().GetEnglish();
         woodfallMap = ItemTable(Location(TINGLE_N_CLOCK_TOWN_WF)->GetPlacedItemKey()).GetName().GetEnglish();
 
-        CustomMessages::CreateMessage(0x1D12, 0xFFFF, 0x3FF0A005, 0xFF1001,
+        CustomMessages::CreateMessage(0x1D12, 0xFFFF, 0x3FF0A014, 0xFF1001,
         woodfallMap.insert(0, "#").append("#    #20 Rupees#&").append(snowHeadMap.insert(0, "#").c_str()).append("#     #40 Rupees#").append("&#No thanks#").c_str(),
         {QM_GREEN, QM_RED, QM_GREEN, QM_RED, QM_GREEN}, {}, {}, 0x0, false, false);
         woodfallMap = ItemTable(Location(TINGLE_N_CLOCK_TOWN_WF)->GetPlacedItemKey()).GetName().GetEnglish();
@@ -109,14 +109,14 @@ namespace Playthrough {
 
       if (Settings::GenerateSpoilerLog) {
         //write logs
-        printf("\x1b[11;10HWriting Spoiler Log...");
+        printf("\x1b[12;10HWriting Spoiler Log...");
         if (SpoilerLog_Write()) {
           printf("Done");
         } else {
           printf("Failed");
         }
         #ifdef ENABLE_DEBUG
-          printf("\x1b[11;10HWriting Placement Log...");
+          printf("\x1b[12;10HWriting Placement Log...");
           if (PlacementLog_Write()) {
             printf("Done\n");
           } else {

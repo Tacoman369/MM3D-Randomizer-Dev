@@ -53,7 +53,7 @@ namespace Settings {
   Option CustomItemsButton    = Option::U8("Items",            { buttonOptions }, { customItemsButtonDesc },    OptionCategory::Setting, 0);
   Option CustomMasksButton    = Option::U8("Masks",            { buttonOptions }, { customMasksButtonDesc },    OptionCategory::Setting, 0);
   Option CustomNotebookButton = Option::U8("Bombers Notebook", { buttonOptions }, { customNotebookDesc },       OptionCategory::Setting, 1);
-  Option IngameSpoilersButton = Option::U8("Ingame Spoler Log",{ buttonOptions }, { ingameSpoilersButtonDesc }, OptionCategory::Setting, 2);
+  Option IngameSpoilersButton = Option::U8("Ingame Spoiler Log",{ buttonOptions }, { ingameSpoilersButtonDesc }, OptionCategory::Setting, 2);
 
   std::vector<Option *> customButtons = {
     &CustomMapButton,
@@ -64,7 +64,7 @@ namespace Settings {
   };
   
   //Mode/Logic Settings
-  Option Logic = Option::U8("Logic", { "Glitchless", "No Logic", "Vanilla", "Glitched" }, { logicGlitchless, logicNoLogic, logicVanilla, logicGlitched });
+  Option Logic = Option::U8("Logic", { "Glitchless", "No Logic", "Vanilla", "Glitched" }, { logicGlitchless, logicNoLogic, logicVanilla, logicGlitched },OptionCategory::Setting, (u8)LogicSetting::LOGIC_GLITCHLESS);
   Option LocationsReachable = Option::Bool("All Locations Reachable", { "Off", "On" }, { locationsReachableDesc }, OptionCategory::Setting, 1); //All Locations Reachable On
   std::vector<Option*> logicOptions = {
     &Logic,
@@ -99,7 +99,7 @@ namespace Settings {
   Option StartingOcarina           = Option::U8("  Ocarina",                { "Ocarina of Time",  "Ocarina of Time" },                                         { "" }, OptionCategory::Toggle, 1);
   Option StartingBombBag           = Option::U8("  Bomb Bag",               { "None",             "Bomb Bag 20",      "Bomb Bag 30",      "Bomb Bag 40" },     { "" });
   Option StartingBombchus          = Option::U8("  Bombchus",               { "None",             "Bombchus" },                                                { "" });
-  Option StartingHookshot          = Option::U8("  Hookshot",               { "None",             "Hookshot",         "Longshot" },                            { "" });
+  Option StartingHookshot          = Option::U8("  Hookshot",               { "None",             "Hookshot" },                                                { "" });
   Option StartingBow               = Option::U8("  Bow",                    { "None",             "Bow + Quiver 30",  "Bow + Quiver 40",  "Bow + Quiver 50" }, { "" });
   Option StartingFireArrows        = Option::U8("  Fire Arrow",             { "None",             "Fire Arrow" },                                              { "" });
   Option StartingIceArrows         = Option::U8("  Ice Arrow",              { "None",             "Ice Arrow" },                                               { "" });
@@ -162,7 +162,7 @@ namespace Settings {
   Option StartingGaroMask          = Option::U8("  Garo Mask",              { "None",             "Garo M."},                                                  { "" });
   Option StartingCaptainsHat       = Option::U8("  Captain's Mask",         { "None",             "Captains M." },                                             { "" });
   Option StartingGiantsMask        = Option::U8("  Giants Mask",            { "None",             "Giants M." },                                               { "" });
-  Option StartingFierceDietyMask   = Option::U8("  Fierce Diety Mask",      { "None",             "F.D M." },                                                  { "" });
+  Option StartingFierceDeityMask   = Option::U8("  Fierce Deity Mask",      { "None",             "F.D M." },                                                  { "" });
   Option StartingMaskOfTruth       = Option::U8("  Mask of Truth",          { "None",             "Truth M." },                                                { "" });
   Option StartingStickCapacity     = Option::U8("  Stick Capacity",         { "None", "10 Sticks", "20 Sticks", "30 Sticks" },                                 { "" });
   Option StartingPictographBox     = Option::U8("  Pictograph Box",         { "None",             "PictoBox" },                                                { "" });
@@ -222,7 +222,7 @@ namespace Settings {
     &StartingGaroMask,
     &StartingCaptainsHat,
     &StartingGiantsMask,
-    &StartingFierceDietyMask,
+    &StartingFierceDeityMask,
     &StartingMaskOfTruth,
     &StartingSongsToggle,
     &StartingOathToOrder,
@@ -302,7 +302,7 @@ namespace Settings {
     &BossKeysanity,
     //&StrayFairysanity,
     //&ShuffleRewards,
-    //&ShuffleHeartContainers,
+    &ShuffleHeartContainers,
   };
 
   //Item Pool Settings 
@@ -312,13 +312,13 @@ namespace Settings {
   Option ShuffleGFRewards       = Option::U8("Great Fairy Rewards",    {"Vanilla", "Great Fairies", "Anywhere" },       { shuffleGFVanilla, shuffleGFSelf, shuffleGFAnywhere },                   OptionCategory::Setting, (u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_VANILLA);
   Option ShuffleMainInventory   = Option::Bool("Main Inventory",       {"Vanilla", "Random"},                           { shuffleMainInventoryDesc},                                              OptionCategory::Toggle,   1);
   Option ShuffleTransformation  = Option::Bool("Transformation Masks", {"Vanilla", "Random"},                           { shuffleTransformationDesc});
-  Option ShuffleFierceDiety     = Option::Bool("Fierce Diety Mask",    {"Vanilla", "Random"},                           { shuffleFierceDietyDesc});
+  Option ShuffleFierceDeity     = Option::Bool("Fierce Deity Mask",    {"Vanilla", "Random"},                           { shuffleFierceDeityDesc});
   Option ShuffleMoonItems       = Option::Bool("Shuffle Moon Items",   {"Off", "On"},                                   {shuffleMoonItemsDesc});
   std::vector<Option*>itemPoolSettingsOptions = {
       &ItemPoolValue,
       &ShuffleMainInventory,
       &ShuffleTransformation,
-      &ShuffleFierceDiety,
+      &ShuffleFierceDeity,
       &ShuffleMasks,
       &ShuffleGFRewards,
       &ShufflePiecesOfHeart,
@@ -337,19 +337,21 @@ namespace Settings {
   //Option MenuOpeningButton    = Option::U8("Open Info Menu with",      { "Select","Start","D-Pad Up","D-Pad Down","D-Pad Right","D-Pad Left", }, { menuButtonDesc });
   Option RandomTrapDmg        = Option::U8("Random Trap Damage",       { "Off", "Basic", "Advanced" },                      { randomTrapDmgDesc, basicTrapDmgDesc, advancedTrapDmgDesc });
   Option RsDurability         = Option::U8("Razor Sword Durability",   { "Vanilla", "Infinite" },                           { rsDurabilityVanilla, rsDurabilityInf});
-  Option IceTrapValue         = Option::U8("Ice Traps",                { "Off", "Normal", "Extra", "Mayhem", "Onslaught" }, { iceTrapsOff, iceTrapsNormal, iceTrapsExtra, iceTrapsMayhem, iceTrapsOnslaught }, OptionCategory::Setting, (u8)IceTrapSetting::ICETRAPS_NORMAL);
+  Option IceTrapValue         = Option::U8("Ice Traps",                { "Off", "Extra", "Mayhem", "Onslaught" },           { iceTrapsOff, iceTrapsExtra, iceTrapsMayhem, iceTrapsOnslaught }, OptionCategory::Setting, (u8)IceTrapSetting::ICETRAPS_OFF);
   Option CompassShowWoTH      = Option::Bool("Compasses Show WotH",    {"Off", "On"},                                       { compassShowWotHDesc});
+  Option SkipBombersMinigame  = Option::Bool("Skip Bombers' Minigame", {"Off", "On"},                                       { skipBombersMinigameDesc});
 
   std::vector<Option*>otherSettingsOptions = {
       &IceTrapValue,
+      &SkipBombersMinigame,
       //&RandomTrapDmg,
       &GossipStoneHints,
       //&ClearerHints,
-      //&HintDistribution,
+      &HintDistribution,
       &CompassShowWoTH,
       //&DamageMultiplier,
       //&ChestAnimations,
-      //&ChestSize,
+      &ChestSize,
       //&ChangeOverworldItems,
       //&IngameSpoilers,
       //&MenuOpeningButton,
@@ -358,9 +360,9 @@ namespace Settings {
   
   /*COMFORT*/
 
-  Option BlastMaskCooldown      = Option::U8("Blast Mask Cooldown",        { "Default", "Instant", "Very Short", "Short", "Long", "Very Long" }, { blastDefault, blastInstant, blastVeryShort, blastShort, blastLong, blastVeryLong });
+  Option BlastMaskCooldown      = Option::U8("Blast Mask Cooldown",        {"Default", "Short", "Very Short", "Instant"},                        { blastDefault, blastShort, blastVeryShort, blastInstant });
   Option UnderwaterOcarina      = Option::Bool("Underwater Ocarina",       { "No","Yes" },                                                       { underwaterOcarinaDesc },                                                         OptionCategory::Toggle);
-  Option FierceDietyAnywhere    = Option::Bool("Fierce Diety Anywhere",    { "No","Yes" },                                                       { fierceDietyAnywhereDesc },                                                       OptionCategory::Toggle);
+  Option FierceDeityAnywhere    = Option::Bool("Fierce Deity Anywhere",    { "No","Yes" },                                                       { fierceDeityAnywhereDesc },                                                       OptionCategory::Toggle);
   Option ProgressiveGildedSword = Option::Bool("Progressive Gilded Sword", { "Off", "On" },                                                      { progressiveGildedSwordDesc });
   Option StartingSpin           = Option::Bool("Starting Spin",            { "Vanilla", "Upgraded" },                                            { startingSpinDesc });
   Option AmmoDrops              = Option::U8("Ammo Drops",                 { "Off", "On" },                                                      { ammoDropDesc });
@@ -370,12 +372,12 @@ namespace Settings {
   std::vector<Option*> comfortOptions = {
      
      &BlastMaskCooldown,
-     &UnderwaterOcarina,
-     &FierceDietyAnywhere,
+     // &UnderwaterOcarina,
+     // &FierceDeityAnywhere,
      //&ProgressiveGildedSword,
-     &StartingSpin,
-     &AmmoDrops,
-     &HeartDropRefills,
+     // &StartingSpin,
+     // &AmmoDrops,
+     // &HeartDropRefills,
      //&BombchusInLogic,
   };
  
@@ -395,6 +397,7 @@ namespace Settings {
   Option DpadTransform       = Option::Bool("DPad Transformation",    { "No", "Yes" },                                       {dpadMaskDesc});
   Option DpadOcarina         = Option::Bool("DPad Ocarina",           { "No", "Yes" },                                       {dpadOcarinaDesc});
   Option DpadArrows          = Option::Bool("Dpad Arrow Swap",        { "No", "Yes" },                                       {dpadArrowDesc});
+  Option TwinmoldRestoration  = Option::Bool("Twinmold Restoration",   { "No", "Yes" },                                      {twinmoldRestorationDesc});
 
   std::vector<Option *> restorationOptions = {
     //&SkipMinigamePhases,
@@ -410,6 +413,7 @@ namespace Settings {
     &DpadTransform,
     &DpadOcarina,
     &DpadArrows,
+    &TwinmoldRestoration,
     //&SkipSongReplays,
   };
 
@@ -541,7 +545,7 @@ namespace Settings {
   
 
   //Menu mainSettings = Menu::SubMenu("Main Settings", &mainSettingsOptions);
-  Menu comfort = Menu::SubMenu("Comfort", &comfortOptions);
+  Menu comfort = Menu::SubMenu("Comfort Settings", &comfortOptions);
   Menu restorationSettings = Menu::SubMenu("Restoration Settings", &restorationOptions);
   Menu cutsceneSettings = Menu::SubMenu("Cutscene Settings", &cutsceneOptions);
   Menu settingsPresets          = Menu::SubMenu("Settings Presets",           &settingsPresetItems);
@@ -561,7 +565,7 @@ namespace Settings {
     &itemPool,
     &startingInventory,
     &detailLogic,
-    //&comfort,
+    &comfort,
     &restorationSettings,
     &cutsceneSettings,
     &otherSettings,
@@ -618,7 +622,7 @@ namespace Settings {
     ctx.itemPoolValue = ItemPoolValue.Value<u8>();
     //ctx.shuffleMainInventory = (ShuffleMainInventory) ? 1 : 0;
     //ctx.shuffleTransformation = (ShuffleTransformation) ? 1 : 0;
-    //ctx.shuffleFierceDiety = (ShuffleFierceDiety) ? 1:0;
+    //ctx.shuffleFierceDeity = (ShuffleFierceDeity) ? 1:0;
     //ctx.shuffleMasks = (ShuffleMasks) ? 1 : 0;
     ctx.shuffleGreatFairyRewards = ShuffleGFRewards.Value<u8>();
     //ctx.shufflePiecesOfHeart = (ShufflePiecesOfHeart) ? 1:0;
@@ -635,9 +639,9 @@ namespace Settings {
     ctx.ingameSpoilers = (IngameSpoilers) ? 1 : 0;
     //ctx.menuOpeningButton = MenuOpeningButton.Value<u8>();
     
-    //ctx.blastMaskCooldown = BlastMaskCooldown.Value<u8>();
+    ctx.blastMaskCooldown = BlastMaskCooldown.Value<u8>();
     //ctx.underwaterOcarina = (UnderwaterOcarina) ? 1 : 0;
-    //ctx.fierceDietyAnywhere = (FierceDietyAnywhere) ? 1 : 0;
+    //ctx.fierceDeityAnywhere = (FierceDeityAnywhere) ? 1 : 0;
     ctx.skipMinigamePhases = (SkipMinigamePhases) ? 1 : 0;
     ctx.skipEponaRace = (SkipEponaRace) ? 1 : 0;
     //ctx.fastLabFish = (FastLabFish) ? 1 : 0;
@@ -673,6 +677,7 @@ namespace Settings {
     //ctx.shuffleMagicBeans = (ShuffleMagicBeans) ? 1 : 0;
     
     ctx.compassesShowWotH = (CompassShowWoTH) ? 1 : 0;
+    ctx.skipBombersMinigame = (SkipBombersMinigame) ? 1 : 0;
     
     ctx.generateSpoilerLog = (GenerateSpoilerLog) ? 1 : 0;
   
@@ -762,7 +767,7 @@ namespace Settings {
     ctx.startingGaroMask = StartingGaroMask.Value<u8>();
     ctx.startingCaptainsHat = StartingCaptainsHat.Value<u8>();
     ctx.startingGiantsMask = StartingGiantsMask.Value<u8>();
-    ctx.startingFierceDietyMask = StartingFierceDietyMask.Value<u8>();
+    ctx.startingFierceDeityMask = StartingFierceDeityMask.Value<u8>();
     ctx.startingMaskOfTruth = StartingMaskOfTruth.Value<u8>();
 
     //Restoration Features
@@ -772,6 +777,7 @@ namespace Settings {
     ctx.enableFastMaskTransform = (DpadTransform) ? 1 : 0;
     ctx.enableFastOcarina = (DpadOcarina) ? 1 : 0;
     ctx.enableFastArrowSwap = (DpadArrows) ? 1 : 0;
+    ctx.twinmoldRestoration = (TwinmoldRestoration) ? 1 : 0;
 
     //Cutscene Skips
     ctx.skipHMSCutscenes = (SkipHMSCutscenes) ? 1 : 0;
@@ -814,8 +820,9 @@ namespace Settings {
     return ctx;
   }
   
-  u8 startingBottleValue;
   u8 StartingBottleConvert(u8 startingBottle) {
+      u8 startingBottleValue = 0;
+
       if (startingBottle == u8(1)) {
         startingBottleValue = 0x12;//Empty Bottle
       }
@@ -876,7 +883,6 @@ namespace Settings {
       else if (startingBottle == u8(20)) {
         startingBottleValue = 0x27;//Spoiled Mystery Milk
       }
-
 
       return startingBottleValue;
   }
@@ -1058,7 +1064,11 @@ namespace Settings {
           break;
         case 1:
           startingInventoryOptions[i]->Hide();
-          startingInventoryOptions[i]->SetSelectedIndex((startingInventoryOptions[i]->GetOptionCount())-1);
+          if (startingInventorySections.GetName() == "Equipment & Upgrades") {
+            startingInventoryOptions[i]->SetSelectedIndex((startingInventoryOptions[i]->GetOptionCount())-2);
+          } else {
+            startingInventoryOptions[i]->SetSelectedIndex((startingInventoryOptions[i]->GetOptionCount())-1);
+          }
           break;
         case 2:
           startingInventoryOptions[i]->Unhide();
@@ -1205,7 +1215,7 @@ namespace Settings {
       CollapseCategory(StartingSongsToggle, 51, 60);
       CollapseCategory(StartingUpgradesToggle, 61, 67);
       CollapseCategory(StartingQuestToggle, 68, 72);
-    for(int i = 14; i < 21 ;++i){
+    for(int i = 18; i < 25 ;++i) {
       switch(StartingInventoryToggle.Value<u8>()) {
         case 0:
           startingInventoryOptions[i]->Hide();
@@ -1412,7 +1422,7 @@ namespace Settings {
       ShuffleHeartContainers.SetSelectedIndex(0);
       ShuffleMainInventory.SetSelectedIndex(0);
       ShuffleTransformation.SetSelectedIndex(0);
-      ShuffleFierceDiety.SetSelectedIndex(0);
+      ShuffleFierceDeity.SetSelectedIndex(0);
       ShuffleMasks.SetSelectedIndex(0);
       ShuffleGFRewards.SetSelectedIndex(0);
       ShufflePiecesOfHeart.SetSelectedIndex(0);

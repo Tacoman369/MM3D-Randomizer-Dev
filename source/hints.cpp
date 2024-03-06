@@ -9,6 +9,7 @@
 #include "spoiler_log.hpp"
 #include "fill.hpp"
 #include "hint_list.hpp"
+#include "custom_messages.hpp"
 //#include "trial.hpp"
 //#include "entrance.hpp"
 
@@ -122,8 +123,8 @@ static Area* GetHintRegion(const AreaKey area) {
     }
 
     //add unchecked exits to spot queue
-    //bool checked = false;
-    /*
+    bool checked = false;
+    
     for (auto& exit : AreaTable(region)->exits) {
       for (AreaKey checkedExit : alreadyChecked) {
         if (exit.GetAreaKey() == checkedExit) {
@@ -135,9 +136,8 @@ static Area* GetHintRegion(const AreaKey area) {
       if (!checked) {
         spotQueue.insert(spotQueue.begin(), exit.GetAreaKey());
       }
-    }*/
+    }
   }
-
   return AreaTable(NONE);
 }
 
@@ -151,21 +151,27 @@ static std::vector<LocationKey> GetAccessibleGossipStones(const LocationKey hint
   auto accessibleGossipStones = GetAccessibleLocations(gossipStoneLocations);
   //Give the item back to the location
   Location(hintedLocation)->SetPlacedItem(originalItem);
-
+  
   return accessibleGossipStones;
 }
 
-/*static void AddHint(Text hint, const LocationKey gossipStone, const std::vector<u8>& colors = {}) {
+static void AddHint(Text hint, const LocationKey gossipStone, const std::vector<colType>& colors = {}) {
   //save hints as dummy items for writing to the spoiler log
-  //NewItem(gossipStone, Item{hint, ITEMTYPE_EVENT, GI_RUPEE_BLUE_LOSE, false, &noVariable, NONE});
+  NewItem(gossipStone, Item{ false, true, &noVariable, hint, NONE, (u32)GetItemID::GI_RUPEE_BLUE, ITEMTYPE_EVENT, (u16)0});
   Location(gossipStone)->SetPlacedItem(gossipStone);
 
   //create the in game message
-  //u32 messageId = 0x400 + Location(gossipStone)->GetFlag();
+  u16 messageId = Location(gossipStone)->GetTextID();
+  std::vector<iconType> icons = {};
   //u32 sariaMessageId = 0xA00 + Location(gossipStone)->GetFlag();
+  CitraPrint("Our hint text is " + hint.GetEnglish());
+  if (hint.GetEnglish().find("$")) {
+    icons.push_back(B_BUTTON);
+  }
+  CustomMessages::CreateMessage(messageId, 0xFFFF, 0x3FFFFFFF, 0xFF0020, hint.GetEnglish().c_str(), colors, icons, {}, 0x0, false, false);
   //CreateMessageFromTextObject(messageId, 0, 2, 3, AddColorsAndFormat(hint, colors));
   //CreateMessageFromTextObject(sariaMessageId, 0, 2, 3, AddColorsAndFormat(hint + EVENT_TRIGGER(), colors));
-}*/
+}
 
 static void CreateLocationHint(const std::vector<LocationKey>& possibleHintLocations) {
   //return if there aren't any hintable locations or gossip stones available
@@ -190,7 +196,7 @@ static void CreateLocationHint(const std::vector<LocationKey>& possibleHintLocat
     return;
   }
 
-  //LocationKey gossipStone = RandomElement(accessibleGossipStones);
+  LocationKey gossipStone = RandomElement(accessibleGossipStones);
   Location(hintedLocation)->SetAsHinted();
 
   //make hint text
@@ -203,7 +209,7 @@ static void CreateLocationHint(const std::vector<LocationKey>& possibleHintLocat
   PlacementLog_Msg(finalHint.english);
   PlacementLog_Msg("\n\n");
 
-  //AddHint(finalHint, gossipStone, {QM_GREEN, QM_RED});
+  AddHint(finalHint, gossipStone, {QM_GREEN, QM_RED});
 }
 
 static void CreateWothHint(u8* remainingDungeonWothHints) {
@@ -240,24 +246,26 @@ static void CreateWothHint(u8* remainingDungeonWothHints) {
     return;
   }
   Location(hintedLocation)->SetAsHinted();
-  //LocationKey gossipStone = RandomElement(gossipStoneLocations);
+  LocationKey gossipStone = RandomElement(gossipStoneLocations);
 
   //form hint text
   Text locationText;
   if (Location(hintedLocation)->IsDungeon()) {
     *remainingDungeonWothHints -= 1;
     AreaKey parentRegion = Location(hintedLocation)->GetParentRegionKey();
+    CitraPrint("WoTH Hint: Getting " + Location(hintedLocation)->GetName() + "'s parent region which is " + Location(parentRegion)->GetName());
     locationText = AreaTable(parentRegion)->GetHint().GetText();
 
   } else {
     AreaKey parentRegion = Location(hintedLocation)->GetParentRegionKey();
+    CitraPrint("WoTH Hint: Getting " + Location(hintedLocation)->GetName() + "'s parent region which is " + Location(parentRegion)->GetName());
     locationText = GetHintRegion(parentRegion)->GetHint().GetText();
   }
   Text finalWothHint = Hint(PREFIX).GetText()+"#"+locationText+"#"+Hint(WAY_OF_THE_HERO).GetText();
   PlacementLog_Msg("\tMessage: ");
   PlacementLog_Msg(finalWothHint.english);
   PlacementLog_Msg("\n\n");
-  //AddHint(finalWothHint, gossipStone, {QM_LBLUE});
+  AddHint(finalWothHint, gossipStone, {QM_BLUE});
 }
 
 static void CreateBarrenHint(u8* remainingDungeonBarrenHints, std::vector<LocationKey>& barrenLocations) {
@@ -287,23 +295,25 @@ static void CreateBarrenHint(u8* remainingDungeonBarrenHints, std::vector<Locati
     return;
   }
   Location(hintedLocation)->SetAsHinted();
-  //LocationKey gossipStone = RandomElement(gossipStoneLocations);
+  LocationKey gossipStone = RandomElement(gossipStoneLocations);
 
   //form hint text
   Text locationText;
   if (Location(hintedLocation)->IsDungeon()) {
     *remainingDungeonBarrenHints -= 1;
     AreaKey parentRegion = Location(hintedLocation)->GetParentRegionKey();
+    CitraPrint("Barrent Hint: Getting " + Location(hintedLocation)->GetName() + "'s parent region which is " + Location(parentRegion)->GetName());
     locationText = Hint(AreaTable(parentRegion)->hintKey).GetText();
   } else {
     AreaKey parentRegion = Location(hintedLocation)->GetParentRegionKey();
+    CitraPrint("Barrent Hint: Getting " + Location(hintedLocation)->GetName() + "'s parent region which is " + Location(parentRegion)->GetName());
     locationText = Hint(GetHintRegion(parentRegion)->hintKey).GetText();
   }
   Text finalBarrenHint = Hint(PREFIX).GetText()+Hint(PLUNDERING).GetText()+"#"+locationText+"#"+Hint(FOOLISH).GetText();
   PlacementLog_Msg("\tMessage: ");
   PlacementLog_Msg(finalBarrenHint.english);
   PlacementLog_Msg("\n\n");
-  //AddHint(finalBarrenHint, gossipStone, {QM_PINK});
+  AddHint(finalBarrenHint, gossipStone, {QM_RED});
 
   //get rid of all other locations in this same barren region
   barrenLocations = FilterFromPool(barrenLocations, [hintedLocation](LocationKey loc){
@@ -338,25 +348,34 @@ static void CreateRandomLocationHint(const bool goodItem = false) {
     return;
   }
   Location(hintedLocation)->SetAsHinted();
-  //LocationKey gossipStone = RandomElement(gossipStoneLocations);
+  LocationKey gossipStone = RandomElement(gossipStoneLocations);
 
   //form hint text
+  /* CitraPrint("Checking location " + Location(hintedLocation)->GetName() + \
+              "'s item which is " + Location(hintedLocation)->GetPlacedItemName().GetEnglish() + \
+              " and GetItemID of " + Location(hintedLocation)->GetPlacedItem().GetItemId() + "\n"); 
+  DebugPrint("Checking location %s's item which is %s and GetItemID of %#04x and hint text is %s\n", Location(hintedLocation)->GetName().c_str(), \
+             Location(hintedLocation)->GetPlacedItemName().GetEnglish().c_str(), \
+             Location(hintedLocation)->GetPlacedItem().GetItemId(), \
+             Location(hintedLocation)->GetPlacedItem().GetHint().GetText().GetEnglish().c_str()); */
   Text itemText = Location(hintedLocation)->GetPlacedItem().GetHint().GetText();
   if (Location(hintedLocation)->IsDungeon()) {
     AreaKey parentRegion = Location(hintedLocation)->GetParentRegionKey();
     Text locationText = AreaTable(parentRegion)->GetHint().GetText();
+    CitraPrint("Random Loc Hint: Getting " + Location(hintedLocation)->GetName() + "'s parent region which is " + Location(parentRegion)->GetName());
     Text finalHint = Hint(PREFIX).GetText()+"#"+locationText+"# "+Hint(HOARDS).GetText()+" #"+itemText+"#.";
     PlacementLog_Msg("\tMessage: ");
     PlacementLog_Msg(finalHint.english);
     PlacementLog_Msg("\n\n");
-    //AddHint(finalHint, gossipStone, {QM_GREEN, QM_RED});
+    AddHint(finalHint, gossipStone, {QM_GREEN, QM_RED});
   } else {
+    CitraPrint("Random Loc Hint: Getting " + Location(hintedLocation)->GetName() + "'s parent region which is " + Location(Location(hintedLocation)->GetParentRegionKey())->GetName());
     Text locationText = GetHintRegion(Location(hintedLocation)->GetParentRegionKey())->GetHint().GetText();
     Text finalHint = Hint(PREFIX).GetText()+"#"+itemText+"# "+Hint(CAN_BE_FOUND_AT).GetText()+" #"+locationText+"#.";
     PlacementLog_Msg("\tMessage: ");
     PlacementLog_Msg(finalHint.english);
     PlacementLog_Msg("\n\n");
-    //AddHint(finalHint, gossipStone, {QM_RED, QM_GREEN});
+    AddHint(finalHint, gossipStone, {QM_RED, QM_GREEN});
   }
 }
 
@@ -367,20 +386,25 @@ static void CreateGoodItemHint() {
 static void CreateJunkHint() {
   //duplicate junk hints are possible for now
   const HintText junkHint = RandomElement(GetHintCategory(HintCategory::Junk));
+
   LogicReset();
   const std::vector<LocationKey> gossipStones = GetAccessibleLocations(gossipStoneLocations);
   if (gossipStones.empty()) {
     PlacementLog_Msg("\tNO GOSSIP STONES TO PLACE HINT\n\n");
     return;
   }
-  //LocationKey gossipStone = RandomElement(gossipStones);
+  LocationKey gossipStone = RandomElement(gossipStones);
   Text hint = junkHint.GetText();
 
   PlacementLog_Msg("\tMessage: ");
   PlacementLog_Msg(hint.english);
+  PlacementLog_Msg("\n");
+
+  PlacementLog_Msg("\tLocation: ");
+  PlacementLog_Msg(Location(gossipStone)->GetName());
   PlacementLog_Msg("\n\n");
 
-  //AddHint(hint, gossipStone, {QM_PINK});
+  AddHint(hint, gossipStone, {QM_RED});
 }
 
 static std::vector<LocationKey> CalculateBarrenRegions() {
@@ -479,7 +503,6 @@ void CreateAllHints() {
 
     //get a random hint type from the remaining hints
     HintType type = RandomElement(remainingHintTypes, true);
-
     PlacementLog_Msg("Attempting to make hint of type: ");
     PlacementLog_Msg(std::to_string(static_cast<int>(type)));
     PlacementLog_Msg("\n");
@@ -519,10 +542,10 @@ void CreateAllHints() {
   }
 
   //If any gossip stones failed to have a hint placed on them for some reason, place a junk hint as a failsafe.
-  /*for (LocationKey gossipStone : FilterFromPool(gossipStoneLocations, [](const LocationKey loc){return Location(loc)->GetPlacedItemKey() == NONE;})) {
+  for (LocationKey gossipStone : FilterFromPool(gossipStoneLocations, [](const LocationKey loc){return Location(loc)->GetPlacedItemKey() == NONE;})) {
     const HintText junkHint = RandomElement(GetHintCategory(HintCategory::Junk));
-    //AddHint(junkHint.GetText(), gossipStone, {QM_PINK});
-  }*/
+    AddHint(junkHint.GetText(), gossipStone, {QM_RED});
+  }
 
   //Getting gossip stone locations temporarily sets one location to not be reachable.
   //Call the function one last time to get rid of false positives on locations not

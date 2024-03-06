@@ -133,7 +133,7 @@ void CreateBaselineCustomMessages() {
 
     // Great Bay
     CreateMessage(0x6141, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #boss key# for the #Great Bay Temple#! ow you can enter the chamber where the boss lurks!",
+    "You got the #boss key# for the #Great Bay Temple#! Now you can enter the chamber where the boss lurks!",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
 
     // Stone Tower
@@ -143,8 +143,13 @@ void CreateBaselineCustomMessages() {
 
     // Kokiri Sword
     CreateMessage(0x0037, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
-    "You got the #kokiri sword!# The trusty sword you're familiar with. A treasure from Kokiri Forest.",
+    "You got the #Kokiri Sword!# The trusty sword you're familiar with. A treasure from Kokiri Forest.",
     {QM_GREEN, QM_RED}, {}, {}, 0x0, false, false);
+
+    // Ice Trap
+    CreateMessage(0x0012, 0xFFFF, 0x3FFFFFFF, 0xFF0000, 
+    "          #FOOL!#",
+    {QM_RED}, {}, {}, 0x0, false, false);
 }
 
 u32 NumMessages() {

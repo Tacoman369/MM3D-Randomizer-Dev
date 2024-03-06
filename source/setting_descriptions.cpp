@@ -18,9 +18,9 @@ string_view logicVanilla              = "For those who want to play the game nor
                                         "locations will contain their vanilla items. This\n"
                                         "supercedes all item shuffle, logic, hint, and\n"  //
                                         "item pool settings. You can still use non-vanilla\n"
-                                        "world settings such as adult start or entrance\n" //
-                                        "shuffle, but the game may require glitches to\n"  //
-                                        "complete if you do.";                             //
+                                        "world settings such as entrance shuffle, \n"      //
+                                        "but the game may require glitches to complete\n"  //
+                                        "if you do.";                             //
 /*------------------------------                                                           //
 |   ALL LOCATIONS REACHABLE    |                                                           //
 ------------------------------*/                                                           //
@@ -120,78 +120,63 @@ string_view shuffleMainInventoryDesc  = "Shuffle Main Inventory Items\n"        
                                         "Magic Beans and Fire, Ice, and Light Arrows";     //
                                                                                            //   
 string_view shuffleTransformationDesc = "Shuffles Deku, Goron, and Zora Masks";            //
-string_view shuffleFierceDietyDesc    = "Shuffles Fierce Diety Mask";                      //
+string_view shuffleFierceDeityDesc    = "Shuffles Fierce Deity Mask";                      //
 string_view shuffleMoonItemsDesc      = "Shuffles Items from the Moon into the pool\n"     //
-                                        "Includes 4 Pieces of Heart, 10 Bombchu & 30 Arrows";
+                                        "Includes 4 Pieces of Heart, and 2 junk items";    //
 /*------------------------------                                                           //
 |      MAPS AND COMPASSES      |                                                           //
 ------------------------------*/                                                           //
-string_view mapCompassStartWith       = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Maps and Compasses are given to you from the\n"   //
+string_view mapCompassStartWith       = "Maps and Compasses are given to you from the\n"   //
                                         "start. This will add a small amount of money and\n"
                                         "refill items to the pool.";                       //
 string_view mapCompassVanilla         = "Maps and Compasses will appear in their vanilla\n"//
                                         "locations.";                                      //
-string_view mapCompassOwnDungeon =      "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Maps and Compasses can only appear in their\n"    //
+string_view mapCompassOwnDungeon =      "Maps and Compasses can only appear in their\n"    //
                                         "respective dungeon.";                             //
-string_view mapCompassAnyDungeon      = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Maps and Compasses can only appear in a dungeon,\n"//
+string_view mapCompassAnyDungeon      = "Maps and Compasses can only appear in a dungeon,\n"//
                                         "but not necessarily the dungeon they are for.";   //
-string_view mapCompassOverworld       = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Maps and Compasses can only appear outside of\n"  //
+string_view mapCompassOverworld       = "Maps and Compasses can only appear outside of\n"  //
                                         "dungeons.";                                       //
-string_view mapCompassAnywhere        = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Maps and Compasses can appear anywhere in the\n"  //
+string_view mapCompassAnywhere        = "Maps and Compasses can appear anywhere in the\n"  //
                                         "world.";                                          //
 /*------------------------------                                                           //
 |         SMALL KEYS           |                                                           //
 ------------------------------*/                                                           //
-string_view smallKeyStartWith         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Small Keys are given to you from the start so you\n"
+string_view smallKeyStartWith         = "Small Keys are given to you from the start so you\n"
                                         "won't have to worry about locked doors. An easier\n"
                                         "mode.";                                           //
-string_view smallKeyVanilla         = "Small Keys will appear in their vanilla locations.";//
-string_view smallKeyOwnDungeon      = "**OPTION CURRENTLY WIP**\n"                         //
-                                        "Small Keys can only appear in their respective\n" //
+string_view smallKeyVanilla           = "Small Keys will appear in their vanilla locations.";//
+string_view smallKeyOwnDungeon        = "Small Keys can only appear in their respective\n" //
                                         "dungeon. ";                                       //
-string_view smallKeyAnyDungeon       = "**OPTION CURRENTLY WIP**\n"                        //
-                                        "Small Keys can only appear inside of any dungeon,\n"
+string_view smallKeyAnyDungeon        = "Small Keys can only appear inside of any dungeon,\n"
                                         "but won't necessarily be in the dungeon that the\n"
                                         "key is for. A difficult mode since it is more\n"  //
                                         "likely to need to enter a dungeon multiple times.";
-string_view smallKeyOverworld         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Small Keys can only appear outside of dungeons.\n"//
+string_view smallKeyOverworld         = "Small Keys can only appear outside of dungeons.\n"//
                                         "You may need to enter a dungeon multiple times to\n"
                                         "gain items to access the overworld locations with\n"
                                         "the keys required to finish a dungeon.";          //
-string_view smallKeyAnywhere          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Small Keys can appear anywhere in the world. A\n" //
+string_view smallKeyAnywhere          = "Small Keys can appear anywhere in the world. A\n" //
                                         "difficult mode since it is more likely to need to\n"
                                         "enter a dungeon multiple times.";                 //
 /*------------------------------                                                           //
 |          BOSS KEYS           |                                                           //
 ------------------------------*/                                                           //
-string_view bossKeyStartWith          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Boss Keys are given to you from the start so you\n"
+string_view bossKeyStartWith          = "Boss Keys are given to you from the start so you\n"
                                         "won't have to worry about boss doors. An easier\n"//
                                         "mode.";                                           //
 string_view bossKeyVanilla            = "Boss Keys will appear in their vanilla locations.";//
-string_view bossKeyOwnDungeon         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Boss Keys can only appear in their respective\n"  //
+string_view bossKeyOwnDungeon         = "Boss Keys can only appear in their respective\n"  //
                                         "dungeon.";                                        //
-string_view bossKeyAnyDungeon         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Boss Keys can only appear inside of any dungeon,\n"
+string_view bossKeyAnyDungeon         = "Boss Keys can only appear inside of any dungeon,\n"
                                         "but won't necessarily be in the dungeon that the\n"
                                         "key is for. A difficult mode since it is more\n"  //
                                         "likely to need to enter a dungeon multiple times.";
-string_view bossKeyOverworld          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Boss Keys can only appear outside of dungeons.\n" //
+string_view bossKeyOverworld          = "Boss Keys can only appear outside of dungeons.\n" //
                                         "You may need to enter a dungeon without the boss\n"
                                         "key to get items required to find the key in the\n"
                                         "overworld.";                                      //
-string_view bossKeyAnywhere           = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Boss Keys can appear anywhere in the world. A\n"  //
+string_view bossKeyAnywhere           = "Boss Keys can appear anywhere in the world. A\n"  //
                                         "difficult mode since it is more likely to need to\n"
                                         "enter a dungeon multiple times.";                 //
 /*------------------------------                                                           //
@@ -254,8 +239,7 @@ string_view shuffleStartShield       = "**OPTION CURRENTLY WIP**\n"             
 | SHUFFLE GREAT FAIRY REWARDS  |                                                           //
 ------------------------------*/                                                           //
 string_view shuffleGFVanilla          = "Great Fairy Rewards will be Vanilla";             //
-string_view shuffleGFSelf             = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Great Fairy Rewards will be shuffled among \n"    //
+string_view shuffleGFSelf             = "Great Fairy Rewards will be shuffled among \n"    //
                                         "other Great Fairy Locations";                     //
 string_view shuffleGFAnywhere         = "Great Fairy Rewards can be anywhere";             //
 /*------------------------------                                                           //
@@ -309,8 +293,7 @@ string_view songsDungeonRewards       = "**OPTION CURRENTLY WIP**\n"            
 string_view songsAllLocations         = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Songs can appear in any location.";               //
                                                                                            //
-string_view shuffleSoaringVanilla     = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Sets Song of Soaring to its Vanilla Location";    //
+string_view shuffleSoaringVanilla     = "Sets Song of Soaring to its Vanilla Location";    //
 string_view shuffleSoaringRandom      = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Randomizes Song of Soaring";                      //                                                                                                             
 /*------------------------------                                                           //
@@ -329,20 +312,15 @@ string_view gossipStonesHintsDesc     = "Gossip Stones can be made to give hints
 /*------------------------------                                                           //
 |        CLEARER HINTS         |                                                           //
 ------------------------------*/                                                           //
-string_view clearerHintsDesc          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "The hints provided by Gossip Stones will be very\n"
+string_view clearerHintsDesc          = "The hints provided by Gossip Stones will be very\n"
                                         "direct if this option is enabled.";               //    
 /*------------------------------                                                           //
 |      HINT DISTRIBUTION       |                                                           //
 ------------------------------*/                                                           //
-string_view uselessHintsDesc          = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Only junk hints.";                                //
-string_view balancedHintsDesc         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Recommended hint spread.";                        //
-string_view strongHintsDesc           = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "More useful hints.";                              //
-string_view veryStrongHintsDesc       = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Many powerful hints.";                            //
+string_view uselessHintsDesc          = "Only junk hints.";                                //
+string_view balancedHintsDesc         = "Recommended hint spread.";                        //
+string_view strongHintsDesc           = "More useful hints.";                              //
+string_view veryStrongHintsDesc       = "Many powerful hints.";                            //
                                                                                            //
 /*------------------------------                                                           //
 |    CHANGE OVERWORLD SPIRTES  |                                                           //
@@ -389,21 +367,19 @@ string_view advancedTrapDmgDesc       = "**OPTION CURRENTLY WIP**\n"            
 /*------------------------------                                                           //
 |          ITEM POOL           |                                                           //
 ------------------------------*/                                                           //
-string_view itemPoolPlentiful         = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Extra major items are added to the pool.";        //
+string_view itemPoolPlentiful         = "Extra major items are added to the pool.";        //
 string_view itemPoolBalanced          = "Original item pool.";                             //
-string_view itemPoolScarce            = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Some excess items are removed, including health\n"//
+string_view itemPoolScarce            = "Some excess items are removed, including health\n"//
                                         "upgrades.";                                       //
-string_view itemPoolMinimal           = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Most excess items are removed.";                  //
+string_view itemPoolMinimal           = "Most excess items are removed.";                  //
                                                                                            //
 /*------------------------------                                                           //
 |          ICE TRAPS           |                                                           //
 ------------------------------*/                                                           //
-string_view iceTrapsOff               = "All Ice Traps are removed.";                      //
-string_view iceTrapsNormal            = "Only Ice Traps from the base item pool are placed.";
-string_view iceTrapsExtra             = "Chance to add extra Ice Traps when junk items are\n"
+string_view iceTrapsOff               = "All Ice Traps are removed.\n"                     //
+                                        "This is the same as Vanilla as the base game\n"   // 
+                                        "Does not have any Ice Traps.";                    //
+string_view iceTrapsExtra             = "Chance to add Ice Traps when junk items are\n"
                                         "added to the itempool.";                          //
 string_view iceTrapsMayhem            = "All added junk items will be Ice Traps.";         //
 string_view iceTrapsOnslaught         = "All junk items will be replaced by Ice Traps, even"
@@ -417,17 +393,13 @@ string_view removeDDDesc              = "If set the double defense item will be 
 /*------------------------------                                                           //
 |     BLAST MASK COOLDOWN      |                                                           //
 ------------------------------*/                                                           //
-string_view blastDefault              = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Sets the cooldown time on the blastmask to \n"    //
+string_view blastDefault              = "Sets the cooldown time on the blastmask to \n"    //
                                         "the default cooldown time of 10 seconds";         //
-string_view blastInstant              = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Sets the cooldown time on the blastmask to \n"    //
+string_view blastInstant              = "Sets the cooldown time on the blastmask to \n"    //
                                         "have no cooldown time";                           //
-string_view blastVeryShort            = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Sets the cooldown time on the blastmask to \n"    //
-                                        "have an even shorter cooldown time of 1 second";  //
-string_view blastShort                = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Sets the cooldown time on the blastmask to \n"    //
+string_view blastVeryShort            = "Sets the cooldown time on the blastmask to \n"    //
+                                        "have an even shorter cooldown time of 3 seconds"; //
+string_view blastShort                = "Sets the cooldown time on the blastmask to \n"    //
                                         "have a shorter cooldown time of 5 seconds";       //
 string_view blastLong                 = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Sets the cooldown time on the blastmask to \n"    //
@@ -444,8 +416,8 @@ string_view skipMinigamePhasesDesc    = "**OPTION CURRENTLY WIP**\n"            
                                         "both rewards at once for that minigame."          //
                                         "Also skips the first beaver race.";               //
                                                                                            //
-string_view fierceDietyAnywhereDesc   = "**OPTION CURRENTLY WIP**\n"                       //
-                                        "Enables the use of the Fierce Diety Mask anywhere";//
+string_view fierceDeityAnywhereDesc   = "**OPTION CURRENTLY WIP**\n"                       //
+                                        "Enables the use of the Fierce Deity Mask anywhere";//
                                                                                            //
  string_view underwaterOcarinaDesc    = "**OPTION CURRENTLY WIP**\n"                       //
                                         "Enables the use of the ocarina while underwater.";//
@@ -641,10 +613,12 @@ string_view ocarinaDiveDesc          = "Enables Ocarina Diving";                
 string_view dpadMaskDesc             = "Enables using the 3 D-Pad buttons to use\n"        //
                                        "transformation masks. This option will also\n"     //
                                        "patch using Down A with Mask Storage.";            //
-string_view dpadOcarinaDesc          = "Enables using D-Pad down to activate your\n"       //
+string_view dpadOcarinaDesc          = "Enables using D-Pad right to activate your\n"      //
                                        "ocarina.";                                         //
 string_view dpadArrowDesc            = "Enables using D-Pad up to change your current\n"   //
                                        "arrow that is being used.";                        //
+string_view twinmoldRestorationDesc  = "Fixes Twinmold boss fight so Red Twinmold does not\n"
+                                       "regen health when it burrows.";                    //
                                                                                            //
 /*-------------------------------                                                          //
 |   CUSTOM BUTTON MAPPING       |                                                          //
@@ -659,6 +633,11 @@ string_view customNotebookDesc       = "Change the button to open the Bomber's N
                                        "Default is Start";                                 //
 string_view ingameSpoilersButtonDesc = "Change the button to open the ingame Spoiler Log\n"//
                                        "Default is Select";                                //
+/*-------------------------------                                                          //
+|     BOMBERS MINIGAME SKIP     |                                                          //
+-------------------------------*/                                                          //
+string_view skipBombersMinigameDesc  = "Skip Bomber's Minigame to get the code.\n"         //
+                                       "Sets the code to 12345.";                          //
 
 /*------------------------------                                                                           //
 |           GLITCHES           |                                                                           //

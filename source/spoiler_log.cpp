@@ -210,9 +210,134 @@ static void WriteIngameSpoilerLog() {
             spoilerData.ItemLocations[spoilerItemIndex].ItemStrOffset = stringOffsetMap[locItem];
             spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = loc->GetCollectionCheck().type;
             spoilerData.ItemLocations[spoilerItemIndex].OverrideType = loc->GetOverrideType();
-            spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetCollectionCheck().scene;
-            spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetCollectionCheck().flag;
-
+            //spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetCollectionCheck().scene;
+            //spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetCollectionCheck().flag;
+            spoilerData.ItemLocations[spoilerItemIndex].LocationScene = loc->GetScene();
+            spoilerData.ItemLocations[spoilerItemIndex].LocationFlag = loc->GetFlag();
+            //Always Reveal unreachable checks
+            if (key == CLOCK_TOWER_OCARINA_OF_TIME)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (key == HMS_STARTING_SWORD)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;    
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;        
+            }
+            if (key == HMS_STARTING_SHIELD)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;              
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;            
+            }
+            //Reveal Stray Fairies and Skulltula Tokens as they're not randomized yet
+            if (Location(key)->GetPlacedItemKey() == CT_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == WF_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == SH_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == GBT_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == ST_STRAY_FAIRY)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == OCEANSIDE_SKULLTULA_TOKEN)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            if (Location(key)->GetPlacedItemKey() == SWAMP_SKULLTULA_TOKEN)
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            //Reveal Songs as they're not randomized yet
+            if (Location(key)->IsCategory(Category::cSong))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED;
+            }
+            //Set Repeatable locations CollectType(Used for changing color in spoiler log)
+            if (Location(key)->IsRepeatable())
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_REPEATABLE;
+            }
+            //If Starting with Song of Healing reveal Deku Mask and Bombers Notebook as they're unobtainable and junk
+            if (key == HMS_DEKU_MASK && Settings::StartingSongOfHealing.Value<u8>() == u8(1))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == HMS_BOMBERS_NOTEBOOK && Settings::StartingSongOfHealing.Value<u8>() == u8(1))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            //If !ShuffleTradeItems Show Anju and Kafei Items in default locations
+            if (key == E_CLOCK_TOWN_AROMA_IN_OFFICE && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == STOCKPOTINN_ANJU_AND_KAFEI && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == STOCKPOTINN_MIDNIGHT_MEETING && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == STOCKPOTINN_RESERVATION && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == LAUNDRY_POOL_KAFEI && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
+            if (key == LAUNDRY_POOL_CURIOSITY_SHOP_MAN_TWO && (Settings::ShuffleTradeItems.Value<bool>() == false))
+            {
+              spoilerData.ItemLocations[spoilerItemIndex].CollectType = COLLECTTYPE_NEVER;
+              spoilerData.ItemLocations[spoilerItemIndex].RevealType = REVEALTYPE_ALWAYS;
+              spoilerData.ItemLocations[spoilerItemIndex].CollectionCheckType = SPOILER_CHK_ALWAYS_COLLECTED; 
+            }
             auto checkGroup = loc->GetCollectionCheckGroup();
             spoilerData.ItemLocations[spoilerItemIndex].Group = checkGroup;
 
@@ -455,7 +580,7 @@ static void WriteWayOfTheHeroLocation(tinyxml2::XMLDocument& spoilerLog) {
 }
 
 // Writes the hints to the spoiler log, if they are enabled.
-/*static void WriteHints(tinyxml2::XMLDocument& spoilerLog) {
+static void WriteHints(tinyxml2::XMLDocument& spoilerLog) {
   if (Settings::GossipStoneHints.Is((u8)GossipStoneHintsSetting::HINTS_NO_HINTS)) {
     return;
   }
@@ -475,7 +600,7 @@ static void WriteWayOfTheHeroLocation(tinyxml2::XMLDocument& spoilerLog) {
   }
 
   spoilerLog.RootElement()->InsertEndChild(parentNode);
-}*/
+}
 
 static void WriteAllLocations(tinyxml2::XMLDocument& spoilerLog) {
   auto parentNode = spoilerLog.NewElement("all-locations");
@@ -511,7 +636,7 @@ bool SpoilerLog_Write() {
   playthroughBeatable = false;
   wothLocations.clear();
 
-  //WriteHints(spoilerLog);
+  WriteHints(spoilerLog);
  // WriteShuffledEntrances(spoilerLog);
   WriteAllLocations(spoilerLog);
 
