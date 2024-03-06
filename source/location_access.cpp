@@ -1064,7 +1064,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(MOUNTAIN_VILLAGE_SMITH_DAY_ONE, {[] {return AnyWallet && ( HotSpringWater || SnowheadClear || (Bow && MagicMeter && FireArrows));}}),
-		LocationAccess(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, {[] {return GoronRaceBottle && AnyWallet (HotSpringWater || SnowheadClear || (Bow && MagicMeter && FireArrows));}}), //Currently need at least one progressive wallet as these are not independent checks
+		LocationAccess(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, {[] {return GoronRaceBottle && AnyWallet && (HotSpringWater || SnowheadClear || (Bow && MagicMeter && FireArrows));}}), //Currently need at least one progressive wallet as these are not independent checks
 	},
 	{
 		//Exits
