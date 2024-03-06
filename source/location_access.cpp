@@ -2532,7 +2532,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(GBT_MAP_CHEST, {[] {return ZoraMask && (Hookshot || (Bow && MagicMeter && IceArrows));}}),
-		LocationAccess(GBT_SF_LEDGE_JAR, {[] {return ZoraMask && (Hookshot || Bow) && || (GreatFairyMask || (Bow && MagicMeter && IceArrows));}}), //Shoot to break pot and either get with GFM or ice platforms
+		LocationAccess(GBT_SF_LEDGE_JAR, {[] {return ZoraMask && (Hookshot || Bow) && (GreatFairyMask || (Bow && MagicMeter && IceArrows));}}), //Shoot to break pot and either get with GFM or ice platforms
 	},
 	{
 		//Exits
