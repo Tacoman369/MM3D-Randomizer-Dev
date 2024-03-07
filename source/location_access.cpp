@@ -2295,7 +2295,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, {[] {return Bow || ZoraMask && (GoronMask || (Bow && FireArrows && MagicMeter) || AnyBombBag);}}), //Either shoot the icicles down or climb up as Zora and break snow boulder
+		LocationAccess(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, {[] {return Bow || (ZoraMask && (GoronMask || (Bow && FireArrows && MagicMeter) || AnyBombBag));}}), //Either shoot the icicles down or climb up as Zora and break snow boulder
 		LocationAccess(SH_SF_ICICLE_ROOM_WALL, {[] {return Bow && GreatFairyMask && LensOfTruth && MagicMeter;}}),
 	},
 	{
@@ -2392,7 +2392,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 		Entrance(SNOWHEAD_TEMPLE_MAIN_ROOM_3F, {[]{return SmallKeys(SnowheadTempleKeys, 3);}}),
-		Entrance(SNOWHEAD_TEMPLE_DINOLFOS_ROOM, {[]{return;}}) //Need Fire Arrows to melt the ice and progress, but you can also just jump down
+		Entrance(SNOWHEAD_TEMPLE_DINOLFOS_ROOM, {[]{return true;}}) //Need Fire Arrows to melt the ice and progress, but you can also just jump down
 	});
 
 	areaTable[SNOWHEAD_TEMPLE_MAIN_ROOM_4F] = Area("Snowhead Temple Main Room 4F", "Snowhead Temple Main Room 4F", SNOWHEAD_TEMPLE, {
