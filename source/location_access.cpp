@@ -2295,7 +2295,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, {[] {return Bow || ZoraMask && (GoronMask || (Bow && FireArrows && MagicMeter) || AnyBombBag;}}), //Either shoot the icicles down or climb up as Zora and break snow boulder
+		LocationAccess(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, {[] {return Bow || ZoraMask && (GoronMask || (Bow && FireArrows && MagicMeter) || AnyBombBag);}}), //Either shoot the icicles down or climb up as Zora and break snow boulder
 		LocationAccess(SH_SF_ICICLE_ROOM_WALL, {[] {return Bow && GreatFairyMask && LensOfTruth && MagicMeter;}}),
 	},
 	{
@@ -2501,7 +2501,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(GBT_SF_WHIRLPOOL_JAR, {[] {return ZoraMask || (Bow && GreatFairyMask;}}), //Swim down or shoot pot with bow and get with mask on
+		LocationAccess(GBT_SF_WHIRLPOOL_JAR, {[] {return ZoraMask || (Bow && GreatFairyMask);}}), //Swim down or shoot pot with bow and get with mask on
 		LocationAccess(GBT_SF_WHIRLPOOL_BARREL, {[] {return true;}}), //Climb the ladder and bonk
 	},
 	{
