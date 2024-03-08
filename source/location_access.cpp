@@ -1065,7 +1065,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(MOUNTAIN_VILLAGE_SMITH_DAY_ONE, {[] {return AnyWallet && ( HotSpringWater || SnowheadClear || (Bow && MagicMeter && FireArrows));}}),
-		LocationAccess(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, {[] {return GoronRaceBottle && (HotSpringWater || SnowheadClear || (Bow && MagicMeter && FireArrows));}}),
+		LocationAccess(MOUNTAIN_VILLAGE_SMITH_DAY_TWO, {[] {return GoronRaceBottle && AnyWallet && (HotSpringWater || SnowheadClear || (Bow && MagicMeter && FireArrows));}}), //Currently need at least one progressive wallet as these are not independent checks
 	},
 	{
 		//Exits
@@ -1162,7 +1162,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 		Entrance(GORON_VILLAGE_LENS_CAVE, {[]{return true;}}),
-		Entrance(GORON_VILLAGE_INTERIOR, {[]{return (AnyBottle && HotSpringWater) || GoronMask;}}), //unfreeze goron or open it yourself
+		Entrance(GORON_VILLAGE_INTERIOR, {[]{return (AnyBottle && HotSpringWater) || (Bow && FireArrows && MagicMeter) || GoronMask;}}), //unfreeze goron or open it yourself
 		Entrance(TWIN_ISLANDS, {[]{return true;}}),
 	});
 
@@ -1173,7 +1173,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(GORON_VILLAGE_LENS_OF_TRUTH_CHEST, {[] {return true;}}),
 		LocationAccess(LENS_CAVE_RED_RUPEE, {[] {return LensOfTruth && MagicMeter;}}),
-		LocationAccess(LENS_CAVE_PURPLE_RUPEE, {[] {return AnyBombBag && LensOfTruth && MagicMeter;}}),
+		LocationAccess(LENS_CAVE_PURPLE_RUPEE, {[] {return AnyBombBag;}}), //Do not need Lens for this chest
 	},
 	{
 		//Exits
@@ -1940,7 +1940,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(WF_SF_ENTRANCE_FAIRY, {[] {return DekuMask && MagicMeter && GreatFairyMask;}}),
-		LocationAccess(WF_SF_ENTRANCE_PLATFORM, {[] {return ((DekuMask && MagicMeter) || Hookshot) && GreatFairyMask;}}),
+		LocationAccess(WF_SF_ENTRANCE_PLATFORM, {[] {return ((DekuMask && MagicMeter) || Hookshot);}}),
 	},
 	{
 		//Exits
@@ -1985,13 +1985,13 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(WOODFALL_TEMPLE_SMALL_KEY_CHEST, {[] {return DekuMask;}}),
+		LocationAccess(WOODFALL_TEMPLE_SMALL_KEY_CHEST, {[] {return DekuMask || Hookshot;}}), //Future proofing for Fairysanity and Entrance Randomizer
 	},
 	{
 		//Exits
 		Entrance(WOODFALL_TEMPLE_MAIN_ROOM, {[]{return true;}}),
 		Entrance(WOODFALL_TEMPLE_UPPER_PLATFORM_ROOM, {[]{return Bow && DekuMask;}}),
-		Entrance(WOODFALL_TEMPLE_MAP_ROOM, {[]{return DekuMask;}}),
+		Entrance(WOODFALL_TEMPLE_MAP_ROOM, {[]{return DekuMask || Hookshot;}}), //Future proofing
 	}),
 
 	areaTable[WOODFALL_TEMPLE_MAP_ROOM] = Area("Woodfall Temple Map Room", "Woodfall Temple Map Room", WOODFALL_TEMPLE, {
@@ -1999,7 +1999,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(WOODFALL_TEMPLE_MAP_CHEST, {[] {return DekuMask;}}),
+		LocationAccess(WOODFALL_TEMPLE_MAP_CHEST, {[] {return DekuMask;}}), //Goron ground pound can also take care of them
 	},
 	{
 		//Exits
@@ -2091,7 +2091,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(WF_SF_DRAGONFLY_ROOM_BUBBLE, {[] {return Bow && DekuMask && GreatFairyMask;}}),
+		LocationAccess(WF_SF_DRAGONFLY_ROOM_BUBBLE, {[] {return Bow && DekuMask;}}), //No need for GFM here, Fairy is ground level
 	},
 	{
 		//Exits
@@ -2104,10 +2104,10 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(WF_SF_PRE_BOSS_LOWER_RIGHT_BUBBLE, {[] {return Bow && GreatFairyMask;}}),
-		LocationAccess(WF_SF_PRE_BOSS_UPPER_RIGHT_BUBBLE, {[] {return Bow && GreatFairyMask;}}),
-		LocationAccess(WF_SF_PRE_BOSS_UPPER_LEFT_BUBBLE, {[] {return Bow && GreatFairyMask;}}),
-		LocationAccess(WF_SF_PRE_BOSS_PILLAR_BUBBLE, {[] {return GreatFairyMask && (Bow || Hookshot);}}),
+		LocationAccess(WF_SF_PRE_BOSS_LOWER_RIGHT_BUBBLE, {[] {return true;}}), //These fairies are ground level and you can jump on the platforms and run into them
+		LocationAccess(WF_SF_PRE_BOSS_UPPER_RIGHT_BUBBLE, {[] {return true;}}),
+		LocationAccess(WF_SF_PRE_BOSS_UPPER_LEFT_BUBBLE, {[] {return true;}}),
+		LocationAccess(WF_SF_PRE_BOSS_PILLAR_BUBBLE, {[] {return DekuMask || (GreatFairyMask && (Bow || Hookshot));}}), //Can either hit the switch with Deku or make the fairy come to you with bow/hookshot
 	},
 	{
 		//Exits
@@ -2168,9 +2168,9 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(SNOWHEAD_TEMPLE_BRIDGE_ROOM_CHEST, {[] {return GoronMask && MagicMeter;}}),
+		LocationAccess(SNOWHEAD_TEMPLE_BRIDGE_ROOM_CHEST, {[] {return (GoronMask || Hookshot) && FireArrows && Bow && MagicMeter;}}), // Fire Arrow to melt ice, then hookshot to it
 		//StrayFairies
-		LocationAccess(SH_SF_BRIDGE_ROOM_LEDGE_BUBBLE, {[] {return ((GreatFairyMask && Bow) || (Hookshot && GreatFairyMask));}}),
+		LocationAccess(SH_SF_BRIDGE_ROOM_LEDGE_BUBBLE, {[] {return (GoronMask || (GreatFairyMask && Bow) || (Hookshot && GreatFairyMask));}}), //Can walk up to it with Goron
 		LocationAccess(SH_SF_BRIDGE_ROOM_PILLAR_BUBBLE, {[] {return ((GreatFairyMask && Bow) || (Hookshot && GreatFairyMask));}}),
 	},
 	{
@@ -2297,7 +2297,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, {[] {return Bow;}}),
+		LocationAccess(SNOWHEAD_TEMPLE_ICICLE_ROOM_CHEST, {[] {return Bow || (ZoraMask && (GoronMask || (Bow && FireArrows && MagicMeter) || AnyBombBag));}}), //Either shoot the icicles down or climb up as Zora and break snow boulder
 		LocationAccess(SH_SF_ICICLE_ROOM_WALL, {[] {return Bow && GreatFairyMask && LensOfTruth && MagicMeter;}}),
 	},
 	{
@@ -2394,7 +2394,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 		Entrance(SNOWHEAD_TEMPLE_MAIN_ROOM_3F, {[]{return SmallKeys(SnowheadTempleKeys, 3);}}),
-		Entrance(SNOWHEAD_TEMPLE_DINOLFOS_ROOM, {[]{return true;}})//maybe FireArrows?
+		Entrance(SNOWHEAD_TEMPLE_DINOLFOS_ROOM, {[]{return true;}}) //Need Fire Arrows to melt the ice and progress, but you can also just jump down
 	});
 
 	areaTable[SNOWHEAD_TEMPLE_MAIN_ROOM_4F] = Area("Snowhead Temple Main Room 4F", "Snowhead Temple Main Room 4F", SNOWHEAD_TEMPLE, {
@@ -2490,7 +2490,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(GBT_SF_SKULLTULA, {[] {return Hookshot || (Bow && GreatFairyMask);}}),
-		LocationAccess(GBT_SF_WATER_CONTROL_UNDERWATER_BUBBLE, {[] {return Hookshot && (ZoraMask || GreatFairyMask);}}),
+		LocationAccess(GBT_SF_WATER_CONTROL_UNDERWATER_BUBBLE, {[] {return (Bow || Hookshot) && (ZoraMask || GreatFairyMask);}}), //Shoot with Bow/Hookshot and collect
 	},
 	{
 		//Exits
@@ -2503,8 +2503,8 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(GBT_SF_WHIRLPOOL_JAR, {[] {return ZoraMask && Hookshot;}}),
-		LocationAccess(GBT_SF_WHIRLPOOL_BARREL, {[] {return ZoraMask && Hookshot;}}),
+		LocationAccess(GBT_SF_WHIRLPOOL_JAR, {[] {return ZoraMask || (Bow && GreatFairyMask);}}), //Swim down or shoot pot with bow and get with mask on
+		LocationAccess(GBT_SF_WHIRLPOOL_BARREL, {[] {return true;}}), //Climb the ladder and bonk
 	},
 	{
 		//Exits
@@ -2533,8 +2533,8 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(GBT_MAP_CHEST, {[] {return ZoraMask && Hookshot;}}),
-		LocationAccess(GBT_SF_LEDGE_JAR, {[] {return ZoraMask && Hookshot && (GreatFairyMask || (Bow && MagicMeter && IceArrows));}}),
+		LocationAccess(GBT_MAP_CHEST, {[] {return ZoraMask && (Hookshot || (Bow && MagicMeter && IceArrows));}}),
+		LocationAccess(GBT_SF_LEDGE_JAR, {[] {return ZoraMask && (Hookshot || Bow) && (GreatFairyMask || (Bow && MagicMeter && IceArrows));}}), //Shoot to break pot and either get with GFM or ice platforms
 	},
 	{
 		//Exits
@@ -2573,8 +2573,8 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(GBT_COMPASS_CHEST, {[] {return ZoraMask;}}),
-		LocationAccess(GBT_SMALL_KEY_CHEST, {[] {return ZoraMask && Hookshot;}}),
-		LocationAccess(GBT_SF_DEXIHANDS_JAR, {[] {return ZoraMask && GreatFairyMask;}}),
+		LocationAccess(GBT_SMALL_KEY_CHEST, {[] {return ZoraMask;}}),
+		LocationAccess(GBT_SF_DEXIHANDS_JAR, {[] {return (ZoraMask || Bow || Hookshot) && GreatFairyMask;}}), //technically don't need Great Fairy Mask, you can break the jar and the hands will shake you into the fairy
 		
 	},
 	{
