@@ -45,9 +45,10 @@ namespace Logic {
 	bool AlienBottle = false;
 	bool GoronRaceBottle = false;
 	bool BeaverRaceBottle = false;
-	bool DampeBottle = false;
+	bool ArcheryBottle = false;
 	bool ChateauBottle = false;
 	bool MysteryMilkBottle = false;
+	bool UsableMysteryMilkBottle = false;
 	bool BombersNotebook = false;
 	bool MirrorShield = false;
 	bool HerosShield = false;
@@ -300,6 +301,7 @@ namespace Logic {
 	bool WoodfallFrog = false;
 	bool GreatBayFrog = false;
 	bool ThinBridgeCrystalChest = false;
+	bool MilkQuestStart = false;
 
 	bool CanGoToMoon = false;
 	
@@ -496,7 +498,7 @@ namespace Logic {
 		//Item Helpers
 		AnyMagicBean = MagicBean || LimitlessBeans;
 		AnyWallet = Townwallet200 || OceanWallet500 || (ProgressiveWallet >= 1);
-		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || DampeBottle || GoronRaceBottle || ChateauBottle || MysteryMilkBottle || HasBottle;
+		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || ArcheryBottle || GoronRaceBottle || ChateauBottle || UsableMysteryMilkBottle || HasBottle;
 		MagicMeter = (ProgressiveMagic >= 1) || MagicPower || ExtendedMagicPower;
 		WaterForBeans = (AnyBottle && (SpringWater || HotSpringWater)) || SongOfStorms;
 		Scarecrow = Hookshot && CanPlay(ScarecrowSong);
@@ -515,13 +517,13 @@ namespace Logic {
 		AnyHealingPotion = AnyRedPotion || AnyBluePotion;
 		AnyRedPotion = AnyBottle;
 		AnyBluePotion = AnyBottle;
-		TwoBottles = { (WitchBottle && AlienBottle) || (WitchBottle && BeaverRaceBottle) || (WitchBottle && DampeBottle) ||
+		TwoBottles = { (WitchBottle && AlienBottle) || (WitchBottle && BeaverRaceBottle) || (WitchBottle && ArcheryBottle) ||
 					(WitchBottle && GoronRaceBottle) || (WitchBottle && ChateauBottle) || (AlienBottle && GoronRaceBottle) ||
-					(AlienBottle && BeaverRaceBottle) || (AlienBottle && DampeBottle) || (AlienBottle && ChateauBottle) ||
-					(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && DampeBottle) || (GoronRaceBottle && ChateauBottle) ||
-					(BeaverRaceBottle && DampeBottle) || (BeaverRaceBottle && ChateauBottle) || (DampeBottle && ChateauBottle) || 
-					(WitchBottle && MysteryMilkBottle) || (AlienBottle && MysteryMilkBottle) || (BeaverRaceBottle && MysteryMilkBottle) || 
-					(DampeBottle && MysteryMilkBottle) || (GoronRaceBottle && MysteryMilkBottle) || (ChateauBottle && MysteryMilkBottle)};
+					(AlienBottle && BeaverRaceBottle) || (AlienBottle && ArcheryBottle) || (AlienBottle && ChateauBottle) ||
+					(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && ArcheryBottle) || (GoronRaceBottle && ChateauBottle) ||
+					(BeaverRaceBottle && ArcheryBottle) || (BeaverRaceBottle && ChateauBottle) || (ArcheryBottle && ChateauBottle) ||
+					(WitchBottle && UsableMysteryMilkBottle) || (AlienBottle && UsableMysteryMilkBottle) || (BeaverRaceBottle && UsableMysteryMilkBottle) ||
+					(ArcheryBottle && UsableMysteryMilkBottle) || (GoronRaceBottle && UsableMysteryMilkBottle) || (ChateauBottle && UsableMysteryMilkBottle)};
 		
 		//Tricks
 		PoisonWaterAsZora = ZoraMask && TakeDamage;
@@ -573,9 +575,10 @@ namespace Logic {
 	  AlienBottle = false;
 	  GoronRaceBottle = false;
 	  BeaverRaceBottle = false;
-	  DampeBottle = false;
+	  ArcheryBottle = false;
 	  ChateauBottle = false;
 	  MysteryMilkBottle = false;
+	  UsableMysteryMilkBottle = false;
 	  BombersNotebook = false;
 	  MirrorShield = false;
 	  HerosShield = false;
@@ -830,6 +833,7 @@ namespace Logic {
 	WoodfallFrog = false;
 	GreatBayFrog = false;
 	ThinBridgeCrystalChest = false;
+	MilkQuestStart = false;
 
 	
 	ZoraEgg = 0;
