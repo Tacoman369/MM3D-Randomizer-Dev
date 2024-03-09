@@ -77,6 +77,7 @@ enum class Category {
     cDayOne,
     cDayTwo,
     cDayThree,
+    cAnjuAndKafei,
 };
 
 enum class OptionCategory {

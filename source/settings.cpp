@@ -66,10 +66,13 @@ namespace Settings {
   //Mode/Logic Settings
   Option Logic = Option::U8("Logic", { "Glitchless", "No Logic", "Vanilla", "Glitched" }, { logicGlitchless, logicNoLogic, logicVanilla, logicGlitched },OptionCategory::Setting, (u8)LogicSetting::LOGIC_GLITCHLESS);
   Option LocationsReachable = Option::Bool("All Locations Reachable", { "Off", "On" }, { locationsReachableDesc }, OptionCategory::Setting, 1); //All Locations Reachable On
+  Option IngameSpoilers       = Option::Bool("Ingame Spoilers",        { "Hide", "Show" },                                  { ingameSpoilersHideDesc, ingameSpoilersShowDesc });
+  
   std::vector<Option*> logicOptions = {
     &Logic,
     &LocationsReachable,
     &GenerateSpoilerLog,
+    &IngameSpoilers,
   };
   
   //TODO MM3D LOGIC TRICKS
@@ -263,7 +266,7 @@ namespace Settings {
   Option ShuffleCows            = Option::Bool("Shuffle Cows",          {"Off", "On"},                                       {shuffleCowsDesc});
   //Option ShuffleOcarinas        = Option::Bool("Shuffle Ocarinas",       {"Off", "On"},                                                     {ocarinasDesc});
   Option ShuffleMerchants       = Option::Bool("Deku Merchant Trades",  { "Off", "On" },                                     { shuffleMerchantsDesc });
-  Option ShuffleSongs           = Option::U8("Shuffle Songs",           { "Song Locations", "Dungeon Rewards", "Anywhere" }, { songsSongLocations, songsDungeonRewards, songsAllLocations });
+  Option ShuffleSongs           = Option::U8("Shuffle Songs",           { "Vanilla", "Dungeon Rewards", "Anywhere" }, { songsSongLocations, songsDungeonRewards, songsAllLocations }, OptionCategory::Setting, (u8)SongShuffleSetting::SONGSHUFFLE_SONG_LOCATIONS);
   Option ShuffleSoaring         = Option::Bool("Shuffle SoS",           {"Vanilla", "Random"},                               {shuffleSoaringVanilla, shuffleSoaringRandom});
   Option ShuffleStartingShield  = Option::Bool("Starting Shield",       {"Off", "On"},                                       {shuffleStartShield});
   Option ShuffleTradeItems      = Option::Bool("Anju And Kafei Items",  {"Vanilla", "Random"},                               {shuffleTradeItemsDesc});
@@ -333,7 +336,6 @@ namespace Settings {
   Option ChestSize            = Option::Bool("Chest Size and Color",   { "Vanilla", "Match Contents"},                      {chestSizeDesc});
   Option ChangeOverworldItems = Option::Bool("Change Overworld Items", { "Vanilla", "Match Contents" },                     { changeOverworldItemsDesc });
   Option GenerateSpoilerLog   = Option::Bool("Generate Spoiler Log",   { "No", "Yes" },                                     { genSpoilerLogDesc },                                                                        OptionCategory::Setting, 1); // On
-  Option IngameSpoilers       = Option::Bool("Ingame Spoilers",        { "Hide", "Show" },                                  { ingameSpoilersHideDesc, ingameSpoilersShowDesc });
   //Option MenuOpeningButton    = Option::U8("Open Info Menu with",      { "Select","Start","D-Pad Up","D-Pad Down","D-Pad Right","D-Pad Left", }, { menuButtonDesc });
   Option RandomTrapDmg        = Option::U8("Random Trap Damage",       { "Off", "Basic", "Advanced" },                      { randomTrapDmgDesc, basicTrapDmgDesc, advancedTrapDmgDesc });
   Option RsDurability         = Option::U8("Razor Sword Durability",   { "Vanilla", "Infinite" },                           { rsDurabilityVanilla, rsDurabilityInf});
@@ -353,7 +355,6 @@ namespace Settings {
       //&ChestAnimations,
       &ChestSize,
       //&ChangeOverworldItems,
-      //&IngameSpoilers,
       //&MenuOpeningButton,
       //&RsDurability,
   };
