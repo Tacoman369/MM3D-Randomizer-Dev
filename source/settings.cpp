@@ -1084,35 +1084,48 @@ namespace Settings {
   
   static void ResolveExcludedLocationConflicts() {
 
-      //std::vector<LocationKey> shopLocations = GetLocations(everyPossibleLocation, Category::cShop);
       //For now, just always hide shop locations, as not sure how to handle hiding them-
       //1-4 should always be hidden, while the others should be settings dependent, but random shopsanity makes that more complicated...
       //Excluded shop locations are also wonky
-      //IncludeAndHide(shopLocations);
+      std::vector<LocationKey> shopLocations = GetLocations(everyPossibleLocation, Category::cShop);
+      IncludeAndHide(shopLocations);
 
       //Force include song locations
      std::vector<LocationKey> songLocations = GetLocations(everyPossibleLocation, Category::cSong);
-     std::vector<LocationKey> DungeonRewards = GetLocations(everyPossibleLocation, Category::cDungeonReward);
-
       //Unhide all song locations, then lock necessary ones
-      Unhide(songLocations);
-      Unhide(DungeonRewards);
+      //Unhide(songLocations);
 
-      if (ShuffleSongs.Is((u8)SongShuffleSetting::SONGSHUFFLE_SONG_LOCATIONS)) {
+      //if (ShuffleSongs.Is((u8)SongShuffleSetting::SONGSHUFFLE_SONG_LOCATIONS)) {
+      //    IncludeAndHide(songLocations);
+     // }
+      //else if (ShuffleSongs.Is((u8)SongShuffleSetting::SONGSHUFFLE_DUNGEON_REWARDS)) {
           IncludeAndHide(songLocations);
-      }
-      else if (ShuffleSongs.Is((u8)SongShuffleSetting::SONGSHUFFLE_DUNGEON_REWARDS)) {
-          IncludeAndHide(DungeonRewards);
-      }
+      //}
+     
+     //Force Include Dungeon Rewards
+     std::vector<LocationKey> DungeonRewards = GetLocations(everyPossibleLocation, Category::cDungeonReward);
+     //if (ShuffleRewards.Is((u8)RewardShuffleSetting::REWARDSHUFFLE_END_OF_DUNGEON)) {
+         IncludeAndHide(DungeonRewards);
+     //}
+     //else {
+     //    Unhide(DungeonRewards);
+     //}
+     //Force hide Ocarina
+     IncludeAndHide({CLOCK_TOWER_OCARINA_OF_TIME});
 
+     //Force hide Deku Princess
+     IncludeAndHide({WOODFALL_TEMPLE_DEKU_PRINCESS});
+     
       //Force Include Vanilla Skulltula locations
       std::vector<LocationKey> SwampSkulltulaLocations = GetLocations(everyPossibleLocation, Category::cSwampSkulltula);
       std::vector<LocationKey> OceanSkulltulaLocations = GetLocations(everyPossibleLocation, Category::cOceanSkulltula);
-      Unhide(SwampSkulltulaLocations);
-      Unhide(OceanSkulltulaLocations);
-      if(Tokensanity) {
+      if(!Tokensanity) {
         IncludeAndHide(SwampSkulltulaLocations);
         IncludeAndHide(OceanSkulltulaLocations);
+      }
+      else {
+        Unhide(SwampSkulltulaLocations);
+        Unhide(OceanSkulltulaLocations);
       }
       /*if (Tokensanity.IsNot(TOKENSANITY_ALL_TOKENS)) {
           if (Tokensanity.Is(TOKENSANITY_OVERWORLD)) {
@@ -1146,24 +1159,113 @@ namespace Settings {
       else {
           IncludeAndHide(cowLocations);
       }
-      
-      //Force include the Kokiri Sword Chest if Shuffle Kokiri Sword is Off
-      //& Also Set Starting Sword to None 
-      if (ShuffleKokiriSword) {
-          Unhide({ HMS_STARTING_SWORD });
-          StartingKokiriSword.SetSelectedIndex(0);
+
+      //Force Include Anju & Kafei Items
+      std::vector<LocationKey> kafeiLocations = GetLocations(everyPossibleLocation, Category::cAnjuAndKafei);
+      if (ShuffleTradeItems) {
+        Unhide(kafeiLocations);
       }
       else {
-          IncludeAndHide({ HMS_STARTING_SWORD });
+        IncludeAndHide(kafeiLocations);
       }
 
-      //Force include the ocarina locations if Shuffle Ocarinas is Off
-   //   std::vector<LocationKey> ocarinaLocations = {LW_GIFT_FROM_SARIA, HF_OCARINA_OF_TIME_ITEM};
-  //    if (ShuffleOcarinas) {
-  //      Unhide(ocarinaLocations);
-  //    } else {
-  //      IncludeAndHide(ocarinaLocations);
-  //    }
+      //Force include Deku Trade Items
+      std::vector<LocationKey> dekuLocations = GetLocations(everyPossibleLocation, Category::cTradeItem);
+      if (ShuffleMerchants) {
+        Unhide(dekuLocations);
+      }
+      else {
+        IncludeAndHide(dekuLocations);
+      }
+
+      //Force include Tingle Maps
+      std::vector<LocationKey> tingleLocations = GetLocations(everyPossibleLocation, Category::cTingleMap);
+      if (ShuffleTingleMaps) {
+        Unhide(tingleLocations);
+      }
+      else {
+        IncludeAndHide(tingleLocations);
+      }
+
+      //Force Include Bombers Notebook
+      std::vector<LocationKey> notebookLocation = GetLocations(everyPossibleLocation, Category::cNotebook);
+      if (ShuffleBombersNotebook) {
+        Unhide(notebookLocation);
+      }
+      else {
+        IncludeAndHide(notebookLocation);
+      }
+
+      //Force Include Zora Eggs
+      std::vector<LocationKey> eggLocations = GetLocations(everyPossibleLocation, Category::cZoraEgg);
+      IncludeAndHide(eggLocations);
+      
+      //Hide alternate check locations
+      std::vector<LocationKey> altLocations = GetLocations(everyPossibleLocation, Category::cAlternateCheck);
+      IncludeAndHide(altLocations);
+
+      //Force Include Great Fairy
+      std::vector<LocationKey> gfLocations = GetLocations(everyPossibleLocation, Category::cFairyFountain);
+      if (ShuffleGFRewards.Is((u8)GreatFairyRewardShuffleSetting::GFREWARDSHUFFLE_ANYWHERE)){
+        Unhide(gfLocations);
+      }
+      else {
+        IncludeAndHide(gfLocations);
+      }
+
+      //Force Include Main Inventory
+      std::vector<LocationKey> maininventoryLocations = GetLocations(everyPossibleLocation, Category::cMainInventory);
+      if (ShuffleMainInventory) {
+        Unhide(maininventoryLocations);
+      }
+      else {
+        IncludeAndHide(maininventoryLocations);
+      }
+
+      //Force include Masks
+      std::vector<LocationKey> maskLocations = GetLocations(everyPossibleLocation, Category::cVanillaMask);
+      if (ShuffleMasks) {
+        Unhide(maskLocations);
+      }
+      else {
+        IncludeAndHide(maskLocations);
+      }
+
+      //Force include Transformation Masks
+      std::vector<LocationKey> transformLocations = GetLocations(everyPossibleLocation, Category::cTransformMask);
+      if (ShuffleTransformation) {
+        Unhide(transformLocations);
+      }
+      else {
+        IncludeAndHide(transformLocations);
+      }
+
+      //Force include Piece of Heart
+      std::vector<LocationKey> heartPieceLocations = GetLocations(everyPossibleLocation, Category::cVanillaHeartPiece);
+      if (ShufflePiecesOfHeart) {
+        Unhide(heartPieceLocations);
+      }
+      else {
+        IncludeAndHide(heartPieceLocations);
+      }
+
+      //Force include Fierce Deity
+      std::vector<LocationKey> fdmLocation = GetLocations(everyPossibleLocation, Category::cFDM);
+      if (ShuffleFierceDeity) {
+        Unhide(fdmLocation);
+      }
+      else {
+        IncludeAndHide(fdmLocation);
+      }
+
+      //Force include Moon Items
+      std::vector<LocationKey> moonItemLocations = GetLocations(everyPossibleLocation, Category::cMoonItems);
+      if (ShuffleMoonItems) {
+        Unhide(moonItemLocations);
+      }
+      else {
+        IncludeAndHide(moonItemLocations);
+      }
 
       //Force include Magic Bean salesman if Shuffle Magic Beans is off
       if (ShuffleMagicBeans) {
@@ -1201,6 +1303,24 @@ namespace Settings {
       }
       else {
           Unhide(bossKeyChests);
+      }
+
+      //Forcce include Boss Heart Containers if Heart Containers are Vanilla
+      std::vector<LocationKey> heartContainers = GetLocations(everyPossibleLocation, Category::cBossHeart);
+      if (!ShuffleHeartContainers) {
+        IncludeAndHide(heartContainers);
+      }
+      else {
+        Unhide(heartContainers);
+      }
+
+      //Force include Stray Fairies if Stray Fairy Sanity is Vanilla
+      std::vector<LocationKey> strayFairies = GetLocations(everyPossibleLocation, Category::cVanillaStrayFairy);
+      if (!StrayFairysanity) {
+        IncludeAndHide(strayFairies);
+      }
+      else {
+        Unhide(strayFairies);
       }
       
   }
