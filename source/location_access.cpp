@@ -1486,7 +1486,7 @@ void AreaTable_Init() {
 		Entrance(ZORA_HALL, {[]{return ZoraMask;}}),
 		Entrance(WATERFALL_RAPIDS, {[]{return Hookshot;}}),
 		Entrance(GREAT_BAY_FAIRY_FOUNTAIN, {[]{return Hookshot;}}),
-		Entrance(ZORA_CAPE_GROTTO, {[]{return AnyBombBag || BlastMask;}}),
+		Entrance(ZORA_CAPE_GROTTO, {[]{return AnyBombBag || BlastMask || GoronMask;}}), //Just need something to break the rock
 		Entrance(GREAT_BAY_TEMPLE_ENTRANCE, {[]{return Hookshot && ZoraMask && CanPlay(NewWaveBossaNova);}}),
 		Entrance(ZORA_HALL_BACK_ENTRANCE, {[]{return ZoraMask;}}),
 	});
