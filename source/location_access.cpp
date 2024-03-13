@@ -769,7 +769,7 @@ void AreaTable_Init() {
 	}, 
 	{
 		//Locations
-		LocationAccess(ROAD_TO_SS_TREE, {[] {return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask);}}),//something to kill the dragonfly
+		LocationAccess(ROAD_TO_SS_TREE, {[] {return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask));}}),//something to kill the dragonfly
 		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		//Gossip Stones
