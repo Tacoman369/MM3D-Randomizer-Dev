@@ -653,7 +653,7 @@ void AreaTable_Init() {
 		Entrance(S_CLOCK_TOWN, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_PEAHAT_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_DODONGO_GROTTO, {[]{return true;}}),
-		Entrance(TERMINA_FIELD_BIO_BABA_GROTTO, {[]{return true;}}),
+		Entrance(TERMINA_FIELD_BIO_BABA_GROTTO, {[]{return AnyBombBag || BlastMask || GoronMask;}}),
 		Entrance(TERMINA_FIELD_PILLAR_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_GRASS_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_BUSINESS_SCRUB_GROTTO, {[]{return true;}}),
@@ -728,7 +728,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(TERMINA_FIELD_BUSINESS_SCRUB, {[] {return AnyWallet;}}),
+		LocationAccess(TERMINA_FIELD_BUSINESS_SCRUB, {[] {return AnyWallet && WatchMoonTearFall;}}),
 	},
 	{
 		//Exits
@@ -769,7 +769,7 @@ void AreaTable_Init() {
 	}, 
 	{
 		//Locations
-		LocationAccess(ROAD_TO_SS_TREE, {[] {return DekuMask && (MagicMeter || Bow || Hookshot || ZoraMask);}}),//something to kill the dragonfly
+		LocationAccess(ROAD_TO_SS_TREE, {[] {return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask);}}),//something to kill the dragonfly
 		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		//Gossip Stones
@@ -844,7 +844,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(SOUTHERN_SWAMP_KOUME, {[] {return AnyBottle && DekuMask;}}),
+		LocationAccess(SOUTHERN_SWAMP_KOUME, {[] {return AnyBottle;}}),
 		LocationAccess(SOUTHERN_SWAMP_PICTOGRAPH_WINNER, {[] {return Pictobox;}}),
 		LocationAccess(SOUTHERN_SWAMP_BOAT_ARCHERY, {[] {return WoodfallClear && AnyBottle;}}),
 	},
