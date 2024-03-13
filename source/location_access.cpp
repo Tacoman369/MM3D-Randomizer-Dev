@@ -657,7 +657,7 @@ void AreaTable_Init() {
 		Entrance(TERMINA_FIELD_PILLAR_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_GRASS_GROTTO, {[]{return true;}}),
 		Entrance(TERMINA_FIELD_BUSINESS_SCRUB_GROTTO, {[]{return true;}}),
-		Entrance(TERMINA_FIELD_COW_GROTTO, {[]{return true;}}),
+		Entrance(TERMINA_FIELD_COW_GROTTO, {[]{return AnyBombBag || BlastMask;}}),
 		Entrance(TERMINA_FIELD_GOSSIP_STONES_GROTTO, {[]{return AnyBombBag || BlastMask || GoronMask;}}),//Something to break rocks
 		Entrance(ROAD_TO_SOUTHERN_SWAMP, {[]{return true;}}),
 		Entrance(PATH_TO_MOUNTAIN_VILLAGE, {[]{return Bow;}}),// || (HotSpringWater && AnyBottle)
@@ -739,8 +739,8 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(TERMINA_FIELD_GROTTO_COW1, {[]{return CanPlay(EponasSong);}}),
-		LocationAccess(TERMINA_FIELD_GROTTO_COW2, {[]{return CanPlay(EponasSong);}}),
+		LocationAccess(TERMINA_FIELD_GROTTO_COW1, {[]{return EponasSong && AnyBottle;}}),
+		LocationAccess(TERMINA_FIELD_GROTTO_COW2, {[]{return EponasSong && AnyBottle;}}),
 	},
 	{
 		//Exits
@@ -1150,7 +1150,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(GORON_VILLAGE_POWDER_KEG_CHALLENGE, {[] {return GoronMask && (SnowheadClear || (Bow && FireArrows && MagicMeter));}}),
-		LocationAccess(GORON_VILLAGE_SCRUB_PURCHASE, {[] {return AnyWallet && GoronMask;}}),
+		LocationAccess(GORON_VILLAGE_SCRUB_PURCHASE, {[] {return AnyWallet && GoronMask && (ProgressiveBombBag >= 2);}}),
 		LocationAccess(GORON_VILLAGE_SCRUB_TRADE, {[] {return DekuMask && SwampTitle;}}),
 		LocationAccess(GORON_VILLAGE_LEDGE, {[] {return DekuMask && SwampTitle;}}),
 		LocationAccess(GORON_VILLAGE_POWDER_KEG_CHALLENGE_SPRING, {[] {return GoronMask && (SnowheadClear || (Bow && FireArrows && MagicMeter));}}),
@@ -1363,9 +1363,9 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(ROMANI_RANCH_COW_1, {[]{return EponasSong && AnyBottle;}}),
-		LocationAccess(ROMANI_RANCH_COW_2, {[]{return EponasSong && AnyBottle;}}),
-		LocationAccess(ROMANI_RANCH_COW_3, {[]{return EponasSong && AnyBottle;}}),
+		LocationAccess(ROMANI_RANCH_COW_1, {[]{return EponasSong && AnyBottle && PowderKeg && GoronMask;}}),
+		LocationAccess(ROMANI_RANCH_COW_2, {[]{return EponasSong && AnyBottle && PowderKeg && GoronMask;}}),
+		LocationAccess(ROMANI_RANCH_COW_3, {[]{return EponasSong && AnyBottle && PowderKeg && GoronMask;}}),
 	},
 	{
 		//Exits
