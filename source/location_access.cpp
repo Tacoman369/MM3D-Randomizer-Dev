@@ -228,7 +228,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(N_CLOCK_TOWN_KEATON_QUIZ, {[] {return KeatonMask;}}),
 		LocationAccess(N_CLOCK_TOWN_TREE, {[] {return true;}}),
-		LocationAccess(N_CLOCK_TOWN_OLD_LADY, {[] {return Fighting || Bow;}}),
+		LocationAccess(N_CLOCK_TOWN_OLD_LADY, {[] {return Fighting;}}),
 		LocationAccess(TINGLE_N_CLOCK_TOWN_CT, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		LocationAccess(TINGLE_N_CLOCK_TOWN_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		LocationAccess(N_CLOCK_TOWN_POSTBOX, {[]{return PostmansHat;}}),
@@ -452,8 +452,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(W_CLOCK_TOWN_SWORDSMANS_SCHOOL, {[] {return Fighting;}}),
-		LocationAccess(W_CLOCK_TOWN_SWORDSMANS_SCHOOL, {[] {return Fighting;}}),
+		LocationAccess(W_CLOCK_TOWN_SWORDSMANS_SCHOOL, {[] {return AnyBSword;}}),
 	},
 	{
 		//Exits
