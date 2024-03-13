@@ -295,6 +295,7 @@ void AreaTable_Init() {
 	
 	areaTable[STOCKPOTINN] = Area("Stock Pot Inn", "Stock Pot Inn", STOCKPOTINN, {
 		//Events
+		EventAccess(&MilkQuestStart, {[] {return CircusLeadersMask;}}),
 	}, 
 	{
 		//Locations
@@ -1282,12 +1283,13 @@ void AreaTable_Init() {
 
 	areaTable[GORMAN_TRACK] = Area("Gorman Track", "Gorman Track", NONE, {
 		//Events
+		EventAccess(&UsableMysteryMilkBottle, {[] {return MilkQuestStart && CircusLeadersMask && MysteryMilkBottle;}}), // Assumes that if you could start the quest, you can finish it
 	},
 	{
 		//Locations
 		LocationAccess(MILK_ROAD_GORMAN_RACE,     {[]{return CanPlay(EponasSong);}}),
 		LocationAccess(MILK_ROAD_GORMAN_MILK_BUY, {[]{return AnyBottle;}}),
-		LocationAccess(GORMAN_TRACK_MYSTERY_MILK_QUEST, {[] {return CircusLeadersMask;}}),
+		LocationAccess(GORMAN_TRACK_MYSTERY_MILK_QUEST, {[] {return MilkQuestStart && CircusLeadersMask;}}),
 	},
 	{
 		//Exits

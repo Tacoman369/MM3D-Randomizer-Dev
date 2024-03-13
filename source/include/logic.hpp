@@ -37,9 +37,10 @@ namespace Logic {
 	extern bool AlienBottle;
 	extern bool GoronRaceBottle;
 	extern bool BeaverRaceBottle;
-	extern bool DampeBottle;
+	extern bool ArcheryBottle;
 	extern bool ChateauBottle;
 	extern bool MysteryMilkBottle;
+	extern bool UsableMysteryMilkBottle;
 	extern bool BombersNotebook;
 	extern bool MirrorShield;
 	extern bool HerosShield;
@@ -309,6 +310,7 @@ namespace Logic {
 	extern bool WoodfallFrog;
 	extern bool GreatBayFrog;
 	extern bool ThinBridgeCrystalChest;
+	extern bool MilkQuestStart;
 	
 	extern bool CanGoToMoon;
 
