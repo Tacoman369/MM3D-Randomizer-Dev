@@ -769,7 +769,7 @@ void AreaTable_Init() {
 	}, 
 	{
 		//Locations
-		LocationAccess(ROAD_TO_SS_TREE, {[] {return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask));}}),//something to kill the dragonfly
+		LocationAccess(ROAD_TO_SS_TREE, {[] {return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),//something to kill the dragonfly
 		LocationAccess(TINGLE_ROAD_TO_SS_WF, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		LocationAccess(TINGLE_ROAD_TO_SS_SH, {[]{return (DekuMask && MagicMeter) || Bow || Hookshot || ZoraMask;}}),
 		//Gossip Stones
@@ -1029,7 +1029,7 @@ void AreaTable_Init() {
 	{
 		//Locations
 		LocationAccess(MOUNTAIN_VILLAGE_FROG_CHOIR, {[] {return SnowheadClear && LaundryFrog && SwampFrog && WoodfallFrog && GreatBayFrog && DonGerosMask;}}), 
-		LocationAccess(MOUNTAIN_VILLAGE_HUNGRY_GORON, {[] {return GoronMask && MagicMeter;}}),
+		LocationAccess(MOUNTAIN_VILLAGE_HUNGRY_GORON, {[] {return (GoronMask && MagicMeter) && (HasFireSource || (LullabyIntro && HasFireSourceWithTorch));}}),
 		LocationAccess(MOUNTAIN_WATERFALL_CHEST, {[] {return SnowheadClear && LensOfTruth && MagicMeter;}}),
 		LocationAccess(MOUNTAIN_VILLAGE_KEATON_QUIZ, {[]{return SnowheadClear && KeatonMask && AnySword;}}),
 		//Gossip Stones
