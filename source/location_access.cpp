@@ -357,7 +357,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Locations
-		LocationAccess(BOMBERS_HIDEOUT_CHEST, {[] {return AnyBombBag;}}),
+		LocationAccess(BOMBERS_HIDEOUT_CHEST, {[] {return AnyBombBag || BlastMask;}}),
 	},
 	{
 		//Exits
@@ -1020,7 +1020,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 		Entrance(TERMINA_FIELD, {[]{return true;}}),
-		Entrance(MOUNTAIN_VILLAGE, {[]{return AnyBombBag;}}),
+		Entrance(MOUNTAIN_VILLAGE, {[]{return AnyBombBag || BlastMask;}}),
 	});
 
 	areaTable[MOUNTAIN_VILLAGE] = Area("Mountain Village", "Mountain Village", MOUNTAIN_VILLAGE, {
@@ -1115,7 +1115,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 		Entrance(TWIN_ISLANDS, {[]{return true;}}),
-		Entrance(TWIN_ISLANDS_GORON_RACETRACK_GROTTO, {[]{return AnyBombBag && ( (Hookshot && ScarecrowSong) || GoronMask);}}),
+		Entrance(TWIN_ISLANDS_GORON_RACETRACK_GROTTO, {[]{return (AnyBombBag || BlastMask) && ((Hookshot && ScarecrowSong) || GoronMask);}}),
 	});
 
 	areaTable[TWIN_ISLANDS_GORON_RACETRACK_GROTTO] = Area("Goron Racetrack Grotto", "Goron Racetrack Grotto", NONE, {
@@ -1172,7 +1172,7 @@ void AreaTable_Init() {
 		//Locations
 		LocationAccess(GORON_VILLAGE_LENS_OF_TRUTH_CHEST, {[] {return true;}}),
 		LocationAccess(LENS_CAVE_RED_RUPEE, {[] {return LensOfTruth && MagicMeter;}}),
-		LocationAccess(LENS_CAVE_PURPLE_RUPEE, {[] {return AnyBombBag;}}), //Do not need Lens for this chest
+		LocationAccess(LENS_CAVE_PURPLE_RUPEE, {[] {return AnyBombBag || BlastMask;}}), //Do not need Lens for this chest
 	},
 	{
 		//Exits
@@ -1219,7 +1219,7 @@ void AreaTable_Init() {
 	},
 	{
 		//Exits
-		Entrance(ROAD_TO_SNOWHEAD_GROTTO, {[]{return GoronMask && MagicMeter && AnyBombBag;}}),
+		Entrance(ROAD_TO_SNOWHEAD_GROTTO, {[]{return GoronMask && MagicMeter && (AnyBombBag || BlastMask);}}),
 		Entrance(MOUNTAIN_VILLAGE, {[]{return true;}}),
 		Entrance(SNOWHEAD, {[]{return GoronMask && MagicMeter;}}),
 	});
@@ -1486,7 +1486,7 @@ void AreaTable_Init() {
 		Entrance(ZORA_HALL, {[]{return ZoraMask;}}),
 		Entrance(WATERFALL_RAPIDS, {[]{return Hookshot;}}),
 		Entrance(GREAT_BAY_FAIRY_FOUNTAIN, {[]{return Hookshot;}}),
-		Entrance(ZORA_CAPE_GROTTO, {[]{return Hookshot && AnyBombBag;}}),
+		Entrance(ZORA_CAPE_GROTTO, {[]{return AnyBombBag || BlastMask;}}),
 		Entrance(GREAT_BAY_TEMPLE_ENTRANCE, {[]{return Hookshot && ZoraMask && CanPlay(NewWaveBossaNova);}}),
 		Entrance(ZORA_HALL_BACK_ENTRANCE, {[]{return ZoraMask;}}),
 	});
@@ -1666,7 +1666,7 @@ void AreaTable_Init() {
 		Entrance(IKANA_GRAVEYARD_BELOW_GRAVE1, {[]{return CaptainsHat;}}),
 		Entrance(IKANA_GRAVEYARD_BELOW_GRAVE2, {[]{return CaptainsHat;}}),
 		Entrance(IKANA_GRAVEYARD_BELOW_GRAVE3, {[]{return CaptainsHat;}}),
-		Entrance(IKANA_GRAVEYARD_GROTTO, {[]{return AnyBombBag;}}),
+		Entrance(IKANA_GRAVEYARD_GROTTO, {[]{return AnyBombBag || BlastMask;}}),
 	});
 
 	areaTable[IKANA_GRAVEYARD_GROTTO] = Area("Ikana Graveyard Grotto", "Ikana Graveyard Grotto", NONE, {
@@ -1739,7 +1739,7 @@ void AreaTable_Init() {
 	{
 		//Exits
 		Entrance(IKANA_GRAVEYARD_BELOW_GRAVE2, {[]{return true;}}),
-		Entrance(IKANA_GRAVEYARD_IRON_KNUCKLE_ROOM, {[]{return Bow && LensOfTruth && MagicMeter && AnyBombBag;}}),
+		Entrance(IKANA_GRAVEYARD_IRON_KNUCKLE_ROOM, {[]{return Bow && LensOfTruth && MagicMeter && (AnyBombBag || BlastMask);}}),
 	});
 
 	areaTable[IKANA_GRAVEYARD_IRON_KNUCKLE_ROOM] = Area("Ikana Graveyard Below Graves Iron Knuckle Room", "Ikana Graveyard Below Graves Iron Knuckle Room", NONE, {
@@ -2728,7 +2728,7 @@ void AreaTable_Init() {
 
 	areaTable[STONE_TOWER_TEMPLE_UPRIGHT_DEATH_ARMOS_ROOM] = Area("Stone Tower Temple Upright Death Armos Room", "Stone Tower Temple Upright Death Armos Room", STONE_TOWER_TEMPLE, {
 		//Events
-		EventAccess(&ArmosRoomLightHole, {[]{return CanPlay(ElegyOfEmptiness) && ZoraMask && GoronMask && AnyBombBag;}}),
+		EventAccess(&ArmosRoomLightHole, {[]{return CanPlay(ElegyOfEmptiness) && ZoraMask && GoronMask && (AnyBombBag || BlastMask);}}),
 	},
 	{
 		//Locations
