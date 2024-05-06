@@ -37,9 +37,10 @@ namespace Logic {
 	extern bool AlienBottle;
 	extern bool GoronRaceBottle;
 	extern bool BeaverRaceBottle;
-	extern bool DampeBottle;
+	extern bool ArcheryBottle;
 	extern bool ChateauBottle;
 	extern bool MysteryMilkBottle;
+	extern bool UsableMysteryMilkBottle;
 	extern bool BombersNotebook;
 	extern bool MirrorShield;
 	extern bool HerosShield;
@@ -82,7 +83,7 @@ namespace Logic {
 	extern bool GarosMask;
 	extern bool CaptainsHat;
 	extern bool GiantsMask;
-	extern bool FierceDietyMask;
+	extern bool FierceDeityMask;
 	extern bool MaskOfTruth;
 	extern bool OneMask;
 	extern bool TwoMasks;
@@ -114,6 +115,7 @@ namespace Logic {
 	extern bool SongOfStorms;
 	extern bool SongOfHealing;
 	extern bool SonataOfAwakening;
+	extern bool LullabyIntro;
 	extern bool GoronsLullaby;
 	extern bool NewWaveBossaNova;
 	extern bool ElegyOfEmptiness;
@@ -308,6 +310,7 @@ namespace Logic {
 	extern bool WoodfallFrog;
 	extern bool GreatBayFrog;
 	extern bool ThinBridgeCrystalChest;
+	extern bool MilkQuestStart;
 	
 	extern bool CanGoToMoon;
 

@@ -156,7 +156,13 @@ public:
 
     void ResetVariables();
 
+
 };
+
+    /*extern std::array<Area, KEY_ENUM_MAX> areaTable;
+    extern std::vector<EventAccess> grottoEvents;
+    bool Here(const AreaKey area, ConditionFn condition);
+    bool HasAccessTo(const AreaKey area);*/
 
 namespace Areas {
 

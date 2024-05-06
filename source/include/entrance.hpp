@@ -68,13 +68,15 @@ public:
     bool ConditionsMet() const {
 
         Area* parent = AreaTable(parentRegion);
+        int conditionsMet = 0;
         //PlacementLog_Msg("\nConditions Met parent = ");
         //PlacementLog_Msg(parent->regionName+"\n"); 
         if (!parent->AllAccess()){
             return false;
         }
+        conditionsMet = (parent->HasAccess());
         Logic::UpdateHelpers();
-        return GetConditionsMet();
+        return conditionsMet;
     }
 
     AreaKey GetAreaKey() const {

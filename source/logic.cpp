@@ -45,9 +45,10 @@ namespace Logic {
 	bool AlienBottle = false;
 	bool GoronRaceBottle = false;
 	bool BeaverRaceBottle = false;
-	bool DampeBottle = false;
+	bool ArcheryBottle = false;
 	bool ChateauBottle = false;
 	bool MysteryMilkBottle = false;
+	bool UsableMysteryMilkBottle = false;
 	bool BombersNotebook = false;
 	bool MirrorShield = false;
 	bool HerosShield = false;
@@ -90,7 +91,7 @@ namespace Logic {
 	bool GarosMask = false;
 	bool CaptainsHat = false;
 	bool GiantsMask = false;
-	bool FierceDietyMask = false;
+	bool FierceDeityMask = false;
 	bool MaskOfTruth = false;
 	bool OneMask = false;
 	bool TwoMasks = false;
@@ -122,6 +123,7 @@ namespace Logic {
 	bool SongOfStorms = false;
 	bool SonataOfAwakening = false;
 	bool SongOfHealing = false;
+	bool LullabyIntro = false;
 	bool GoronsLullaby = false;
 	bool NewWaveBossaNova = false;
 	bool ElegyOfEmptiness = false;
@@ -299,6 +301,7 @@ namespace Logic {
 	bool WoodfallFrog = false;
 	bool GreatBayFrog = false;
 	bool ThinBridgeCrystalChest = false;
+	bool MilkQuestStart = false;
 
 	bool CanGoToMoon = false;
 	
@@ -363,7 +366,7 @@ namespace Logic {
 			(item == GAROS_MASK) ||
 			(item == CAPTAINS_HAT) ||
 			(item == GIANTS_MASK) ||
-			(item == FIERCE_DIETY_MASK) ||
+			(item == FIERCE_DEITY_MASK) ||
 			(item == MASK_OF_TRUTH);
 	}
 	static bool HasItem(ItemKey itemName) {
@@ -397,7 +400,7 @@ namespace Logic {
 			(itemName == GAROS_MASK && GarosMask) ||
 			(itemName == CAPTAINS_HAT && CaptainsHat) ||
 			(itemName == GIANTS_MASK && GiantsMask) ||
-			(itemName == FIERCE_DIETY_MASK && FierceDietyMask) ||
+			(itemName == FIERCE_DEITY_MASK && FierceDeityMask) ||
 			(itemName == MASK_OF_TRUTH && MaskOfTruth);
 	}
 
@@ -428,7 +431,7 @@ namespace Logic {
 	}
 
 	bool TotalHeartContainers(u8 requiredAmount) {
-		return (HeartContainers + (PiecesOfHeart/4) >= requiredAmount);
+		return (HeartContainers + (PiecesOfHeart/4) + 3 >= requiredAmount);
 	}
 
 	u8 TotalMaskCount() { 
@@ -462,9 +465,9 @@ namespace Logic {
 		DekuNutDrop = NutPot || NutCrate || DekuBabaNuts;
 		BugsAccess = BugShrub || WanderingBugs || BugRock;
 		FishAccess = LoneFish || FishGroup;
-		WaterAccess = (SpringWater && WitchBottle) || CanPlay(SongOfStorms);
-		HotSpringWaterAccess = HotSpringWater && WitchBottle;
-		WaterForBeans = (WitchBottle && WaterAccess) || SongOfStorms;
+		WaterAccess = (SpringWater && AnyBottle) || CanPlay(SongOfStorms);
+		HotSpringWaterAccess = HotSpringWater && AnyBottle;
+		WaterForBeans = (AnyBottle && WaterAccess) || SongOfStorms;
 		AnyMagicBean = (MagicBean || MagicBeanPack || LimitlessBeans);
 		//refills
 		Bombs = AnyBombBag;
@@ -495,7 +498,7 @@ namespace Logic {
 		//Item Helpers
 		AnyMagicBean = MagicBean || LimitlessBeans;
 		AnyWallet = Townwallet200 || OceanWallet500 || (ProgressiveWallet >= 1);
-		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || DampeBottle || GoronRaceBottle || ChateauBottle || MysteryMilkBottle || HasBottle;
+		AnyBottle = WitchBottle || AlienBottle || BeaverRaceBottle || ArcheryBottle || GoronRaceBottle || ChateauBottle || UsableMysteryMilkBottle || HasBottle;
 		MagicMeter = (ProgressiveMagic >= 1) || MagicPower || ExtendedMagicPower;
 		WaterForBeans = (AnyBottle && (SpringWater || HotSpringWater)) || SongOfStorms;
 		Scarecrow = Hookshot && CanPlay(ScarecrowSong);
@@ -514,13 +517,13 @@ namespace Logic {
 		AnyHealingPotion = AnyRedPotion || AnyBluePotion;
 		AnyRedPotion = AnyBottle;
 		AnyBluePotion = AnyBottle;
-		TwoBottles = { (WitchBottle && AlienBottle) || (WitchBottle && BeaverRaceBottle) || (WitchBottle && DampeBottle) ||
+		TwoBottles = { (WitchBottle && AlienBottle) || (WitchBottle && BeaverRaceBottle) || (WitchBottle && ArcheryBottle) ||
 					(WitchBottle && GoronRaceBottle) || (WitchBottle && ChateauBottle) || (AlienBottle && GoronRaceBottle) ||
-					(AlienBottle && BeaverRaceBottle) || (AlienBottle && DampeBottle) || (AlienBottle && ChateauBottle) ||
-					(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && DampeBottle) || (GoronRaceBottle && ChateauBottle) ||
-					(BeaverRaceBottle && DampeBottle) || (BeaverRaceBottle && ChateauBottle) || (DampeBottle && ChateauBottle) || 
-					(WitchBottle && MysteryMilkBottle) || (AlienBottle && MysteryMilkBottle) || (BeaverRaceBottle && MysteryMilkBottle) || 
-					(DampeBottle && MysteryMilkBottle) || (GoronRaceBottle && MysteryMilkBottle) || (ChateauBottle && MysteryMilkBottle)};
+					(AlienBottle && BeaverRaceBottle) || (AlienBottle && ArcheryBottle) || (AlienBottle && ChateauBottle) ||
+					(GoronRaceBottle && BeaverRaceBottle) || (GoronRaceBottle && ArcheryBottle) || (GoronRaceBottle && ChateauBottle) ||
+					(BeaverRaceBottle && ArcheryBottle) || (BeaverRaceBottle && ChateauBottle) || (ArcheryBottle && ChateauBottle) ||
+					(WitchBottle && UsableMysteryMilkBottle) || (AlienBottle && UsableMysteryMilkBottle) || (BeaverRaceBottle && UsableMysteryMilkBottle) ||
+					(ArcheryBottle && UsableMysteryMilkBottle) || (GoronRaceBottle && UsableMysteryMilkBottle) || (ChateauBottle && UsableMysteryMilkBottle)};
 		
 		//Tricks
 		PoisonWaterAsZora = ZoraMask && TakeDamage;
@@ -572,9 +575,10 @@ namespace Logic {
 	  AlienBottle = false;
 	  GoronRaceBottle = false;
 	  BeaverRaceBottle = false;
-	  DampeBottle = false;
+	  ArcheryBottle = false;
 	  ChateauBottle = false;
 	  MysteryMilkBottle = false;
+	  UsableMysteryMilkBottle = false;
 	  BombersNotebook = false;
 	  MirrorShield = false;
 	  HerosShield = false;
@@ -617,7 +621,7 @@ namespace Logic {
 	  GarosMask = false;
 	  CaptainsHat = false;
 	  GiantsMask = false;
-	  FierceDietyMask = false;
+	  FierceDeityMask = false;
 	  MaskOfTruth = false;
 	  OneMask = false;
 	  TwoMasks = false;
@@ -649,6 +653,7 @@ namespace Logic {
 	  SongOfStorms = false;
 	  SonataOfAwakening = false;
 	  SongOfHealing = false;
+	  LullabyIntro = false;
 	  GoronsLullaby = false;
 	  NewWaveBossaNova = false;
 	  ElegyOfEmptiness = false;
@@ -828,6 +833,7 @@ namespace Logic {
 	WoodfallFrog = false;
 	GreatBayFrog = false;
 	ThinBridgeCrystalChest = false;
+	MilkQuestStart = false;
 
 	
 	ZoraEgg = 0;

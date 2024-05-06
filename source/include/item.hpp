@@ -33,6 +33,7 @@ enum ItemType {
     ITEMTYPE_STRAYFAIRY,
     ITEMTYPE_QUEST,
     ITEMTYPE_TRADE,
+    ITEMTYPE_GFAIRY,
 };
 
 class Item {
